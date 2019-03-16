@@ -1,21 +1,431 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<nav class="navbar navbar-expand-lg navbar-light" id="myHeader">
+  <div class="container">            
+      <div class="left-header">
+          <p class="header-line mb-0">美容室・サロン専用のAIによるサロン管理・顧客管理POSシステム</p>
+          <div class="d-flex ">
+              <a class="navbar-brand" href="#"><img src="../assets/images/jts-board-logo.png"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                      <li class="nav-item active"><a class="nav-link" href="#">About Us</a></li>
+                      <li class="nav-item active"><a class="nav-link" href="#">Services</a></li>
+                      <li class="nav-item active"><a class="nav-link" href="#">Pricing</a></li>
+                      <!-- <li class="nav-item active"><a class="nav-link" href="#">Blog</a></li> -->
+                  </ul>
+              </div>
+          </div>
 
-<router-outlet></router-outlet>
+      </div>
+      <div class="right-header d-flex ">
+          <div class="call-detail text-center">                    
+              <p class="mb-0">ご相談・ご質問をお気軽にどうぞ。</p>
+              <ul class="number-detail">
+                  <li class="phone-icon">
+                      <!-- <i class="fas fa-phone-square"></i> -->
+                      <img src="../assets/images/icons/phone.png">
+                  </li>
+                  <li>
+                      <span class="phone-number">052-485-4301</span>
+                      <p class="timing mb-0">受付時間：平日10:00 ~ 20:00</p>                            
+                  </li>
+              </ul>
+          </div>
+          <div class="contact-buttons text-right">
+              <a href="#" class="btn mb-10">無料トライアル</a>
+              <ul class="header-buttons"><li><a href="#"><i class="far fa-envelope"></i> お問い合わせ</a></li><li><a href="#"><i class="far fa-user"></i> ログイン</a></li></ul>
+          </div>
+      </div>
+  </div>
+</nav>
+
+
+<div class="main">
+
+  <!---------- main-slider ---------------->
+  <div class="main-slider-conmtainer">
+      <!--- slider --->
+          <div class="slider-outer">
+
+              <div id="owl-demo1" class="owl-carousel">
+
+                  <div class="item">
+                      <img src="../assets/images/slider-img/slider-img3.jpg" alt="">
+                      <div class="slider-content text-center">
+                          <div class="container">
+                              <div class="row justify-content-md-center">
+                                  <div class="col-md-8">
+                                      <div class="slider-content-inner">
+                                        <h1 class="mb-60">「顧客管理」「スタッフ管理」は<br> &nbsp; AIがサポート </h1>
+                                        <h4 class="mb-60"> 約、シフト、カルテ、売上げ、スタッフ、POSレジ、全ての管理を備えています。美容室、ネイル、エステ、アイラッシュ、マッサージなど、サロン全てでご利用いただけます</h4>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+
+              </div>
+
+          </div>
+      <!--- slider --->
+  </div>
+  <!------------ main-slider ------------>
+
+
+<!---------- about panel--------->
+<div class="about-panel gray-bg panel-padding">
+  <div class="container">
+      <h1 class="main-heading text-center mb-20">JTS Boardは次世代のシステムです。</h1>
+      <h5 class="sub-heading text-center mb-50">「全てはお客様に期待以上の満足を提供するために・・・」AI登場</h5>
+      <div class="row">
+          <div class="col-sm-6 mb-40">
+              <img class="box-shadow" src="../assets/images/about-img.jpg">
+          </div>
+          <div class="col-sm-6">
+            <p>
+                サロン業務をAIが代行してくれる日本で初めてのサロン管理システムを開発いたしました。人が辞めない企業やサロンを作るためにも、有能な人材が必要です。人が一番大切な、サロン運営。 サロン運営をする中で、有能なマネージャーを見つけることができませんでした。そこで考えたのが、このJTSボードです。 サロン運営に必要な業務、スタッフコミュニケーション、売上を上げ利益を出す。生産性を上げる。全てのスキルを身につけたシステムを作ることで、サロン業務をこのシステムが管理し、AIが代行してくれる。AIによる管理なので人為的なミスをゼロにすることが可能。
+            </p>
+            <p>
+                サロン運営で抱える問題をこのJTSボードが解決してくれます。 スタッフとお客様、そしてサロンを知るためにもAIの力が必要です。 
+            </p>
+          </div>
+      </div>
+  </div>
+</div>
+<!---------- about panel--------->
+
+<!---------- app links panel--------->
+<div class="app-links-panel panel-padding border-bottom">
+    <div class="container">
+        <h1 class="main-heading text-center mb-20">導入方法</h1>
+        <h5 class="sub-heading text-center mb-20">JTSボードの導入方法について。まずは下のアプリをダウンロード！全てのデバイスでご利用可能です。</h5>
+        <h5 class="sub-heading text-center mb-50">（パソコン/IOS/Androidモバイルアプリケーション/タブレット）</h5>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="mb-30 text-center"><img src="../assets/images/app-links/web.png"></div>
+                <div class="mb-40 text-center"><a href="#"><img src="../assets/images/app-links/web-btn.png"></a></div>
+            </div>
+            <div class="col-sm-4">
+                <div class="mb-30 text-center"><img src="../assets/images/app-links/iPhon-iPad.png"></div>
+                <div class="mb-40 text-center"><a href="#"><img src="../assets/images/app-links/app-store-btn.png"></a></div>
+            </div>
+            <div class="col-sm-4">
+                <div class="mb-30 text-center"><img src="../assets/images/app-links/android.png"></div>
+                <div class="mb-40 text-center"><a href="#"><img src="../assets/images/app-links/google-play-btn.png"></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------- app links panel--------->
+
+<!---------- app screen panel--------->
+<div class="panel-padding app-screen-panel">
+  <div class="container">
+      <h1 class="main-heading text-center mb-20">Lorem Ipsum is simply dummy text </h1>
+      <h5 class="sub-heading text-center mb-50">Lorem Ipsum is simply dummy text of the printing</h5>
+      <div class="row">
+          <div class="col-md-4 col-6">
+              <div class="app-screen-detail mb-40">
+                  <img class="mb-20 box-shadow" src="../assets/images/screen-img/AI.jpg">
+                  <p class="text-center mb-30">AIが社長となり、アドバイスや指示を出してくれます。 JTSボードを使用することで、お客様の情報、売上げ、稼働率、リピート率、経過、予算、カルテからお店の状況やお客様の行動を把握。JTSボードを使い、情報を入力することでJTSボードがサロンのことを学び、アドバイスをしてくれます。 スタッフからの質問にAIが返事をします。 シフトはAIが管理します。 経費の使い過ぎを発見します。</p>
+                  <div class="text-center"><a class="" href="#">Read More <i class="fas fa-arrow-circle-right"></i></a></div>
+              </div>
+          </div>
+          <div class="col-md-4 col-6">
+              <div class="app-screen-detail mb-40">
+                  <img class="mb-20 box-shadow" src="../assets/images/screen-img/customer-form.jpg">
+                  <p class="text-center mb-30">カルテ 顧客情報を入力しデータとして保管できます。 紙のカルテは保管スペースを確保しなけばいけないため、場所をとります。膨大な量の紙カルテは資源の無駄です。 ペーパーレスのこの時代にJTSボードのカルテを使うことで全ての顧客情報をデータで管理できます。 来店履歴、施術した内容をメモに残すことができます。会話内容、お客様の好みや注意点。施術前や施術後のお写真など。枚数制限無く、保管ができます。</p>
+                        <div class="text-center"><a class="" href="#">Read More <i class="fas fa-arrow-circle-right"></i></a></div>
+                    </div>
+          </div>
+          <div class="col-md-4 col-6">
+              <div class="app-screen-detail mb-40">
+                  <img class="mb-20 box-shadow" src="../assets/images/screen-img/calendar.jpg">
+                  <p class="text-center mb-30">カレンダー お客様の予約管理を行います。今日１日の来店客リストを一覧で確認することが可能です。 お客様がご来店時は開始ボタン。施術終了時後は終了ボタンを押します。お客様の施術にかかった時間や、稼働率を管理します。 スタッフのシフト管理もカレンダーで行います。欠席スタッフを一目で確認できます。
+                    ホットペッパーからの予約が直接入力されます。予約がかぶってしまう心配がありません。さらにＪＴＳボードに予約を入力後は、サロンボードの予約欄を自動でクローズします。</p>
+              <div class="text-center"><a class="" href="#">Read More <i class="fas fa-arrow-circle-right"></i></a></div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+              <div class="app-screen-detail mb-40">
+                  <img class="mb-20 box-shadow" src="../assets/images/screen-img/auto-reservation.jpg">
+                  <p class="text-center mb-30">自動予約システム  ホットペッパービューティーからの予約をJTSボードに自動で追加。次回予約、電話予約、LINEからの予約管理がカレンダーで一覧できます。 さらにJTSボードに入力したお客様の予約をサロンボード（ホットペッパー予約システム）の予約欄にブランクを入れることが可能。使いやすくミスのない予約管理ができます。</p>
+                        <div class="text-center"><a class="" href="#">Read More <i class="fas fa-arrow-circle-right"></i></a></div>
+                    </div>
+          </div>
+          <div class="col-md-4 col-6">
+              <div class="app-screen-detail mb-40">
+                  <img class="mb-20 box-shadow" src="../assets/images/screen-img/expenses-budget.jpg">
+                  <p class="text-center mb-30">経費・予算 毎月決まった固定経費を入力できます。 JTSボード内で経費入力を行うことで、今月の経費使用状況が一目で把握できます。</p>
+                        <div class="text-center"><a class="" href="#">Read More <i class="fas fa-arrow-circle-right"></i></a></div>
+                    </div>
+          </div>
+          <div class="col-md-4 col-6">
+              <div class="app-screen-detail mb-40">
+                  <img class="mb-20 box-shadow" src="../assets/images/screen-img/sales.jpg">
+                  <p class="text-center mb-30">売上 今日の売上、累計売上を管理できます。サービスごと、スタッフごとの売上も簡単に確認できます。.</p>
+                        <div class="text-center"><a class="" href="#">Read More <i class="fas fa-arrow-circle-right"></i></a></div>
+                    </div>
+          </div>
+          <div class="col-md-4 col-6">
+              <div class="app-screen-detail mb-40">
+                  <img class="mb-20 box-shadow" src="../assets/images/screen-img/chat-support.jpg">
+                  <p class="text-center mb-30">AIとのチャット・スタッフサポート お客様の情報や、サロン情報をAIが分析。分析結果をもとにスタッフに適切なアドバイスや、スタッフからの質問に答えます。AIとの会話はJTSボード内にあるチャットで行います。  スタッフ同士のチャットも可能です。プライベートなメッセージアプリを使用することなく仕事の連絡ができます。もちろん写真も添付可能です。</p>
+                        <div class="text-center"><a class="" href="#">Read More <i class="fas fa-arrow-circle-right"></i></a></div>
+                    </div>
+          </div>
+          <div class="col-md-4 col-6">
+              <div class="app-screen-detail mb-40">
+                  <img class="mb-20 box-shadow" src="../assets/images/screen-img/gallery.jpg">
+                  <p class="text-center mb-30">ギャラリー お客様の画像をカテゴリ別やスタッフ別で、保存できます。お気に入りの写真にお店のロゴなどを挿入することができるから、お店のロゴ入りの画像をSNSに簡単にアップできます。ネイル・ヘアー・アイラッシュ・エステのビフォーアフターなど、JTSボード内で保存してシェアできます</p>
+                        <div class="text-center"><a class="" href="#">Read More <i class="fas fa-arrow-circle-right"></i></a></div>
+                    </div>
+          </div>
+          <div class="col-md-4 col-6">
+              <div class="app-screen-detail mb-40">
+                  <img class="mb-20 box-shadow" src="../assets/images/screen-img/attendance.jpg">
+                  <p class="text-center mb-30">出退勤時間管理 スタッフの出勤、退勤をタブレットで行います。スタッフ毎に出勤時間、退勤時間、休憩時間、1日の労働時間、総労働時間など、一括で検索ができます。 給与計算や労働時間計算を簡単に行うことができます。</p>
+                        <div class="text-center"><a class="" href="#">Read More <i class="fas fa-arrow-circle-right"></i></a></div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!---------- app screen panel---------> 
+
+<!---------- function panel--------->  
+<div class="gray-bg panel-padding fuction-panel">
+  <div class="container">
+      <h1 class="main-heading text-center mb-20">機能について</h1>
+      <h5 class="sub-heading text-center mb-50">Function necessary for management of hair salon · salon is enriched. Easy to use by anyone with simple usability.</h5>
+      <ul class="fuction-list">
+          <li>
+              <a href="" class="AI-function">
+                  <img src="../assets/images/icons/home/AI.png"><br>人工知能
+              </a>
+          </li>
+          <li>
+              <a href="" class="form-function">
+                  <img src="../assets/images/icons/home/form.png"><br>カルテ
+              </a>
+          </li>
+          <li>
+              <a href="" class="customer-list-function">
+                  <img src="../assets/images/icons/home/customer-list.png"><br>顧客管理
+              </a>
+          </li>
+          <li>
+              <a href="" class="calendar-function">
+                  <img src="../assets/images/icons/home/calendar.png"><br>カレンダー
+              </a>
+          </li>
+          <li>
+              <a href="" class="staff-function">
+                  <img src="../assets/images/icons/home/staff.png"><br>スタッフ
+              </a>
+          </li>
+          <li>
+              <a href="" class="sales-function">
+                  <img src="../assets/images/icons/home/sales.png"><br>売上集計
+              </a>
+          </li>
+          <li>
+              <a href="" class="expenses-function">
+                  <img src="../assets/images/icons/home/expenses.png"><br>経費
+              </a>
+          </li>
+          <li>
+              <a href="" class="budget-function">
+                  <img src="../assets/images/icons/home/budget.png"><br>予算
+              </a>
+          </li>
+          <li>
+              <a href="" class="chat-function">
+                  <img src="../assets/images/icons/home/chat.png"><br>チャット
+              </a>
+          </li>
+          <li>
+              <a href="" class="gallery-function">
+                  <img src="../assets/images/icons/home/gallery.png"><br>画像ギャラリー
+              </a>
+          </li>
+      </ul>
+
+      <div class="text-center mb-40"><a class="btn btn-black" href="#">List Here</a></div>
+
+  </div>
+</div>
+<!---------- function panel ----------->
+
+
+<!---------- cost panel ----------->
+<div class="panel-padding cost-panel">
+    <div class="container">
+         <h1 class="main-heading text-center mb-20">費用・プラン</h1>
+        <h5 class="sub-heading text-center mb-50">カレンダー機能、シフト、予約、顧客管理、カルテ、レジ・会計、売上集計、分析、チャット、出退勤など充実の機能を15,000円でご利用いただけます。</h5>
+
+        <div class="basic-plan-panel">
+            <div class="cost-heading">
+                基本プラン
+            </div>
+            <ul class="basic-plan-list">
+               <li>
+                   <a href="#"><span class="label-b">初期設定費用</span><span class="price-b">0 <span class="yen">円</span></span></a>
+               </li>
+               <li>
+                   <a href="#"><span class="label-b">初月利用料</span><span class="price-b">無料</span></a>
+               </li>
+               <li>
+                   <a href="#"><span class="label-b">月額利用料</span><span class="price-b">15,000 <span class="yen">円</span> <span class="tax-label">(税抜き価格)</span> </span></a>
+               </li>
+            </ul>
+
+            <div class="text-center mb-40">
+                <a href="#" class="btn">他のシステムと比較する</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!---------- cost panel ----------->
+
+
+<!---------- case study panel ----------->
+<div class="case-study-panel panel-padding gray-bg">
+  <div class="container">
+      <h1 class="main-heading text-center mb-20">Case study</h1>
+      <h5 class="sub-heading text-center mb-50">We asked the impression from beauty shop, barber shop, nail · relax salon who introduced biionry.</h5>
+      <ul class="case-study-list">
+          <li>
+              <div class="case-study-item box-shadow">
+                  <img src="../assets/images/case-study-img1.jpg">
+                  <div class="cs-content">
+                      <h6>美容室</h6>
+                      <hr>
+                      <p class="more">お客様ごとに紙のカルテを保管。カルテを探す手間に費やす時間やカルテの保管場所を確保するのは大変です。電子カルテなら、スマホやタブレットから、簡単にお客様のカルテを見ることができます。今までのヘアスタイルを写真で保管したり、使用したカラー剤や薬品名を簡単に調べることができます。写真の保管枚数は無限大。お客様への接客や技術に集中できて、顧客満足度は上がります。</p>
+                            <!-- <a href="javascript:void(0);" class="">Read More <i class='fas fa-arrow-circle-right'></i></a> -->
+                        </div>
+              </div>
+          </li>
+          <li>
+              <div class="case-study-item box-shadow">
+                  <img src="../assets/images/case-study-img1.jpg">
+                  <div class="cs-content">
+                      <h6>ネイルサロン</h6>
+                      <hr>
+                      <p class="more">固定客を増やし、売上を上げ、生産性を上げるためには、リピートしていただける接客が必要です。また来たい！と思っていただくには、他のサロンにはない、価値をつけた接客、技術が必要です。JTS board を使い、顧客管理を行うことで、施術毎の会話内容や、注意点など、細かくメモを残すことができます。来店周期や、支払金額など、知りたい情報を、すぐに確認することができます。</p>
+                            <!-- <a href="javascript:void(0);" class="">Read More <i class='fas fa-arrow-circle-right'></i></a> -->
+                        </div>
+              </div>
+          </li>
+          <li>
+              <div class="case-study-item box-shadow">
+                  <img src="../assets/images/case-study-img1.jpg">
+                  <div class="cs-content">
+                    <h6>アイラッシュサロン</h6>
+                    <hr>
+                    <p class="more">日別、月別、スタッフ別に売上を確認することができます。リピート率や来店周期や来店回数など、知りたい内容をすぐに検索できます</p>
+                    <!-- <a href="javascript:void(0);" class="">Read More <i class='fas fa-arrow-circle-right'></i></a> -->
+                </div>
+            </div>
+          </li>
+          <li>
+              <div class="case-study-item box-shadow">
+                  <img src="../assets/images/case-study-img1.jpg">
+                  <div class="cs-content">
+                    <h6>エステサロン</h6>
+                    <hr>
+                    <p class="more">様々な広告媒体に掲載すると、予約管理は大変。一つの管理画面で管理出来たらいいな！を叶えました。例えばホットペッパーからの予約、電話予約、次回予約…と、予約経路がバラバラでは、予約ミスを招いてしまう可能性があります。そこで、JTSボードは、ホットペッパービューティからの予約をJTSボードのカレンダーに自動送信。管理が楽になります。</p>
+                    <!-- <a href="javascript:void(0);" class="">Read More <i class='fas fa-arrow-circle-right'></i></a> -->
+                </div>
+            </div>
+          </li>
+      </ul>
+      <div class="text-center mb-40"><a href="#" class="btn btn-black">List Here</a></div>
+  </div>
+</div>
+<!------ case study panel ------------->
+
+
+
+<!------ footer strat here ------------->
+
+<footer class="main-footer">
+  <div class="footer-top">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                  <h3 class="footer-heading">Fuctions</h3>
+                  <ul class="footer-links">
+                      <li><a href="#">Reservation management</a></li>
+                      <li><a href="#">Customer management</a></li>
+                      <li><a href="#">Cashier / Accounting</a></li>
+                      <li><a href="#">Sales / summary</a></li>
+                      <li><a href="#">Analysis</a></li>
+                      <li><a href="#">Email</a></li>
+                      <li><a href="#">Communication</a></li>
+                      <li><a href="#">Support</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                  <h3 class="footer-heading">Fuctions</h3>
+                  <ul class="footer-links">
+                      <li><a href="#">Reservation management</a></li>
+                      <li><a href="#">Customer management</a></li>
+                      <li><a href="#">Cashier / Accounting</a></li>
+                      <li><a href="#">Sales / summary</a></li>
+                      <li><a href="#">Analysis</a></li>
+                      <li><a href="#">Email</a></li>
+                      <li><a href="#">Communication</a></li>
+                      <li><a href="#">Support</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                  <h3 class="footer-heading">Fuctions</h3>
+                  <ul class="footer-links">
+                      <li><a href="#">Reservation management</a></li>
+                      <li><a href="#">Customer management</a></li>
+                      <li><a href="#">Cashier / Accounting</a></li>
+                      <li><a href="#">Sales / summary</a></li>
+                      <li><a href="#">Analysis</a></li>
+                      <li><a href="#">Email</a></li>
+                      <li><a href="#">Communication</a></li>
+                      <li><a href="#">Support</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6">
+                  <h3 class="footer-heading">Fuctions</h3>
+                  <ul class="footer-links">
+                      <li><a href="#">Reservation management</a></li>
+                      <li><a href="#">Customer management</a></li>
+                      <li><a href="#">Cashier / Accounting</a></li>
+                      <li><a href="#">Sales / summary</a></li>
+                      <li><a href="#">Analysis</a></li>
+                      <li><a href="#">Email</a></li>
+                      <li><a href="#">Communication</a></li>
+                      <li><a href="#">Support</a></li>
+                  </ul>
+              </div>
+             
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <div class="container">
+          <div class="text-center"><a class="footer-logo" href="#"><img src="../assets/images/jts-board-logo.png"></a><br>
+              Copyright © <a href="#">Zein El Dine International</a> 2019. All right reserved. </div>
+      </div>
+  </div>
+
+</footer> 
+<!---------- footer end here ----------------->
+
+
+<!-- Back to top button -->
+<a href="#" id="back-top-button"><i class="fas fa-angle-up"></i></a>
+
+</div>
