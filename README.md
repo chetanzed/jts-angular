@@ -34,8 +34,11 @@ You need to set up firebase first.
 ``` bash
 $npm i -g firebase-tools
 $firebase login
-#Login with the account which has the permission of this project
-#And just deploy it.
+#Login with the account which has the permission of this project.(only
+onetime)
+
+#Build and deploy it.
+$npm run build
 $firebase deploy -P jts-board
 ```
 
