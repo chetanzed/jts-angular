@@ -360,6 +360,7 @@ box-shadow: 0 0 15px rgba(0,0,0,0.10); margin-bottom:30px;letter-spacing: 1px; }
 .slider-content-inner .view-model-btn {background-color: #c98c56; color: #f9f8c7; border-color: #c98c56;}
 .slider-content-inner .view-model-btn:hover {background-color: transparent; color: #c98c56; border-color: #c98c56; }
 
+.main-slider-conmtainer img{width: 100%;}
 
 /******* main-slider **********/
 
@@ -508,6 +509,20 @@ box-shadow: 0 0 15px rgba(0,0,0,0.10); margin-bottom:30px;letter-spacing: 1px; }
     .container {max-width: 1410px;}
 }
 */
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .navbar {font-size: 12px;}
+    .navbar-brand img {height: 45px;}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .navbar {font-size: 11px;}
+    .navbar-brand img {height: 45px;}
+    .left-header p, .right-header p {font-size: 10px;}
+    .phone-number {font-size: 21px;}
+    .phone-icon img{height: 32px;}
+}
+
 /** Large devices (desktops, less than 1200px)*/
 
 @media (max-width: 1199.98px) { 
@@ -578,6 +593,15 @@ box-shadow: 0 0 15px rgba(0,0,0,0.10); margin-bottom:30px;letter-spacing: 1px; }
 
     .fuction-list li a img {height: 75px;}
     .basic-plan-panel {padding: 0 20%;}
+    .slide-h4{font-size: 1.5rem;    font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;}
+    .slide-5{font-size: 1.25rem;
+        font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;}
 
 }
 
@@ -673,6 +697,8 @@ box-shadow: 0 0 15px rgba(0,0,0,0.10); margin-bottom:30px;letter-spacing: 1px; }
      .fuction-list li a img {height: 60px;}
      .right-header  {display: none !important;}
 
+     .left-header p, .right-header p {font-size: 11px;}
+
      
 
 
@@ -696,6 +722,8 @@ box-shadow: 0 0 15px rgba(0,0,0,0.10); margin-bottom:30px;letter-spacing: 1px; }
 
      .payment-b .main-content {padding-top: 30px;}
      .fuction-list li a img {height: 45px;}
+
+
      
 
  }
