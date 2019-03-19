@@ -6,7 +6,9 @@
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <link rel="icon" type="image/x-icon" href="./assets/images/logo.png">
+  
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -146,14 +148,14 @@ $(document).ready(function() {
           var c1 = content1.substr(0, showChar1);
           var h1 = content1.substr(showChar1, content1.length - showChar1);
 
-          var html = c1 + '<span class="moreellipses">' + ellipsestext1+ '&nbsp;</span><span class="morecontent"><span>' + h1 + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext1 + '</a></span>';
+          var html = c1 + '<span class="moreellipses">' + ellipsestext1+ '&nbsp;</span><span class="morecontent"><span>' + h1 + '</span>&nbsp;&nbsp;<a href="" class="morelink morelink1">' + moretext1 + '</a></span>';
 
           $(this).html(html);
       }
 
   });
 
-  $(".morelink").click(function(){
+  $(".morelink1").click(function(){
       if($(this).hasClass("less")) {
           $(this).removeClass("less");
           $(this).html(moretext1);
