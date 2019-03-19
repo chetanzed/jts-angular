@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FootarComponent } from './footar/footar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
+import { ConferenceComponent } from './conference/conference.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     FootarComponent,
     LandingPageComponent,
-    LoginComponent
+    LoginComponent,
+    ConferenceComponent
   ],
   imports: [
     BrowserModule,
