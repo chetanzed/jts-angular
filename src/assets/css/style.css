@@ -3,7 +3,6 @@
 */
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-
 body {font-family: 'Poppins', sans-serif;background: #fafafa; color: #281e05; font-size: 14px;letter-spacing: 0.025em;}
 p {font-size: 1.1em; font-weight: 300; line-height: 1.7em;color: #999;}
 
@@ -346,8 +345,8 @@ box-shadow: 0 0 15px rgba(0,0,0,0.10); margin-bottom:30px;letter-spacing: 1px; }
 .slider-content {position: absolute;top: 50%; left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);transform: translate(-50%, -50%); color: #fff; width: 100%;}
 
-.slider-content-inner h1{text-shadow: 2px 2px 5px rgba(0,0,0,0.5)}
-.slider-content-inner h4{text-shadow: 2px 2px 5px rgba(0,0,0,0.5)}
+.slider-content-inner h1{text-shadow: 0 0 5px rgba(0,0,0,0.5)}
+.slider-content-inner h4{text-shadow: 0 0 5px rgba(0,0,0,0.5)}
 .slider-content-inner ul{font-family: 'Capriola'; color: #fff;}
 .slider-content-inner .slider-btn {font-family: 'Capriola'; color: #c98c56; background-color: #f9f8c7; display: inline-block;
  height: 50px; line-height: 50px;  padding:0 20px;  text-align: center;
@@ -498,7 +497,7 @@ box-shadow: 0 0 15px rgba(0,0,0,0.10); margin-bottom:30px;letter-spacing: 1px; }
 
 
 
-
+.navbar-toggler {padding: 0;font-size: 1rem; height: 40px; width: 40px;}
 
 
 /* ---------------------------------------------------
@@ -510,9 +509,15 @@ box-shadow: 0 0 15px rgba(0,0,0,0.10); margin-bottom:30px;letter-spacing: 1px; }
 }
 */
 
+
+@media (min-width: 992px) { 
+    .navbar-expand-lg .navbar-collapse.mobile-nav {display: none!important;}
+}
+
 @media (min-width: 992px) and (max-width: 1199.98px) { 
     .navbar {font-size: 12px;}
     .navbar-brand img {height: 45px;}
+    .navbar-expand-lg .navbar-collapse.mobile-nav {display: none!important;}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) { 
@@ -593,15 +598,7 @@ box-shadow: 0 0 15px rgba(0,0,0,0.10); margin-bottom:30px;letter-spacing: 1px; }
 
     .fuction-list li a img {height: 75px;}
     .basic-plan-panel {padding: 0 20%;}
-    .slide-h4{font-size: 1.5rem;    font-family: inherit;
-        font-weight: 500;
-        line-height: 1.2;
-        color: inherit;}
-    .slide-5{font-size: 1.25rem;
-        font-family: inherit;
-    font-weight: 500;
-    line-height: 1.2;
-    color: inherit;}
+    
 
 }
 
@@ -662,11 +659,18 @@ box-shadow: 0 0 15px rgba(0,0,0,0.10); margin-bottom:30px;letter-spacing: 1px; }
 /** Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) { 
 
-    .main-heading {font-size: 1.5rem;}
-    .sub-heading {font-size: 1rem;}
+.h1, h1{font-size: 1.80rem;}
+.h2, h2{font-size: 1.60rem;}
+.h3, h2{font-size: 1.40rem;}
+.h4, h3{font-size: 1.20rem;}
+.h5, h4{font-size: 1rem;}
+.h6, h5{font-size: 0.8rem;}
 
-    .slider-content-inner h1{font-size: 1.5rem}
-    .slider-content-inner h4{font-size: 1rem;}
+    .main-heading {font-size: 1.25rem;}
+    .sub-heading {font-size: 0.85rem;}
+
+    .slider-content-inner h1{font-size: 1.25rem}
+    .slider-content-inner h4{font-size: 0.8rem;}
 
     #sidebar {margin-left: -240px;transform: rotateY(90deg);}
     #sidebar.active {margin-left: 0; transform: none;}
@@ -691,21 +695,32 @@ box-shadow: 0 0 15px rgba(0,0,0,0.10); margin-bottom:30px;letter-spacing: 1px; }
      .basic-plan-panel {padding: 0;}
      .fuction-list li a {padding: 20px 0;font-size: 14px;}
      .cost-heading {padding: 15px;font-size: 20px; }
-     .basic-plan-list li a {padding: 20px 15px}
-     .basic-plan-list li .price-b {font-size: 40px;}
-     .fuction-list li {width: 33.33%;}
+     .basic-plan-list li a {padding: 15px}
+     .basic-plan-list li .price-b {font-size: 36px;}
+     .fuction-list li {width: 50%;}
      .fuction-list li a img {height: 60px;}
-     .right-header  {display: none !important;}
+     /* .right-header  {display: none !important;} */
+     .right-header .call-detail{display: none !important;} 
 
      .left-header p, .right-header p {font-size: 11px;}
+     .case-study-list li {padding-bottom: 15px;}
+     p{font-size: 0.9em;}     
 
-     
+     .header-line {display: none;}
+     .header-buttons {width: 100%;}
+     .header-buttons li a {font-size: 12px;}
+     .header-buttons li:first-child{display: none;}
+     .contact-buttons {margin-left: 10px;}
+     .contact-buttons .btn {padding: 8px 15px;}
+   
 
 
  }
 
 /** Extra small devices (portrait phones, less than 576px)**/
 @media (max-width: 575.98px) { 
+    .panel-padding{padding: 20px 0 10px;}
+    .basic-plan-list {margin-bottom: 20px;}
     .profile-detail {display: block;}
     .profile-detail label {margin-right: 0; display: block; width: 100%;border-right: none; }
     .profile-detail span { display: block; width: 100%; }
@@ -723,6 +738,10 @@ box-shadow: 0 0 15px rgba(0,0,0,0.10); margin-bottom:30px;letter-spacing: 1px; }
      .payment-b .main-content {padding-top: 30px;}
      .fuction-list li a img {height: 45px;}
 
+     .case-study-list li {width: 100%;}
+     .app-links-button img{height: 40px;}
+     .app-links-screen img{max-width: 70%;}
+   
 
      
 
