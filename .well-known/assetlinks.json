@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.zedtech.jtsboard",
+    "sha256_cert_fingerprints":
+    ["86:40:8B:3C:83:4D:13:B5:AD:DE:F9:4D:0A:E0:33:93:C6:16:C0:D1:CE:45:63:8D:18:C1:B5:01:23:4E:D3:2F"]
+  }
+}]
