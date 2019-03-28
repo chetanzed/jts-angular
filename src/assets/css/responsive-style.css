@@ -1,0 +1,156 @@
+/*
+    JTS Board
+*/
+
+
+/*@media (min-width: 1440px) {
+    .container {max-width: 1410px;}
+}
+*/
+@media (min-width: 1200px){
+.container { max-width: 1200px;}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+  
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  
+}
+
+/** Large devices (desktops, less than 1200px)*/
+
+@media (max-width: 1199.98px) { 
+
+    .mb-100{margin-bottom: 80px;}
+    .mb-80{margin-bottom: 65px;}
+    .mb-60{margin-bottom: 50px;}
+    .mb-50{margin-bottom: 40px;}
+    .mb-40{margin-bottom: 32px;}
+    .mb-30{margin-bottom: 24px;}
+    .mb-20{margin-bottom: 16px;}
+    .mb-15{margin-bottom: 12px;}
+    .mb-10{margin-bottom: 8px;}
+    .mb-5{margin-bottom: 5px;}
+
+    .ml-100{margin-left: 80px;}
+    .ml-80{margin-left: 65px;}
+    .ml-60{margin-left: 50px;}
+    .ml-50{margin-left: 40px;}
+    .ml-40{margin-left: 32px;}
+    .ml-30{margin-left: 24px;}
+    .ml-20{margin-left: 16px;}
+    .ml-15{margin-left: 12px;}
+    .ml-10{margin-left: 8px;}
+    .ml-5{margin-left: 5px;}
+
+    .mr-100{margin-right: 80px;}
+    .mr-80{margin-right: 65px;}
+    .mr-60{margin-right: 50px;}
+    .mr-50{margin-right: 40px;}
+    .mr-40{margin-right: 32px;}
+    .mr-30{margin-right: 24px;}
+    .mr-20{margin-right: 16px;}
+    .mr-15{margin-right: 12px;}
+    .mr-10{margin-right: 8px;}
+    .mr-5{margin-right: 5px;}
+
+    .mt-100{margin-top: 80px;}
+    .mt-80{margin-top: 65px;}
+    .mt-60{margin-top: 50px;}
+    .mt-50{margin-top: 40px;}
+    .ml-40{margin-top: 32px;}
+    .mt-30{margin-top: 24px;}
+    .mt-20{margin-top: 16px;}
+    .mt-15{margin-top: 12px;}
+    .mt-10{margin-top: 8px;}
+    .mt-5{margin-top: 5px;}
+
+}
+
+
+/** Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) { 
+
+    .mb-100{margin-bottom: 50px;}
+    .mb-80{margin-bottom: 40px;}
+    .mb-60{margin-bottom: 30px;}
+    .mb-50{margin-bottom: 25px;}
+    .mb-40{margin-bottom: 20px;}
+    .mb-30{margin-bottom: 15px;}
+    .mb-20{margin-bottom: 10px;}
+    .mb-15{margin-bottom: 8px;}
+    .mb-10{margin-bottom: 5px;}
+
+    .ml-100{margin-left: 50px;}
+    .ml-80{margin-left: 40px;}
+    .ml-60{margin-left: 30px;}
+    .ml-50{margin-left: 25px;}
+    .ml-40{margin-left: 20px;}
+    .ml-30{margin-left: 15px;}
+    .ml-20{margin-left: 10px;}
+    .ml-15{margin-left: 8px;}
+    .ml-10{margin-left: 5px;}
+
+    .mr-100{margin-right: 50px;}
+    .mr-80{margin-right: 40px;}
+    .mr-60{margin-right: 30px;}
+    .mr-50{margin-right: 25px;}
+    .mr-40{margin-right: 20px;}
+    .mr-30{margin-right: 15px;}
+    .mr-20{margin-right: 10px;}
+    .mr-15{margin-right: 8px;}
+    .mr-10{margin-right: 5px;}
+
+    .mt-100{margin-top: 50px;}
+    .mt-80{margin-top: 40px;}
+    .mt-60{margin-top: 30px;}
+    .mt-50{margin-top: 25px;}
+    .ml-40{margin-top: 20px;}
+    .mt-30{margin-top: 15px;}
+    .mt-20{margin-top: 10px;}
+    .mt-15{margin-top: 8px;}
+    .mt-10{margin-top: 5px;}
+
+    .btn {padding: 8px 30px;}
+    .form-control {padding: 8px 15px;}    
+    #back-top-button {width: 50px; height: 50px;line-height: 45px;font-size: 30px;bottom: 15px;right: 15px;}
+    }
+
+
+/** Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) { 
+
+    .h1, h1 {font-size: 1.80rem;}
+    .h2, h2 {font-size: 1.60rem;}
+    .h3, h3 {font-size: 1.40rem;}
+    .h4, h4 {font-size: 1.20rem;}
+    .h5, h5 {font-size: 1rem;}
+    .h6, h6 {font-size: 0.8rem;}
+
+    .main-heading {font-size: 1.25rem;}
+    .sub-heading {font-size: 0.85rem;}
+
+    p {font-size: 0.9em;}
+ }
+
+
+/** Extra small devices (portrait phones, less than 576px)**/
+@media (max-width: 575.98px) { 
+
+     p {font-size: 0.9em;}
+
+     .header {
+        height: auto;
+        text-align: center;
+    }
+
+ }
+
+
+
+
+
+
+
