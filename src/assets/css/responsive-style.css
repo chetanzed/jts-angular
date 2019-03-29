@@ -8,15 +8,21 @@
 }
 */
 @media (min-width: 1200px){
-.container { max-width: 1200px;}
+    .container { max-width: 1200px;}
+    .menu-left{display: none;}
+    .comment-box{top: -40px;left: -45px;}
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-  
+  .menu-left{display: none;}
+
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) { 
-  
+    .navbar-dark .navbar-toggler{border-color: rgba(255,255,255,.50);margin:10px;}
+    .top-nav .navbar{top:30px;}
+    .menu-left{vertical-align: middle;font-size: 20px;color: #fff;}
+    .app-img-button{height: 35px;}
 }
 
 /** Large devices (desktops, less than 1200px)*/
@@ -66,6 +72,18 @@
     .mt-15{margin-top: 12px;}
     .mt-10{margin-top: 8px;}
     .mt-5{margin-top: 5px;}
+    
+    .padding-panel {padding-top: 80px; padding-bottom: 56px;}
+    .fuction-list li a img {height: 70px;}
+.slider-content-inner h1{    font-size: 2.95rem; }
+.slider-content-inner h2{    font-size: 1.2rem; }
+.slider-content-inner h4{    font-size: 0.8rem; }
+.slider-text{margin-bottom: 18px;}
+
+
+    .right-header .col-right-header {padding-left: 15px;}
+    .right-header .col-right-header:first-child {padding-left: 0;}
+    .col-right-header-btn {padding-left: 15px; margin-left: 15px;}
 
 }
 
@@ -75,7 +93,7 @@
 
     .mb-100{margin-bottom: 50px;}
     .mb-80{margin-bottom: 40px;}
-    .mb-60{margin-bottom: 30px;}
+   
     .mb-50{margin-bottom: 25px;}
     .mb-40{margin-bottom: 20px;}
     .mb-30{margin-bottom: 15px;}
@@ -113,41 +131,106 @@
     .mt-15{margin-top: 8px;}
     .mt-10{margin-top: 5px;}
 
-    .btn {padding: 8px 30px;}
+    .padding-panel {padding-top: 60px; padding-bottom: 45px;}
+    .header {text-align: center;}
+    .right-header {text-align: center;}
+    .right-header {padding-top: 10px;}
+    .right-header .col-right-header {padding-left:20px;}
+    .right-header .col-right-header:first-child {padding-left: 0}
+     .col-right-header-btn {padding-left: 15px; margin-left: 15px;}
+
+     .salon-voice-content h4{line-height: 32px;font-size: 1rem;}
+     .basic-plans-list li .price-b {font-size: 35px;}
+
+.comment-box img{margin-bottom: 10px;height: 150px;}
+    .comment-box{position: unset; }
+.white-bg{padding: 20px 15px;}
+    .cs-content h6{font-size: 0.8rem;}
+ .help-suppoer-img img{height: 150px;}
+ 
+    /*.btn {padding: 8px 30px;}
     .form-control {padding: 8px 15px;}    
-    #back-top-button {width: 50px; height: 50px;line-height: 45px;font-size: 30px;bottom: 15px;right: 15px;}
+    #back-top-button {width: 50px; height: 50px;line-height: 45px;font-size: 30px;bottom: 15px;right: 15px;}*/
     }
 
 
 /** Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) { 
 
-    .h1, h1 {font-size: 1.80rem;}
-    .h2, h2 {font-size: 1.60rem;}
-    .h3, h3 {font-size: 1.40rem;}
-    .h4, h4 {font-size: 1.20rem;}
+    .h1, h1 {font-size: 1.8rem;}
+    .h2, h2 {font-size: 1.6rem;}
+    .h3, h3 {font-size: 1.4rem;}
+    .h4, h4 {font-size: 1.2rem;}
     .h5, h5 {font-size: 1rem;}
     .h6, h6 {font-size: 0.8rem;}
+.top-nav .navbar{top: 25px;}
+.top-app-links li img{height: 40px;}
+    .padding-panel {padding-top: 50px;padding-bottom: 35px;}
+    .page-heading h1 {margin: 0 0 25px; padding-bottom: 20px;}
+    .page-sub-heading h5 {line-height: 28px;margin-bottom: 25px;}
 
-    .main-heading {font-size: 1.25rem;}
+    .brand-logo img{height: 45px;}  
+      .navbar-dark .navbar-toggler{border-color: rgba(255,255,255,.50);margin:5px;}  
+      .menu-left{vertical-align: middle;font-size: 20px;color: #fff;}
+    .col-right-header-btn {display: block; border-left: none; padding-left: 0; margin-left: 0; padding-top: 10px;}
+   
+    .fuction-list li a {padding:25px 15px; }
+    .fuction-list li a img {margin-bottom: 15px; height: 50px;}
+ 
+ .slide-app-img-button{height: 25px;}
+    /*.main-heading {font-size: 1.25rem;}
     .sub-heading {font-size: 0.85rem;}
 
-    p {font-size: 0.9em;}
+    p {font-size: 0.9em;}*/
  }
 
 
 /** Extra small devices (portrait phones, less than 576px)**/
 @media (max-width: 575.98px) { 
 
-     p {font-size: 0.9em;}
+     /*p {font-size: 0.9em;}*/
+    .h1, h1 {font-size: 1.5rem;}
+    .h2, h2 {font-size: 1.40rem;}
+    .h3, h3 {font-size: 1.15rem;}
+    .h4, h4 {font-size: 1rem;}
+    .h5, h5 {font-size: 0.85rem;}
+    .h6, h6 {font-size: 0.70rem;}
 
-     .header {
-        height: auto;
-        text-align: center;
-    }
+    .header-top {font-size: 10px;}
+    .brand-logo {padding-top: 0;}
+.top-nav .navbar{top: 25px;}
+    .slider-content-inner h1{font-size: 1rem;}
+   
+ .top-app-links li img{height: 30px;}
+    .right-header .col-right-header {display: block;padding-left: 0;vertical-align: middle; padding-top: 15px;}
+.advantage-list li{font-size: 0.95rem;    margin-bottom: 20px; line-height: 90px;}
+   .advantage-list li img{height: 45px;} 
+    
+   .container-x {overflow-x: auto;}
+   .compare-table tr th img{ width: auto; height: 32px; max-width: fit-content;}
+   .salon-voice-content{        padding: 10px 0;}
+  .salon-voice-content h4{line-height: 14px;font-size: 11px;}
+   
 
+.footer-top{padding-top: 40px;}
+.footer-top .footer-links{margin-bottom: 40px;}
+
+.footer-top .footer-heading{margin-bottom: 30px;}
+ 
  }
-
+.header{padding: 10px;}
+.header-top{padding: 0;}
+.phone-icon{padding: 10px 30px;}
+.phone-icon img{height: 32px;}
+.number-detail {display: table; margin:0; }
+.number-detail li{display: table-cell; vertical-align: middle; padding-right: 10px;}
+.phone-number {font-size: 24px; font-weight: bold;}
+.col-right-header-btn .btn{font-size: 1rem;padding: 12px 35px;}
+.timing{    font-size: 0.75rem;}
+.header-link li a {font-size: 13px;}
+.salon-voice-panel {position: relative; background-image: url(../images/bg/salon-voice-bg.jpg);
+    background-repeat: no-repeat;background-size: cover;background-position: center;}
+.number-detail {display: flex;}
 
 
 
