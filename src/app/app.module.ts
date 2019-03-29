@@ -8,6 +8,7 @@ import { FootarComponent } from './footar/footar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
 import { ConferenceComponent } from './conference/conference.component';
+import { RecruitComponent } from './recruit/recruit.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ConferenceComponent } from './conference/conference.component';
     FootarComponent,
     LandingPageComponent,
     LoginComponent,
-    ConferenceComponent
+    ConferenceComponent,
+    RecruitComponent
   ],
   imports: [
     BrowserModule,

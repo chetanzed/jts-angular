@@ -3,9 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
 import { ConferenceComponent } from './conference/conference.component';
+import { RecruitComponent } from './recruit/recruit.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
+  {path: 'recruit',component: RecruitComponent},
   {path: 'login', component: LoginComponent},
   {path: 'conference', component: ConferenceComponent},
 

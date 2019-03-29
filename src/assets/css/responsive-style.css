@@ -236,6 +236,50 @@
 
 
 
+/*************** Recrit page end **************/
+
+.recurit-section-2-list li { background-color: #f5f5f5; text-align: center; font-size: 1.1rem; font-weight: 500; color: #000; margin: 10px; line-height: 80px; -webkit-border-radius: 2px;
+    -moz-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; transition: all .3s; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; display: inline-block;
+    width: 46%;}
+.recurit-section-2-list li:hover { box-shadow: 0 10px 15px rgba(0,0,0,0.20); -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.20);} 
+
+
+.recurit-section-3 {background-image: url(../assets/images/bg/recruitment5.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;}
+.recurit-section-3-list li { background-color: #fff; text-align: center; font-size: 0.8rem; font-weight: 500; color: #000; margin: 10px; line-height: 80px; -webkit-border-radius: 2px;
+    -moz-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; transition: all .3s; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; display: inline-block;
+    width: 25%; border: 1px solid #f3f3f3;}
+.recurit-section-3-list li:hover { box-shadow: 0 10px 15px rgba(0,0,0,0.20); -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.20);}
+/***** recurit-section-4 start***********/
+.recurit-section-4 {background-color: #7a9ae3;}
+.recurit-section-4-table {border-collapse: separate;border-spacing: 0 10px; width: 100%;}
+.recurit-section-4-table thead tr {background-color: #e2f0ec;}
+.recurit-section-4-table .function-name-bg {background-color: #bfd2ff;}
+.recurit-section-4-table .jts-value-bg {background-color: #fff4cd;}
+.recurit-section-4-table tr {transition: all .3s; -webkit-transition: all .3s; -moz-transition: all .3s;-o-transition: all .3s; background-color: #fff;}
+.recurit-section-4-table tr:hover {box-shadow: 0 10px 10px rgba(0,0,0,0.20); -webkit-box-shadow: 0 10px 10px rgba(0,0,0,0.20);}
+.recurit-section-4-table td, .recurit-section-4-table th {padding:0.75rem; font-size: 1.1rem; color: #000000;}
+.recurit-section-4-table td:first-child, .recurit-section-4-table th:first-child {border-radius: 2px 0 0 2px;  width: 35%;}
+.recurit-section-4-table td:last-child, .recurit-section-4-table th:last-child {border-radius: 0 2px 2px 0; width: 100%;}
+.recurit-section-4-table .fa-check{color: #149600; font-size: 1.25rem;}
+.recurit-section-4-table .fa-times{color: #c80000; font-size: 1.25rem;}
+/***** recurit-section-4 end***********/
+
+/***** recurit-section-5 start***********/
+.recurit-section-5 {background-color: #7a9ae3;}
+.recurit-section-5-table {border-collapse: separate;border-spacing: 0 10px; width: 100%;}
+.recurit-section-5-table thead tr {background-color: #7a9ae3;}
+.recurit-section-5-table .function-name-bg {background-color: #bfd2ff;}
+.recurit-section-5-table .jts-value-bg {background-color: #fff4cd;}
+.recurit-section-5-table tr {transition: all .3s; -webkit-transition: all .3s; -moz-transition: all .3s;-o-transition: all .3s; background-color: #fff;}
+.recurit-section-5-table tr:hover {box-shadow: 0 10px 10px rgba(0,0,0,0.20); -webkit-box-shadow: 0 10px 10px rgba(0,0,0,0.20);}
+.recurit-section-5-table td, .recurit-section-5-table th {padding:0.75rem; font-size: 1.1rem; color: #000000; width: 25%; font-weight: 600;}
+.recurit-section-5-table td:first-child, .recurit-section-4-table th:first-child {border-radius: 2px 0 0 2px;  width: 25%;}
+.recurit-section-5-table td:last-child, .recurit-section-4-table th:last-child {border-radius: 0 2px 2px 0; width: 100%;}
+.recurit-section-5-table .fa-check{color: #149600; font-size: 1.25rem;}
+.recurit-section-5-table .fa-times{color: #c80000; font-size: 1.25rem;}
+.recruit-section-6-btn {width: 75%; font-size: 1rem; padding: 15px 30px;}
+/***** recurit-section-5 end***********/
+
 
 
 

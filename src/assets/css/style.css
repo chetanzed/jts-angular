@@ -138,8 +138,8 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 /****** main nav start**********/ 
 .top-nav .navbar {background-color: #e7c240;border: 0 none; float: none; margin-bottom: 0; margin-top: 0; min-height: auto; padding:0; padding-left: 20px; position: relative; top:35px;
     z-index: 777;}
-.top-nav .navbar-nav > li > a {color: #fff;display: block; font-size: 13px;padding: 25px 15px; position: relative; text-transform: uppercase;}
-.top-nav .navbar-nav > li > a:hover,.top-nav .navbar-nav > li > a:focus{color:#281e05; }
+.top-nav .navbar-dark .navbar-nav > li > a {color: #fff;display: block; font-weight: 600; font-size: 13px;padding: 15px; position: relative; text-transform: uppercase;}
+.top-nav .navbar-dark .navbar-nav > li > a:hover,.top-nav .navbar-nav > li > a:focus{color:#281e05; }
 .navbar-expand-lg .navbar-nav .nav-link {padding-right: 15px; padding-left: 15px; }
 /****** main nav end **********/
 
