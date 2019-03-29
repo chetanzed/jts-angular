@@ -199,9 +199,11 @@
     .header-top {font-size: 10px;}
     .brand-logo {padding-top: 0;}
 .top-nav .navbar{top: 25px;}
-    .slider-content-inner h1{font-size: 1rem;}
+  .slider-content-inner h1{    font-size: 1rem; margin-bottom: 12px;}
+.slider-content-inner h2{    font-size: 0.8rem;  margin-bottom: 8px;}
+.slider-content-inner h4{    font-size: 0.5rem; }
    
- .top-app-links li img{height: 30px;}
+ .top-app-links li img{height: 24px;}
     .right-header .col-right-header {display: block;padding-left: 0;vertical-align: middle; padding-top: 15px;}
 .advantage-list li{font-size: 0.95rem;    margin-bottom: 20px; line-height: 90px;}
    .advantage-list li img{height: 45px;} 
