@@ -217,9 +217,6 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .salon-voice-content { bottom: 0; background-color: rgba(0,0,0,0.5); left: 0; right: 0; padding: 20px 0; text-align: center;}
 .salon-voice-content h4{color: #fff; line-height: 36px;}
 
-.page-sub-heading h4{color: #fff;}
-.salon-voice-content p{color: #fff;}
-
 /***** salon-voice-panel end ***********/
 
 /***** pricing-panel start ***********/
