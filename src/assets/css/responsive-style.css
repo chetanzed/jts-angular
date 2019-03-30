@@ -23,6 +23,8 @@
     .top-nav .navbar{top:30px;}
     .menu-left{vertical-align: middle;font-size: 20px;color: #fff;}
     .app-img-button{height: 35px;}
+  
+
 }
 
 /** Large devices (desktops, less than 1200px)*/
@@ -84,7 +86,7 @@
     .right-header .col-right-header {padding-left: 15px;}
     .right-header .col-right-header:first-child {padding-left: 0;}
     .col-right-header-btn {padding-left: 15px; margin-left: 15px;}
-
+    .recurit-section-2-list li{font-size: 1rem;}
 }
 
 
@@ -147,7 +149,11 @@
 .white-bg{padding: 20px 15px;}
     .cs-content h6{font-size: 0.8rem;}
  .help-suppoer-img img{height: 150px;}
- 
+ .recurit-section-2-list li{margin: 11px;
+    padding: 25px;    font-size: 1.2rem;    width: 100%;}
+    .recurit-section-3-list li{    margin: 10px;    font-size: 0.8rem;    width: 45%;}
+    .page-heading h3{font: 1.5rem;}
+   
     /*.btn {padding: 8px 30px;}
     .form-control {padding: 8px 15px;}    
     #back-top-button {width: 50px; height: 50px;line-height: 45px;font-size: 30px;bottom: 15px;right: 15px;}*/
@@ -182,6 +188,10 @@
     .sub-heading {font-size: 0.85rem;}
 
     p {font-size: 0.9em;}*/
+    .recurit-section-2-list li{width: 90%;margin: 7px;
+        padding: 3px 2px;
+        line-height: 48px;font-size: 0.8rem;}
+        
  }
 
 
@@ -218,8 +228,12 @@
 .footer-top .footer-links{margin-bottom: 40px;}
 
 .footer-top .footer-heading{margin-bottom: 30px;}
- 
- }
+ /* -------------------recurit========================================== */
+ .recurit-section-3-list li{    width: 90%;font-size: 0.8rem;}
+ .recurit-section-5-table td, .recurit-section-5-table th{font-size: 0.8rem;}
+ .recurit-section-4-table td, .recurit-section-4-table th{font-size: 0.9rem;}
+ .page-heading h3{font-size: 0.9rem;}
+}
 .header{padding: 10px;}
 .header-top{padding: 0;}
 .phone-icon{padding: 10px 30px;}
@@ -236,49 +250,7 @@
 
 
 
-/*************** Recrit page end **************/
 
-.recurit-section-2-list li { background-color: #f5f5f5; text-align: center; font-size: 1.1rem; font-weight: 500; color: #000; margin: 10px; line-height: 80px; -webkit-border-radius: 2px;
-    -moz-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; transition: all .3s; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; display: inline-block;
-    width: 46%;}
-.recurit-section-2-list li:hover { box-shadow: 0 10px 15px rgba(0,0,0,0.20); -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.20);} 
-
-
-.recurit-section-3 {background-image: url(../images/bg/recruitment5.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;}
-.recurit-section-3-list li { background-color: #fff; text-align: center; font-size: 0.8rem; font-weight: 500; color: #000; margin: 10px; line-height: 80px; -webkit-border-radius: 2px;
-    -moz-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; transition: all .3s; -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; display: inline-block;
-    width: 25%; border: 1px solid #f3f3f3;}
-.recurit-section-3-list li:hover { box-shadow: 0 10px 15px rgba(0,0,0,0.20); -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.20);}
-/***** recurit-section-4 start***********/
-.recurit-section-4 {background-color: #7a9ae3;}
-.recurit-section-4-table {border-collapse: separate;border-spacing: 0 10px; width: 100%;}
-.recurit-section-4-table thead tr {background-color: #e2f0ec;}
-.recurit-section-4-table .function-name-bg {background-color: #bfd2ff;}
-.recurit-section-4-table .jts-value-bg {background-color: #fff4cd;}
-.recurit-section-4-table tr {transition: all .3s; -webkit-transition: all .3s; -moz-transition: all .3s;-o-transition: all .3s; background-color: #fff;}
-.recurit-section-4-table tr:hover {box-shadow: 0 10px 10px rgba(0,0,0,0.20); -webkit-box-shadow: 0 10px 10px rgba(0,0,0,0.20);}
-.recurit-section-4-table td, .recurit-section-4-table th {padding:0.75rem; font-size: 1.1rem; color: #000000;}
-.recurit-section-4-table td:first-child, .recurit-section-4-table th:first-child {border-radius: 2px 0 0 2px;  width: 35%;}
-.recurit-section-4-table td:last-child, .recurit-section-4-table th:last-child {border-radius: 0 2px 2px 0; width: 100%;}
-.recurit-section-4-table .fa-check{color: #149600; font-size: 1.25rem;}
-.recurit-section-4-table .fa-times{color: #c80000; font-size: 1.25rem;}
-/***** recurit-section-4 end***********/
-
-/***** recurit-section-5 start***********/
-.recurit-section-5 {background-color: #7a9ae3;}
-.recurit-section-5-table {border-collapse: separate;border-spacing: 0 10px; width: 100%;}
-.recurit-section-5-table thead tr {background-color: #7a9ae3;}
-.recurit-section-5-table .function-name-bg {background-color: #bfd2ff;}
-.recurit-section-5-table .jts-value-bg {background-color: #fff4cd;}
-.recurit-section-5-table tr {transition: all .3s; -webkit-transition: all .3s; -moz-transition: all .3s;-o-transition: all .3s; background-color: #fff;}
-.recurit-section-5-table tr:hover {box-shadow: 0 10px 10px rgba(0,0,0,0.20); -webkit-box-shadow: 0 10px 10px rgba(0,0,0,0.20);}
-.recurit-section-5-table td, .recurit-section-5-table th {padding:0.75rem; font-size: 1.1rem; color: #000000; width: 25%; font-weight: 600;}
-.recurit-section-5-table td:first-child, .recurit-section-4-table th:first-child {border-radius: 2px 0 0 2px;  width: 25%;}
-.recurit-section-5-table td:last-child, .recurit-section-4-table th:last-child {border-radius: 0 2px 2px 0; width: 100%;}
-.recurit-section-5-table .fa-check{color: #149600; font-size: 1.25rem;}
-.recurit-section-5-table .fa-times{color: #c80000; font-size: 1.25rem;}
-.recruit-section-6-btn {width: 75%; font-size: 1rem; padding: 15px 30px;}
-/***** recurit-section-5 end***********/
 
 
 
