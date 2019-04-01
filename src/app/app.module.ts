@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
+import { HttpClientModule }    from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
 import { ConferenceComponent } from './conference/conference.component';
 import { RecruitComponent } from './recruit/recruit.component';
+import { AdminComponent } from './admin/admin.component';
+import {  AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,17 @@ import { RecruitComponent } from './recruit/recruit.component';
     LandingPageComponent,
     LoginComponent,
     ConferenceComponent,
-    RecruitComponent
+    RecruitComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

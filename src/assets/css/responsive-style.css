@@ -234,10 +234,14 @@
  .recurit-section-4-table td, .recurit-section-4-table th{font-size: 0.9rem;}
  .page-heading h3{font-size: 0.9rem;}
 }
+
+
+
 .header{padding: 10px;}
 .header-top{padding: 0;}
 .phone-icon{padding: 10px 30px;}
 .phone-icon img{height: 32px;}
+.item{    background-color: #da5a67;}
 .number-detail {display: table; margin:0; }
 .number-detail li{display: table-cell; vertical-align: middle; padding-right: 10px;}
 .phone-number {font-size: 24px; font-weight: bold;}
