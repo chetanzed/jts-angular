@@ -18,12 +18,15 @@ export class LoginComponent implements OnInit {
   
   onSignin(){
     var log= {
-      "email": "mannysahu.zed@gmail.com", "password":"123456"
+      "email": "ss@yopmail.com",
+      "password": "123456"
+  
      }
 this.authservice.checkLogin(log)
 .subscribe(data =>{
        
-  if(data.user_id)
+  console.log (data)
+  if(data.msg1)
   {
 
     localStorage.setItem("isLoggedin","yes");

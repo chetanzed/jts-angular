@@ -251,7 +251,7 @@
 .salon-voice-panel {position: relative; background-image: url(../images/bg/salon-voice-bg.jpg);
     background-repeat: no-repeat;background-size: cover;background-position: center;}
 .number-detail {display: flex;}
-
+.rec_img{width: 100%;}
 
 
 

@@ -11,6 +11,6 @@ export class AuthService {
   constructor(private http:HttpClient) { }
   checkLogin(log): Observable <Login>
   {
-   return this.http.post<Login> ("https://api.jtsboard.com/web_servicesv35/login","log")
+   return this.http.post<Login> ("https://api.jtsboard.com/web_servicesv30/login","log")
   }
 }

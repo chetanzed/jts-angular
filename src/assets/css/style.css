@@ -11,7 +11,7 @@ p {font-size: 1.1em; font-weight: 300; line-height: 1.7em;color: #999;}
 a {color: #e7c240;  -webkit-transition: all .3s; -moz-transition: all .3s; -o-transition: all .3s; transition: all .3s; outline:0 none;}
 a:hover, a:focus  {color: #281e05;text-decoration: none;transition: all 0.3s; -webkit-transition: all 0.3s;}
 ul {list-style-type: none;padding: 0; margin-bottom: 0;}
-img {max-width: 100%;border-style: none;height: auto;width: auto;}
+img {max-width: 100%;border-style: none;height: auto;width: auto; }
 button:focus {outline: 0 none;}
 
 .btn{background: #e7c240;border: none;color: #fff;padding: 10px 30px;font-size: 0.85rem; transition: all .3s; -webkit-transition: all .3s; -moz-transition: all .3s;-o-transition: all .3s; 
@@ -285,6 +285,23 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .recurit-section-4-table .fa-check{color: #149600; font-size: 1.25rem;}
 .recurit-section-4-table .fa-times{color: #c80000; font-size: 1.25rem;}
 /***** recurit-section-4 end***********/
+
+/************ new dashboard *************/
+
+.main-dashboard .navbar {box-shadow: none; background-image: linear-gradient(to bottom, rgba(220,188,77,1), rgba(157,126,47,1)) !important; padding: 15px;}
+.block-menu {/*position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);*/}
+.block-menu-list {display: flex; flex-wrap: wrap;}
+.block-menu-list li{width: 33.33%; padding: 25px;}
+.block-menu-list li a{display: block;}
+.block-menu-list .bottom-border{border-bottom: 2px solid #debd4e;}
+.block-menu-list .left-border{border-left: 2px solid #debd4e;}
+.block-menu-list span{display: block; color: #a9abae;}
+.block-menu-list img{height: 125px;}
+
+
+.main-dashboard #sidebarCollapse {width: unset; height: unset; background: no-repeat; cursor: pointer; border-radius: 0;}
+
+/************ new dashboard *************/
 
 /***** recurit-section-5 start***********/
 .recurit-section-5 {background-color: #7a9ae3;}
