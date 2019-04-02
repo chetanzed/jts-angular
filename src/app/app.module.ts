@@ -14,6 +14,7 @@ import { RecruitComponent } from './recruit/recruit.component';
 import { AdminComponent } from './admin/admin.component';
 import {  AuthService } from './auth.service';
 import { RegistrationComponent } from './registration/registration.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RegistrationComponent } from './registration/registration.component';
     ConferenceComponent,
     RecruitComponent,
     AdminComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

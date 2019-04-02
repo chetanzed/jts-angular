@@ -7,14 +7,14 @@ import { RecruitComponent } from './recruit/recruit.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './auth.guard';
 import { RegistrationComponent } from './registration/registration.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'recruit',component: RecruitComponent},
   {path:'register',component:RegistrationComponent},
-
-
   {path: 'login',   component: LoginComponent},
+  {path:'signup',component:SignupComponent},
   {path: 'admin', canActivate:[AuthGuard], component: AdminComponent},
   {path: 'conference', component: ConferenceComponent},
 
