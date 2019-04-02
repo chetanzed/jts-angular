@@ -9,21 +9,23 @@
 */
 @media (min-width: 1200px){
     .container { max-width: 1200px;}
-    .menu-left{display: none;}
-    .comment-box{top: -40px;left: -45px;}
+    .col-right-header-btn .btn {font-size: 1rem; padding: 12px 35px;}
+
+    
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-  .menu-left{display: none;}
-
+    .slider-face img{width: 60%;}
+    .slider-content-inner h1 {font-size: 2.75rem}
+    .slider-content-inner h4 {font-size: 1.25rem}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) { 
-    .navbar-dark .navbar-toggler{border-color: rgba(255,255,255,.50);margin:10px;}
-    .top-nav .navbar{top:30px;}
-    .menu-left{vertical-align: middle;font-size: 20px;color: #fff;}
-    .app-img-button{height: 35px;}
-  
+    .slider-face img{height: 375px; width: unset;}
+    .slider-content-inner h1 {font-size: 2.25rem}
+    .slider-content-inner h2 {font-size: 1.6rem}
+    .slider-content-inner h4 {font-size: 1rem}
+    .top-app-links img {height: 48px;}
 
 }
 
@@ -74,19 +76,18 @@
     .mt-15{margin-top: 12px;}
     .mt-10{margin-top: 8px;}
     .mt-5{margin-top: 5px;}
-    
+
     .padding-panel {padding-top: 80px; padding-bottom: 56px;}
-    .fuction-list li a img {height: 70px;}
-.slider-content-inner h1{    font-size: 2.95rem; }
-.slider-content-inner h2{    font-size: 1.2rem; }
-.slider-content-inner h4{    font-size: 0.8rem; }
-.slider-text{margin-bottom: 18px;}
 
+    .header-link li a{font-size: 11px;}    
+    .phone-icon img {height: 40px;}
 
-    .right-header .col-right-header {padding-left: 15px;}
-    .right-header .col-right-header:first-child {padding-left: 0;}
-    .col-right-header-btn {padding-left: 15px; margin-left: 15px;}
-    .recurit-section-2-list li{font-size: 1rem;}
+    .comment-box {left: -30px;top: -70px;}
+    .comment-box img{height: 190px;}
+    .comment-box h2 {top: 60px;}
+
+    
+
 }
 
 
@@ -95,7 +96,7 @@
 
     .mb-100{margin-bottom: 50px;}
     .mb-80{margin-bottom: 40px;}
-   
+    .mb-60{margin-bottom: 30px;}
     .mb-50{margin-bottom: 25px;}
     .mb-40{margin-bottom: 20px;}
     .mb-30{margin-bottom: 15px;}
@@ -134,138 +135,133 @@
     .mt-10{margin-top: 5px;}
 
     .padding-panel {padding-top: 60px; padding-bottom: 45px;}
-    .header {text-align: center;}
-    .right-header {text-align: center;}
-    .right-header {padding-top: 10px;}
-    .right-header .col-right-header {padding-left:20px;}
-    .right-header .col-right-header:first-child {padding-left: 0}
-     .col-right-header-btn {padding-left: 15px; margin-left: 15px;}
 
-     .salon-voice-content h4{line-height: 32px;font-size: 1rem;}
-     .basic-plans-list li .price-b {font-size: 35px;}
+    .header-top {font-size: 0.55rem}
+    .col-right-header-btn {padding-left: 25px; margin-left: 25px;}
+    .col-right-header p {font-size: 11px;}
+    .col-right-header .timing {font-size: 0.65rem;}
+    .phone-icon img {height: 32px;}
+    .phone-number {font-size: 21px;}
+    .top-nav .navbar {padding-left: 0; color: #fff;}
+    .menu-left {display: block;padding-left: 15px; font-size: 1.2rem;}
 
-.comment-box img{margin-bottom: 10px;height: 150px;}
-    .comment-box{position: unset; }
-.white-bg{padding: 20px 15px;}
-    .cs-content h6{font-size: 0.8rem;}
- .help-suppoer-img img{height: 150px;}
- .recurit-section-2-list li{margin: 11px;
-    padding: 25px;    font-size: 1.2rem;    width: 100%;}
-    .recurit-section-3-list li{    margin: 10px;    font-size: 0.8rem;    width: 45%;}
-    .page-heading h3{font: 1.5rem;}
+    .navbar-dark .navbar-toggler {border: none;}
+    .navbar-nav {background-color: #140c02;}
+    .top-nav .navbar {top: 20px;}
+
+    .comment-box {left: -10px;top: -50px;}
+    .comment-box img{height: 160px;}
+    .comment-box h2 {top: 50px;}
+
+    .app-link-btn img {height: 45px;}
+    .recruit-header-panel h1 {font-size: 1.25rem;}
+     .recruit-header-panel h2 {padding: 20px 0;line-height: unset; font-size: 1rem;}
+     .recruit-comment {top: -60px; left: 7%;}
+     .recruit-comment img{height: 80px;}
+     .recruit-comment h3 { top: 28px; font-size: 1rem;}
+     .recruit-block-text {font-size: 0.75rem}
+     .recruit-work-text {font-size: 0.7rem;}
+
+
    
-    /*.btn {padding: 8px 30px;}
-    .form-control {padding: 8px 15px;}    
-    #back-top-button {width: 50px; height: 50px;line-height: 45px;font-size: 30px;bottom: 15px;right: 15px;}*/
     }
 
 
 /** Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) { 
-
     .h1, h1 {font-size: 1.8rem;}
     .h2, h2 {font-size: 1.6rem;}
     .h3, h3 {font-size: 1.4rem;}
     .h4, h4 {font-size: 1.2rem;}
     .h5, h5 {font-size: 1rem;}
     .h6, h6 {font-size: 0.8rem;}
-.top-nav .navbar{top: 25px;}
-.top-app-links li img{height: 40px;}
-    .padding-panel {padding-top: 50px;padding-bottom: 35px;}
-    .page-heading h1 {margin: 0 0 25px; padding-bottom: 20px;}
-    .page-sub-heading h5 {line-height: 28px;margin-bottom: 25px;}
+     p {font-size: 0.9em;}
 
-    .brand-logo img{height: 45px;}  
-      .navbar-dark .navbar-toggler{border-color: rgba(255,255,255,.50);margin:5px;}  
-      .menu-left{vertical-align: middle;font-size: 20px;color: #fff;}
-    .col-right-header-btn {display: block; border-left: none; padding-left: 0; margin-left: 0; padding-top: 10px;}
-   
-    .fuction-list li a {padding:25px 15px; }
+    .padding-panel {padding-top: 50px; padding-bottom: 35px;}
+    .btn {font-size: 0.75rem;padding: 8px 25px;}
+    .page-heading h1 {margin: 0 0 25px; padding-bottom: 25px;}
+    .page-sub-heading h5 {line-height: 30px;margin-bottom: 25px;}
+    #back-top-button.show {display: none;}
+    .white-bg {padding: 20px 15px;}
+
+    .header {text-align: center;}
+    .brand-logo img{height: 45px;}
+    .right-header {padding-top: 10px; padding-bottom: 10px;}
+    .right-header {text-align: center;}
+    .header-top {text-align: center; margin-top: 0; background-color: #f5f5f5; padding: 5px 0;  border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-radius: 2px;
+    margin-bottom: -10px;}
+    .top-nav .navbar-nav > li > a {padding: 20px 15px;}
+
+    .slider-face {text-align: center;}
+    .slider-content {position: unset; -webkit-transform: unset; transform:unset; text-align: center;}
+    .slider-content-inner h1 {font-size: 2rem;}
+    .slider-content-inner h4 {font-size: 0.85rem;}
+    .top-app-links img { height: 40px; margin-bottom: 30px;}
+    .slider-face img {width: unset;}
+
+    .fuction-list li a {padding: 25px 15px;}
     .fuction-list li a img {margin-bottom: 15px; height: 50px;}
- 
- .slide-app-img-button{height: 25px;}
-    /*.main-heading {font-size: 1.25rem;}
-    .sub-heading {font-size: 0.85rem;}
+    .help-suppoer-img img {width: 240px;}
 
-    p {font-size: 0.9em;}*/
-    .recurit-section-2-list li{width: 90%;margin: 7px;
-        padding: 3px 2px;
-        line-height: 48px;font-size: 0.8rem;}
-        
+    .comment-box {position: unset;margin: -60px 0 10px;}
+    .comment-box img{height: 150px}
+    .comment-box h2{top: 5px;}
+
+    .advantage-list li {font-size: 0.95rem; margin-bottom: 15px;line-height: 90px;}
+    .advantage-list li img{height: 45px;}
+
+    .basic-plans-list li .price-b {font-size: 36px;}
+    .app-link-btn img {height: 35px;}
+
+     .join-us-b .join-us-btn {padding: 10px; width: 250px; font-size: 1rem;}
+     .recruit-reward-panel .table-gap td, .recruit-reward-panel .table-gap th { font-size: 0.8rem;}
+     .recruit-work-text, .recruit-block-text {margin-bottom: 15px;}
  }
+
 
 
 /** Extra small devices (portrait phones, less than 576px)**/
 @media (max-width: 575.98px) { 
 
-     /*p {font-size: 0.9em;}*/
+
     .h1, h1 {font-size: 1.5rem;}
     .h2, h2 {font-size: 1.40rem;}
     .h3, h3 {font-size: 1.15rem;}
     .h4, h4 {font-size: 1rem;}
-    .h5, h5 {font-size: 0.85rem;}
+    .h5, h5 {font-size: 0.8rem;}
     .h6, h6 {font-size: 0.70rem;}
 
-    .header-top {font-size: 10px;}
-    .brand-logo {padding-top: 0;}
-.top-nav .navbar{top: 25px;}
-  .slider-content-inner h1{    font-size: 1rem; margin-bottom: 12px;}
-.slider-content-inner h2{    font-size: 0.8rem;  margin-bottom: 8px;}
-.slider-content-inner h4{    font-size: 0.5rem; }
-   
- .top-app-links li img{height: 24px;}
-    .right-header .col-right-header {display: block;padding-left: 0;vertical-align: middle; padding-top: 15px;}
-.advantage-list li{font-size: 0.95rem;    margin-bottom: 20px; line-height: 90px;}
-   .advantage-list li img{height: 45px;} 
-    
-   .container-x {overflow-x: auto;}
-   .compare-table tr th img{ width: auto; height: 32px; max-width: fit-content;}
-   .salon-voice-content{        padding: 10px 0;}
-  .salon-voice-content h4{line-height: 14px;font-size: 11px;}
-   
+    .padding-panel {padding-top: 40px; padding-bottom: 25px;}
 
-.footer-top{padding-top: 40px;}
-.footer-top .footer-links{margin-bottom: 40px;}
+    .header-link li a {font-size: 10px;}
+    .header-link li {padding-right: 5px;}
+    .col-right-header-btn {padding-left: 15px;margin-left: 10px;}
+    .col-right-header p { font-size: 10px;}
+    .number-detail li {padding-right: 5px;} 
+    .col-right-header .timing {font-size: 0.55rem;}
+    .phone-number {font-size: 18px;}
 
-.footer-top .footer-heading{margin-bottom: 30px;}
- /* -------------------recurit========================================== */
- .recurit-section-3-list li{    width: 90%;font-size: 0.8rem;}
- .recurit-section-5-table td, .recurit-section-5-table th{font-size: 0.8rem;}
- .recurit-section-4-table td, .recurit-section-4-table th{font-size: 0.9rem;}
- .page-heading h3{font-size: 0.9rem;}
-}
+    .comment-box {position: unset;margin: -50px 0 10px;}
+    .comment-box img{height: 120px}
+    .app-link-btn img {height: 40px; margin-bottom: 20px; }
+    .app-screen img {width: 250px;}
+    .compare-table-b {overflow-x: auto;}
+    .compare-table tr th img { width: auto; height: 30px; max-width: unset;}
+
+    .recruit-header-panel h2 {line-height: unset; font-size: 10px;padding: 5px 0;}
+    .recruit-header-panel h1 { padding: 5px; font-size: 11px;}
+    .recruit-comment {position: absolute; top: -32px;  left: 3%;}
+    .recruit-comment img{height: 40px;}
+    .recruit-comment h3 {top: 13px;left: 3px;font-size: 9px;}
+ }
 
 
 
-.header{padding: 10px;}
-.header-top{padding: 0;}
-.phone-icon{padding: 10px 30px;}
-.phone-icon img{height: 32px;}
-.item{    background-color: #da5a67;}
-.number-detail {display: table; margin:0; }
-.number-detail li{display: table-cell; vertical-align: middle; padding-right: 10px;}
-.phone-number {font-size: 24px; font-weight: bold;}
-.col-right-header-btn .btn{font-size: 1rem;padding: 12px 35px;}
-.timing{    font-size: 0.75rem;}
-.header-link li a {font-size: 13px;}
-.salon-voice-panel {position: relative; background-image: url(../images/bg/salon-voice-bg.jpg);
-    background-repeat: no-repeat;background-size: cover;background-position: center;}
-.number-detail {display: flex;}
-.rec_img{width: 100%;}
-.recurit-section-5-table th{color: #fff;}
 
 
 
-/* ----------------------login Form================================ */
-#logreg-forms{width:472px;margin:10vh auto; background-color:#ffffff; box-shadow: 0 7px 7px rgba(0, 0, 0, 0.12), 0 12px 40px rgba(0,0,0,0.22); border-radius: 5px;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1); -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1); -ms-transition: all 0.3s cubic-bezier(.25,.8,.25,1);}
-  #logreg-forms form {width: 100%; max-width: 470px; padding: 15px; margin: auto;}
-  #logreg-forms .form-reset, #logreg-forms .form-signup{ display: none; }
+
+
+
+
   
-
-
-
-
-
-
-
