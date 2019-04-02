@@ -13,6 +13,7 @@ import { ConferenceComponent } from './conference/conference.component';
 import { RecruitComponent } from './recruit/recruit.component';
 import { AdminComponent } from './admin/admin.component';
 import {  AuthService } from './auth.service';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {  AuthService } from './auth.service';
     LoginComponent,
     ConferenceComponent,
     RecruitComponent,
-    AdminComponent
+    AdminComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

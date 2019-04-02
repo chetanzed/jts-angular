@@ -1,0 +1,81 @@
+<div class="wrapper">
+
+    
+  <div id="content">
+
+      <div id="logreg-forms">
+         <form (ngSubmit)="onSignup(f)" #f="ngForm">
+             <div class="form-group">
+                 <input type="text" id="user-name" name="user-name" ngModel  class="form-control" placeholder="Name" required="" autofocus="">
+             </div>
+             <div class="form-group">
+                 <input type="text" id="user-name" name="user-name" ngModel  class="form-control" placeholder="Email" required="" autofocus="">
+             </div>
+             
+             <div class="form-group">
+                  
+                 <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Password" required autofocus="">
+             </div>
+             <div class="form-group">
+                 <input type="password" id="user-repeatpass"  class="form-control" placeholder="Confirm Password" required autofocus="">
+             </div>
+             <div class="form-group">
+                 <input type="text" id="user-name" name="user-name" ngModel  class="form-control" placeholder="Telephone Number" required="" autofocus="">
+             </div>
+             <div class="form-group">
+                 <input type="text" id="user-name"  name="user-name" ngModel class="form-control" placeholder="DOB" required="" autofocus="">
+             </div>
+
+             <div class="form-group">
+             <select  id="user-name" name="user-name"  class="form-control ">
+                    <option>Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+             </div>
+  
+             <div class="form-group">
+                 <input type="text" id="user-name" name="user-name" ngModel class="form-control" placeholder="Zip Code" required="" autofocus="">
+             </div>
+             
+             <div class="form-group">
+                 <input type="text" id="user-name" name="user-name" ngModel class="form-control" placeholder="City" required="" autofocus="">
+             </div>
+             <div class="form-group">
+                 <input type="text" id="user-name" name="user-name" ngModel  class="form-control" placeholder="Address1" required="" autofocus="">
+             </div>
+             <div class="form-group">
+                 <input type="text" id="user-name" name="user-name" ngModel class="form-control" placeholder="Address2" required="" autofocus="">
+             </div>
+            
+         
+  
+          
+
+             <div class="form-group">
+               <button class="btn btn-md btn-block submit" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+             </div>
+
+             <a href="#" id="cancel_signup" routerLink="/login"><i class="fa fa-angle-left"></i> Back</a>
+         </form>
+     <br>
+
+     </div>
+
+ </div>
+</div>
+
+<!-- <div class="row">
+   <form (ngSubmit)="onSignup(f)" #f="ngForm">
+       <div class="form-group">
+           <label for="email">Mail</label>
+           <input type="email" id="email" name="email" ngModel class="form-control">
+</div>
+<div class="form-group">
+       <label for="password">Password</label>
+       <input type="password" id="password" name="password" ngModel class="form-control">
+</div>
+
+<button class="btn btn-primary" type="submit">Sign Up</button>
+</form>
+</div> -->
