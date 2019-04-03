@@ -8,7 +8,7 @@
 }
 */
 @media (min-width: 1200px){
-    .container { max-width: 1200px;}
+    .container {max-width: 1200px;}
     .col-right-header-btn .btn {font-size: 1rem; padding: 12px 35px;}
 
     
@@ -16,15 +16,15 @@
 
 @media (min-width: 992px) and (max-width: 1199.98px) { 
     .slider-face img{width: 60%;}
-    .slider-content-inner h1 {font-size: 2.75rem}
-    .slider-content-inner h4 {font-size: 1.25rem}
+    .slider-content-inner h1 {font-size: 2.75rem;}
+    .slider-content-inner h4 {font-size: 1.25rem;}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) { 
     .slider-face img{height: 375px; width: unset;}
-    .slider-content-inner h1 {font-size: 2.25rem}
-    .slider-content-inner h2 {font-size: 1.6rem}
-    .slider-content-inner h4 {font-size: 1rem}
+    .slider-content-inner h1 {font-size: 2.25rem;}
+    .slider-content-inner h2 {font-size: 1.6rem;}
+    .slider-content-inner h4 {font-size: 1rem;}
     .top-app-links img {height: 48px;}
 
 }
@@ -149,9 +149,11 @@
     .navbar-nav {background-color: #140c02;}
     .top-nav .navbar {top: 20px;}
 
-    .comment-box {left: -10px;top: -50px;}
-    .comment-box img{height: 160px;}
-    .comment-box h2 {top: 50px;}
+    .AI-panel {background-position: right 20% center;}
+    .comment-box {left: -15px;top: -45px;}
+    .comment-box img{height: 140px;}
+    .comment-box h2 {top: 38px;}
+    .help-suppoer-img img{width: 225px;}
 
     .app-link-btn img {height: 45px;}
     .recruit-header-panel h1 {font-size: 1.25rem;}
@@ -159,7 +161,7 @@
      .recruit-comment {top: -60px; left: 7%;}
      .recruit-comment img{height: 80px;}
      .recruit-comment h3 { top: 28px; font-size: 1rem;}
-     .recruit-block-text {font-size: 0.75rem}
+     .recruit-block-text {font-size: 0.75rem;}
      .recruit-work-text {font-size: 0.7rem;}
 
 
@@ -168,7 +170,8 @@
 
 
 /** Small devices (landscape phones, less than 768px)*/
-@media (max-width: 767.98px) { 
+@media (max-width: 767.98px) {
+ 
     .h1, h1 {font-size: 1.8rem;}
     .h2, h2 {font-size: 1.6rem;}
     .h3, h3 {font-size: 1.4rem;}
@@ -201,11 +204,12 @@
 
     .fuction-list li a {padding: 25px 15px;}
     .fuction-list li a img {margin-bottom: 15px; height: 50px;}
-    .help-suppoer-img img {width: 240px;}
-
-    .comment-box {position: unset;margin: -60px 0 10px;}
-    .comment-box img{height: 150px}
-    .comment-box h2{top: 5px;}
+  
+    .AI-panel {background-position: right 10% center;}
+    .comment-box img{height: 100px}
+    .comment-box {left: 0px; top: -40px;}
+    .comment-box h2 {top: 28px;}
+    .help-suppoer-img img {width: 160px;}
 
     .advantage-list li {font-size: 0.95rem; margin-bottom: 15px;line-height: 90px;}
     .advantage-list li img{height: 45px;}
@@ -216,6 +220,12 @@
      .join-us-b .join-us-btn {padding: 10px; width: 250px; font-size: 1rem;}
      .recruit-reward-panel .table-gap td, .recruit-reward-panel .table-gap th { font-size: 0.8rem;}
      .recruit-work-text, .recruit-block-text {margin-bottom: 15px;}
+
+
+    .fuction-list {justify-content: center;}
+    .fuction-list li a { padding: 10px; font-size: 0.9rem;}
+    .fuction-list li {padding: 0 10px 20px; width: 40%;}
+
  }
 
 
@@ -241,18 +251,31 @@
     .col-right-header .timing {font-size: 0.55rem;}
     .phone-number {font-size: 18px;}
 
-    .comment-box {position: unset;margin: -50px 0 10px;}
-    .comment-box img{height: 120px}
-    .app-link-btn img {height: 40px; margin-bottom: 20px; }
+   
+    .app-link-btn img {height: 25px; }
     .app-screen img {width: 250px;}
-    .compare-table-b {overflow-x: auto;}
-    .compare-table tr th img { width: auto; height: 30px; max-width: unset;}
+    /*.compare-table-b {overflow-x: auto;}
+    .compare-table tr th img { width: auto; height: 30px; max-width: unset;}*/
 
     .recruit-header-panel h2 {line-height: unset; font-size: 10px;padding: 5px 0;}
     .recruit-header-panel h1 { padding: 5px; font-size: 11px;}
     .recruit-comment {position: absolute; top: -32px;  left: 3%;}
     .recruit-comment img{height: 40px;}
     .recruit-comment h3 {top: 13px;left: 3px;font-size: 9px;}
+
+    .compare-table td, .compare-table th {padding: 0.4rem;text-align: center; font-size: 0.7rem;}
+    .compare-table h4 {font-size: 0.8rem;} 
+    .compare-table .fa-check, .compare-table .fa-times {font-size: 1rem;}
+
+    .about-panel {background-position: 37% center;}
+    .fuction-list li {padding: 0 8px 16px; width: 35%;}
+    .fuction-list li a img {margin-bottom: 10px; height: 40px;}
+
+
+
+    
+    
+
  }
 
 
@@ -261,7 +284,3 @@
 
 
 
-
-
-
-  

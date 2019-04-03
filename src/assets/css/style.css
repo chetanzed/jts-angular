@@ -91,7 +91,8 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .padding-panel {padding-top: 100px; padding-bottom: 70px;}
 .white-over {background-color: rgba(255,255,255,0.9);}
 .black-over {background-color: rgba(0,0,0,0.05);}
-.box-bg {background-image: url(../../assets/images/bg/box-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: right center; }
+.blue-over {background-color: rgba(122,154,227,0.9);}
+.box-bg {background-image: url(../images/bg/box-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: right center; }
 .box-shadow {box-shadow: 0 0 15px rgba(0,0,0,0.25); -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.25);}
 .table-gap {border-collapse: separate;border-spacing: 0 10px; width: 100%;}
 .table-gap tr {transition: all .3s;-webkit-transition: all .3s;-moz-transition: all .3s;-o-transition: all .3s;background-color: #fff;}
@@ -180,7 +181,7 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 /********* header slider end ********/
 
 /********* about panel start*************/
-.about-panel {background-image: url(../../assets/images/bg/about-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;}
+.about-panel {background-image: url(../images/bg/about-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;}
 .fuction-list {display: flex; flex-wrap: wrap;}
 .fuction-list li {padding: 0 15px 30px; width: 50%;}
 .fuction-list li a {display: block; color: #fff; text-align: center; font-size: 18px; font-weight: 500; -webkit-border-radius: 2px;  -moz-border-radius: 2px; -o-border-radius: 2px;
@@ -203,7 +204,7 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 /***** about panel end***********/
 
 /***** AI-panel start***********/
-.AI-panel {background-image: url(../../assets/images/bg/AI-support-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.AI-panel {background-image: url(../images/bg/AI-support-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; }
 .white-bg {background-color: rgba(255,255,255,0.85); padding: 50px 15px; -webkit-border-radius: 2px;  -moz-border-radius: 2px; -o-border-radius: 2px;border-radius: 2px; 
     box-shadow: 0 0 25px rgba(0,0,0,0.20); -webkit-box-shadow: 0 0 25px rgba(0,0,0,0.20); }
 .comment-box {position: absolute;top: -50px; left: -70px;}
@@ -241,11 +242,11 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 /***** case-study-panel end***********/
 
 /***** salon-voice-panel start ***********/
-.salon-voice-panel {background-image: url(../../assets/images/bg/salon-voice-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; }
+.salon-voice-panel {background-image: url(../images/bg/salon-voice-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; }
 /***** salon-voice-panel end ***********/
 
 /***** pricing-panel start ***********/
-.pricing-panel {background-image: url(../../assets/images/bg/pricing-bg.png); background-size: cover; background-repeat: no-repeat; background-position: left center; }
+.pricing-panel {background-image: url(../images/bg/pricing-bg.png); background-size: cover; background-repeat: no-repeat; background-position: left center; }
 .pricing-panel .page-heading h1,.pricing-panel .page-sub-heading  h5{color: #fff}
 .pricing-inner-panel {background-color: rgba(125,125,80,0.75);}
 .basic-plans-heading {text-align: center; background-color: #e7c240; padding: 20px; color: #fff; font-size: 24px; -webkit-border-radius: 2px; 
