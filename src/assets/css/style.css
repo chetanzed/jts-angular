@@ -100,7 +100,8 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .table-gap td:first-child, .table-gap th:first-child {border-radius: 2px 0 0 2px}
 .table-gap td:last-child, .table-gap th:last-child {border-radius: 0 2px 2px 0}
 
-.color-red {color: #d72828;}
+.color-red {color: #d72828 !important;}
+.color-white {color: #fff !important;}
 
 /******* read more ********/
 .morecontent span { display: none;}
