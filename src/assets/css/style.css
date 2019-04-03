@@ -18,6 +18,7 @@ button:focus {outline: 0 none;}
    border-radius: 2px;-moz-border-radius: 2px -webkit-border-radius: 2px;}
 .btn:hover, .btn:focus {background: #281e05; color: #fff; outline: 0; box-shadow: 0 0 0 0.05rem rgba(40,30,5,.20); -webkit-box-shadow: 0 0 0 0.05rem rgba(40,30,5,.20);} 
 .btn-black {background-color: #281e05;}
+.btn-black:hover,.btn-black:focus {background-color: #e7c240;}
 
 /*.navbar {padding: 5px 15px;background: #fff;border: none;border-radius: 0;box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);}
 .navbar-btn {box-shadow: none;outline: none !important; border: none;}
@@ -100,6 +101,8 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .table-gap td, .table-gap th {padding:0.75rem; text-align: center;}
 .table-gap td:first-child, .table-gap th:first-child {border-radius: 2px 0 0 2px}
 .table-gap td:last-child, .table-gap th:last-child {border-radius: 0 2px 2px 0}
+.b-s:hover {box-shadow: 0 10px 15px rgba(0,0,0,0.20); -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.20);}
+.top-space {margin-top: 25px;}
 
 .color-red {color: #d72828 !important;}
 .color-white {color: #fff !important;}
@@ -282,7 +285,7 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 /*************** home page end **************/
 
 
-.b-s:hover {box-shadow: 0 10px 15px rgba(0,0,0,0.20); -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.20);}
+
 
 /*********** recruit page start ************/
 .recruit-header-panel {position: relative;}
@@ -305,7 +308,7 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 
 .recruit-reward-panel .table-gap td,.recruit-reward-panel .table-gap th{font-size: 18px; }
 .recruit-reward-panel .table-gap th{background-color: #7a9ae3; color: #fff; font-weight: normal;}
-.join-us-b .join-us-btn {padding: 15px; width: 40%; font-size: 1.2rem;}
+.join-us-btn {padding: 15px; width: 100%; font-size: 1.2rem;}
 
 /*********** recruit page end ************/
 

@@ -18,6 +18,11 @@
     .slider-face img{width: 60%;}
     .slider-content-inner h1 {font-size: 2.75rem;}
     .slider-content-inner h4 {font-size: 1.25rem;}
+    .recruit-header-panel h1 {font-size: 1.5rem;}
+    .recruit-header-panel h2 {padding: 30px 0;line-height: 30px; font-size: 1.3rem;}
+    .recruit-comment img {height: 100px;}
+    .recruit-comment {top: -80px;}
+    .recruit-comment h3 {top: 30px;left: 7px;font-size: 1.5rem;}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) { 
@@ -85,6 +90,8 @@
     .comment-box {left: -30px;top: -70px;}
     .comment-box img{height: 190px;}
     .comment-box h2 {top: 60px;}
+
+    .join-us-btn {font-size: 1rem;}
 
     
 
@@ -158,13 +165,14 @@
     .app-link-btn img {height: 45px;}
     .recruit-header-panel h1 {font-size: 1.25rem;}
      .recruit-header-panel h2 {padding: 20px 0;line-height: unset; font-size: 1rem;}
-     .recruit-comment {top: -60px; left: 7%;}
-     .recruit-comment img{height: 80px;}
-     .recruit-comment h3 { top: 28px; font-size: 1rem;}
+     .recruit-comment {top: -55px;}
+     .recruit-comment img{height: 70px;}
+     .recruit-comment h3 {top: 24px; font-size: 1rem; left: 5px;}
      .recruit-block-text {font-size: 0.75rem;}
      .recruit-work-text {font-size: 0.7rem;}
+     .top-space {margin-top: 20px;}
 
-
+     #logreg-forms{width: 90%;}
    
     }
 
@@ -219,13 +227,20 @@
 
      .join-us-b .join-us-btn {padding: 10px; width: 250px; font-size: 1rem;}
      .recruit-reward-panel .table-gap td, .recruit-reward-panel .table-gap th { font-size: 0.8rem;}
-     .recruit-work-text, .recruit-block-text {margin-bottom: 15px;}
+     .recruit-work-text, .recruit-block-text {margin-bottom: 10px;padding: 15px 0;}
+     .recruit-description-panel .table-gap td {font-size: 0.7rem;}
 
 
     .fuction-list {justify-content: center;}
     .fuction-list li a { padding: 10px; font-size: 0.9rem;}
     .fuction-list li {padding: 0 10px 20px; width: 40%;}
 
+    .recruit-header-panel h1 {font-size: 1rem;}
+    .recruit-comment {top: -50px;}
+    .recruit-comment img {height: 60px;}
+    .recruit-comment h3 {top: 18px; left: 5px;}
+    .recruit-header-panel h2 {padding: 10px 0; line-height: unset;  font-size: 0.8rem;}
+    #logreg-forms{width: 90%;}
  }
 
 
@@ -242,6 +257,7 @@
     .h6, h6 {font-size: 0.70rem;}
 
     .padding-panel {padding-top: 40px; padding-bottom: 25px;}
+    .table-gap td, .table-gap th {padding: 0.5rem;}
 
     .header-link li a {font-size: 10px;}
     .header-link li {padding-right: 5px;}
@@ -259,9 +275,9 @@
 
     .recruit-header-panel h2 {line-height: unset; font-size: 10px;padding: 5px 0;}
     .recruit-header-panel h1 { padding: 5px; font-size: 11px;}
-    .recruit-comment {position: absolute; top: -32px;  left: 3%;}
-    .recruit-comment img{height: 40px;}
-    .recruit-comment h3 {top: 13px;left: 3px;font-size: 9px;}
+    .recruit-comment {position: absolute; top: -28px;  left: 3%;}
+    .recruit-comment img{height: 35px;}
+    .recruit-comment h3 {top: 12px;left: 2px;font-size: 9px;}
 
     .compare-table td, .compare-table th {padding: 0.4rem;text-align: center; font-size: 0.7rem;}
     .compare-table h4 {font-size: 0.8rem;} 
@@ -270,16 +286,21 @@
     .about-panel {background-position: 37% center;}
     .fuction-list li {padding: 0 8px 16px; width: 35%;}
     .fuction-list li a img {margin-bottom: 10px; height: 40px;}
+    .recruit-reward-panel .table-gap td, .recruit-reward-panel .table-gap th { font-size: 0.55rem; font-weight: bold;}
+    .recruit-description-panel .table-gap td { font-size: 0.55rem;  font-weight: bold;}
 
-
+  
 
     
+ #logreg-forms{width:90%;}
     
-
  }
 
 
-
+ #logreg-forms{width:472px;margin:10vh auto; background-color:#ffffff; box-shadow: 0 7px 7px rgba(0, 0, 0, 0.12), 0 12px 40px rgba(0,0,0,0.22); border-radius: 5px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1); -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1); -ms-transition: all 0.3s cubic-bezier(.25,.8,.25,1);}
+     #logreg-forms form {width: 100%; max-width: 470px; padding: 15px; margin: auto;}
+     #logreg-forms .form-reset, #logreg-forms .form-signup{ display: none; }
 
 
 
