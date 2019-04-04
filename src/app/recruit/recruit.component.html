@@ -115,7 +115,7 @@
             <div class="page-sub-heading text-center">
                 <h5>
                     JTSボード販売員の報酬はフルコミッション（完全歩合制）です。報酬の100パーセントが自分の業績によって決まります。
-                    JTSボードの販売価格は15,000円(税別）です。<br>クライアント様への販売は1年契約が条件です。契約終了まで毎月支給されます。（更新可）
+                    JTSボードの販売価格は15,000円(税別）です。<br>クライアント様への販売は1年契約が条件です。<br class="d-block d-sm-none">契約終了まで毎月支給されます。（更新可）<br>
                     契約数と歩合還元率は以下となります。
                 </h5>
             </div>
@@ -124,10 +124,10 @@
                 <table class="table-gap">
                     <thead>
                         <tr>
-                            <th>契約店舗数</th>
-                            <th>歩合還元率</th>
-                            <th>１店舗あたり報酬額 (税別)</th>
-                            <th>最大報酬 (税別)</th>
+                            <th>契約<br class="d-block d-sm-none">店舗数</th>
+                            <th>歩合<br class="d-block d-sm-none">還元率</th>
+                            <th>１店舗あたり<br class="d-block d-sm-none">報酬額 (税別)</th>
+                            <th>最大報酬 <br class="d-block d-sm-none">(税別)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -156,7 +156,7 @@
                             <td>600,000 円</td>
                         </tr>
                         <tr>
-                            <td>250〜500 </td>
+                            <td>201〜500 </td>
                             <td>25%</td>
                             <td>3,750 円</td>
                             <td>1,875,000 円</td>
@@ -175,11 +175,42 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6"><a href="#"  class="btn btn-black join-us-btn mb-30">紹介ではない方はこちらから問い合わせする</a></div>
-                <div class="col-lg-6"><a  (click)="openPopup()" class="btn join-us-btn mb-30">紹介者コードをお持ちの方はこちらから応募する</a></div>
+                <div class="col-lg-6"><a href="#" data-toggle="modal" data-target="#myModal"  class="btn join-us-btn mb-30">紹介者コードをお持ちの方はこちらから応募する</a></div>
             </div>
         </div>
     </div>
 
 </div>
+        <!-- The Modal Staff Detail -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
 
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Sales Code </h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body" >
+                    
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="code" placeholder="Code" required></div>
+                        
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <div class="text-center">
+                        <a (click)="onSubmit()" class="btn mr-20" data-dismiss="modal">Submit</a>
+                        <a class="btn" data-dismiss="modal" href="#">Close</a>
+                    </div>                       
+                   
+                </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- The Modal Staff Detail End --->
       <app-footar></app-footar>

@@ -172,7 +172,7 @@
      .recruit-work-text {font-size: 0.7rem;}
      .top-space {margin-top: 20px;}
 
-     #logreg-forms{width: 90%;}
+
    
     }
 
@@ -240,7 +240,7 @@
     .recruit-comment img {height: 60px;}
     .recruit-comment h3 {top: 18px; left: 5px;}
     .recruit-header-panel h2 {padding: 10px 0; line-height: unset;  font-size: 0.8rem;}
-    #logreg-forms{width: 90%;}
+
  }
 
 
@@ -289,11 +289,6 @@
     .recruit-reward-panel .table-gap td, .recruit-reward-panel .table-gap th { font-size: 0.55rem; font-weight: bold;}
     .recruit-description-panel .table-gap td { font-size: 0.55rem;  font-weight: bold;}
 
-  
-
-    
- #logreg-forms{width:90%;}
-    
  }
 
 
@@ -303,5 +298,11 @@
      #logreg-forms .form-reset, #logreg-forms .form-signup{ display: none; }
 
 
+     .modal {padding-right: 0 !important;background-color: rgba(0,0,0,0.5);}
+     .modal-backdrop.show{display: none;}
+     .modal-header {background: #e7c240; color: #fff;}
+     .attendance-body h5{margin-bottom: 20px}
+     /* .attendance-body .btn-attendance{background-color:#281e05; } */
+     
 
 
