@@ -3,7 +3,7 @@ import { Observable, from } from 'rxjs';
 import { Login } from './login.model';
 import { Popup } from './popup.model';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
-import { RegisterForm } from './registration/registration.model';
+import { RegisterForm } from './registration.model';
 
 
 @Injectable({

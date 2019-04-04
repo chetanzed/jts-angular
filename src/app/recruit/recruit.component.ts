@@ -14,7 +14,7 @@ export class RecruitComponent implements OnInit {
   constructor(private route:Router, private authservice:AuthService) { }
 
   ngOnInit() {
-    this.log1.unique_sales_code="";
+    this.log1.unique_sales_code = "";
   }
   onSubmit(){
     alert("i am submiting"+this.log1.unique_sales_code);

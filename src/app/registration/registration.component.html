@@ -18,48 +18,65 @@
 
                     <form #reg="ngForm"  (submit)="onRegister()">
                             <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="kana" placeholder="ふりがな"  required>
+                                    <div class="form-group mb-30">
+                                    <input type="text" 
+                                    #rg="ngModel"  [(ngModel)]="reg.kana"
+                                    class="form-control"  
+                                    name="kana" placeholder="ふりがな"  required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="kanji" placeholder="氏名" required>
+                                    <input type="text" 
+                                    #rg="ngModel"  [(ngModel)]="reg.kanji"
+                                    class="form-control"  name="kanji" placeholder="氏名" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="tel" placeholder="携帯番号" required>
+                                    <input type="text" 
+                                    
+                                    class="form-control" [(ngModel)]="reg.tel" name="tel" placeholder="携帯番号" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="email" placeholder="メールアドレス" ngModel name="email" required email>
+                                    <input type="text" [(ngModel)]="reg.email" class="form-control"  placeholder="メールアドレス"  name="email" required email>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="dob" placeholder="生年月日   年    月    日" required>
+                                    <input type="text" 
+                                    [(ngModel)]="reg.dob"
+                                    class="form-control"  name="dob" placeholder="生年月日   年    月    日" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="password" placeholder="パスワードを作成（半角英数６桁）" required>
+                                    <input type="text"
+                                    [(ngModel)]="reg.password" 
+                                    class="form-control"  name="password" placeholder="パスワードを作成（半角英数６桁）" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="confirm_password" placeholder="パスワードを再入力（確認用）" required>
+                                    <input type="text" 
+                                    [(ngModel)]="reg.confirm_password"
+                                    class="form-control"  name="confirm_password" placeholder="パスワードを再入力（確認用）" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="zip_code" placeholder="郵便番号" required>
+                                    <input type="text" 
+                                    [(ngModel)]="reg.zip_code"
+                                    class="form-control"  name="zip_code" placeholder="郵便番号" required>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="address" placeholder="住所 " required>
+                                    <input type="text" 
+                                    [(ngModel)]="reg.address"
+                                    class="form-control"  name="address" placeholder="住所 " required>
                                 </div>
                             </div>
                             <div class="col-sm-12">
@@ -81,13 +98,18 @@
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
                                     <label>表：</label>
-                                    <input type="file" class="form-control" ngModel name="dl_front_img" required>
+                                    <input type="file" 
+                                    [(ngModel)]="reg.dl_front_img"
+                                    class="form-control" 
+                                     name="dl_front_img" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
                                     <label>裏：</label>
-                                    <input type="file" class="form-control" ngModel name="dl_back_img" required>
+                                    <input type="file" class="form-control" 
+                                    [(ngModel)]="reg.dl_back_img"
+                                    name="dl_back_img" required>
                                 </div>
                             </div>
 
@@ -103,37 +125,51 @@
 
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="bank_name" placeholder="金融機関名" required>
+                                    <input type="text" class="form-control" 
+                                    [(ngModel)]="reg.bank_name"
+                                    name="bank_name" placeholder="金融機関名" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="bank_name_kana" placeholder="金融機関名（カナ）" required>
+                                    <input type="text" class="form-control"
+                                    [(ngModel)]="reg.bank_name_kana"
+                                    name="bank_name_kana" placeholder="金融機関名（カナ）" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="bank_number" placeholder="金融機関コード" required>
+                                    <input type="text" class="form-control" 
+                                    [(ngModel)]="reg.bank_number"
+                                    name="bank_number" placeholder="金融機関コード" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="branch" placeholder="支店名" required>
+                                    <input type="text" class="form-control" 
+                                    [(ngModel)]="reg.branch"
+                                    name="branch" placeholder="支店名" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="branch_kana" placeholder="支店名（カナ）" required>
+                                    <input type="text" class="form-control" 
+                                    [(ngModel)]="reg.branch_kana" 
+                                    name="branch_kana" placeholder="支店名（カナ）" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="branck_code" placeholder="支店コード" required>
+                                    <input type="text" class="form-control" 
+                                    [(ngModel)]="reg.branck_code"
+                                     name="branck_code" placeholder="支店コード" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <select class="form-control" ngModel name="what_kind_of_bank">
+                                    <select class="form-control" 
+                                    [(ngModel)]="reg.what_kind_of_bank"
+                                     name="what_kind_of_bank" required>
                                         <option selected="selected" disabled="disabled">預金種類</option>
                                         <option value="普通預金">普通預金</option>
                                         <option value="当座預金">当座預金</option>
@@ -142,17 +178,22 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="account_number" placeholder="口座番号" required>
+                                    <input type="text" class="form-control" 
+                                    [(ngModel)]="reg.account_number"
+                                     name="account_number" placeholder="口座番号" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="account_holder_name_kana" placeholder="口座名義（カナ）" required>
+                                    <input type="text" class="form-control" 
+                                    [(ngModel)]="reg.account_holder_name_kana" name="account_holder_name_kana" placeholder="口座名義（カナ）" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" class="form-control" ngModel name="account_holder_name" placeholder="口座名義" required>
+                                    <input type="text" class="form-control" 
+                                    [(ngModel)]="reg.account_holder_name"
+                                     name="account_holder_name" placeholder="口座名義" required>
                                 </div>
                             </div>
 
@@ -193,7 +234,7 @@
                                 </div>
                                 <div class="mb-30"><hr></div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn join-us-btn">規約に同意して確認画面へ</button>
+                                    <button type="submit" (click)="onRegister()" class="btn join-us-btn">規約に同意して確認画面へ</button>
                                 </div>
                             </div>
                             </form>
