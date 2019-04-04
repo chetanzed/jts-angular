@@ -193,21 +193,24 @@
                 </div>
 
                 <!-- Modal body -->
-                <div class="modal-body" >
+                <form #my="ngForm"  (submit)="onSubmit()">
+                    <div class="modal-body" >
                     
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="code" placeholder="Code" required></div>
-                        
-                </div>
+                        <div class="form-group">
+                            <input type="text" #usc="ngModel"  [(ngModel)]="log1.unique_sales_code" class="form-control" name="unique_sales_code" placeholder="Enter your sales code" required></div>
+                                <!-- {{log1|json}} -->
+                        </div>
 
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <div class="text-center">
-                        <a (click)="onSubmit()" class="btn mr-20" data-dismiss="modal">Submit</a>
-                        <a class="btn" data-dismiss="modal" href="#">Close</a>
-                    </div>                       
-                   
-                </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <div class="text-center">
+                                <a class="btn mr-20" data-dismiss="modal" (click)="onSubmit()" >Submit</a>
+                                <a class="btn" data-dismiss="modal" href="#">Close</a>
+                            </div>                       
+                        
+                        </div>
+                </form>
+                
 
                 </div>
             </div>

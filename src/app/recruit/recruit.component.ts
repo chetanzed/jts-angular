@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { Popup } from '../popup.model';
 
 @Component({
   selector: 'app-recruit',
@@ -8,28 +9,27 @@ import { Router } from '@angular/router';
   styleUrls: ['./recruit.component.css']
 })
 export class RecruitComponent implements OnInit {
-  unique_sales_code= "JTSB123456";
-
+  
+  log1:Popup=new Popup();
   constructor(private route:Router, private authservice:AuthService) { }
 
   ngOnInit() {
+    this.log1.unique_sales_code="";
   }
   onSubmit(){
-    var log1= {
-      "unique_sales_code": "JTSB123456"
-  
-     }
-     this.authservice.createcode(log1)
+    alert("i am submiting"+this.log1.unique_sales_code);
+    
+     this.authservice.createcode(this.log1)
 .subscribe(data =>{
        
   console.log (data)
-  if(data)
+  if(data.status=="success")
   {
-    localStorage.setItem("isLoggedin","yes");
-    this.route.navigate(['register'])
+    // localStorage.setItem("isLoggedin","yes");
+    this.route.navigate(['register'],{queryParams:{usc:data.unique_sales_code}});
   }
   else{
-alert("sorry")
+       alert("sorry")
   }
 
  });
