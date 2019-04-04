@@ -13,11 +13,11 @@ export class AuthService {
 
   checkLogin(log): Observable <Login>
   {
-   return this.http.post<Login> ("https://api.jtsboard.com/web_servicesv36/check_sales_user_code",log)
+   return this.http.post<Login> ("https://api.jtsboard.com/web_service_angular/login",log)
   }
 
   createcode(log1):Observable <Popup>
   {
-   return this.http.post<Popup> ("https://api.jtsboard.com/web_servicesv36/check_sales_user_code",log1)
+   return this.http.post<Popup> ("https://api.jtsboard.com/web_service_angular/check_sales_user_code",log1)
   }
 }

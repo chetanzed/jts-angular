@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./recruit.component.css']
 })
 export class RecruitComponent implements OnInit {
+  unique_sales_code= "JTSB123456";
 
   constructor(private route:Router, private authservice:AuthService) { }
 
@@ -22,7 +23,7 @@ export class RecruitComponent implements OnInit {
 .subscribe(data =>{
        
   console.log (data)
-  if(data.msg1)
+  if(data)
   {
     localStorage.setItem("isLoggedin","yes");
     this.route.navigate(['register'])
