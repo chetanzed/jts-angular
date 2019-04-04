@@ -1,82 +1,199 @@
-<div class="wrapper">
+<app-header></app-header>
+<div class="main top-space">
 
-    
-    <div id="content">
-    
-        <div id="logreg-forms">
-              <h1 class="h3 mb-3 font-weight-normal text-center">Sign Up for Sales</h1>
-           <form >
-               <div class="form-group">
-                   <input type="text" id="user-name" name="user-name" ngModel  class="form-control" placeholder="Name" required="" autofocus="">
-               </div>
-               <div class="form-group">
-                   <input type="text" id="user-name" name="user-name" ngModel  class="form-control" placeholder="Email" required="" autofocus="">
-               </div>
-               
-               <div class="form-group">
-                    
-                   <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Password" required autofocus="">
-               </div>
-               <div class="form-group">
-                   <input type="password" id="user-repeatpass"  class="form-control" placeholder="Confirm Password" required autofocus="">
-               </div>
-               <div class="form-group">
-                   <input type="text" id="user-name" name="user-name" ngModel  class="form-control" placeholder="Telephone Number" required="" autofocus="">
-               </div>
-               <div class="form-group">
-                   <input type="text" id="user-name"  name="user-name" ngModel class="form-control" placeholder="DOB" required="" autofocus="">
-               </div>
-  
-               <div class="form-group">
-               <select  id="user-name" name="user-name"  class="form-control ">
-                      <option>Gender</option>
-                      <option>Male</option>
-                      <option>Female</option>
-                    </select>
-               </div>
-    
-               <div class="form-group">
-                   <input type="text" id="user-name" name="user-name" ngModel class="form-control" placeholder="Zip Code" required="" autofocus="">
-               </div>
-               
-               <div class="form-group">
-                   <input type="text" id="user-name" name="user-name" ngModel class="form-control" placeholder="City" required="" autofocus="">
-               </div>
-               <div class="form-group">
-                   <input type="text" id="user-name" name="user-name" ngModel  class="form-control" placeholder="Address1" required="" autofocus="">
-               </div>
-               <div class="form-group">
-                   <input type="text" id="user-name" name="user-name" ngModel class="form-control" placeholder="Address2" required="" autofocus="">
-               </div>
-              
-           
-    
+
+    <!---- registration Start ------->
+    <div class="registration-panel padding-panel box-bg">     
+        <div class="container">
+            <div class="white-bg">
+                <div class="page-heading text-center"><h1>契約フォーム</h1></div>
+                <div class="page-sub-heading text-center">
+                    <h5 class="primary-color">
+                       契約のお申し込み
+                    </h5>
+                </div>  
+                <div class="row justify-content-center">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="ふりがな">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="氏名">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="携帯番号">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="メールアドレス">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="生年月日   年    月    日">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="パスワードを作成（半角英数６桁）">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="パスワードを再入力（確認用）">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="郵便番号">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="住所 ">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 mb-30"><hr></div>
+
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>運転免許証の写真を表側、裏側を選択してアップロードしてください</label>
+                                </div>
+                            </div>                                
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <label>表：</label>
+                                    <input type="file" class="form-control" name="">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <label>裏：</label>
+                                    <input type="file" class="form-control" name="">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 mb-30"><hr></div>
+
+                            <div class="col-sm-12">
+                                <div class="page-sub-heading text-center">
+                                    <h5 class="primary-color">
+                                       銀行口座情報入力 
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="金融機関名">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="金融機関名（カナ）">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="金融機関コード">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="支店名">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="支店名（カナ）">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="支店コード">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <select class="form-control">
+                                        <option selected="selected" disabled="disabled">預金種類</option>
+                                        <option>普通預金</option>
+                                        <option>当座預金</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="口座番号">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="口座名義（カナ）">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text" class="form-control" name="" placeholder="口座名義">
+                                </div>
+                            </div>
+
+                             <div class="col-sm-12 mb-30"><hr></div>
+
+                            <div class="col-sm-12">
+                                <div class="page-sub-heading text-center">
+                                    <h5 class="primary-color">
+                                       ご確認項目 
+                                    </h5>
+                                </div>
+                                <p class="mb-30">
+                                    以下、ゼンエルディーンインターナショナル株式会社との営業代行契約書です。必ず確認の上、お申し込みください。
+                                </p>
+                                <div class="contract-content border mb-30">
+                                    <p class="mb-20">計言ヨキロヘ高法ぽぴず理藤ヱタ脱追ヘアテフ寿禁コクウ作細っレょ禁際こドむば紙問づうい止済エノ容歴オ掲9必マリミ提進ゅっ析内どすクン供展ラルシソ芸内リキサト絡誌供キラモ策携抽綱都るろぼに。強リ学会たゆンぱ歳4内ぽ端病ゅやまぼ無庭リ悪的散さげ迫上2込ぶべじ防78大れッ回治真能査ハケユ児区組跡トびリ。</p>
+
+                                    <p class="mb-20">在なん極材めぶぼ授自豊ス書81百ノ講井ヨ電制サ仕聞見ユヲ込凄レ更国オソフス意使少調ゃラこべ。暮ん米地ヨキオホ斎禁づにば住続じゅルお変郷トがあ索映メ報続ば県外しッラや毎裏えかし力91載をーぎ被馬ソ知無げでゆぼ取茸会能ぽっえ県探れおの生分キヨ芸体ろこべげ。選覧部をなぼ真先ハメオフ更弘校ヤツ質出シ少1効むー月数度提レスナ可昇表ふゃぞば。</p>
+
+                                    <p class="mb-20">本なべ起昭トネ速全ょ古南かげん惑念かび地治広二コフ厚前やぞ涼転力にちべよ対52知オクラ好与丹庄じ。綏じかぴみ表強6文ヒウ伝付コクチ日府ょ設棋さばも品自ウ料普セチヨ員天説74弁盾49発ヘイセ辞白ウヤ問知ーべ定詳ぼイち責委極断スな。断能のをン県場含ん青県アテ安愛ヒ事類元うがもの隊4料ぱよ購府ばぱレぎ員向ウ者写サ整断つ掲年メ暮棋夫フじり。</p>
+
+                                    <p class="mb-20">条マフリ争乱19載ツサネモ務止真ハフヒシ化2図戦南成トヘ上魅リおさ置20闘メト歴躍てぴ名4義おず生総かラ住5書ひで現必傳呈播めンつし。情ドあげ九戦ぴなにラ属達リルメロ物国スぱ景電ク税配スコ遇経ホケリ明登ネノヘ日年るラ級逮ゆドへや催南寺みン語下ハ直事れひよ総器ルヘス岡書ネヱ舗少ハヲケコ押前ぼふドけ固土ろひごク展断へ宿超党針ものがす。</p>
+
+                                    <p class="mb-20">状りたざひ調定ヒホハチ第41五こなま者7複き室断言くむぴ上語4今立ニヨ幹稚冊にいょド。保30詳お関高どドょぎ進芸田ウ稿住著ん政5年ニウネノ縄響ホ問住シムフ躍撃主ラノ道託か風表ぴおぱ園切辞ほどの。表ラぱ詳滋コネシヲ再的検ル引印エ家意ア人心に千芸ニミ氷増ソ上確ク航東ぶがわ戦組ぴめ月活ムケヲネ向期せはえフ全載せ症夏し慎市エトル裁要よお献頭謙奏訳っラびざ。</p>
+
+                                    <p class="mb-20">入えるら議囲テリトロ注地ぐざすぎ立型ぞ診志ニ使1年チスア料前ナ内気レト行探もッうク歩法ルづ更走スぽょリ文志ワエレ問形ロ麻負応政めゃもう的町オソスケ集質ツ念松ぼ。越かむ南性ぐレばぱ読中原裁あっこみ中景ヤラキネ世39倉ネウナ回意チメ農層めう犯子マセニル首第おま沈45投ぴトぜぐ内視ゆフづ情社葉了ロ転表典伺屯ぎたろ。</p>
+
+                                    <p class="mb-20">初著ヨトワツ比楽コタテマ問到スづリ行拡エキヘマ年点ぼめあ手探ぽつ浮当スラひ記58事チフ撮謙マオ前覧ねルンど准団わクリゅ墓選ま魂29済つゆー博限いラへ朝格92南かがせぎ反版始県ぴドげ。宿ぱ真28見ヒタコヘ英光質ンス地年ル号査ハクス告意すさぼク属送ヌクヒム南活ヤウ局考第ムリ暮証ラト菱早ゃリ手並サチハル様4広伝以ミテヱシ質載融ず。</p>
+
+                                    <p class="mb-20">類フ政石辺ッ記変ねど大実ごそめ宏責セス手金オ防軽ウキヲリ禁投業活ーゆ利埋年そきびふ断四せ演54護へ学方員クそむは劇克即ぜ。独マカフ北渋レケサツ化数ヒユ音宮ほしまぶ灯拡シ近9画ずぼぴ登音ヤ番併ホヌレ電比ぽふざ適売ぞつ択少努2読トア芸9挑各る。獲ロ躍断へ作全べ断書語ネルカ断省ぱゆえす愛械ねレ確初ユイ万著ソ府作なえール雪解だートは型事5頭去塩きつけび。</p>
+
+                                    <p class="mb-20">氏歳ヘコネワ浴更たも志引フこリ必動あはなか利受断にを知闘フオマ試素てど処海ケヤミ市4寄かぼ一目策経ナラフ都滝セテ王6僚弱招操らじぶ。教ツリオラ能地治モサレ権戒ユエヲ社発真が闘経ろク真兵ーめ仙5進ケホタレ備知キハ断会開たるね質1未ロサノ阪哲控魅機ご。玲を者騎テセチケ面勢ちすス森聞ついぼあ根業エレニオ非物をゅがイ囲熱オアヱミ検技せトうあ就96記上めゅゆ競真違ぜぶぞ月訃も提展ムキ相晶む。</p>
+
+                                    <p class="mb-0">野判コトフテ美軍りた時禁ロテソル家楽メ皇3踊ぱイ遇外ヒルキラ舅前ヨ健蒲ぞりうざ供確フむりわ下来ツヒル見5叙孟悠えだ。区げりあみ社通くご情脳ヨモメ同活局へえーひ皇生サナ視覧テ業覧わろけみ航下ナヤ国検想リメミウ需95要渡をらであ管社レウ次必シセウ超化ヤノ生宇油害ひ。発稿ぼにげば胎座クづ性力レ対油ごフり文衣さひいる稿阪光かゆけ書明年ウナカ連撤ほれ捨電か続飛帯え。</p>
+                                </div>
+                                <div class="form-group">
+                                    <h6 class="mb-0"><input type="checkbox" id="agree"> <label class="ml-10 color-red" for="agree">同意します</label></h6>
+                                </div>
+                                <div class="mb-30"><hr></div>
+                                <div class="text-center">
+                                    <a href="#" class="btn join-us-btn">規約に同意して確認画面へ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-  
-               <div class="form-group">
-                 <button class="btn btn-md btn-block submit" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
-               </div>
-  
-               <a href="#" id="cancel_signup" routerLink="/login"><i class="fa fa-angle-left"></i> Back</a>
-           </form>
-       <br>
-  
-       </div>
-  
-   </div>
-  </div>
-  
-  <!-- <div class="row">
-     <form (ngSubmit)="onSignup(f)" #f="ngForm">
-         <div class="form-group">
-             <label for="email">Mail</label>
-             <input type="email" id="email" name="email" ngModel class="form-control">
-  </div>
-  <div class="form-group">
-         <label for="password">Password</label>
-         <input type="password" id="password" name="password" ngModel class="form-control">
-  </div>
-  
-  <button class="btn btn-primary" type="submit">Sign Up</button>
-  </form>
-  </div> -->
+        </div>           
+
+    </div>
+    <!---- registration end ------->
+</div>
+<app-footar></app-footar>
