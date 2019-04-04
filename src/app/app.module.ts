@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
-import { HttpClientModule }    from '@angular/common/http';
+import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule,HttpClient}    from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { AdminComponent } from './admin/admin.component';
 import {  AuthService } from './auth.service';
 import { RegistrationComponent } from './registration/registration.component';
 import { SignupComponent } from './signup/signup.component';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -27,16 +29,22 @@ import { SignupComponent } from './signup/signup.component';
     RecruitComponent,
     AdminComponent,
     RegistrationComponent,
-    SignupComponent
+    SignupComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    NgbModule.forRoot(),
     HttpClientModule
 
   ],
   providers: [AuthService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    PopupComponent
+  ]
 })
 export class AppModule { }

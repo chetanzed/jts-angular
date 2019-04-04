@@ -8,6 +8,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './auth.guard';
 import { RegistrationComponent } from './registration/registration.component';
 import { SignupComponent } from './signup/signup.component';
+import { PopupComponent } from './popup/popup.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
@@ -17,7 +18,7 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent},
   {path: 'admin', canActivate:[AuthGuard], component: AdminComponent},
   {path: 'conference', component: ConferenceComponent},
-
+  {path: 'popup', component: PopupComponent},
   ];
 
 @NgModule({
