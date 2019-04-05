@@ -17,7 +17,7 @@ export class RecruitComponent implements OnInit {
     this.log1.unique_sales_code = "";
   }
   onSubmit(){
-    alert("i am submiting"+this.log1.unique_sales_code);
+    // alert("i am submiting"+this.log1.unique_sales_code);
     
      this.authservice.createcode(this.log1)
 .subscribe(data =>{
@@ -29,7 +29,7 @@ export class RecruitComponent implements OnInit {
     this.route.navigate(['register'],{queryParams:{usc:data.unique_sales_code}});
   }
   else{
-       alert("sorry")
+       alert("unique_sales_code: " +this.log1.unique_sales_code + "" +" is not Valid");
   }
 
  });

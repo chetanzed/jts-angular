@@ -6,6 +6,7 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { RegisterForm } from './registration.model';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -27,7 +28,7 @@ export class AuthService {
   {
     return this.http.post<RegisterForm> ("https://api.jtsboard.com/web_service_angular/add_sales_user",reg)
   }
-
+ 
 
   
 

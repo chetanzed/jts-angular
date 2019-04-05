@@ -4,6 +4,8 @@ import {NgModel } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { RegisterForm } from '../registration.model';
+import { registrationResponse} from '../registrationResponse.model';
+import { from } from 'rxjs';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -18,8 +20,6 @@ export class RegistrationComponent implements OnInit {
   rform:RegisterForm=new RegisterForm();
 
   ngOnInit() {
-
-    this.reg.roll_id="";
     this.reg.name="";
     this.reg.kana="";
     this.reg.kanji="";
@@ -55,14 +55,14 @@ export class RegistrationComponent implements OnInit {
     
   }
   onRegister(){
-    
+    console.log(this.reg);
     // alert("i am submiting regForm "+this.reg.name);
     
     this.authservice.registration(this.reg)
 .subscribe(data =>{
       
  console.log (data)
- if(data.status=="success")
+ if(data.status == "success")
  {
    alert("Thank you for Submission, you are Registred Now ")
    // localStorage.setItem("isLoggedin","yes");

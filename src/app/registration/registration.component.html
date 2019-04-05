@@ -14,13 +14,30 @@
                 </div>  
                 <div class="row justify-content-center">
                     <div class="col-md-9">
+                            <form #regs="ngForm"  (submit)="onRegister()">
                         <div class="row">
-
-                    <form #reg="ngForm"  (submit)="onRegister()">
+                    
+                            <div class="col-sm-12">
+                                    <div class="form-group mb-30">
+                                        <input type="text" class="form-control" name="master_sales_code" 
+                                        [(ngModel)]="rform.master_sales_code"
+                                        placeholder="master_sales_code"  readonly>
+                               <!-- {{rform.master_sales_code}} -->
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                        <div class="form-group mb-30">
+                                        <input type="text" 
+                                         [(ngModel)]="reg.name"
+                                        class="form-control"  
+                                        name="name" placeholder="ふりがな"  required>
+                                        <!-- {{reg|json}}  -->
+                                    </div>
+                                </div>
                             <div class="col-sm-6">
                                     <div class="form-group mb-30">
                                     <input type="text" 
-                                    #rg="ngModel"  [(ngModel)]="reg.kana"
+                                     [(ngModel)]="reg.kana"
                                     class="form-control"  
                                     name="kana" placeholder="ふりがな"  required>
                                 </div>
@@ -28,7 +45,7 @@
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
                                     <input type="text" 
-                                    #rg="ngModel"  [(ngModel)]="reg.kanji"
+                                     [(ngModel)]="reg.kanji"
                                     class="form-control"  name="kanji" placeholder="氏名" required>
                                 </div>
                             </div>
@@ -41,7 +58,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" [(ngModel)]="reg.email" class="form-control"  placeholder="メールアドレス"  name="email" required email>
+                                    <input type="email" [(ngModel)]="reg.email" class="form-control"  placeholder="メールアドレス"  name="email" required >
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -55,7 +72,7 @@
                                 <div class="form-group mb-30">
                                     <input type="text"
                                     [(ngModel)]="reg.password" 
-                                    class="form-control"  name="password" placeholder="パスワードを作成（半角英数６桁）" required>
+                                    class="form-control"  name="password" placeholder="パスワードを作成（半角英数６桁）" #email="ngModel" required minlength="6">
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -79,14 +96,7 @@
                                     class="form-control"  name="address" placeholder="住所 " required>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group mb-30">
-                                    <input type="text" class="form-control" name="master_sales_code" 
-                                    [(ngModel)]="rform.master_sales_code"
-                                    placeholder="master_sales_code" required>
-                           <!-- {{rform.master_sales_code}} -->
-                                </div>
-                            </div>
+                            
 
                             <div class="col-sm-12 mb-30"><hr></div>
 
@@ -237,8 +247,10 @@
                                     <button type="submit" (click)="onRegister()" class="btn join-us-btn">規約に同意して確認画面へ</button>
                                 </div>
                             </div>
-                            </form>
+                           
                         </div>
+                    </form>
+                    
                     </div>
                 </div>
             </div>
