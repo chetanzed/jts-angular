@@ -4,6 +4,7 @@ import { Login } from './login.model';
 import { Popup } from './popup.model';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { RegisterForm } from './registration.model';
+import { registrationResponse } from './registrationResponse.model';
 
 
 
@@ -24,9 +25,9 @@ export class AuthService {
    return this.http.post<Popup> ("https://api.jtsboard.com/web_service_angular/check_sales_user_code",log1)
   }
 
-  registration(reg):Observable<RegisterForm>
+  registration(reg:RegisterForm):Observable<registrationResponse>
   {
-    return this.http.post<RegisterForm> ("https://api.jtsboard.com/web_service_angular/add_sales_user",reg)
+    return this.http.post<registrationResponse> ("https://api.jtsboard.com/web_service_angular/add_sales_user",reg)
   }
  
 

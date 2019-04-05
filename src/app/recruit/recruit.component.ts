@@ -29,6 +29,7 @@ export class RecruitComponent implements OnInit {
     this.route.navigate(['register'],{queryParams:{usc:data.unique_sales_code}});
   }
   else{
+    this.log1.unique_sales_code
        alert("unique_sales_code: " +this.log1.unique_sales_code + "" +" is not Valid");
   }
 

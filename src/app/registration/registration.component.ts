@@ -14,13 +14,14 @@ import { from } from 'rxjs';
 export class RegistrationComponent implements OnInit {
 
   reg:RegisterForm= new RegisterForm();
+ 
   
   constructor(private router:Router,private authservice:AuthService, private route:ActivatedRoute) { }
   
   rform:RegisterForm=new RegisterForm();
 
   ngOnInit() {
-    this.reg.name="";
+ 
     this.reg.kana="";
     this.reg.kanji="";
     this.reg.email="";
@@ -69,6 +70,7 @@ export class RegistrationComponent implements OnInit {
 // this.route.navigate(['register'],{queryParams:{usc:data.unique_sales_code}});
  }
  else{
+   
       alert("sorry please fill the details properly")
  }
 

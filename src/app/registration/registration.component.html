@@ -13,7 +13,7 @@
                     </h5>
                 </div>  
                 <div class="row justify-content-center">
-                    <div class="col-md-9">
+                    <div class="col-md-10 col-lg-9">
                             <form #regs="ngForm"  (submit)="onRegister()">
                         <div class="row">
                     
@@ -21,18 +21,8 @@
                                     <div class="form-group mb-30">
                                         <input type="text" class="form-control" name="master_sales_code" 
                                         [(ngModel)]="rform.master_sales_code"
-                                        placeholder="master_sales_code"  readonly>
+                                        placeholder="master_sales_code"  disabled="disabled">
                                <!-- {{rform.master_sales_code}} -->
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                        <div class="form-group mb-30">
-                                        <input type="text" 
-                                         [(ngModel)]="reg.name"
-                                         #name="ngModel"
-                                        class="form-control"  
-                                        name="name" placeholder="ふりがな"  required>
-                                        <!-- {{reg|json}}  -->
                                     </div>
                                 </div>
                             <div class="col-sm-6">
