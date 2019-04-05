@@ -28,7 +28,7 @@ export class AuthService {
   registration(reg):Observable<RegisterForm>
 
   {
-    
+    console.log(reg);
     return this.http.post<RegisterForm> ("https://api.jtsboard.com/web_service_angular/add_sales_user",reg)
   }
  

@@ -188,7 +188,7 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h5 class="modal-title">Sales Code </h5>
+                    <h5 class="modal-title">紹介者コード </h5>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
@@ -197,15 +197,15 @@
                     <div class="modal-body" >
                     
                         <div class="form-group">
-                            <input type="text" #usc="ngModel"  [(ngModel)]="log1.unique_sales_code" class="form-control" name="unique_sales_code" placeholder="Enter your sales code" required></div>
+                            <input type="text" #usc="ngModel"  [(ngModel)]="log1.unique_sales_code" class="form-control" name="unique_sales_code" placeholder="紹介者コードを入力してください" required></div>
                                 <!-- {{log1|json}} -->
                         </div>
 
                         <!-- Modal footer -->
                         <div class="modal-footer">
                             <div class="text-center">
-                                <a class="btn mr-20" data-dismiss="modal" (click)="onSubmit()" >Submit</a>
-                                <a class="btn" data-dismiss="modal" href="#">Close</a>
+                                <a class="btn mr-20" href="#" data-dismiss="modal" (click)="onSubmit()" >送信する</a>
+                                <a class="btn" data-dismiss="modal" href="#">閉じる</a>
                             </div>                       
                         
                         </div>

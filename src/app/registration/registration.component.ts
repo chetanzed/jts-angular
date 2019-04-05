@@ -30,8 +30,8 @@ this.reg.tel="";
 this.reg.dob="";
 this.reg.zip_code="";
 this.reg.address="";
-this.reg.dl_front_img="";
-this.reg.dl_back_img="";
+// this.reg.dl_front_img="";
+// this.reg.dl_back_img="";
 this.rform.master_sales_code="";
 this.reg.bank_name="";
 this.reg.bank_name_kana="";
@@ -43,7 +43,6 @@ this.reg.what_kind_of_bank="";
 this.reg.account_number="";
 this.reg.account_holder_name_kana="";
 this.reg.account_holder_name="";
-
       
         
       this.route.queryParamMap.subscribe(data=>{
@@ -56,8 +55,9 @@ this.reg.account_holder_name="";
     })
     
   }
-  onRegister(){
-    console.log(this.reg);
+  onRegister(reg){
+    console.log(reg);
+    return false;
     // alert("i am submiting regForm "+this.reg.name);
     
     this.authservice.registration(this.reg)

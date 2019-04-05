@@ -14,7 +14,7 @@
                 </div>  
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-lg-9">
-                            <form #regs="ngForm"  (submit)="onRegister()">
+                            <form #regs="ngForm"  (submit)="onRegister(reg)">
                         <div class="row">
                     
                             <div class="col-sm-12">
@@ -22,7 +22,7 @@
                                         <input type="text" class="form-control" name="master_sales_code" 
                                         [(ngModel)]="reg.master_sales_code"
                                         #master_sales_code="ngModel"
-                                        placeholder="{{rform.master_sales_code}}"  disabled="disabled">
+                                        placeholder="{{rform.master_sales_code}}" value="{{rform.master_sales_code|json}}"  readonly="readonly">
                                <!-- {{rform.master_sales_code}} -->
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@
                                     <label>運転免許証の写真を表側、裏側を選択してアップロードしてください</label>
                                 </div>
                             </div>                                
-                            <div class="col-sm-6">
+                            <!-- <div class="col-sm-6">
                                 <div class="form-group mb-30">
                                     <label>表：</label>
                                     <input type="file" 
@@ -138,7 +138,7 @@
                                     name="dl_back_img" required>
                                     <span class="help-block" *ngIf="!dl_back_img.valid && dl_back_img.touched">Value is empity.</span>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="col-sm-12 mb-30"><hr></div>
 
