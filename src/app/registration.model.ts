@@ -9,9 +9,9 @@ tel:string;
 dob:string;
 zip_code:string;
 address:string;
-master_sales_code: string;
 dl_front_img: string;
 dl_back_img: string;
+master_sales_code: string;
 bank_name:string;
 bank_name_kana:string;
 bank_number:string;
@@ -22,5 +22,6 @@ what_kind_of_bank:string;
 account_number:string;
 account_holder_name_kana:string;
 account_holder_name:string;
+status:string;
 
 }

@@ -22,26 +22,27 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit() {
  
-    this.reg.kana="";
-    this.reg.kanji="";
-    this.reg.email="";
-    this.reg.password="";
-    this.reg.tel="";
-    this.reg.dob="";
-    this.reg.zip_code="";
-    this.reg.address="";
-    this.reg.dl_front_img="";
-    this.reg.dl_back_img="";
-    this.reg.bank_name="";
-    this.reg.bank_name_kana="";
-    this.reg.bank_number="";
-    this.reg.branch="";
-    this.reg.branch_kana="";
-    this.reg.branch_code="";
-    this.reg.what_kind_of_bank="";
-    this.reg.account_number="";
-    this.reg.account_holder_name_kana="";
-    this.reg.account_holder_name="";
+this.reg.kana="";
+this.reg.kanji="";
+this.reg.email="";
+this.reg.password="";
+this.reg.tel="";
+this.reg.dob="";
+this.reg.zip_code="";
+this.reg.address="";
+this.reg.dl_front_img="";
+this.reg.dl_back_img="";
+this.rform.master_sales_code="";
+this.reg.bank_name="";
+this.reg.bank_name_kana="";
+this.reg.bank_number="";
+this.reg.branch="";
+this.reg.branch_kana="";
+this.reg.branch_code="";
+this.reg.what_kind_of_bank="";
+this.reg.account_number="";
+this.reg.account_holder_name_kana="";
+this.reg.account_holder_name="";
 
       
         
@@ -62,7 +63,7 @@ export class RegistrationComponent implements OnInit {
     this.authservice.registration(this.reg)
 .subscribe(data =>{
       
- console.log (data)
+ console.log ()
  if(data.status == "success")
  {
    alert("Thank you for Submission, you are Registred Now ")

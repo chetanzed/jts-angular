@@ -20,18 +20,20 @@
                             <div class="col-sm-12">
                                     <div class="form-group mb-30">
                                         <input type="text" class="form-control" name="master_sales_code" 
-                                        [(ngModel)]="rform.master_sales_code"
-                                        placeholder="master_sales_code"  disabled="disabled">
+                                        [(ngModel)]="reg.master_sales_code"
+                                        #master_sales_code="ngModel"
+                                        placeholder="{{rform.master_sales_code}}"  disabled="disabled">
                                <!-- {{rform.master_sales_code}} -->
                                     </div>
                                 </div>
                             <div class="col-sm-6">
                                     <div class="form-group mb-30">
                                     <input type="text" 
-                                     [(ngModel)]="reg.kana"
+                                    [(ngModel)]="reg.kana"
                                      #kana="ngModel"
                                     class="form-control"  
                                     name="kana" placeholder="ふりがな"  required>
+                                    <span class="help-block" *ngIf="!kana.valid && kana.touched">Enter the value hear box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -40,6 +42,7 @@
                                      [(ngModel)]="reg.kanji"
                                      #kanji="ngModel"
                                     class="form-control"  name="kanji" placeholder="氏名" required>
+                                    <span class="help-block" *ngIf="!kanji.valid && kanji.touched">Enter the value hear box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -50,6 +53,7 @@
                                     [(ngModel)]="reg.tel" name="tel"
                                     #tel="ngModel"
                                      placeholder="携帯番号" required>
+                                     <span class="help-block" *ngIf="!tel.valid && tel.touched">Enter the value hear box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -57,6 +61,7 @@
                                     <input type="email" [(ngModel)]="reg.email" 
                                     #email="ngModel"
                                     class="form-control"  placeholder="メールアドレス"  name="email" required >
+                                    <span class="help-block" *ngIf="!email.valid && email.touched">Enter the value hear box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -65,6 +70,7 @@
                                     [(ngModel)]="reg.dob"
                                     #dob="ngModel"
                                     class="form-control"  name="dob" placeholder="生年月日   年    月    日" required>
+                                    <span class="help-block" *ngIf="!dob.valid && dob.touched">Enter the value hear box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -73,6 +79,7 @@
                                     [(ngModel)]="reg.password" 
                                     #password="ngModel"
                                     class="form-control"  name="password" placeholder="パスワードを作成（半角英数６桁）" #email="ngModel" required minlength="6">
+                                    <span class="help-block" *ngIf="!password.valid && password.touched">Enter the value hear box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -81,6 +88,7 @@
                                     [(ngModel)]="reg.confirm_password"
                                     #confirm_password="ngModel"
                                     class="form-control"  name="confirm_password" placeholder="パスワードを再入力（確認用）" required>
+                                    <span class="help-block" *ngIf="!confirm_password.valid && confirm_password.touched">Enter the value hear box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -89,6 +97,7 @@
                                     [(ngModel)]="reg.zip_code"
                                     #zip_code="ngModel"
                                     class="form-control"  name="zip_code" placeholder="郵便番号" required>
+                                    <span class="help-block" *ngIf="!zip_code.valid && zip_code.touched">Enter the value hear box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-12">
@@ -97,6 +106,7 @@
                                     [(ngModel)]="reg.address"
                                     #address="ngModel"
                                     class="form-control"  name="address" placeholder="住所 " required>
+                                    <span class="help-block" *ngIf="!address.valid && address.touched">Enter the value hear box is empity.</span>
                                 </div>
                             </div>
                             
@@ -116,6 +126,7 @@
                                     #dl_front_img="ngModel"
                                     class="form-control" 
                                      name="dl_front_img" required>
+                                     <span class="help-block" *ngIf="!dl_front_img.valid && dl_front_img.touched">Value is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -125,6 +136,7 @@
                                     [(ngModel)]="reg.dl_back_img"
                                     #dl_back_img="ngModel"
                                     name="dl_back_img" required>
+                                    <span class="help-block" *ngIf="!dl_back_img.valid && dl_back_img.touched">Value is empity.</span>
                                 </div>
                             </div>
 
@@ -144,6 +156,7 @@
                                     [(ngModel)]="reg.bank_name"
                                     #bank_name="ngModel"
                                     name="bank_name" placeholder="金融機関名" required>
+                                    <span class="help-block" *ngIf="!bank_name.valid && bank_name.touched">Value is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -152,6 +165,7 @@
                                     [(ngModel)]="reg.bank_name_kana"
                                     #bank_name_kana="ngModel"
                                     name="bank_name_kana" placeholder="金融機関名（カナ）" required>
+                                    <span class="help-block" *ngIf="!bank_name_kana.valid && bank_name_kana.touched">Enter the Value input Box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -160,6 +174,7 @@
                                     [(ngModel)]="reg.bank_number"
                                     #bank_number="ngModel"
                                     name="bank_number" placeholder="金融機関コード" required>
+                                    <span class="help-block" *ngIf="!bank_number.valid && bank_number.touched">Enter the Value input Box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -168,6 +183,7 @@
                                     [(ngModel)]="reg.branch"
                                     #branch="ngModel"
                                     name="branch" placeholder="支店名" required>
+                                    <span class="help-block" *ngIf="!branch.valid && branch.touched">Enter the Value input Box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -176,6 +192,7 @@
                                     [(ngModel)]="reg.branch_kana" 
                                     #branch_kana="ngModel"
                                     name="branch_kana" placeholder="支店名（カナ）" required>
+                                    <span class="help-block" *ngIf="!branch_kana.valid && branch_kana.touched">Enter the Value input Box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -184,6 +201,7 @@
                                     [(ngModel)]="reg.branch_code"
                                     #branch_code="ngModel"
                                      name="branch_code" placeholder="支店コード" required>
+                                     <span class="help-block" *ngIf="!branch_code.valid && branch_code.touched">Enter the Value input Box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -204,6 +222,7 @@
                                     [(ngModel)]="reg.account_number"
                                     #account_number="ngModel"
                                      name="account_number" placeholder="口座番号" required>
+                                     <span class="help-block" *ngIf="!account_number.valid && account_number.touched">Enter the Value input Box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -212,6 +231,7 @@
                                     [(ngModel)]="reg.account_holder_name_kana"
                                     #account_holder_name_kana="ngModel"
                                     name="account_holder_name_kana" placeholder="口座名義（カナ）" required>
+                                    <span class="help-block" *ngIf="!account_holder_name_kana.valid && account_holder_name_kana.touched">Enter the Value input Box is empity.</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -220,6 +240,7 @@
                                     [(ngModel)]="reg.account_holder_name"
                                     #account_holder_name="ngModel"
                                      name="account_holder_name" placeholder="口座名義" required>
+                                     <span class="help-block" *ngIf="!account_holder_name.valid && account_holder_name.touched">Enter the Value input Box is empity.</span>
                                 </div>
                             </div>
 
