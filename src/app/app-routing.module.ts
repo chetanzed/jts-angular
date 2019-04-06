@@ -7,7 +7,12 @@ import { RecruitComponent } from './recruit/recruit.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './auth.guard';
 import { RegistrationComponent } from './registration/registration.component';
-import { SignupComponent } from './signup/signup.component';
+import { SignupComponent } from './signup/signup.component';import { FaqComponent } from './faq/faq.component';
+import { FunctionComponent } from './function/function.component';
+import { HowToUseComponent } from './how-to-use/how-to-use.component';
+import { ThanksComponent } from './thanks/thanks.component';
+import { NewsComponent } from './news/news.component';
+import { RegistrationDetailsComponent } from './registration-details/registration-details.component';
 
 
 const routes: Routes = [
@@ -17,7 +22,16 @@ const routes: Routes = [
   {path: 'login',   component: LoginComponent},
   {path:'signup',component:SignupComponent},
   {path: 'admin', canActivate:[AuthGuard], component: AdminComponent},
-  {path: 'conference', component: ConferenceComponent}
+  {path: 'conference', component: ConferenceComponent},
+  {path :'function',component: FunctionComponent },
+  {path :'thanks',component: ThanksComponent },
+  {path :'faq',component: FaqComponent },
+  {path :'news',component: NewsComponent },
+  {path :'registration-detail',component: RegistrationDetailsComponent },
+
+  {path :'how-to-use',component: HowToUseComponent  },
+
+  // {path :'who-use',component: }
   ];
 
 @NgModule({

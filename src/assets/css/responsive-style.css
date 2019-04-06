@@ -94,6 +94,9 @@
     .join-us-btn {font-size: 1rem;}
 
     
+    .fuction-list-inside li a img {height: 60px;}
+
+    
 
 }
 
@@ -162,6 +165,10 @@
     .comment-box h2 {top: 38px;}
     .help-suppoer-img img{width: 225px;}
 
+
+    .footer-top{padding-top: 60px;}
+    .footer-top .footer-links {margin-bottom: 50px;}
+
     .app-link-btn img {height: 45px;}
     .recruit-header-panel h1 {font-size: 1.25rem;}
      .recruit-header-panel h2 {padding: 20px 0;line-height: unset; font-size: 1rem;}
@@ -171,6 +178,12 @@
      .recruit-block-text {font-size: 0.75rem;}
      .recruit-work-text {font-size: 0.7rem;}
      .top-space {margin-top: 20px;}
+
+     .label-name {margin-right: 0; margin-bottom: 6px;}
+     .label-name, .label-value {display: block;}
+
+     .fuction-list-inside li a {padding: 20px 0;}
+     .fuction-list-inside li a img {height: 45px; margin-bottom: 10px;}
 
 
    
@@ -235,11 +248,26 @@
     .fuction-list li a { padding: 10px; font-size: 0.9rem;}
     .fuction-list li {padding: 0 10px 20px; width: 40%;}
 
+    .footer-top{padding-top: 50px;}
+    .footer-top .footer-links {margin-bottom: 40px;}
+
     .recruit-header-panel h1 {font-size: 1rem;}
     .recruit-comment {top: -50px;}
     .recruit-comment img {height: 60px;}
     .recruit-comment h3 {top: 18px; left: 5px;}
     .recruit-header-panel h2 {padding: 10px 0; line-height: unset;  font-size: 0.8rem;}
+
+
+    .thank-content h1 {font-size: 2.5rem}
+    .thank-content h1 .fa-check{ font-size: 6rem; top: -30px;} 
+    .thank-content{padding: 25px 15px;}
+    .thank-content h5{line-height: 24px;}
+
+    .fuction-list-inside li {width: 50%;padding: 0 8px 16px;} 
+    .fuction-list-inside li a{padding: 16px 0;font-size: 14px;} 
+    .fuction-list-inside li a img {margin-bottom: 8px; height: 40px;}
+
+
 
  }
 
@@ -289,20 +317,19 @@
     .recruit-reward-panel .table-gap td, .recruit-reward-panel .table-gap th { font-size: 0.55rem; font-weight: bold;}
     .recruit-description-panel .table-gap td { font-size: 0.55rem;  font-weight: bold;}
 
+
+    .footer-top{padding-top: 40px;}
+    .footer-top .footer-links {margin-bottom: 30px;}
+
+
+    
+    
+
  }
 
 
- #logreg-forms{width:472px;margin:10vh auto; background-color:#ffffff; box-shadow: 0 7px 7px rgba(0, 0, 0, 0.12), 0 12px 40px rgba(0,0,0,0.22); border-radius: 5px;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1); -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1); -ms-transition: all 0.3s cubic-bezier(.25,.8,.25,1);}
-     #logreg-forms form {width: 100%; max-width: 470px; padding: 15px; margin: auto;}
-     #logreg-forms .form-reset, #logreg-forms .form-signup{ display: none; }
 
 
-     .modal {padding-right: 0 !important;background-color: rgba(0,0,0,0.5);}
-     .modal-backdrop.show{display: none;}
-     .modal-header {background: #e7c240; color: #fff;}
-     .attendance-body h5{margin-bottom: 20px}
-     /* .attendance-body .btn-attendance{background-color:#281e05; } */
-     
+
 
 

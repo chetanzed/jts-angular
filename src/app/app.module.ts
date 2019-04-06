@@ -16,6 +16,12 @@ import { AdminComponent } from './admin/admin.component';
 import {  AuthService } from './auth.service';
 import { RegistrationComponent } from './registration/registration.component';
 import { SignupComponent } from './signup/signup.component';
+import { FaqComponent } from './faq/faq.component';
+import { FunctionComponent } from './function/function.component';
+import { HowToUseComponent } from './how-to-use/how-to-use.component';
+import { ThanksComponent } from './thanks/thanks.component';
+import { RegistrationDetailsComponent } from './registration-details/registration-details.component';
+import { NewsComponent } from './news/news.component';
 
 
 @NgModule({
@@ -29,7 +35,13 @@ import { SignupComponent } from './signup/signup.component';
     RecruitComponent,
     AdminComponent,
     RegistrationComponent,
-    SignupComponent
+    SignupComponent,
+    FaqComponent,
+    FunctionComponent,
+    HowToUseComponent,
+    ThanksComponent,
+    RegistrationDetailsComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

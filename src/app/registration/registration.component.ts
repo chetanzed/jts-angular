@@ -5,6 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { RegisterForm } from '../registration.model';
 import { registrationResponse} from '../registrationResponse.model';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { from } from 'rxjs';
 @Component({
   selector: 'app-registration',
@@ -12,7 +13,8 @@ import { from } from 'rxjs';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-
+  // registerForm: FormGroup;
+  // submitted = false;
   reg:RegisterForm= new RegisterForm();
  
   
@@ -57,7 +59,7 @@ this.reg.account_holder_name="";
   }
   onRegister(reg){
     console.log(reg);
-    return false;
+   
     // alert("i am submiting regForm "+this.reg.name);
     
     this.authservice.registration(this.reg)
