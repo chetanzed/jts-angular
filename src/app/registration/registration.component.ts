@@ -21,8 +21,9 @@ export class RegistrationComponent implements OnInit {
   constructor(private router:Router,private authservice:AuthService, private route:ActivatedRoute) { }
   
   rform:RegisterForm=new RegisterForm();
-
+  firstLoad:Boolean = true;
   ngOnInit() {
+    
  
 this.reg.kana="";
 this.reg.kanji="";
@@ -46,6 +47,10 @@ this.reg.account_number="";
 this.reg.account_holder_name_kana="";
 this.reg.account_holder_name="";
       
+if(this.firstLoad) {
+  window.scroll(0,0);
+  this.firstLoad = false;
+}
         
       this.route.queryParamMap.subscribe(data=>{
 
