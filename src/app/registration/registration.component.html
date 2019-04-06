@@ -21,7 +21,6 @@
                                     <div class="form-group mb-30">
                                         <input type="text" class="form-control"name="master_sales_code" 
                                         [(ngModel)]="reg.master_sales_code"
-                                        #master_sales_code="ngModel"
                                         placeholder="{{rform.master_sales_code}}" value="{{rform.master_sales_code|json}}"  readonly="readonly">
                                <!-- {{rform.master_sales_code}} -->
                                     </div>
@@ -118,7 +117,7 @@
                                     <label>運転免許証の写真を表側、裏側を選択してアップロードしてください</label>
                                 </div>
                             </div>                                
-                            <!-- <div class="col-sm-6">
+                            <div class="col-sm-6">
                                 <div class="form-group mb-30">
                                     <label>表：</label>
                                     <input type="file" 
@@ -127,6 +126,9 @@
                                     class="form-control" 
                                      name="dl_front_img" required>
                                      <span class="help-block" *ngIf="!dl_front_img.valid && dl_front_img.touched">Value is empity.</span>
+                                    <!-- W64
+                                     <input class="form-control" [(ngModel)]="frontImage" name="frontImage" #abc="ngModel" type="file" accept="image/*" (change)="changeListener($event)" required> -->
+                                     <!-- <span class="help-block" *ngIf="!abc.valid && abc.touched">Value is empity.</span> -->
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -138,7 +140,7 @@
                                     name="dl_back_img" required>
                                     <span class="help-block" *ngIf="!dl_back_img.valid && dl_back_img.touched">Value is empity.</span>
                                 </div>
-                            </div> -->
+                            </div>
 
                             <div class="col-sm-12 mb-30"><hr></div>
 
