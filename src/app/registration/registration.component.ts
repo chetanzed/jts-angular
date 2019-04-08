@@ -5,7 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { RegisterForm } from '../registration.model';
 
-
+declare var $:any;
 import { from } from 'rxjs';
 @Component({
   selector: 'app-registration',
@@ -23,10 +23,16 @@ export class RegistrationComponent implements OnInit {
   rform:RegisterForm=new RegisterForm();
   firstLoad:Boolean = true;
   ngOnInit() {
+    //show on top screen 
     if(this.firstLoad) {
   window.scroll(0,0);
   this.firstLoad = false;
 }
+//load time picker
+$('#sandbox-container input').datepicker({
+  format: 'yyyy-mm-dd',
+});
+
         
       this.route.queryParamMap.subscribe(data=>{
 

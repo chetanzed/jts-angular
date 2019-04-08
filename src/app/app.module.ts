@@ -10,7 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FootarComponent } from './footar/footar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
-import { ConferenceComponent } from './conference/conference.component';
+
 import { RecruitComponent } from './recruit/recruit.component';
 import { AdminComponent } from './admin/admin.component';
 import {  AuthService } from './auth.service';
@@ -32,7 +32,6 @@ import { AuthComponent } from './auth/auth.component';
     FootarComponent,
     LandingPageComponent,
     LoginComponent,
-    ConferenceComponent,
     RecruitComponent,
     AdminComponent,
     RegistrationComponent,

@@ -96,3 +96,4 @@ $('body, html').animate({scrollTop: scrollTo+'px'}, 800);
 
 
   }
+}

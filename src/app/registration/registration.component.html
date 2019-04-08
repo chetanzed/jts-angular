@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <div class="form-group mb-30">
+                                <div class="form-group mb-30" id="sandbox-container">
                                     <input type="text" 
                                     [(ngModel)]="reg.dob"
                                     #dob="ngModel"
@@ -74,7 +74,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text"
+                                    <input type="password"
                                     [(ngModel)]="reg.password" 
                                     #password="ngModel"
                                     class="form-control"  name="password" placeholder="パスワードを作成（半角英数６桁）" #email="ngModel" required minlength="6">

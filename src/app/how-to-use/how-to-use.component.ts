@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class HowToUseComponent implements OnInit {
 
   constructor() { }
-
+  firstLoad:boolean=true;
   ngOnInit() {
+    if(this.firstLoad) {
+      window.scroll(0,0);
+      this.firstLoad = false;
+    }
   }
 
 }
