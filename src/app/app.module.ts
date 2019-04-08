@@ -22,6 +22,7 @@ import { HowToUseComponent } from './how-to-use/how-to-use.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { RegistrationDetailsComponent } from './registration-details/registration-details.component';
 import { NewsComponent } from './news/news.component';
+import { AuthComponent } from './auth/auth.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { NewsComponent } from './news/news.component';
     HowToUseComponent,
     ThanksComponent,
     RegistrationDetailsComponent,
-    NewsComponent
+    NewsComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
