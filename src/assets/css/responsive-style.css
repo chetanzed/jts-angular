@@ -321,12 +321,18 @@
     .footer-top{padding-top: 40px;}
     .footer-top .footer-links {margin-bottom: 30px;}
 
-.form-group input{font-size: 11px;}
+.form-group input{font-size: inherit;}
     
     
 
  }
-
+ @media screen and (-webkit-min-device-pixel-ratio:0) { 
+    select,
+    textarea,
+    input {
+        font-size: inherit;
+    }
+  }
 
 
 

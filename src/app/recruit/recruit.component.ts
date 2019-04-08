@@ -13,8 +13,13 @@ export class RecruitComponent implements OnInit {
   log1:Popup=new Popup();
   constructor(private route:Router, private authservice:AuthService) { }
 
+  firstLoad:boolean=true;
   ngOnInit() {
     this.log1.unique_sales_code = "";
+    if(this.firstLoad) {
+      window.scroll(0,0);
+      this.firstLoad = false;
+    }
   }
   onSubmit(){
     // alert("i am submiting"+this.log1.unique_sales_code);

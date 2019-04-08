@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
-  constructor() { }
-
+  firstLoad:boolean=true;
   ngOnInit() {
+    if(this.firstLoad) {
+      window.scroll(0,0);
+      this.firstLoad = false;
+    }
   }
-
 }
