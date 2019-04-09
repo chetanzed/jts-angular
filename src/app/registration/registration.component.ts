@@ -16,7 +16,8 @@ export class RegistrationComponent implements OnInit {
   
   frontImage:string;
   backImage:string;
-  reg:RegisterForm= new RegisterForm();
+  what_kind_of_back:string;
+    reg:RegisterForm= new RegisterForm();
  
   
   constructor(private router:Router,private authservice:AuthService, private route:ActivatedRoute) { }
@@ -24,6 +25,7 @@ export class RegistrationComponent implements OnInit {
   rform:RegisterForm=new RegisterForm();
   firstLoad:Boolean = true;
   ngOnInit() {
+    this.reg.what_kind_of_bank="預金種類";
     //show on top screen 
     if(this.firstLoad)
      {
