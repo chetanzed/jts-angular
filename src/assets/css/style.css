@@ -113,7 +113,7 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .morecontent span { display: none;}
 .morelink {display: block; margin-top: 15px;}
 
-
+.modal{z-index: 10000;}
 
 
 /******* back to top button start ********/
@@ -135,7 +135,7 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 
 
 /*************** home page start **************/
-.header {padding-top: 10px;}
+.header {padding-top: 10px; background-color: #fff;}
 
 .brand-logo {display: inline-block; /*padding-top: 5px;*/}
 .header-top {/*padding-top: 5px;*/ font-size: 11px; margin-top: -10px; margin-bottom: -15px;}
@@ -159,17 +159,16 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 
 /****** main nav start**********/ 
 .top-nav .navbar {background-color: #e7c240;border: 0 none; float: none; margin-bottom: 0; margin-top: 0; min-height: auto; padding:0; padding-left: 20px; position: relative; top:25px;
-    z-index: 777; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px;}
+    z-index: 777; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; transition: all 0.3s; -webkit-transition: all 0.3s; -o-transition: all 0.3s;}
 .top-nav .navbar-nav > li > a {color: #fff;display: block; font-size: 13px;padding: 15px; position: relative; text-transform: uppercase;}
 /* .top-nav .navbar-nav > li > a:hover,.top-nav .navbar-nav > li > a:focus{color:#281e05; } */
 .top-nav .navbar-nav .nav-link:focus, .top-nav .navbar-nav .nav-link:hover {background-color: rgba(255,255,255,0.15); color: #fff;}
 .navbar-expand-lg .navbar-nav .nav-link {padding-right: 15px; padding-left: 15px; color: #fff;font-weight: 600;}
 
-#navbar {/*overflow: hidden;*/ z-index: 9999;}
+#navbar {z-index: 9999;}
 .sticky {position: fixed; top: 0; width:100%;}
-.sticky + .main {padding-top: 30px;}
-.sticky + .main.top-space {padding-top: 25px;}
-.sticky.top-nav .navbar {top:0;}
+.sticky + .main {padding-top: 108px;}
+
 
 .menu-left{display: none;}
 
@@ -368,7 +367,7 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 
 
 
-
+.modal-content{margin-top: 220px;}
 
 
 

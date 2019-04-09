@@ -146,6 +146,8 @@
 
     .padding-panel {padding-top: 60px; padding-bottom: 45px;}
 
+    .sticky + .main {padding-top: 108px;}
+
     .header-top {font-size: 0.55rem}
     .col-right-header-btn {padding-left: 25px; margin-left: 25px;}
     .col-right-header p {font-size: 11px;}
@@ -209,6 +211,8 @@
     .white-bg {padding: 20px 15px;}
 
     .header {text-align: center;}
+    .sticky + .main {padding-top: 198px;}
+
     .brand-logo img{height: 45px;}
     .right-header {padding-top: 10px; padding-bottom: 10px;}
     .right-header {text-align: center;}
@@ -287,6 +291,8 @@
     .padding-panel {padding-top: 40px; padding-bottom: 25px;}
     .table-gap td, .table-gap th {padding: 0.5rem;}
 
+    .sticky + .main {padding-top: 191px;}
+
     .header-link li a {font-size: 10px;}
     .header-link li {padding-right: 5px;}
     .col-right-header-btn {padding-left: 15px;margin-left: 10px;}
@@ -320,20 +326,10 @@
 
     .footer-top{padding-top: 40px;}
     .footer-top .footer-links {margin-bottom: 30px;}
-
-.form-group input{font-size: inherit;}
     
     
 
  }
- @media screen and (-webkit-min-device-pixel-ratio:0) { 
-    select,
-    textarea,
-    input {
-        font-size: inherit;
-    }
-  }
-
 
 
 
