@@ -165,6 +165,12 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .top-nav .navbar-nav .nav-link:focus, .top-nav .navbar-nav .nav-link:hover {background-color: rgba(255,255,255,0.15); color: #fff;}
 .navbar-expand-lg .navbar-nav .nav-link {padding-right: 15px; padding-left: 15px; color: #fff;font-weight: 600;}
 
+#navbar {/*overflow: hidden;*/ z-index: 9999;}
+.sticky {position: fixed; top: 0; width:100%;}
+.sticky + .main {padding-top: 30px;}
+.sticky + .main.top-space {padding-top: 25px;}
+.sticky.top-nav .navbar {top:0;}
+
 .menu-left{display: none;}
 
 .menubar1, .menubar2, .menubar3 {width: 30px;height: 4px;background-color: #fff;margin: 6px 0; transition: 0.4s;display: block;}
