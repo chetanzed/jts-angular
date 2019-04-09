@@ -14,7 +14,8 @@ import { from } from 'rxjs';
 })
 export class RegistrationComponent implements OnInit {
   
-  
+  frontImage:string;
+  backImage:string;
   reg:RegisterForm= new RegisterForm();
  
   
