@@ -14,7 +14,7 @@ import { from } from 'rxjs';
 })
 export class RegistrationComponent implements OnInit {
   
-  frontImage: string;
+  
   reg:RegisterForm= new RegisterForm();
  
   
@@ -24,32 +24,27 @@ export class RegistrationComponent implements OnInit {
   firstLoad:Boolean = true;
   ngOnInit() {
     //show on top screen 
-    if(this.firstLoad) {
+    if(this.firstLoad)
+     {
   window.scroll(0,0);
   this.firstLoad = false;
-}
+  }
+
 //load time picker
 $('#sandbox-container input').datepicker({
   format: 'yyyy-mm-dd',
 });
+ this.route.queryParamMap.subscribe(data=>{
 
-        
-      this.route.queryParamMap.subscribe(data=>{
+this.reg.master_sales_code=data.get('rfc');
+})
+    }
 
-      // alert(data.get('usc'));
-
-      this.rform.master_sales_code=data.get('usc');
-      this.reg.master_sales_code=data.get('usc');
-
-      // alert(this.rform.master_sales_code);
-      // console.log('jhds', this.reg)
-    })
-    
-  }
   onRegister(reg){
+    
     console.log(reg);
    
-    // alert("i am submiting regForm "+this.reg.name);
+    
     if (this.reg.dl_front_img && this.reg.dl_back_img) {
       this.authservice.registration(reg)
 .subscribe(data =>{
@@ -57,38 +52,51 @@ $('#sandbox-container input').datepicker({
  console.log (data)
  if(data.status == "success")
  {
-  //  alert("Thank you for Submission, you are Registred Now ")
-   // localStorage.setItem("isLoggedin","yes");
-this.router.navigate(['thanks'])
+ 
+this.router.navigate(['registration-detail'],{queryParams:{kana:this.reg.kana,
+  kanji:this.reg.kanji, tel:this.reg.tel, email:this.reg.email, dob:this.reg.dob,
+  password:this.reg.password,confirm_password:this.reg.confirm_password, zip_code:this.reg.zip_code,
+  address:this.reg.address, 
+
+  dl_front_img:this.reg.dl_front_img, dl_back_img:this.reg.dl_back_img,
+
+  bank_name:this.reg.bank_name,  bank_name_kana:this.reg.bank_name_kana, bank_number:this.reg.bank_number, 
+  branch:this.reg.branch, branch_kana:this.reg.branch_kana, branch_code:this.reg.branch_code, what_kind_of_bank:this.reg.what_kind_of_bank, 
+  account_number:this.reg.account_number,
+  account_holder_name_kana:this.reg.account_holder_name_kana, account_holder_name:this.reg.account_holder_name,
+}});
+
  }
  else{
-   
-      alert("sorry please fill the details properly")
- }
-
+  this.router.navigate(['register']) 
+      }
 });
     }
-    
-
+}
+  
+// W64
+changeListener($event) : void {
+  this.readThis($event.target);
 }
 
-// W64
-// changeListener($event) : void {
-//   this.readThis($event.target);
-// }
+readThis(inputValue: any): void {
+  let image;
+  var file:File = inputValue.files[0];
+  var myReader:FileReader = new FileReader();
 
-// readThis(inputValue: any): void {
-//   let image;
-//   var file:File = inputValue.files[0];
-//   var myReader:FileReader = new FileReader();
+  myReader.onloadend = (e) => {
+    image = myReader.result;
+    this.reg.dl_front_img = myReader.result;
+    
+    $('#imgfront').attr('src',myReader.result);
+    // console.log('front image', this.reg.dl_front_img)
 
-//   myReader.onloadend = (e) => {
-//     // image = myReader.result;
-//     this.reg.dl_front_img = myReader.result;
-//     console.log('hvdchvds', this.reg.dl_front_img)
-//   }
+    this.reg.dl_back_img = myReader.result;
+    // $('#imgback').attr('src',myReader.result);
+    console.log('back image', this.reg.dl_front_img)
+  }
   
-//   myReader.readAsDataURL(file);
-// }
+  myReader.readAsDataURL(file);
+}
 
 }

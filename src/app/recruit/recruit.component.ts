@@ -11,7 +11,7 @@ import { Popup } from '../popup.model';
 export class RecruitComponent implements OnInit {
   
   log1:Popup=new Popup();
-  constructor(private route:Router, private authservice:AuthService) { }
+  constructor(private router:Router, private authservice:AuthService) { }
 
   firstLoad:boolean=true;
   ngOnInit() {
@@ -31,7 +31,7 @@ export class RecruitComponent implements OnInit {
   if(data.status=="success")
   {
     // localStorage.setItem("isLoggedin","yes");
-    this.route.navigate(['register'],{queryParams:{usc:data.unique_sales_code}});
+    this.router.navigate(['register'],{queryParams:{rfc:data.unique_sales_code}});
   }
   else{
     this.log1.unique_sales_code
