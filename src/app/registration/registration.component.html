@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <div class="form-group mb-30" id="sandbox-container">
+                                <div class="form-group mb-30" >
                                     <input type="date" 
                                     [(ngModel)]="reg.dob"
                                     #dob="ngModel"
@@ -83,7 +83,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" 
+                                    <input type="password" 
                                     [(ngModel)]="reg.confirm_password"
                                     #confirm_password="ngModel"
                                     class="form-control"  name="confirm_password" placeholder="パスワードを再入力（確認用）" required>
@@ -249,6 +249,9 @@
                                        ご確認項目 
                                     </h5>
                                 </div>
+                                <p class="mb-30">
+                                    以下、ゼンエルディーンインターナショナル株式会社との営業代行契約書です。必ず確認の上、お申し込みください。
+                                </p>
                                  <!-------- contract content -------------->
                                  <div class="contract-content border mb-30">
                                     <h4 class="mb-30">営業代行契約書</h4>
