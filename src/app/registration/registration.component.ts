@@ -23,12 +23,32 @@ export class RegistrationComponent implements OnInit {
   constructor(private router:Router,private authservice:AuthService, private route:ActivatedRoute) { }
   
   rform:RegisterForm=new RegisterForm();
-  firstLoad:Boolean = true;
+  firstLoad:boolean=true;
   ngOnInit() {
     // $("#files").change(function() {
     //   filename = this.files[0].name
     //   console.log(filename);
     // });
+
+    const uploadButton = document.querySelector('.browse-btn');
+    const fileInfo = document.querySelector('.file-info');
+    const realInput = document.getElementById('real-input');
+
+    uploadButton.addEventListener('click', (e) => {
+      realInput.click();
+    });
+
+
+
+
+
+    const uploadButton1 = document.querySelector('.browse-btn1');
+    const fileInfo1 = document.querySelector('.file-info1');
+    const realInput1 = document.getElementById('real-input1');
+
+    uploadButton1.addEventListener('click', (e) => {
+      realInput1.click();
+    });
 
 
 
@@ -42,6 +62,10 @@ export class RegistrationComponent implements OnInit {
   })
 
 
+
+
+  
+ 
   
 
   

@@ -329,6 +329,14 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .label-name {/*display: block; margin-bottom: 10px; */color: #999; margin-right: 6px;}
 .label-value {font-weight: bold;}
 
+.input-container {border: 1px solid #eee; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; height: auto; box-shadow: none; font-size: 14px;}
+input[type='file'] {display: none;}
+.browse-btn {background: #281e05;color: #fff;min-height: 35px;padding: 10px;border: none;border-top-left-radius: 2px;border-bottom-left-radius: 2px;}
+.browse-btn:hover {background: #281e05;}
+.browse-btn1 {background: #281e05;color: #fff;min-height: 35px;padding: 10px;border: none;border-top-left-radius: 2px;border-bottom-left-radius: 2px;}
+.browse-btn1:hover {background: #281e05;}
+.file-info, .file-info1 {padding-left: 15px;}
+
 /********************* registration page ********/
 
 

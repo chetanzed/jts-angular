@@ -15,8 +15,13 @@ export class RegistrationDetailsComponent implements OnInit {
   
   reg:RegisterForm= new RegisterForm();
 
-
+  firstLoad:Boolean = true;
   ngOnInit() {
+    if(this.firstLoad) {
+      window.scroll(0,0);
+      this.firstLoad = false;
+    }
+
     this.route.queryParamMap.subscribe(data=>{
 // alert(data.get('kana')+" "+data.get('kanji'));
 
