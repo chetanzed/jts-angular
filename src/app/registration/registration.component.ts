@@ -18,13 +18,35 @@ export class RegistrationComponent implements OnInit {
   backImage:string;
   what_kind_of_back:string;
     reg:RegisterForm= new RegisterForm();
- 
+    
   
   constructor(private router:Router,private authservice:AuthService, private route:ActivatedRoute) { }
   
   rform:RegisterForm=new RegisterForm();
   firstLoad:Boolean = true;
   ngOnInit() {
+    // $("#files").change(function() {
+    //   filename = this.files[0].name
+    //   console.log(filename);
+    // });
+
+
+
+
+    //mobile no.
+    $(document).ready(function () {
+      $('#yourphone').usPhoneFormat({
+          format: 'xxx-xxx-xxxx',
+      });
+     
+  })
+
+
+  
+
+  
+
+     //mobile no. 
     this.reg.what_kind_of_bank="預金種類";
     //show on top screen 
     if(this.firstLoad)

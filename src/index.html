@@ -45,7 +45,26 @@
 <script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
 
 <!----custom js------>
-<script src="assets/js/index.js"></script>
+<script src="assets/js/phone_number.js"></script>
+
+<script>
+  window.onscroll = function() {myFunction()};
+
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+</script>
+
+
+
+
 <!-- Date picker js start -->
 <!-- <script type="text/javascript" src="assets/js/datepicker/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript" src="assets/js/datepicker/bootstrap-datepicker.js"></script> -->

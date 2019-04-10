@@ -28,15 +28,16 @@
                           <div class="col-sm-6 mb-30">
                               <label class="label-name">メールアドレス :</label><label class="label-value">{{reg.email}}</label>
                           </div>
-                          <div class="col-sm-6 mb-30">
-                              <label class="label-name">生年月日   年    月    日 :</label><label class="label-value">{{reg.dob}}</label>
-                          </div>
+                          
                           <div class="col-sm-6 mb-30">
                               <label class="label-name">パスワードを作成（半角英数６桁） :</label><label class="label-value">{{reg.password}}</label>
                           </div>
                           <div class="col-sm-6 mb-30">
                               <label class="label-name">パスワードを再入力（確認用） :</label><label class="label-value">{{reg.confirm_password}}</label>
                           </div>
+                          <div class="col-sm-6 mb-30">
+                            <label class="label-name">生年月日   年    月    日 :</label><label class="label-value">{{reg.dob}}</label>
+                        </div>
                           <div class="col-sm-6 mb-30">
                               <label class="label-name">郵便番号 :</label><label class="label-value">{{reg.zip_code}}</label>
                           </div>
@@ -86,7 +87,7 @@
                               <label class="label-name">支店名（カナ） ：</label><label class="label-value">{{reg.branch_kana}}</label>
                           </div>
                           <div class="col-sm-6 mb-30">
-                              <label class="label-name">支店コード ：</label><label class="label-value">{{reg.branch_code|json}}</label>
+                              <label class="label-name">支店コード ：</label><label class="label-value">{{reg.branch_code}}</label>
                           </div>
                           <div class="col-sm-6 mb-30">
                               <label class="label-name">預金種類 ：</label><label class="label-value">{{reg.what_kind_of_bank}}</label>
