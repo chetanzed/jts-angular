@@ -1,4 +1,4 @@
-<app-header id="navbar"></app-header>
+<app-header id="navbar"></app-header >
 <div class="main top-space">
 
 
@@ -65,7 +65,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30" id="sandbox-container">
-                                    <input type="text" 
+                                    <input type="date" 
                                     [(ngModel)]="reg.dob"
                                     #dob="ngModel"
                                     class="form-control" name="dob" placeholder="生年月日   年    月    日" required>
@@ -132,7 +132,7 @@
                                 <div class="form-group mb-30">
                                     <label>裏：</label>
                                     
-                                    <input class="form-control" [(ngModel)]="backImage" name="backImage" #def="ngModel" type="file" accept="image/*" (change)="changeListener($event)" required> 
+                                    <input class="form-control" [(ngModel)]="backImage" name="backImage" #def="ngModel" type="file" accept="image/*" (change)="changeListener1($event)" required> 
                                      
                                 </div>
                             </div>

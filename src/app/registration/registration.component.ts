@@ -33,10 +33,7 @@ export class RegistrationComponent implements OnInit {
   this.firstLoad = false;
   }
 
-//load time picker
-$('#sandbox-container input').datepicker({
-  format: 'yyyy-mm-dd',
-});
+
  this.route.queryParamMap.subscribe(data=>{
 
 this.reg.master_sales_code=data.get('rfc');
@@ -77,7 +74,7 @@ this.router.navigate(['registration-detail'],{queryParams:{kana:this.reg.kana,
     }
 }
   
-// W64
+// W64 for front image
 changeListener($event) : void {
   this.readThis($event.target);
 }
@@ -91,12 +88,33 @@ readThis(inputValue: any): void {
     image = myReader.result;
     this.reg.dl_front_img = myReader.result;
     
-    $('#imgfront').attr('src',myReader.result);
-    // console.log('front image', this.reg.dl_front_img)
+    // $('#imgfront').attr('src',myReader.result);
+    console.log('front image', this.reg.dl_front_img)
 
+  
+  }
+  
+  myReader.readAsDataURL(file);
+}
+
+// W64 for Back image
+changeListener1($event) : void {
+  this.readThis1($event.target);
+}
+
+readThis1(inputValue: any): void {
+  let image;
+  var file:File = inputValue.files[0];
+  var myReader:FileReader = new FileReader();
+
+  myReader.onloadend = (e) => {
+    image = myReader.result;
     this.reg.dl_back_img = myReader.result;
-    // $('#imgback').attr('src',myReader.result);
-    console.log('back image', this.reg.dl_front_img)
+    
+    // $('#imgfront').attr('src',myReader.result);
+    console.log('back image', this.reg.dl_back_img)
+
+  
   }
   
   myReader.readAsDataURL(file);
