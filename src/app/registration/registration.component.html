@@ -1,438 +1,617 @@
-<app-header id="navbar"></app-header >
+<app-header id="navbar"></app-header>
 <div class="main top-space">
-
-
-    <!---- registration Start ------->
-    <div class="registration-panel padding-panel box-bg">     
-        <div class="container">
-            <div class="white-bg">
-                <div class="page-heading text-center"><h1>契約フォーム</h1></div>
-                <div class="page-sub-heading text-center">
-                    <h5 class="primary-color">
-                       契約のお申し込み
-                    </h5>
-                </div>  
-                <div class="row justify-content-center">
-                    <div class="col-md-10 col-lg-9">
-                            <form ngForm="registerForm" (submit)="onRegister(reg)">
-                        <div class="row">
-                    
-                            <div class="col-sm-12">
-                                    <div class="form-group mb-30">
-                                        <input type="text" class="form-control"name="master_sales_code" 
-                                        [(ngModel)]="reg.master_sales_code"
-                                        placeholder="master_sales_code" value="{{reg.master_sales_code|json}}"  readonly="readonly">
-                               <!-- {{rform.master_sales_code}} -->
-                                    </div>
-                                </div>
-                            <div class="col-sm-6">
-                                    <div class="form-group mb-30">
-                                    <input type="text" 
-                                    [(ngModel)]="reg.kana"
-                                     #kana="ngModel"
-                                    class="form-control"  
-                                    name="kana" placeholder="ふりがな"  required>
-                                    <!-- <span class="help-block" *ngIf="!kana.valid && kana.touched">Enter the value hear box is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text" 
-                                     [(ngModel)]="reg.kanji"
-                                     #kanji="ngModel"
-                                    class="form-control" name="kanji" placeholder="氏名" required>
-                                    <!-- <span class="help-block" *ngIf="!kanji.valid && kanji.touched">Enter the value hear box is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="tel"                                  
-                                    class="form-control" 
-                                    [(ngModel)]="reg.tel"
-                                    
-                                    #tel="ngModel"
-                                    id="yourphone"
-                                    name="tel"
-                                     placeholder="携帯番号" required >
-                                     <!-- <span class="help-block" *ngIf="!tel.valid && tel.touched">Enter the value hear box is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="email" [(ngModel)]="reg.email" 
-                                    #email="ngModel"
-                                    class="form-control"  placeholder="メールアドレス" name="email" required email >
-                                    <!-- <span class="help-block" *ngIf="!email.valid && email.touched">Enter the value hear box is empity.</span> -->
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="password"
-                                    [(ngModel)]="reg.password" 
-                                    #password="ngModel"
-                                    class="form-control"  name="password" placeholder="パスワードを作成（半角英数６桁）" #password="ngModel" required maxlength="6">
-                                    <!-- <span class="help-block" *ngIf="!password.valid && password.touched">Enter the value hear box is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="password" 
-                                    [(ngModel)]="reg.confirm_password"
-                                    #confirm_password="ngModel"
-                                    class="form-control"  name="confirm_password" placeholder="パスワードを再入力（確認用）"  required maxlength="6">
-                                    <!-- <span class="help-block" *ngIf="!confirm_password.valid && confirm_password.touched">Enter the value hear box is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30" >
-                                    <input type="date" 
-                                    id="dob" 
-                                    [(ngModel)]="reg.dob"
-                                    #dob="ngModel"
-                                    class="form-control" name="dob" 
-                                    placeholder="生年月日   年    月    日" required>
-                                    <!-- <span class="help-block" *ngIf="!dob.valid && dob.touched">Enter the value hear box is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text" 
-                                    [(ngModel)]="reg.zip_code"
-                                    #zip_code="ngModel"
-                                    class="form-control"  name="zip_code" placeholder="郵便番号" required >
-                                    <!-- <span class="help-block" *ngIf="!zip_code.valid && zip_code.touched">Enter the value hear box is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="form-group mb-30">
-                                    <input type="text" 
-                                    [(ngModel)]="reg.address"
-                                    #address="ngModel"
-                                    class="form-control" name="address" placeholder="住所 " required>
-                                    <!-- <span class="help-block" *ngIf="!address.valid && address.touched">Enter the value hear box is empity.</span> -->
-                                </div>
-                            </div>
-                            
-
-                            <div class="col-sm-12 mb-30"><hr></div>
-
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label>運転免許証の写真を表側、裏側を選択してアップロードしてください</label>
-                                </div>
-                            </div>                                
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <label>表：</label>
-                                    
-                                     <!-- W64 -->
-                                     <!-- <label for="files" class="btn">画像を選択する</label>
-                                     <input  id="files" class="form-control" style="visibility:hidden;" [(ngModel)]="frontImage" name="frontImage" #abc="ngModel" type="file" accept="image/*" (change)="changeListener($event)" required>  -->
-                                     
-                                     <div class="input-container">
-
-                                            <input id="real-input" 
-                                            class="form-control"
-                                             [(ngModel)]="frontImage" 
-                                             name="frontImage"
-                                              #abc="ngModel" type="file" accept="image/*" (change)="changeListener($event)" required> 
-                                          <button class="browse-btn">画像を選択する</button>
-                                        <span class="file-info">未選択</span>
-                                     </div>
-      
-                                       
-                                      
-                                      
-                                </div>
-                                
-                            </div>
-                            
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <label>裏：</label>
-                                    
-                                    
-                                    <div class="input-container">
-                                        <input id="real-input1" class="form-control" [(ngModel)]="backImage" name="backImage" #def="ngModel" type="file" accept="image/*" (change)="changeListener1($event)" required> 
-                                        <button class="browse-btn1">画像を選択する</button>
-                                        <span class="file-info1">未選択</span>
-                                    </div>
-                                     
-                                </div>
-                            </div>
-
-                            <div class="col-sm-12 mb-30"><hr></div>
-
-                            <div class="col-sm-12">
-                                <div class="page-sub-heading text-center">
-                                    <h5 class="primary-color">
-                                       銀行口座情報入力 
-                                    </h5>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text" class="form-control" 
-                                    [(ngModel)]="reg.bank_name"
-                                    #bank_name="ngModel"
-                                   name="bank_name" placeholder="金融機関名" required>
-                                    <!-- <span class="help-block" *ngIf="!bank_name.valid && bank_name.touched">Value is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text" class="form-control"
-                                    [(ngModel)]="reg.bank_name_kana"
-                                    #bank_name_kana="ngModel"
-                                    name="bank_name_kana" placeholder="金融機関名（カナ）" required>
-                                    <!-- <span class="help-block" *ngIf="!bank_name_kana.valid && bank_name_kana.touched">Enter the Value input Box is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="tel" class="form-control" 
-                                    [(ngModel)]="reg.bank_number"
-                                    #bank_number="ngModel"
-                                    id="yourphone1"
-                                   
-                                   
-                                    name="bank_number" placeholder="金融機関コード" required >
-                                    <!-- <span class="help-block" *ngIf="!bank_number.valid && bank_number.touched">Enter the Value input Box is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="tel" class="form-control" 
-                                    [(ngModel)]="reg.branch_code"
-                                    #branch_code="ngModel"
-                                    id="yourphone2"
-                                    
-                                    name="branch_code" placeholder="支店コード"  required >
-                                     <!-- <span class="help-block" *ngIf="!branch_code.valid && branch_code.touched">Enter the Value input Box is empity.</span> -->
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text" class="form-control" 
-                                    [(ngModel)]="reg.branch_kana" 
-                                    #branch_kana="ngModel"
-                                    name="branch_kana" placeholder="支店名（カナ）" required>
-                                    <!-- <span class="help-block" *ngIf="!branch_kana.valid && branch_kana.touched">Enter the Value input Box is empity.</span> -->
-                                </div>
-                            </div>
-
-                            <!-- branch  -->
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text" class="form-control" 
-                                    [(ngModel)]="reg.branch"
-                                    #branch="ngModel"
-                                    name="branch" placeholder="支店名" required>
-                                    <!-- <span class="help-block" *ngIf="!branch.valid && branch.touched">Enter the Value input Box is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <select class="form-control" 
-                                    [(ngModel)]="reg.what_kind_of_bank"
-                                    #what_kind_of_bank="ngModel"
-                                    name="what_kind_of_bank" required>
-                                        <option selected="selected" disabled="disabled">預金種類</option>
-                                        <option value="普通預金">普通預金</option>
-                                        <option value="当座預金">当座預金</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text"  class="form-control" 
-                                    [(ngModel)]="reg.account_number"
-                                    #account_number="ngModel"                                    
-                                   id="yourphone3"
-                                    name="account_number" placeholder="口座番号" required>
-                                     <!-- <span class="help-block" *ngIf="!account_number.valid && account_number.touched">Enter the Value input Box is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text" class="form-control" 
-                                    [(ngModel)]="reg.account_holder_name_kana"
-                                    #account_holder_name_kana="ngModel"
-                                    name="account_holder_name_kana" placeholder="口座名義（カナ）" required>
-                                    <!-- <span class="help-block" *ngIf="!account_holder_name_kana.valid && account_holder_name_kana.touched">Enter the Value input Box is empity.</span> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text" class="form-control" 
-                                    [(ngModel)]="reg.account_holder_name"
-                                    #account_holder_name="ngModel"
-                                    name="account_holder_name" placeholder="口座名義" required>
-                                     <!-- <span class="help-block" *ngIf="!account_holder_name.valid && account_holder_name.touched">Enter the Value input Box is empity.</span> -->
-                                </div>
-                            </div>
-
-                             <div class="col-sm-12 mb-30"><hr></div>
-
-                            <div class="col-sm-12">
-                                <div class="page-sub-heading text-center">
-                                    <h5 class="primary-color">
-                                       ご確認項目 
-                                    </h5>
-                                </div>
-                                <p class="mb-30">
-                                    以下、ゼンエルディーンインターナショナル株式会社との営業代行契約書です。必ず確認の上、お申し込みください。
-                                </p>
-                                 <!-------- contract content -------------->
-                                 <div class="contract-content border mb-30">
-                                    <h4 class="mb-30">営業代行契約書</h4>
-                                    <p class="mb-20">株式会社ゼンエルディーンインターナショナル（以下、「当社」という）と</p>
-                                    <p>__________________________________ 以下「契約者」という）とは、</p>
-                                    <p class="mb-30">下記目的の業務を行うことに関し、 次のとおり契約（以下、「本契約」という）を締結する。</p>
-
-                                    <h5 class="mb-20">第１条（目的）</h5>
-                                    <p class="mb-20">当社は契約者に対し、以下の各号に定める業務（以下、「本件業務」）という）を委託し、契約者はこれを受託するものとする。</p>
-                                    <ul class="mb-30">
-                                        <li>１．当社の提供するJTSボード（サロン向け顧客管理システム）（以下、「当社のサービス」という）に適う新規取引先（以下、「クライアント」という）の開拓。</li>
-                                        <li>２．当社のサービスの成約・クロージング業務。</li>
-                                        <li>３．当社のサービスの販売後のクライアントサポート業務。</li>
-                                        <li>４．当社のサービスの解約手続業務。</li>
-                                    </ul>
-
-                                    <h5 class="mb-20">第２条（業務の遂行）</h5>
-                                    <p class="mb-30">契約者は、当社に取って最大の利益となるよう、積極的に本件業務を行うものとする。また、契約者は当社の信用を傷つける行為、または当社のサービス・商品に対する信頼を傷つける行為など、その他不信用な行為を行なわないよう努めるものとする。</p>
-
-                                    <h5 class="mb-20">第３条（資料などの提供）</h5>
-                                    <p class="mb-30">当社は、契約者が本件業務を行うに当たり必要とする資料・パンフレット等を、契約者に対し無償提供するものとし、また契約者に対し本件業務に関し必要な指示を与えるものとする。ただし、これらの知的財産権は当然に当社に留保される。</p>
-
-                                    <h5 class="mb-20">第４条（報告）</h5>
-                                    <p class="mb-30">当社および契約者は双方協議のもと定めた案件管理システムを双方で管理することで、進捗状況の チェックを行う。</p>
-
-                                    <h5 class="mb-20">第５条（成功報酬料金）</h5>
-                                    <ul class="mb-30">
-                                        <li>１．本件業務の成功報酬料金は別途定める営業代行成功報酬料金価格表に基づき精算をするものとする。</li>
-                                        <li>２．当社は、前項の定める成功報酬料金の当月分を翌々月末日までに、契約者の指定する金融機関の口座に振込む方法によって支払う。</li>
-                                        <li>３．前項の規定にかかわらず、契約店舗数が10店舗に満たない場合は、報酬が発生した月より1年後の月末までに、１年分を一括して支払う。</li>
-                                        <li>４．契約店舗数とは、当社のサービスの無料トライアル後の本契約数とする。無料トライアル後に本契約がないクライアントは契約店舗数としないため、成功報酬料は発生しない。</li>
-                                        <li>５．契約者が行う業務のために支出した費用は、全て契約者の負担とする。</li>
-                                    </ul>
-
-                                    <h5 class="mb-20">営業代行成功報酬料金価格表</h5>
-                                    <p class="text-right mb-0">単位：円</p>
-                                    <table class="table table-bordered">
-                                        <tr>
-                                            <th>契約店舗数</th>
-                                            <th>還元歩合率（％）</th>
-                                            <th>1店舗あたり報酬額</th>
-                                        </tr>
-                                        <tr>
-                                            <td>10～50</td>
-                                            <td>5</td>
-                                            <td>750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>51～100</td>
-                                            <td>10</td>
-                                            <td>1,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td>101～150</td>
-                                            <td>15</td>
-                                            <td>2,250</td>
-                                        </tr>
-                                        <tr>
-                                            <td>151～200</td>
-                                            <td>20</td>
-                                            <td>3,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>201～500</td>
-                                            <td>25</td>
-                                            <td>3,750</td>
-                                        </tr>
-                                    </table>
-                                    <p class="text-right mb-30">税別</p>
-
-                                    <h5 class="mb-20">第６条（秘密保持義務）</h5>
-                                    <p class="mb-20">
-                                        １．当社および契約者は、本件業務の履行に際して、書面・口頭及び物品を問わず知り得たクライアントおよびそのクライアントの技術上または営業上、その他業務上の情報、ならびに「個人情報の保護に関する法律」第２５条 1 項に定義する個人情報（以下、総称して「秘密情報」という）を、クライアントまたはクライアントの承諾を得ることなく、第三者に開示し、漏洩、提供してはならない。ただし、個人情報を除き次の各号に該当する情報は秘密情報に含まないものとする。
-                                    </p>
-                                    <ul class="mb-20">
-                                        <li>（1）開示のときにすでに公知の事実である情報または自らが所有していた情報</li>
-                                        <li> (2）開示後、自らの責め帰さない事由により公知なった情報</li>
-                                        <li>（3）開示後、正当な権限を有する第三者から秘密保持義務を負わず適法に知得した情報</li>
-                                        <li>（4）秘密情報によらず自らの開発により知得した情報</li>
-                                        <li>（5）管轄官公庁の要求または法令に基づき開示される情報</li>
-                                    </ul>
-                                    <p class="mb-30">2．本条の秘密保持義務は本契約終了後も 1 年間その効力が存続するものとする。</p>
-
-                                    <h5 class="mb-20">第７条（権利義務の譲渡等禁止）</h5>
-                                    <p class="mb-30">契約者は、事前に当社の承諾を得ないで、本契約に基づいて発生する一切の権利または義務を第三者に譲渡し、または承継させてはならない。</p>
-
-                                    <h4 class="mb-20">第８条（損害賠償）</h4>
-                                    <p>契約者は、故意または過失により本契約の定めに違反し、当社に損害を発生させた場合には、その損害を賠償しなければならない。</p>
-
-                                    <h4 class="mb-20">第９条（契約の解除）</h4>
-                                    <p class="mb-20">当社または契約者は、クライアントに次の各号の該当する事由の一が生じたときは、何らの催告なくして直ちに本契約の全部または一部を解除することができる。なお、この契約解除は損害賠償の請求を妨げない。</p>
-
-                                    <ul class="mb-30">
-                                        <li>（1）本契約の各条項に違背したとき</li>
-                                        <li>（2）クライアントとの信頼関係を損なう行為を行ったとき</li>
-                                        <li>（3）公租公課の滞納処分を受けたとき</li>
-                                        <li>（4）支払停止に陥ったとき、その他財政状態が悪化し、またはその虞があると認められる相当の理由があるとき</li>
-                                        <li>（5）手形交換所の取引停止処分を受けたとき</li>
-                                        <li>（6）仮差押、仮処分、または差押の命令または通知があったとき</li>
-                                        <li>（7）破産手続開始、民事再生手続開始、会社更生手続開始または特別精算開始の申立があったとき</li>
-                                        <li>（8）監督官庁より営業停止、取消などの処分を受けたとき</li>
-                                        <li>（9）営業の廃止、休止、営業譲渡、合併などの営業上重要な変更があったとき</li>
-                                        <li>（10）その他、上記各号のいずれかに準ずる事由があったとき</li>
-                                    </ul>
-
-                                    <h5 class="mb-20">第１０条（合意管轄）</h5>
-                                    <p class="mb-30">本契約の履行および解釈に関し紛争が生じたときは、その訴額に応じて、当社の本店所在地を管轄する簡易裁判所または地方裁判所を第一審の専属的合意管轄裁判所とする。</p>
-
-                                    <h5 class="mb-20">第１１条（協議解決）</h5>
-                                    <p class="mb-30">本契約に定めのない事項、および本契約の各条項の解釈に疑義が生じた事項については、当社契約者信義誠実の原則に従い協議の上、その解決を図るものとする。</p>
-
-                                    <h5 class="mb-20">第１２条（有効期間）</h5>
-                                    <p class="mb-30">本契約の有効期間は、契約締結の日から1年とする。ただし、期間満了の一か月前までに当社または契約者から書面による変更あるいは終了の申出のないときは、本契約はさらに一年間延長され、以後も同様とする。</p>
-
-                                    <h5 class="mb-20">第１３条（解約）</h5>
-                                    <p class="mb-30">当社および契約者は、１ヶ月前の通知により本契約をいつでも解約することができる。ただし、既に発生した債権・債務は解約による影響を受けないものとする。</p>
-
-                                    <p class="mb-30">本契約締結の証として本契約書２通を作成し、当社および契約者の記名捺印のうえ、各１通を保有する。</p>
-                                    <p class="mb-30 text-right">年　　月　　日</p>
-
-                                    <p class="mb-30">当社</p>
-                                    <p>契約者</p>
-
-                                    
-                                </div>
-                                <!-------- contract content -------------->
-
-                                <div class="form-group">
-                                    <h6 class="mb-0"><input type="checkbox" id="agree" required> <label class="ml-10 color-red" for="agree" >同意します</label></h6>
-                                </div>
-                                <div class="mb-30"><hr></div>
-                                <div class="text-center">
-                                    <button type="submit"  class="btn join-us-btn" >規約に同意して確認画面へ</button>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </form>
-
-                    </div>
+  <!---- registration Start ------->
+  <div class="registration-panel padding-panel box-bg">
+    <div class="container">
+      <div class="white-bg">
+        <div class="page-heading text-center"><h1>契約フォーム</h1></div>
+        <div class="page-sub-heading text-center">
+          <h5 class="primary-color">
+            契約のお申し込み
+          </h5>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-9">
+            <form ngForm="registerForm" (submit)="onRegister(reg)">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="master_sales_code"
+                      [(ngModel)]="reg.master_sales_code"
+                      placeholder="master_sales_code"
+                      value="{{ reg.master_sales_code | json }}"
+                      readonly="readonly"
+                    />
+                    <!-- {{rform.master_sales_code}} -->
+                  </div>
                 </div>
-            </div>
-            
-        </div>           
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      [(ngModel)]="reg.kana"
+                      #kana="ngModel"
+                      class="form-control"
+                      name="kana"
+                      placeholder="ふりがな"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!kana.valid && kana.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      [(ngModel)]="reg.kanji"
+                      #kanji="ngModel"
+                      class="form-control"
+                      name="kanji"
+                      placeholder="氏名"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!kanji.valid && kanji.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      [(ngModel)]="reg.tel"
+                      #tel="ngModel"
+                      id="yourphone"
+                      name="tel"
+                      placeholder="携帯番号"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!tel.valid && tel.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="email"
+                      [(ngModel)]="reg.email"
+                      #email="ngModel"
+                      class="form-control"
+                      placeholder="メールアドレス"
+                      name="email"
+                      required
+                      email
+                    />
+                    <!-- <span class="help-block" *ngIf="!email.valid && email.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
 
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="password"
+                      [(ngModel)]="reg.password"
+                      #password="ngModel"
+                      class="form-control"
+                      name="password"
+                      placeholder="パスワードを作成（半角英数６桁）"
+                      #password="ngModel"
+                      required
+                      maxlength="6"
+                    />
+                    <!-- <span class="help-block" *ngIf="!password.valid && password.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="password"
+                      [(ngModel)]="reg.confirm_password"
+                      #confirm_password="ngModel"
+                      class="form-control"
+                      name="confirm_password"
+                      placeholder="パスワードを再入力（確認用）"
+                      required
+                      maxlength="6"
+                    />
+                    <!-- <span class="help-block" *ngIf="!confirm_password.valid && confirm_password.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="date"
+                      id="dob"
+                      [(ngModel)]="reg.dob"
+                      #dob="ngModel"
+                      class="form-control"
+                      name="dob"
+                      placeholder="生年月日   年    月    日"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!dob.valid && dob.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      [(ngModel)]="reg.zip_code"
+                      #zip_code="ngModel"
+                      class="form-control"
+                      name="zip_code"
+                      placeholder="郵便番号"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!zip_code.valid && zip_code.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      [(ngModel)]="reg.address"
+                      #address="ngModel"
+                      class="form-control"
+                      name="address"
+                      placeholder="住所 "
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!address.valid && address.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
+
+                <div class="col-sm-12 mb-30"><hr /></div>
+
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label
+                      >運転免許証の写真を表側、裏側を選択してアップロードしてください</label
+                    >
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <label>表：</label>
+
+                    <!-- W64 -->
+                    <!-- <label for="files" class="btn">画像を選択する</label>
+                                     <input  id="files" class="form-control" style="visibility:hidden;" [(ngModel)]="frontImage" name="frontImage" #abc="ngModel" type="file" accept="image/*" (change)="changeListener($event)" required>  -->
+
+                    <div class="input-container">
+                      <input
+                        id="real-input"
+                        class="form-control"
+                        [(ngModel)]="frontImage"
+                        name="frontImage"
+                        #abc="ngModel"
+                        type="file"
+                        accept="image/*"
+                        (change)="changeListener($event)"
+                        required
+                      />
+                      <button class="browse-btn">画像を選択する</button>
+                      <span class="file-info">未選択</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <label>裏：</label>
+
+                    <div class="input-container">
+                      <input
+                        id="real-input1"
+                        class="form-control"
+                        [(ngModel)]="backImage"
+                        name="backImage"
+                        #def="ngModel"
+                        type="file"
+                        accept="image/*"
+                        (change)="changeListener1($event)"
+                        required
+                      />
+                      <button class="browse-btn1">画像を選択する</button>
+                      <span class="file-info1">未選択</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 mb-30"><hr /></div>
+
+                <div class="col-sm-12">
+                  <div class="page-sub-heading text-center">
+                    <h5 class="primary-color">
+                      銀行口座情報入力
+                    </h5>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.bank_name"
+                      #bank_name="ngModel"
+                      name="bank_name"
+                      placeholder="金融機関名"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!bank_name.valid && bank_name.touched">Value is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.bank_name_kana"
+                      #bank_name_kana="ngModel"
+                      name="bank_name_kana"
+                      placeholder="金融機関名（カナ）"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!bank_name_kana.valid && bank_name_kana.touched">Enter the Value input Box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      [(ngModel)]="reg.bank_number"
+                      #bank_number="ngModel"
+                      id="yourphone1"
+                      name="bank_number"
+                      placeholder="金融機関コード"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!bank_number.valid && bank_number.touched">Enter the Value input Box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      [(ngModel)]="reg.branch_code"
+                      #branch_code="ngModel"
+                      id="yourphone2"
+                      name="branch_code"
+                      placeholder="支店コード"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!branch_code.valid && branch_code.touched">Enter the Value input Box is empity.</span> -->
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.branch_kana"
+                      #branch_kana="ngModel"
+                      name="branch_kana"
+                      placeholder="支店名（カナ）"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!branch_kana.valid && branch_kana.touched">Enter the Value input Box is empity.</span> -->
+                  </div>
+                </div>
+
+                <!-- branch  -->
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.branch"
+                      #branch="ngModel"
+                      name="branch"
+                      placeholder="支店名"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!branch.valid && branch.touched">Enter the Value input Box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <select
+                      class="form-control"
+                      [(ngModel)]="reg.what_kind_of_bank"
+                      #what_kind_of_bank="ngModel"
+                      name="what_kind_of_bank"
+                      required
+                    >
+                      <option selected="selected" disabled="disabled"
+                        >預金種類</option
+                      >
+                      <option value="普通預金">普通預金</option>
+                      <option value="当座預金">当座預金</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.account_number"
+                      #account_number="ngModel"
+                      id="yourphone3"
+                      name="account_number"
+                      placeholder="口座番号"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!account_number.valid && account_number.touched">Enter the Value input Box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.account_holder_name_kana"
+                      #account_holder_name_kana="ngModel"
+                      name="account_holder_name_kana"
+                      placeholder="口座名義（カナ）"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!account_holder_name_kana.valid && account_holder_name_kana.touched">Enter the Value input Box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.account_holder_name"
+                      #account_holder_name="ngModel"
+                      name="account_holder_name"
+                      placeholder="口座名義"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!account_holder_name.valid && account_holder_name.touched">Enter the Value input Box is empity.</span> -->
+                  </div>
+                </div>
+
+                <div class="col-sm-12 mb-30"><hr /></div>
+
+                <div class="col-sm-12">
+                  <div class="page-sub-heading text-center">
+                    <h5 class="primary-color">
+                      ご確認項目
+                    </h5>
+                  </div>
+                  <p class="mb-30">
+                    以下、ゼンエルディーンインターナショナル株式会社との営業代行契約書です。必ず確認の上、お申し込みください。
+                  </p>
+                  <!-------- contract content -------------->
+                  <div class="contract-content border mb-30">
+                    <h4 class="mb-30">営業代行契約書</h4>
+                    <p class="mb-20">
+                      株式会社ゼンエルディーンインターナショナル（以下、「当社」という）と
+                    </p>
+                    <p>
+                      __________________________________
+                      以下「契約者」という）とは、
+                    </p>
+                    <p class="mb-30">
+                      下記目的の業務を行うことに関し、
+                      次のとおり契約（以下、「本契約」という）を締結する。
+                    </p>
+
+                    <h5 class="mb-20">第１条（目的）</h5>
+                    <p class="mb-20">
+                      当社は契約者に対し、以下の各号に定める業務（以下、「本件業務」）という）を委託し、契約者はこれを受託するものとする。
+                    </p>
+                    <ul class="mb-30">
+                      <li>
+                        １．当社の提供するJTSボード（サロン向け顧客管理システム）（以下、「当社のサービス」という）に適う新規取引先（以下、「クライアント」という）の開拓。
+                      </li>
+                      <li>２．当社のサービスの成約・クロージング業務。</li>
+                      <li>
+                        ３．当社のサービスの販売後のクライアントサポート業務。
+                      </li>
+                      <li>４．当社のサービスの解約手続業務。</li>
+                    </ul>
+
+                    <h5 class="mb-20">第２条（業務の遂行）</h5>
+                    <p class="mb-30">
+                      契約者は、当社に取って最大の利益となるよう、積極的に本件業務を行うものとする。また、契約者は当社の信用を傷つける行為、または当社のサービス・商品に対する信頼を傷つける行為など、その他不信用な行為を行なわないよう努めるものとする。
+                    </p>
+
+                    <h5 class="mb-20">第３条（資料などの提供）</h5>
+                    <p class="mb-30">
+                      当社は、契約者が本件業務を行うに当たり必要とする資料・パンフレット等を、契約者に対し無償提供するものとし、また契約者に対し本件業務に関し必要な指示を与えるものとする。ただし、これらの知的財産権は当然に当社に留保される。
+                    </p>
+
+                    <h5 class="mb-20">第４条（報告）</h5>
+                    <p class="mb-30">
+                      当社および契約者は双方協議のもと定めた案件管理システムを双方で管理することで、進捗状況の
+                      チェックを行う。
+                    </p>
+
+                    <h5 class="mb-20">第５条（成功報酬料金）</h5>
+                    <ul class="mb-30">
+                      <li>
+                        １．本件業務の成功報酬料金は別途定める営業代行成功報酬料金価格表に基づき精算をするものとする。
+                      </li>
+                      <li>
+                        ２．当社は、前項の定める成功報酬料金の当月分を翌々月末日までに、契約者の指定する金融機関の口座に振込む方法によって支払う。
+                      </li>
+                      <li>
+                        ３．前項の規定にかかわらず、契約店舗数が10店舗に満たない場合は、報酬が発生した月より1年後の月末までに、１年分を一括して支払う。
+                      </li>
+                      <li>
+                        ４．契約店舗数とは、当社のサービスの無料トライアル後の本契約数とする。無料トライアル後に本契約がないクライアントは契約店舗数としないため、成功報酬料は発生しない。
+                      </li>
+                      <li>
+                        ５．契約者が行う業務のために支出した費用は、全て契約者の負担とする。
+                      </li>
+                    </ul>
+
+                    <h5 class="mb-20">営業代行成功報酬料金価格表</h5>
+                    <p class="text-right mb-0">単位：円</p>
+                    <table class="table table-bordered">
+                      <tr>
+                        <th>契約店舗数</th>
+                        <th>還元歩合率（％）</th>
+                        <th>1店舗あたり報酬額</th>
+                      </tr>
+                      <tr>
+                        <td>10～50</td>
+                        <td>5</td>
+                        <td>750</td>
+                      </tr>
+                      <tr>
+                        <td>51～100</td>
+                        <td>10</td>
+                        <td>1,500</td>
+                      </tr>
+                      <tr>
+                        <td>101～150</td>
+                        <td>15</td>
+                        <td>2,250</td>
+                      </tr>
+                      <tr>
+                        <td>151～200</td>
+                        <td>20</td>
+                        <td>3,000</td>
+                      </tr>
+                      <tr>
+                        <td>201～500</td>
+                        <td>25</td>
+                        <td>3,750</td>
+                      </tr>
+                    </table>
+
+                    <p class="text-right mb-30">税別</p>
+
+                    <h5 class="mb-20">第６条（秘密保持義務）</h5>
+                    <p class="mb-20">
+                      １．当社および契約者は、本件業務の履行に際して、書面・口頭及び物品を問わず知り得たクライアントおよびそのクライアントの技術上または営業上、その他業務上の情報、ならびに「個人情報の保護に関する法律」第２５条
+                      1
+                      項に定義する個人情報（以下、総称して「秘密情報」という）を、クライアントまたはクライアントの承諾を得ることなく、第三者に開示し、漏洩、提供してはならない。ただし、個人情報を除き次の各号に該当する情報は秘密情報に含まないものとする。
+                    </p>
+                    <ul class="mb-20">
+                      <li>
+                        （1）開示のときにすでに公知の事実である情報または自らが所有していた情報
+                      </li>
+                      <li>
+                        (2）開示後、自らの責め帰さない事由により公知なった情報
+                      </li>
+                      <li>
+                        （3）開示後、正当な権限を有する第三者から秘密保持義務を負わず適法に知得した情報
+                      </li>
+                      <li>（4）秘密情報によらず自らの開発により知得した情報</li>
+                      <li>
+                        （5）管轄官公庁の要求または法令に基づき開示される情報
+                      </li>
+                    </ul>
+                    <p class="mb-30">
+                      2．本条の秘密保持義務は本契約終了後も 1
+                      年間その効力が存続するものとする。
+                    </p>
+
+                    <h5 class="mb-20">第７条（権利義務の譲渡等禁止）</h5>
+                    <p class="mb-30">
+                      契約者は、事前に当社の承諾を得ないで、本契約に基づいて発生する一切の権利または義務を第三者に譲渡し、または承継させてはならない。
+                    </p>
+
+                    <h4 class="mb-20">第８条（損害賠償）</h4>
+                    <p>
+                      契約者は、故意または過失により本契約の定めに違反し、当社に損害を発生させた場合には、その損害を賠償しなければならない。
+                    </p>
+
+                    <h4 class="mb-20">第９条（契約の解除）</h4>
+                    <p class="mb-20">
+                      当社または契約者は、クライアントに次の各号の該当する事由の一が生じたときは、何らの催告なくして直ちに本契約の全部または一部を解除することができる。なお、この契約解除は損害賠償の請求を妨げない。
+                    </p>
+
+                    <ul class="mb-30">
+                      <li>（1）本契約の各条項に違背したとき</li>
+                      <li>
+                        （2）クライアントとの信頼関係を損なう行為を行ったとき
+                      </li>
+                      <li>（3）公租公課の滞納処分を受けたとき</li>
+                      <li>
+                        （4）支払停止に陥ったとき、その他財政状態が悪化し、またはその虞があると認められる相当の理由があるとき
+                      </li>
+                      <li>（5）手形交換所の取引停止処分を受けたとき</li>
+                      <li>
+                        （6）仮差押、仮処分、または差押の命令または通知があったとき
+                      </li>
+                      <li>
+                        （7）破産手続開始、民事再生手続開始、会社更生手続開始または特別精算開始の申立があったとき
+                      </li>
+                      <li>
+                        （8）監督官庁より営業停止、取消などの処分を受けたとき
+                      </li>
+                      <li>
+                        （9）営業の廃止、休止、営業譲渡、合併などの営業上重要な変更があったとき
+                      </li>
+                      <li>
+                        （10）その他、上記各号のいずれかに準ずる事由があったとき
+                      </li>
+                    </ul>
+
+                    <h5 class="mb-20">第１０条（合意管轄）</h5>
+                    <p class="mb-30">
+                      本契約の履行および解釈に関し紛争が生じたときは、その訴額に応じて、当社の本店所在地を管轄する簡易裁判所または地方裁判所を第一審の専属的合意管轄裁判所とする。
+                    </p>
+
+                    <h5 class="mb-20">第１１条（協議解決）</h5>
+                    <p class="mb-30">
+                      本契約に定めのない事項、および本契約の各条項の解釈に疑義が生じた事項については、当社契約者信義誠実の原則に従い協議の上、その解決を図るものとする。
+                    </p>
+
+                    <h5 class="mb-20">第１２条（有効期間）</h5>
+                    <p class="mb-30">
+                      本契約の有効期間は、契約締結の日から1年とする。ただし、期間満了の一か月前までに当社または契約者から書面による変更あるいは終了の申出のないときは、本契約はさらに一年間延長され、以後も同様とする。
+                    </p>
+
+                    <h5 class="mb-20">第１３条（解約）</h5>
+                    <p class="mb-30">
+                      当社および契約者は、１ヶ月前の通知により本契約をいつでも解約することができる。ただし、既に発生した債権・債務は解約による影響を受けないものとする。
+                    </p>
+
+                    <p class="mb-30">
+                      本契約締結の証として本契約書２通を作成し、当社および契約者の記名捺印のうえ、各１通を保有する。
+                    </p>
+                    <p class="mb-30 text-right">年　　月　　日</p>
+
+                    <p class="mb-30">当社</p>
+                    <p>契約者</p>
+                  </div>
+                  <!-------- contract content -------------->
+
+                  <div class="form-group">
+                    <h6 class="mb-0">
+                      <input type="checkbox" id="agree" required />
+                      <label class="ml-10 color-red" for="agree"
+                        >同意します</label
+                      >
+                    </h6>
+                  </div>
+                  <div class="mb-30"><hr /></div>
+                  <div class="text-center">
+                    <button type="submit" class="btn join-us-btn">
+                      規約に同意して確認画面へ
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <!---- registration end ------->
-    
+  </div>
+  <!---- registration end ------->
 </div>
 <app-footar></app-footar>
