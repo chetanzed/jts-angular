@@ -53,8 +53,16 @@
 
 
 <!-- Date picker js start -->
-<!-- <script type="text/javascript" src="assets/js/datepicker/bootstrap-datepicker.min.js"></script>
-<script type="text/javascript" src="assets/js/datepicker/bootstrap-datepicker.js"></script> -->
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script>
+  $(document).ready(function() {
+$("#bao").datepicker({
+  format: "dd-mm-yyyy",
+  autoclose:true
+  
+});
+})
+</script>
 
 <!-- Date picker js end -->
 
