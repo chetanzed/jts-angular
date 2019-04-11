@@ -93,5 +93,61 @@
             });
 
         }
+        else if (params.format === 'xxxx') {
+            $(this).on('keydown touchend', function (e) {
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                }
+                $(this).attr('maxlength', '4');
+            });
+            $(this).bind('paste', function (e) {
+                e.preventDefault();
+                var  inputValue = String(inputValue.replace(/(\d{4})/, "$1"));
+                    $(this).val(inputValue);
+                    $(this).val('');
+                    inputValue = inputValue.substring(0, 4);
+                    $(this).val(inputValue);
+            });
+
+        }else if (params.format === 'xxx') {
+            $(this).on('keydown touchend', function (e) {
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                }
+                $(this).attr('maxlength', '3');
+            });
+            $(this).bind('paste', function (e) {
+                e.preventDefault();
+                var  inputValue = String(inputValue.replace(/(\d{3})/, "$1"));
+                    $(this).val(inputValue);
+                    $(this).val('');
+                    inputValue = inputValue.substring(0, 3);
+                    $(this).val(inputValue);
+            });
+
+        }
+        
+        else if (params.format === 'xxxxxxxx') {
+            $(this).on('keydown touchend', function (e) {
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                }
+                $(this).attr('maxlength', '8');
+            });
+            $(this).bind('paste', function (e) {
+                e.preventDefault();
+                var  inputValue = String(inputValue.replace(/(\d{8})/, "$1"));
+                    $(this).val(inputValue);
+                    $(this).val('');
+                    inputValue = inputValue.substring(0, 8);
+                    $(this).val(inputValue);
+            });
+
+        }
     }
+
+
+
+    
+    
 }(jQuery));

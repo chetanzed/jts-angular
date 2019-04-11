@@ -86,11 +86,12 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30" >
-                                    <input type="text" 
-                                    id="bao" 
+                                    <input type="date" 
+                                    id="dob" 
                                     [(ngModel)]="reg.dob"
                                     #dob="ngModel"
-                                    class="form-control" name="dob" placeholder="生年月日   年    月    日" required>
+                                    class="form-control" name="dob" 
+                                    placeholder="生年月日   年    月    日" required>
                                     <!-- <span class="help-block" *ngIf="!dob.valid && dob.touched">Enter the value hear box is empity.</span> -->
                                 </div>
                             </div>
@@ -130,7 +131,12 @@
                                      <input  id="files" class="form-control" style="visibility:hidden;" [(ngModel)]="frontImage" name="frontImage" #abc="ngModel" type="file" accept="image/*" (change)="changeListener($event)" required>  -->
                                      
                                      <div class="input-container">
-                                            <input id="real-input" class="form-control" [(ngModel)]="frontImage" name="frontImage" #abc="ngModel" type="file" accept="image/*" (change)="changeListener($event)" required> 
+
+                                            <input id="real-input" 
+                                            class="form-control"
+                                             [(ngModel)]="frontImage" 
+                                             name="frontImage"
+                                              #abc="ngModel" type="file" accept="image/*" (change)="changeListener($event)" required> 
                                           <button class="browse-btn">画像を選択する</button>
                                         <span class="file-info">未選択</span>
                                      </div>
@@ -186,11 +192,10 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="number" class="form-control" 
+                                    <input type="tel" class="form-control" 
                                     [(ngModel)]="reg.bank_number"
                                     #bank_number="ngModel"
-                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                                    maxlength="4"
+                                    id="yourphone1"
                                    
                                    
                                     name="bank_number" placeholder="金融機関コード" required >
@@ -199,11 +204,10 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="number" class="form-control" 
+                                    <input type="tel" class="form-control" 
                                     [(ngModel)]="reg.branch_code"
                                     #branch_code="ngModel"
-                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                                    maxlength="3"
+                                    id="yourphone2"
                                     
                                     name="branch_code" placeholder="支店コード"  required >
                                      <!-- <span class="help-block" *ngIf="!branch_code.valid && branch_code.touched">Enter the Value input Box is empity.</span> -->
@@ -244,12 +248,10 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-30">
-                                    <input type="number"  class="form-control" 
+                                    <input type="text"  class="form-control" 
                                     [(ngModel)]="reg.account_number"
                                     #account_number="ngModel"                                    
-                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                                    maxlength="8"
-                                   
+                                   id="yourphone3"
                                     name="account_number" placeholder="口座番号" required>
                                      <!-- <span class="help-block" *ngIf="!account_number.valid && account_number.touched">Enter the Value input Box is empity.</span> -->
                                 </div>

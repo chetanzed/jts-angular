@@ -29,46 +29,72 @@ export class RegistrationComponent implements OnInit {
     //   filename = this.files[0].name
     //   console.log(filename);
     // });
+    $(document).ready(function() {
+      $("#dob").datepicker({
+        format: "dd-mm-yyyy",
+        autoclose:true
+        
+      });
+      })
+   
+      const uploadButton = document.querySelector('.browse-btn');
+      const fileInfo = document.querySelector('.file-info');
+      const realInput = document.getElementById('real-input');
 
-    const uploadButton = document.querySelector('.browse-btn');
-    const fileInfo = document.querySelector('.file-info');
-    const realInput = document.getElementById('real-input');
+      uploadButton.addEventListener('click', (e) => {
+        realInput.click();
+      });
 
-    uploadButton.addEventListener('click', (e) => {
-      realInput.click();
-    });
+      // realInput.addEventListener('change', () => {
+      //   const name = realInput.value.split(/\\|\//).pop();
+      //   const truncated = name.length > 20 
+      //     ? name.substr(name.length - 20) 
+      //     : name;
+        
+      //   fileInfo.innerHTML = truncated;
+      // });
 
 
 
+      const uploadButton1 = document.querySelector('.browse-btn1');
+      const fileInfo1 = document.querySelector('.file-info1');
+      const realInput1 = document.getElementById('real-input1');
 
+      uploadButton1.addEventListener('click', (e) => {
+        realInput1.click();
+      });
 
-    const uploadButton1 = document.querySelector('.browse-btn1');
-    const fileInfo1 = document.querySelector('.file-info1');
-    const realInput1 = document.getElementById('real-input1');
-
-    uploadButton1.addEventListener('click', (e) => {
-      realInput1.click();
-    });
+      // realInput1.addEventListener('change', () => {
+      //   const name = realInput1.value.split(/\\|\//).pop();
+      //   const truncated = name.length > 20 
+      //     ? name.substr(name.length - 20) 
+      //     : name;
+        
+      //   fileInfo1.innerHTML = truncated;
+      // });
 
 
 
 
     //mobile no.
     $(document).ready(function () {
+
       $('#yourphone').usPhoneFormat({
           format: 'xxx-xxx-xxxx',
       });
-     
+
+      $('#yourphone1').usPhoneFormat({
+        format: 'xxxx',
+      });
+
+      $('#yourphone2').usPhoneFormat({
+        format: 'xxx',
+    });
+
+    $('#yourphone3').usPhoneFormat({
+      format: 'xxxxxxxx',
+    });
   })
-
-
-
-
-  
- 
-  
-
-  
 
      //mobile no. 
     this.reg.what_kind_of_bank="預金種類";
