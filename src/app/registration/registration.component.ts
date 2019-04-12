@@ -30,12 +30,12 @@ export class RegistrationComponent implements OnInit {
     //   filename = this.files[0].name
     //   console.log(filename);
     // });
-    $(document).ready(function() {
-      $('#dob').datepicker({
-        format: 'yyyy-mm-dd',
-        autoclose: true
-      })
-    })
+    // $(document).ready(function() {
+    //   $('#dob').datepicker({
+    //     format: 'yyyy/mm/dd',
+    //     autoclose: true
+    //   })
+    // })
 
     const uploadButton = document.querySelector('.browse-btn')
     const fileInfo = document.querySelector('.file-info')
@@ -184,5 +184,9 @@ export class RegistrationComponent implements OnInit {
     }
 
     myReader.readAsDataURL(file)
+  }
+
+  dateChange(date: any): void {
+    this.reg.dob = date
   }
 }

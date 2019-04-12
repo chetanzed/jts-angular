@@ -1,102 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>JTS Board</title>
-  <base href="/">
+  <head>
+    <meta charset="utf-8" />
+    <title>JTS Board</title>
+    <base href="/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0">
-  
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0"
+    />
 
- <!-- Bootstrap CSS -->
- <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
- <!---Fontawesome --->
- <link href="assets/css/all.css" rel="stylesheet" type="text/css">
- 
- <!-- Owl Carousel Assets -->
- <link href="assets/css/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
- <link href="assets/css/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link
+      href="assets/css/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css"
+    />
 
- <!------- Animation ----------->
- <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css">
+    <!---Fontawesome --->
+    <link href="assets/css/all.css" rel="stylesheet" type="text/css" />
 
- <!-- Our Custom CSS -->
- <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- Owl Carousel Assets -->
+    <link
+      href="assets/css/owl-carousel/owl.carousel.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/owl-carousel/owl.theme.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
- <!-- Our Custom CSS -->
- <link href="assets/css/responsive-style.css" rel="stylesheet" type="text/css">
- <!-- Date picker css start -->
- <link rel="stylesheet" type="text/css" href="assets/css/datepicker/bootstrap-datepicker3.min.css"/>
-    
- <!-- Date picker css end -->
-</head>
-<body>
-  <app-root></app-root>
-<!-- jQuery js-->
-<script src="assets/js/jquery.min.js"></script>    
+    <!------- Animation ----------->
+    <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
 
-<!-- Bootstrap JS -->
-<script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- Our Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 
-<!-- owl-carousel -->
-<script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Our Custom CSS -->
+    <link
+      href="assets/css/responsive-style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Date picker css start -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/datepicker/bootstrap-datepicker3.min.css"
+    />
 
-<!----custom js------>
-<script src="assets/js/phone_number.js"></script>
-<script src="assets/js/accountNo.js"></script>
+    <!-- Date picker css end -->
+  </head>
+  <body>
+    <app-root></app-root>
+    <!-- jQuery js-->
+    <script src="assets/js/jquery.min.js"></script>
 
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
 
+    <!-- owl-carousel -->
+    <script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
 
+    <!----custom js------>
+    <script src="assets/js/phone_number.js"></script>
+    <script src="assets/js/accountNo.js"></script>
 
+    <!-- Date picker js start -->
+    <!-- <script src="assets/js/bootstrap-datepicker.js"></script> -->
 
-<!-- Date picker js start -->
-<script src="assets/js/bootstrap-datepicker.js"></script>
+    <!-- Date picker js end -->
 
-<!-- Date picker js end -->
+    <script type="text/javascript">
+      // Read More Jquery Start first
+      $(document).ready(function() {
+        // Configure/customize these variables.
+        var showChar = 40 // How many characters are shown by default
+        var ellipsestext = '...'
+        var moretext = "続きを読む <i class='fas fa-arrow-circle-right'></i>"
+        var lesstext = "もっと読む <i class='fas fa-arrow-circle-right'></i>"
 
-<script type="text/javascript">
+        $('.more').each(function() {
+          var content = $(this).html()
 
-  // Read More Jquery Start first
-$(document).ready(function() {
-  // Configure/customize these variables.
-  var showChar = 40;  // How many characters are shown by default
-  var ellipsestext = "...";
-  var moretext = "続きを読む <i class='fas fa-arrow-circle-right'></i>";
-  var lesstext = "もっと読む <i class='fas fa-arrow-circle-right'></i>";
-  
+          if (content.length > showChar) {
+            var c = content.substr(0, showChar)
+            var h = content.substr(showChar, content.length - showChar)
 
-  $('.more').each(function() {
-      var content = $(this).html();
+            var html =
+              c +
+              '<span class="moreellipses">' +
+              ellipsestext +
+              '&nbsp;</span><span class="morecontent"><span>' +
+              h +
+              '</span>&nbsp;&nbsp;<a href="#" class="morelink">' +
+              moretext +
+              '</a></span>'
 
-      if(content.length > showChar) {
+            $(this).html(html)
+          }
+        })
 
-          var c = content.substr(0, showChar);
-          var h = content.substr(showChar, content.length - showChar);
-
-          var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="#" class="morelink">' + moretext + '</a></span>';
-
-          $(this).html(html);
-      }
-
-  });
-
-  $(".morelink").click(function(){
-      if($(this).hasClass("less")) {
-          $(this).removeClass("less");
-          $(this).html(moretext);
-      } else {
-          $(this).addClass("less");
-          $(this).html(lesstext);
-      }
-      $(this).parent().prev().toggle();
-      $(this).prev().toggle();
-      return false;
-  });
-});
-// Read More Jquery End 
-</script>
-</body>
+        $('.morelink').click(function() {
+          if ($(this).hasClass('less')) {
+            $(this).removeClass('less')
+            $(this).html(moretext)
+          } else {
+            $(this).addClass('less')
+            $(this).html(lesstext)
+          }
+          $(this)
+            .parent()
+            .prev()
+            .toggle()
+          $(this)
+            .prev()
+            .toggle()
+          return false
+        })
+      })
+      // Read More Jquery End
+    </script>
+  </body>
 </html>
