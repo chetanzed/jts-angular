@@ -17,7 +17,7 @@ export class RegistrationComponent implements OnInit {
   backImage: string
   what_kind_of_back: string
   reg: RegisterForm = new RegisterForm()
- 
+  realInput2:any;
   constructor(
     private router: Router,
     private authservice: AuthService,
@@ -47,40 +47,46 @@ export class RegistrationComponent implements OnInit {
     //     autoclose: true
     //   })
     // })
-
     const uploadButton = document.querySelector('.browse-btn')
     const fileInfo = document.querySelector('.file-info')
-    const realInput = document.getElementById('real-input')
-
+    const realInput = (<HTMLInputElement>document.getElementById('real-input'))
+   
     uploadButton.addEventListener('click', e => {
       realInput.click()
     })
 
-    // realInput.addEventListener('change', () => {
-    //   const name = this.realInput.value.split(/\\|\//).pop();
-    //   const truncated = name.length > 20
-    //     ? name.substr(name.length - 20)
-    //     : name;
+    realInput.addEventListener('change', () => {
+      const name = realInput.value.split(/\\|\//).pop();
+      const truncated = name.length > 20
+        ? name.substr(name.length - 20)
+        : name;
 
-    //   fileInfo.innerHTML = truncated;
-    // });
+      fileInfo.innerHTML = truncated;
+    });
+
+   
 
     const uploadButton1 = document.querySelector('.browse-btn1')
     const fileInfo1 = document.querySelector('.file-info1')
-    const realInput1 = document.getElementById('real-input1')
-
+    const realInput1 = (<HTMLInputElement>document.getElementById('real-input1'))
+   
     uploadButton1.addEventListener('click', e => {
       realInput1.click()
     })
 
-    // realInput1.addEventListener('change', () => {
-    //   const name = realInput1.value.split(/\\|\//).pop();
-    //   const truncated = name.length > 20
-    //     ? name.substr(name.length - 20)
-    //     : name;
+    realInput1.addEventListener('change', () => {
+      const name = realInput1.value.split(/\\|\//).pop();
+      const truncated = name.length > 20
+        ? name.substr(name.length - 20)
+        : name;
 
-    //   fileInfo1.innerHTML = truncated;
-    // });
+      fileInfo1.innerHTML = truncated;
+    });
+
+
+
+
+
 
     //mobile no.
     $(document).ready(function() {
