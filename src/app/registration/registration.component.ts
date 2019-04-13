@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core'
-
+import { Component, OnInit,ViewChild,HostListener } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
 import { AuthService } from '../auth.service'
 import { RegisterForm } from '../registration.model'
-
+import { BsLocaleService, BsDatepickerDirective } from 'ngx-bootstrap/datepicker';
 declare var $: any
 import { from } from 'rxjs'
 @Component({
@@ -12,20 +11,32 @@ import { from } from 'rxjs'
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
+  @ViewChild(BsDatepickerDirective) datepicker: BsDatepickerDirective;
+  locale : 'ja';
   frontImage: string
   backImage: string
   what_kind_of_back: string
   reg: RegisterForm = new RegisterForm()
-
+ 
   constructor(
     private router: Router,
     private authservice: AuthService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private localeService: BsLocaleService
   ) {}
 
   rform: RegisterForm = new RegisterForm()
   firstLoad: boolean = true
+
+  // @HostListener('window:scroll')
+  // onScrollEvent() {
+  //   this.datepicker.hide();
+  // }
+ 
   ngOnInit() {
+    this.localeService.use(this.locale);
+
+   
     // $("#files").change(function() {
     //   filename = this.files[0].name
     //   console.log(filename);
@@ -46,7 +57,7 @@ export class RegistrationComponent implements OnInit {
     })
 
     // realInput.addEventListener('change', () => {
-    //   const name = realInput.value.split(/\\|\//).pop();
+    //   const name = this.realInput.value.split(/\\|\//).pop();
     //   const truncated = name.length > 20
     //     ? name.substr(name.length - 20)
     //     : name;
@@ -101,6 +112,7 @@ export class RegistrationComponent implements OnInit {
     this.route.queryParamMap.subscribe(data => {
       this.reg.master_sales_code = data.get('rfc')
     })
+    
   }
 
   onRegister(reg) {
@@ -189,4 +201,5 @@ export class RegistrationComponent implements OnInit {
   dateChange(date: any): void {
     this.reg.dob = date
   }
+  
 }

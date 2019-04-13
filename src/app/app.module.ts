@@ -23,8 +23,11 @@ import { ThanksComponent } from './thanks/thanks.component'
 import { RegistrationDetailsComponent } from './registration-details/registration-details.component'
 import { NewsComponent } from './news/news.component'
 import { AuthComponent } from './auth/auth.component'
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
+import { defineLocale } from 'ngx-bootstrap/chronos';
+import { jaLocale } from 'ngx-bootstrap/locale';
+defineLocale('ja', jaLocale);
 
-import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker'
 
 @NgModule({
   declarations: [
@@ -51,8 +54,7 @@ import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker'
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BsDatepickerModule.forRoot(),
-    DatepickerModule.forRoot()
+    BsDatepickerModule.forRoot()
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

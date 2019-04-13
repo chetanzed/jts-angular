@@ -23,10 +23,10 @@
                 if (!$.isNumeric(inputValue)) {
                     return false;
                 } else {
-                    inputValue = String(inputValue.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3"));
+                    inputValue = String(inputValue.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3"));
                     $(this).val(inputValue);
                     $(this).val('');
-                    inputValue = inputValue.substring(0, 12);
+                    inputValue = inputValue.substring(0, 13);
                     $(this).val(inputValue);
                 }
             });
@@ -38,10 +38,10 @@
                 var curval = $(this).val();
                 if (curchr == 3 && e.which != 8 && e.which != 0) {
                     $(this).val(curval + "-");
-                } else if (curchr == 7 && e.which != 8 && e.which != 0) {
+                } else if (curchr == 8 && e.which != 8 && e.which != 0) {
                     $(this).val(curval + "-");
                 }
-                $(this).attr('maxlength', '12');
+                $(this).attr('maxlength', '13');
             });
 
         } else if (params.format === '(xxx) xxx-xxxx') {
