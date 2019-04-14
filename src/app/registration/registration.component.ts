@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router'
 import { AuthService } from '../auth.service'
 import { RegisterForm } from '../registration.model'
 import { BsLocaleService, BsDatepickerDirective } from 'ngx-bootstrap/datepicker';
+import { listLocales } from 'ngx-bootstrap/chronos';
 declare var $: any
 import { from } from 'rxjs'
 @Component({
@@ -12,7 +13,9 @@ import { from } from 'rxjs'
 })
 export class RegistrationComponent implements OnInit {
   @ViewChild(BsDatepickerDirective) datepicker: BsDatepickerDirective;
-  locale : 'ja';
+  locale = "ja";
+  locales = listLocales();
+
   frontImage: string
   backImage: string
   what_kind_of_back: string
