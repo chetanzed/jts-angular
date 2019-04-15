@@ -2,8 +2,7 @@ import { Component, OnInit,ViewChild,HostListener } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
 import { AuthService } from '../auth.service'
 import { RegisterForm } from '../registration.model'
-import { BsLocaleService, BsDatepickerDirective } from 'ngx-bootstrap/datepicker';
-import { listLocales } from 'ngx-bootstrap/chronos';
+
 declare var $: any
 import { from } from 'rxjs'
 @Component({
@@ -12,44 +11,28 @@ import { from } from 'rxjs'
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  @ViewChild(BsDatepickerDirective) datepicker: BsDatepickerDirective;
-  locale = "ja";
-  locales = listLocales();
+  // @ViewChild(BsDatepickerDirective) datepicker: BsDatepickerDirective;
+  // locale = "ja";
+  // locales = listLocales();
 
   frontImage: string
   backImage: string
   what_kind_of_back: string
   reg: RegisterForm = new RegisterForm()
   realInput2:any;
+  msg1:any;
   constructor(
     private router: Router,
     private authservice: AuthService,
     private route: ActivatedRoute,
-    private localeService: BsLocaleService
+  
   ) {}
 
   rform: RegisterForm = new RegisterForm()
   firstLoad: boolean = true
-
-  // @HostListener('window:scroll')
-  // onScrollEvent() {
-  //   this.datepicker.hide();
-  // }
  
   ngOnInit() {
-    this.localeService.use(this.locale);
-
-   
-    // $("#files").change(function() {
-    //   filename = this.files[0].name
-    //   console.log(filename);
-    // });
-    // $(document).ready(function() {
-    //   $('#dob').datepicker({
-    //     format: 'yyyy/mm/dd',
-    //     autoclose: true
-    //   })
-    // })
+    // this.localeService.use(this.locale);
     const uploadButton = document.querySelector('.browse-btn')
     const fileInfo = document.querySelector('.file-info')
     const realInput = (<HTMLInputElement>document.getElementById('real-input'))
@@ -95,20 +78,24 @@ export class RegistrationComponent implements OnInit {
     $(document).ready(function() {
       $('#yourphone').usPhoneFormat({
         format: 'xxx-xxx-xxxx'
-      })
+      });
 
       $('#yourphone1').usPhoneFormat({
         format: 'xxxx'
-      })
+      });
 
       $('#yourphone2').usPhoneFormat({
         format: 'xxx'
-      })
+      });
 
       $('#yourphone3').usPhoneFormat({
         format: 'xxxxxxxx'
-      })
-    })
+      });
+      $('#yourphone4').usPhoneFormat({
+        format:'xxxx-xx-xx'
+      });
+     
+    });
 
     //mobile no.
     this.reg.what_kind_of_bank = '預金種類'
@@ -159,6 +146,9 @@ export class RegistrationComponent implements OnInit {
             }
           })
         } else {
+          this.authservice.registration(reg).subscribe(data =>{
+            alert(data.msg1);
+          })
           this.router.navigate(['register'])
         }
       })

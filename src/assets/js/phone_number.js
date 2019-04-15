@@ -143,8 +143,38 @@
                     $(this).val(inputValue);
             });
 
+        }else if (params.format === 'xxxx-xx-xx') {
+            $(this).on('keydown touchend', function (e) {
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                }
+                var curchr = this.value.length;
+                var curval = $(this).val();
+                if (curchr == 4 && e.which != 8 && e.which != 0) {
+                    $(this).val(curval + '/');
+                } else if (curchr == 7 && e.which != 8 && e.which != 0) {
+                    $(this).val(curval + "/");
+                }
+                $(this).attr('maxlength', '10');
+            });
+            $(this).bind('paste', function (e) {
+                e.preventDefault();
+                var inputValue = e.originalEvent.clipboardData.getData('Text');
+                if (!$.isNumeric(inputValue)) {
+                    return false;
+                } else {
+                    inputValue = String(inputValue.replace(/(\d{4})(\d{2})(\d{2})/, "($1) $2-$3"));
+                    $(this).val(inputValue);
+                    $(this).val('');
+                    inputValue = inputValue.substring(0, 10);
+                    $(this).val(inputValue);
+                }
+            });
+
         }
-    }
+       
+        }
+
 
 
 

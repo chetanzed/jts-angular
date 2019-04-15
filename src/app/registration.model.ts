@@ -23,5 +23,5 @@ account_number:string;
 account_holder_name_kana:string;
 account_holder_name:string;
 status:string;
-
+msg1:string;
 }

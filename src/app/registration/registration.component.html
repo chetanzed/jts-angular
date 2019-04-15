@@ -122,17 +122,16 @@
                   <div class="form-group mb-30">
                     <input
                       type="text"
-                      #dob="bsDatepicker"
-                      bsDatepicker
-                      [(bsValue)]="reg.dob"
-                      [bsConfig]="{
-                        dateInputFormat:'YYYY Do MMMM',
-                        containerClass: 'theme-default'
-                      }"
+                      #dob="ngModel"
+                   
+                      [(ngModel)]="reg.dob"
+                      id="yourphone4"
                       class="form-control"
                       name="dob"
                       placeholder="生年月日   年    月    日"
+                      required
                     />
+                    
                     <!-- <span class="help-block" *ngIf="!dob.valid && dob.touched">Enter the value hear box is empity.</span> -->
                   </div>
                 </div>
