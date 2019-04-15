@@ -151,9 +151,11 @@
                 var curchr = this.value.length;
                 var curval = $(this).val();
                 if (curchr == 4 && e.which != 8 && e.which != 0) {
-                    $(this).val(curval + '/');
+                    $(this).val(curval + '年');
                 } else if (curchr == 7 && e.which != 8 && e.which != 0) {
-                    $(this).val(curval + "/");
+                    $(this).val(curval + "月");
+                }else if (curchr == 10 && e.which != 8 && e.which != 0) {
+                    $(this).val(curval + "日");
                 }
                 $(this).attr('maxlength', '10');
             });
