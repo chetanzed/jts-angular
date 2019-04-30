@@ -4,19 +4,21 @@
   <div id="content">
 
       <div id="logreg-forms">
-          <form class="form-signin">
+          <form (ngSubmit)="onSignin(signinForm)" [formGroup]="signinForm">
               <h1 class="h3 mb-3 font-weight-normal text-center"> Sign in</h1>
              
               <div class="form-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+                <input type="email" formControlName="email" class="form-control" placeholder="Email address" required>
+                <span *ngIf="!signinForm.get('email').valid && signinForm.get('email').touched">Please enter  Name !!!</span>
               </div>
 
               <div class="form-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                <input  type="text" formControlName="password" class="form-control" placeholder="Password" required>
+                <span *ngIf="!signinForm.get('password').valid && signinForm.get('password').touched">Please enter  password !!!</span>
               </div>
 
               <div class="form-group">
-                <button class="btn btn-md btn-rounded btn-block form-control submit" (click)="onSignin()" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+                <button class="btn btn-md btn-rounded btn-block form-control submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
               </div>
 
               <a href="#" id="forgot_pswd">Forgot password?</a>

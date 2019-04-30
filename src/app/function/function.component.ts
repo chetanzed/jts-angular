@@ -11,7 +11,7 @@ export class FunctionComponent implements OnInit {
   firstLoad: boolean = true;
 
   ngOnInit() {
-    // Read More Jquery Start first
+                     // Read More Jquery Start first
     $(document).ready(function () {
       // Configure/customize these variables.
       var showChar = 70; // How many characters are shown by default
@@ -60,11 +60,12 @@ export class FunctionComponent implements OnInit {
     });
 
     // Read More Jquery End
+
+
     if (this.firstLoad) {
       window.scroll(0, 0);
       this.firstLoad = false;
     }
-
   }
 
 }

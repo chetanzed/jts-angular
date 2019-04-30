@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {  AuthService } from '../auth.service';
+import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
-import { Popup } from '../popup.model';
+import { Popup } from '../Models/popup.model';
+import { FormBuilder, Validators, FormGroup, AbstractControl } from '@angular/forms';
+import { RegisterForm } from '../Models/registration.model'
 
 @Component({
   selector: 'app-recruit',
@@ -9,35 +11,39 @@ import { Popup } from '../popup.model';
   styleUrls: ['./recruit.component.css']
 })
 export class RecruitComponent implements OnInit {
-  
-  log1:Popup=new Popup();
-  constructor(private router:Router, private authservice:AuthService) { }
+resp:any;
+  log1: Popup = new Popup();
+  reg: RegisterForm = new RegisterForm();
 
-  firstLoad:boolean=true;
+  popupForm: FormGroup;
+  constructor(private router: Router, private authservice: AuthService, private fb: FormBuilder) { }
+
+  firstLoad: boolean = true;
   ngOnInit() {
-    this.log1.unique_sales_code = "";
-    if(this.firstLoad) {
-      window.scroll(0,0);
+    this.popupForm = this.fb.group({
+      unique_sales_code: ['', [Validators.required]]
+    });
+
+    if (this.firstLoad) {
+      window.scroll(0, 0);
       this.firstLoad = false;
     }
   }
-  onSubmit(){
-    // alert("i am submiting"+this.log1.unique_sales_code);
-    
-     this.authservice.createcode(this.log1)
-.subscribe(data =>{
-       
-  console.log (data)
-  if(data.status=="success")
-  {
-    // localStorage.setItem("isLoggedin","yes");
-    this.router.navigate(['register'],{queryParams:{rfc:data.unique_sales_code}});
-  }
-  else{
-    this.log1.unique_sales_code
-       alert("unique_sales_code: " +this.log1.unique_sales_code + "" +" is not Valid");
-  }
+  onSubmit() {
+    this.log1.unique_sales_code = this.popupForm.get('unique_sales_code').value;
+    this.authservice.createcode(this.log1)
+      .subscribe(data => {
+        console.log(data)
 
- });
+        if (data.status == "success") {
+          this.router.navigate(['register'], {
+            queryParams:
+              { unique_sales_code: this.popupForm.get('unique_sales_code').value }
+          });
+        } else {
+         // alert(data.msg1);
+          this.resp = data.msg;
+        }
+      });
   }
 }
