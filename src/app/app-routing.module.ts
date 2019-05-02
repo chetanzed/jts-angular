@@ -13,6 +13,7 @@ import { HowToUseComponent } from './how-to-use/how-to-use.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { NewsComponent } from './news/news.component';
 import { RegistrationDetailsComponent } from './registration-details/registration-details.component';
+import { EventComponent } from './event/event.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,7 @@ const routes: Routes = [
   {path :'faq',component: FaqComponent },
   {path :'news',component: NewsComponent },
   {path :'registration-detail',component: RegistrationDetailsComponent },
-
+{path : 'event', component: EventComponent},
   {path :'how-to-use',component: HowToUseComponent  },
 
   // {path :'who-use',component: }

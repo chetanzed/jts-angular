@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { HttpClientModule, HttpClient } from '@angular/common/http'
 
+import { TextMaskModule } from 'angular2-text-mask';
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { HeaderComponent } from './header/header.component'
@@ -26,6 +27,8 @@ import { AuthComponent } from './auth/auth.component'
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
 import { defineLocale } from 'ngx-bootstrap/chronos';
 import { jaLocale } from 'ngx-bootstrap/locale';
+import { EventComponent } from './event/event.component';
+
 defineLocale('ja', jaLocale);
 
 
@@ -46,7 +49,8 @@ defineLocale('ja', jaLocale);
     ThanksComponent,
     RegistrationDetailsComponent,
     NewsComponent,
-    AuthComponent
+    AuthComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +58,7 @@ defineLocale('ja', jaLocale);
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    TextMaskModule,
     BsDatepickerModule.forRoot()
   ],
   providers: [AuthService],

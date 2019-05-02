@@ -1,0 +1,143 @@
+<app-header id="navbar"></app-header >
+<div class="main top-space">
+
+  <div class="padding-panel event-panel">
+    
+    <div class="container">
+      <h1 class="event-heading event-heading-color text-center mb-40 mt-0">AI Beauty Innovation Seminar 2020</h1>
+      <div class="event-first-box">
+          <div class="event-text">
+            <h2 class="mb-20">AIとつくる、新しいサロンのカタチ</h2>
+            <h4 class="mb-40">来店予測/売上UP/マネージメント/経費削減</h4>             
+            <div class="event-venue mb-40 ml-80">
+              <ul class="d-flex event-detail justify-content-center mb-20">
+                <li class="align-self-end">
+                  <span class="">開 催 日</span>
+                  <span class="year">2019 <small>年</small></span>
+                </li>
+                <li class="date align-self-end">6/12</li>
+                <li class="align-self-end">(水)</li>
+              </ul>
+                <h6>ウインク愛知</h6>
+                <h6>13:30受付開始</h6>
+                <h6>14:00スタート</h6>
+                <h6>所要時間 約90分程</h6>
+                <h6 class="mb-0">参加費 無料</h6>
+            </div>
+          </div>
+          <div class="event-image-face"><img src="../../assets/images/event-AI.png"></div>
+      </div>
+      <div class="event-second-box mb-40">
+        <h2 class="mb-30">＜こんなお悩みはありませんか？＞</h2>
+        <div class="row">
+          <div class="col-md-8">
+            <h5><i class="fas fa-circle mr-10"></i> 新規集客頼りのサロン経営を脱したい</h5>
+            <h5><i class="fas fa-circle mr-10"></i> 利益が残るサロン経営を行いたい</h5>
+            <h5><i class="fas fa-circle mr-10"></i> 自分のサロンがどのような状態が把握できていない</h5>
+            <h5 class="mb-30"><i class="fas fa-circle mr-10"></i> マネジメント管理者はいるが、うまく機能していない</h5>
+            <img class="mb-40" src="../../assets/images/event-pic.jpg">
+
+            <h4 class="event-heading-color event-heading-color1 mb-30">
+              ＜サロン経営に関するお悩みを、全てJTSBoardが解決します＞
+            </h4>
+            <h5>たった１つのアプリでサロン業務全てを“かんたん＆一元管理”</h5>
+            <h5>AIシステムは導入サロン様の規模に合わせて利益づくりのサポートを行います。</h5>
+            <h5>今なら初期費用０円、初月使用料０円で導入が可能です。</h5>
+            <h5 class="mb-30">私たちはサロン経営の革新的な未来をお約束します。</h5>
+          </div>
+          <div class="col-md-4">
+            <h5>売上UPと同時にコスト削減も実現</h5>
+            <h5>AIならではの未来予測によって</h5>
+            <h5 class="mb-30">“今、何をすべきかが”明確に</h5>
+            <img class="mb-20" src="../../assets/images/graph.png">
+            <div class="row">
+              <div class="col-6">
+                <ul class="d-flex justify-content-around mb-30 graph-label">
+                  <li class="ml-10">導入前</li>
+                  <li class="">導入後</li>
+                </ul>
+                <h5 class="text-center">売上</h5>
+            </div>
+            <div class="col-6">                    
+              <ul class="d-flex justify-content-around mb-30 graph-label">
+                <li>導入前</li>
+                <li class="mr-20">導入後</li>
+              </ul>
+              <h5 class="text-center">経費</h5>
+            </div>                  
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="white-bg event-form mb-30">
+        <h2 class="event-form-heading text-center mb-50">AI Beauty Innovation Seminar 2020</h2>
+        <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+        <div class="row justify-content-center">
+       
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group mb-30"><input class="form-control" name="salonname" formControlName="salonname" 
+                  placeholder="サロン様名" type="text" 
+                  [ngClass]="{ 'is-invalid': submitted && f.salonname.errors }"
+                  >
+                  
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group mb-30"><input class="form-control" name="participantname1" formControlName="participantname1" placeholder="参加者名" type="text"
+                  [ngClass]="{ 'is-invalid': submitted && f.participantname1.errors }"
+                  ></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group mb-30"><input class="form-control" name="participantname2" formControlName="participantname2" placeholder="参加者名" type="text"
+                  [ngClass]="{ 'is-invalid': submitted && f.participantname2.errors }"
+                  ></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group mb-30"><input class="form-control" name="participantname3" formControlName="participantname3" placeholder="参加者名" type="text"
+                  [ngClass]="{ 'is-invalid': submitted && f.participantname3.errors }"
+                  ></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group mb-30"><input class="form-control"  name="tel" [textMask]="{mask: mask}" formControlName="tel"  placeholder="Tel" type="text"
+                  [ngClass]="{ 'is-invalid': submitted && f.tel.errors }"
+                  ></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group mb-30"><input class="form-control" name="email" formControlName="email" placeholder="Email" type="text"
+                  [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                  ></div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-group mb-30"><input class="form-control" name="salon_like_address" formControlName="salon_like_address" placeholder="サロン様住所 〒" type="text"
+                  [ngClass]="{ 'is-invalid': submitted && f.salon_like_address.errors }"
+                  ></div>
+              </div>
+              <div class="col-sm-12">
+                <div class="text-center"><button class="btn" >送信する</button></div>
+              </div>
+            </div>
+          </div>
+       
+        </div>
+      </form>
+      </div>
+
+      <!-- <div class="white-bg">
+        <div class="page-heading text-center"><h1>COMING SOON!</h1></div>
+        <div class="page-sub-heading text-center">
+          <h5>
+              Our website is under construction. We`ll be here soon with our new awesome site.
+          </h5>
+          <img src="images/under-construction.jpg">
+        </div>
+      </div> -->
+    </div>
+
+  </div>
+
+</div>
+<app-footar></app-footar>

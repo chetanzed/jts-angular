@@ -97,6 +97,7 @@
     .fuction-list-inside li a img {height: 60px;}
 
     
+    
 
 }
 
@@ -187,6 +188,8 @@
      .fuction-list-inside li a {padding: 20px 0;}
      .fuction-list-inside li a img {height: 45px; margin-bottom: 10px;}
 
+     .event-heading {font-size: 2rem}
+     .event-image-face {top: 100px;}
 
    
     }
@@ -271,6 +274,13 @@
     .fuction-list-inside li a{padding: 16px 0;font-size: 14px;} 
     .fuction-list-inside li a img {margin-bottom: 8px; height: 40px;}
 
+    .event-heading {font-size: 1.55rem;}
+    .event-heading-color {-webkit-text-stroke: 0.05rem white; text-stroke: 0.05rem white;}
+    .event-image-face {right: unset;width: 100%;text-align: center;top: 0;}
+    .event-image-face img{width: 300px;}
+    .event-text {padding-top: 215px;}
+    .event-panel h2 {font-size: 1.25rem;}
+    .event-heading-color1 { -webkit-text-stroke: 0.01rem white; text-stroke: 0.01rem white;}
 
 
  }

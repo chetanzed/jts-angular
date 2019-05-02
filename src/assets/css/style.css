@@ -4,6 +4,7 @@
 /*@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";*/
 
 @import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho');
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i');
 
 
 body {font-family: 'Sawarabi Mincho', sans-serif;/*background: #fafafa;*/ color: #525252; /*color: #281e05; */font-size: 13px;letter-spacing: 0.025em;}
@@ -371,7 +372,26 @@ input[type='file'] {display: none;}
 
 /*********** news ***********/
 
+/******** Event ************/
 
+.event-panel {background-color: #141c30;}
+.event-first-box *, .event-second-box * {color: #fff;}
+.event-heading { font-size: 3rem; font-family: 'Arvo', serif; font-weight: bold; letter-spacing: 3px;}
+.event-first-box  {position: relative;}
+.event-heading-color {background: -webkit-linear-gradient(#dcbc4d, #9c7e2e); -webkit-background-clip: text;-webkit-text-fill-color: transparent;-webkit-text-stroke: 0.1rem white;text-stroke: 0.1rem white; }
+.event-heading-color1 {-webkit-text-stroke: 0.02rem white;text-stroke: 0.02rem white; }
+.event-first-box  {position: relative;}
+.event-image-face {position: absolute; top: 0; right: 0; width: 40%;}
+.event-venue {width: 270px; border-radius: 10px;-webkit-border-radius: 10px;-moz-border-radius: 10px;-o-border-radius: 10px; border:1px solid #fff; text-align: center; font-size: 1rem;
+padding: 15px 0;}
+.event-second-box .fa-circle {font-size: 0.75rem}
+.event-detail span{display: block;line-height: normal;}
+.event-detail span.year{font-size: 1.5rem}
+.event-detail .date{font-size: 3.5rem;line-height: 3.5rem;}
+.event-form {background-color: #fff;}
+.event-form-heading {color: #525252;}
+.event-text {position: relative; z-index: 1}
+/******** Event ************/
 
 
 
