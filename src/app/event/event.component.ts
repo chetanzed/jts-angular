@@ -11,6 +11,7 @@ export class EventComponent extends utilClass implements OnInit {
   firstLoad: any;
   eventForm: FormGroup;
   submitted = false;
+  msg = " ";
   constructor(private formBuilder: FormBuilder, private EventService: AuthService) {
     super();
   }
@@ -27,7 +28,7 @@ export class EventComponent extends utilClass implements OnInit {
       participant_one: ['', Validators.required],
       participant_two: ['', Validators.required],
       participant_three: ['', Validators.required],
-      tel: ['', [Validators.required,Validators.minLength(10)]],
+      tel: ['', [Validators.required, Validators.minLength(10)]],
       email: ['', [Validators.required, Validators.email]],
       address: ['', [Validators.required]]
     });
@@ -49,11 +50,15 @@ export class EventComponent extends utilClass implements OnInit {
     // stop here if form is invalid
     if (this.eventForm.invalid) {
       return;
+    } else {
+      console.log(this.eventForm);
+      this.EventService.eventService(this.eventForm.value).subscribe(data => {
+        console.log(data.msg);
+        this.msg = data.msg ;
+      });
+      this.eventForm.reset();
+     
     }
-    console.log(this.eventForm);
-    this.EventService.eventService(this.eventForm.value).subscribe(data => {
-      console.log(data);
-    });
   }
   mask: any[] =
     // ['+', '1', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];

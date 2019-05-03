@@ -10,6 +10,7 @@ declare let $: any;
 export class LandingPageComponent implements OnInit {
   contectForm: FormGroup;
   submitted = false;
+  msg="";
   constructor(private fb: FormBuilder, private auth: AuthService) { }
 
   ngOnInit() {
@@ -104,7 +105,9 @@ export class LandingPageComponent implements OnInit {
       console.log(this.contectForm.value);
       this.auth.contectForm(this.contectForm.value).subscribe(data => {
         console.log(data);
+        this.msg= data.msg;
       });
+      this.contectForm.reset();
     }
   }
 
