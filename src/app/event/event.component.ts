@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { utilClass } from '../model/utilClass';
+import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
@@ -10,7 +11,7 @@ export class EventComponent extends utilClass implements OnInit {
   firstLoad: any;
   eventForm: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private EventService: AuthService) {
     super();
   }
 
@@ -22,13 +23,13 @@ export class EventComponent extends utilClass implements OnInit {
 
 
     this.eventForm = this.formBuilder.group({
-      salonname: ['', Validators.required],
-      participantname1: ['', Validators.required],
-      participantname2: ['', Validators.required],
-      participantname3: ['', Validators.required],
-      tel: ['', Validators.required],
+      salon_name: ['', Validators.required],
+      participant_one: ['', Validators.required],
+      participant_two: ['', Validators.required],
+      participant_three: ['', Validators.required],
+      tel: ['', [Validators.required,Validators.minLength(10)]],
       email: ['', [Validators.required, Validators.email]],
-      salon_like_address: ['', [Validators.required]]
+      address: ['', [Validators.required]]
     });
 
 
@@ -44,13 +45,15 @@ export class EventComponent extends utilClass implements OnInit {
 
 
   onSubmit() {
-  this.submitted = true;
+    this.submitted = true;
     // stop here if form is invalid
     if (this.eventForm.invalid) {
       return;
     }
     console.log(this.eventForm);
-    //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+    this.EventService.eventService(this.eventForm.value).subscribe(data => {
+      console.log(data);
+    });
   }
   mask: any[] =
     // ['+', '1', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];

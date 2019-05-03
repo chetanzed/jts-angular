@@ -78,22 +78,22 @@
           <div class="col-md-9">
             <div class="row">
               <div class="col-sm-6">
-                <div class="form-group mb-30"><input class="form-control" name="salonname" formControlName="salonname" 
+                <div class="form-group mb-30"><input class="form-control" name="salon_name" formControlName="salon_name" 
                   placeholder="サロン様名" type="text" 
-                  [ngClass]="{ 'is-invalid': submitted && f.salonname.errors }">
+                  [ngClass]="{ 'is-invalid': submitted && f.salon_name.errors }">
                 </div>
               </div>
               <div class="col-sm-6">
-                <div class="form-group mb-30"><input class="form-control" name="participantname1" formControlName="participantname1" placeholder="参加者名" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.participantname1.errors }"></div>
+                <div class="form-group mb-30"><input class="form-control" name="participant_one" formControlName="participant_one" placeholder="参加者名" type="text"
+                  [ngClass]="{ 'is-invalid': submitted && f.participant_one.errors }"></div>
               </div>
               <div class="col-sm-6">
-                <div class="form-group mb-30"><input class="form-control" name="participantname2" formControlName="participantname2" placeholder="参加者名" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.participantname2.errors }"></div>
+                <div class="form-group mb-30"><input class="form-control" name="participant_two" formControlName="participant_two" placeholder="参加者名" type="text"
+                  [ngClass]="{ 'is-invalid': submitted && f.participant_two.errors }"></div>
               </div>
               <div class="col-sm-6">
-                <div class="form-group mb-30"><input class="form-control" name="participantname3" formControlName="participantname3" placeholder="参加者名" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.participantname3.errors }"></div>
+                <div class="form-group mb-30"><input class="form-control" name="participant_three" formControlName="participant_three" placeholder="参加者名" type="text"
+                  [ngClass]="{ 'is-invalid': submitted && f.participant_three.errors }"></div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group mb-30"><input class="form-control"  name="tel" [textMask]="{mask: mask}" formControlName="tel"  placeholder="Tel" type="text"
@@ -104,8 +104,8 @@
                   [ngClass]="{ 'is-invalid': submitted && f.email.errors }"></div>
               </div>
               <div class="col-sm-12">
-                <div class="form-group mb-30"><input class="form-control" name="salon_like_address" formControlName="salon_like_address" placeholder="サロン様住所 〒" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.salon_like_address.errors }"></div>
+                <div class="form-group mb-30"><input class="form-control" name="address" formControlName="address" placeholder="サロン様住所 〒" type="text"
+                  [ngClass]="{ 'is-invalid': submitted && f.address.errors }"></div>
               </div>
               <div class="col-sm-12">
                 <div class="text-center"><button class="btn" >送信する</button></div>

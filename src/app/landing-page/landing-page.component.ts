@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
-import { Content } from '@angular/compiler/src/render3/r3_ast';
 declare let $: any;
 @Component({
   selector: 'app-landing-page',
@@ -34,14 +33,6 @@ export class LandingPageComponent implements OnInit {
         navigationText: [
           "<span class='icon-left-arrow'></span>",
           "<span class='icon-right-arrow'></span>"],
-
-        // "singleItem:true" is a shortcut for:
-        // items : 1, 
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
-
       });
     });
 

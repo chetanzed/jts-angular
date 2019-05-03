@@ -5,6 +5,7 @@ import { Popup } from './Models/popup.model'
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { RegisterForm } from './Models/registration.model';
 import { ContactUse } from './Models/contactUs.model';
+import { eventForm } from './Models/eventForm.model';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,9 @@ export class AuthService {
   }
   contectForm(contectForm): Observable<ContactUse> {
   return this.http.post<ContactUse>('https://api.jtsboard.com/web_service_angular/contact_form',contectForm);
+  }
+
+  eventService(eventForm):Observable<eventForm>{
+return this.http.post<eventForm>('https://api.jtsboard.com/web_service_angular/event_form',eventForm);
   }
 }
