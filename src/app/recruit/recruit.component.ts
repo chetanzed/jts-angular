@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  AuthService } from '../auth.service';
 import { Router } from '@angular/router';
-import { Popup } from '../popup.model';
+import { Popup } from '../Models/popup.model';
 
 @Component({
   selector: 'app-recruit',

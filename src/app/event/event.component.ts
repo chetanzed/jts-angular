@@ -44,7 +44,7 @@ export class EventComponent extends utilClass implements OnInit {
 
 
   onSubmit() {
-    this.submitted = true;
+  this.submitted = true;
     // stop here if form is invalid
     if (this.eventForm.invalid) {
       return;

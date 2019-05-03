@@ -75,46 +75,37 @@
         <h2 class="event-form-heading text-center mb-50">AI Beauty Innovation Seminar 2020</h2>
         <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
         <div class="row justify-content-center">
-       
           <div class="col-md-9">
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group mb-30"><input class="form-control" name="salonname" formControlName="salonname" 
                   placeholder="サロン様名" type="text" 
-                  [ngClass]="{ 'is-invalid': submitted && f.salonname.errors }"
-                  >
-                  
+                  [ngClass]="{ 'is-invalid': submitted && f.salonname.errors }">
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group mb-30"><input class="form-control" name="participantname1" formControlName="participantname1" placeholder="参加者名" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.participantname1.errors }"
-                  ></div>
+                  [ngClass]="{ 'is-invalid': submitted && f.participantname1.errors }"></div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group mb-30"><input class="form-control" name="participantname2" formControlName="participantname2" placeholder="参加者名" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.participantname2.errors }"
-                  ></div>
+                  [ngClass]="{ 'is-invalid': submitted && f.participantname2.errors }"></div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group mb-30"><input class="form-control" name="participantname3" formControlName="participantname3" placeholder="参加者名" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.participantname3.errors }"
-                  ></div>
+                  [ngClass]="{ 'is-invalid': submitted && f.participantname3.errors }"></div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group mb-30"><input class="form-control"  name="tel" [textMask]="{mask: mask}" formControlName="tel"  placeholder="Tel" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.tel.errors }"
-                  ></div>
+                  [ngClass]="{ 'is-invalid': submitted && f.tel.errors }"></div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group mb-30"><input class="form-control" name="email" formControlName="email" placeholder="Email" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
-                  ></div>
+                  [ngClass]="{ 'is-invalid': submitted && f.email.errors }"></div>
               </div>
               <div class="col-sm-12">
                 <div class="form-group mb-30"><input class="form-control" name="salon_like_address" formControlName="salon_like_address" placeholder="サロン様住所 〒" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.salon_like_address.errors }"
-                  ></div>
+                  [ngClass]="{ 'is-invalid': submitted && f.salon_like_address.errors }"></div>
               </div>
               <div class="col-sm-12">
                 <div class="text-center"><button class="btn" >送信する</button></div>

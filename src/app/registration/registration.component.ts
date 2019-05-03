@@ -1,7 +1,7 @@
 import { Component, OnInit,ViewChild,HostListener } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
 import { AuthService } from '../auth.service'
-import { RegisterForm } from '../registration.model'
+import { RegisterForm } from '../Models/registration.model'
 
 declare var $: any
 import { from } from 'rxjs'

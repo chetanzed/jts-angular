@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { RegisterForm } from '../registration.model';
+import { RegisterForm } from '../Models/registration.model';
 import { AuthService } from '../auth.service';
 
 declare var $:any;

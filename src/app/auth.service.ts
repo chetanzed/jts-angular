@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core'
 import { Observable, from } from 'rxjs'
-import { Login } from './login.model'
-import { Popup } from './popup.model'
+import { Login } from './Models/login.model'
+import { Popup } from './Models/popup.model'
 import { HttpClient, HttpHeaders } from '@angular/common/http'
-import { RegisterForm } from './registration.model'
+import { RegisterForm } from './Models/registration.model';
+import { ContactUse } from './Models/contactUs.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   checkLogin(log): Observable<Login> {
     return this.http.post<Login>(
@@ -30,6 +31,9 @@ export class AuthService {
     return this.http.post<RegisterForm>(
       'https://api.jtsboard.com/web_service_angular/add_sales_user',
       reg
-    )
+    );
+  }
+  contectForm(contectForm): Observable<ContactUse> {
+  return this.http.post<ContactUse>('https://api.jtsboard.com/web_service_angular/contact_form',contectForm);
   }
 }

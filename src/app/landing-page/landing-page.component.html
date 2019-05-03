@@ -471,42 +471,50 @@
     <div class="container">
         <div class="white-bg mb-30">
             <div class="page-heading text-center"><h1>お問い合わせ</h1></div>
+            <form (ngSubmit)="onContact()" [formGroup]="contectForm">
             <div class="row justify-content-center">
                 <div class="col-md-9">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
-                                <input type="text" class="form-control" name="" placeholder="名前">
+                                <input type="text" class="form-control" name="name" formControlName="name" placeholder="名前"
+                            [ngClass]="{'is-invalid': submitted && f.name.errors }">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
-                                <input type="text" class="form-control" name="" placeholder="メールアドレス">
+                                <input type="text" class="form-control" name="email" formControlName="email"placeholder="メールアドレス"
+                                [ngClass]="{'is-invalid': submitted && f.email.errors }">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
-                                <input type="text" class="form-control" name="" placeholder="電話番号">
+                                <input type="text" class="form-control" name="phone" [textMask]="{mask: mask}" formControlName="phone" placeholder="電話番号"
+                                [ngClass]="{'is-invalid': submitted && f.phone.errors }">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
-                                <input type="text" class="form-control" name="" placeholder="サロンの業種">
+                                <input type="text" class="form-control" name="subject" formControlName="subject" placeholder="サロンの業種"
+                                [ngClass]="{'is-invalid': submitted && f.subject.errors }">
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group mb-30">
-                                <textarea placeholder="メッセージ" cols="" rows="6" class="form-control"></textarea>
+                                <textarea name="message"  formControlName="message" placeholder="メッセージ" cols="" rows="6" class="form-control"
+                                [ngClass]="{'is-invalid': submitted && f.message.errors }"
+                                ></textarea>
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="text-center">
-                                <a href="#" class="btn">送信する</a>
+                                <button class="btn">送信する</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </form>
         </div>
     </div>
 </div>
