@@ -11,6 +11,7 @@ export class LandingPageComponent implements OnInit {
   contectForm: FormGroup;
   submitted = false;
   msg="";
+  public edited = false;
   constructor(private fb: FormBuilder, private auth: AuthService) { }
 
   ngOnInit() {
@@ -108,6 +109,12 @@ export class LandingPageComponent implements OnInit {
         this.msg= data.msg;
       });
       this.contectForm.reset();
+        //wait 2 Seconds and hide
+        setTimeout(function() {
+          //    //show box msg
+          this.edited = true;
+              console.log(this.edited);
+          }.bind(this), 2000);
     }
   }
 

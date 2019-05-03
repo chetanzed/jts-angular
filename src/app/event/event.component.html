@@ -1,31 +1,31 @@
-<app-header id="navbar"></app-header >
+<app-header id="navbar"></app-header>
 <div class="main top-space">
 
   <div class="padding-panel event-panel">
-    
+
     <div class="container">
       <h1 class="event-heading event-heading-color text-center mb-40 mt-0">AI Beauty Innovation Seminar 2020</h1>
       <div class="event-first-box">
-          <div class="event-text">
-            <h2 class="mb-20">AIとつくる、新しいサロンのカタチ</h2>
-            <h4 class="mb-40">来店予測/売上UP/マネージメント/経費削減</h4>             
-            <div class="event-venue mb-40 ml-80">
-              <ul class="d-flex event-detail justify-content-center mb-20">
-                <li class="align-self-end">
-                  <span class="">開 催 日</span>
-                  <span class="year">2019 <small>年</small></span>
-                </li>
-                <li class="date align-self-end">6/12</li>
-                <li class="align-self-end">(水)</li>
-              </ul>
-                <h6>ウインク愛知</h6>
-                <h6>13:30受付開始</h6>
-                <h6>14:00スタート</h6>
-                <h6>所要時間 約90分程</h6>
-                <h6 class="mb-0">参加費 無料</h6>
-            </div>
+        <div class="event-text">
+          <h2 class="mb-20">AIとつくる、新しいサロンのカタチ</h2>
+          <h4 class="mb-40">来店予測/売上UP/マネージメント/経費削減</h4>
+          <div class="event-venue mb-40 ml-80">
+            <ul class="d-flex event-detail justify-content-center mb-20">
+              <li class="align-self-end">
+                <span class="">開 催 日</span>
+                <span class="year">2019 <small>年</small></span>
+              </li>
+              <li class="date align-self-end">6/12</li>
+              <li class="align-self-end">(水)</li>
+            </ul>
+            <h6>ウインク愛知</h6>
+            <h6>13:30受付開始</h6>
+            <h6>14:00スタート</h6>
+            <h6>所要時間 約90分程</h6>
+            <h6 class="mb-0">参加費 無料</h6>
           </div>
-          <div class="event-image-face"><img src="../../assets/images/event-AI.png"></div>
+        </div>
+        <div class="event-image-face"><img src="../../assets/images/event-AI.png"></div>
       </div>
       <div class="event-second-box mb-40">
         <h2 class="mb-30">＜こんなお悩みはありませんか？＞</h2>
@@ -43,12 +43,21 @@
             <h5>たった１つのアプリでサロン業務全てを“かんたん＆一元管理”</h5>
             <h5>AIシステムは導入サロン様の規模に合わせて利益づくりのサポートを行います。</h5>
             <h5>今なら初期費用０円、初月使用料０円で導入が可能です。</h5>
-            <h5 class="mb-30">私たちはサロン経営の革新的な未来をお約束します。</h5>
+            <h5 class="mb-80">私たちはサロン経営の革新的な未来をお約束します。</h5>
           </div>
+
           <div class="col-md-4">
-            <h5>売上UPと同時にコスト削減も実現</h5>
-            <h5>AIならではの未来予測によって</h5>
-            <h5 class="mb-30">“今、何をすべきかが”明確に</h5>
+              <div class="d-none d-sm-block">
+                  <h5>売上UPと同時にコスト削減も実現</h5>
+                  <h5>AIならではの未来予測によって</h5>
+                  <h5 class="mb-30">“今、何をすべきかが”明確に</h5>
+                </div>
+                
+                <div class="d-block d-sm-none text-center">
+                  <h4>売上UPと同時にコスト削減も実現</h4>
+                  <h4>AIならではの未来予測によって</h4>
+                  <h4 class="mb-30">“今、何をすべきかが”明確に</h4>
+                </div>
             <img class="mb-20" src="../../assets/images/graph.png">
             <div class="row">
               <div class="col-6">
@@ -57,65 +66,72 @@
                   <li class="">導入後</li>
                 </ul>
                 <h5 class="text-center">売上</h5>
-            </div>
-            <div class="col-6">                    
-              <ul class="d-flex justify-content-around mb-30 graph-label">
-                <li>導入前</li>
-                <li class="mr-20">導入後</li>
-              </ul>
-              <h5 class="text-center">経費</h5>
-            </div>                  
+              </div>
+              <div class="col-6">
+                <ul class="d-flex justify-content-around mb-30 graph-label">
+                  <li>導入前</li>
+                  <li class="mr-20">導入後</li>
+                </ul>
+                <h5 class="text-center">経費</h5>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-
       <div class="white-bg event-form mb-30">
         <h2 class="event-form-heading text-center mb-50">AI Beauty Innovation Seminar 2020</h2>
-        <h5  class="event-form-heading text-center mb-50">{{msg}}</h5>
+       
         <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
-        <div class="row justify-content-center">
-          <div class="col-md-9">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="form-group mb-30"><input class="form-control" name="salon_name" formControlName="salon_name" 
-                  placeholder="サロン様名" type="text" 
-                  [ngClass]="{ 'is-invalid': submitted && f.salon_name.errors }">
+          <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div *ngIf="edited" class="alert alert-success mb-30" role="alert">
+                    {{msg}}
+                </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group mb-30"><input class="form-control" name="salon_name"
+                      formControlName="salon_name" placeholder="サロン様名" type="text"
+                      [ngClass]="{ 'is-invalid': submitted && f.salon_name.errors }">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30"><input class="form-control" name="participant_one"
+                      formControlName="participant_one" placeholder="参加者名" type="text"
+                      [ngClass]="{ 'is-invalid': submitted && f.participant_one.errors }"></div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30"><input class="form-control" name="participant_two"
+                      formControlName="participant_two" placeholder="参加者名" type="text"
+                      [ngClass]="{ 'is-invalid': submitted && f.participant_two.errors }"></div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30"><input class="form-control" name="participant_three"
+                      formControlName="participant_three" placeholder="参加者名" type="text"
+                      [ngClass]="{ 'is-invalid': submitted && f.participant_three.errors }"></div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30"><input class="form-control" name="tel" [textMask]="{mask: mask}"
+                      formControlName="tel" placeholder="Tel" type="text"
+                      [ngClass]="{ 'is-invalid': submitted && f.tel.errors }"></div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30"><input class="form-control" name="email" formControlName="email"
+                      placeholder="Email" type="text" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"></div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-group mb-30"><input class="form-control" name="address" formControlName="address"
+                      placeholder="サロン様住所 〒" type="text" [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="text-center"><button  class="btn">送信する</button></div>
                 </div>
               </div>
-              <div class="col-sm-6">
-                <div class="form-group mb-30"><input class="form-control" name="participant_one" formControlName="participant_one" placeholder="参加者名" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.participant_one.errors }"></div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group mb-30"><input class="form-control" name="participant_two" formControlName="participant_two" placeholder="参加者名" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.participant_two.errors }"></div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group mb-30"><input class="form-control" name="participant_three" formControlName="participant_three" placeholder="参加者名" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.participant_three.errors }"></div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group mb-30"><input class="form-control"  name="tel" [textMask]="{mask: mask}" formControlName="tel"  placeholder="Tel" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.tel.errors }"></div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group mb-30"><input class="form-control" name="email" formControlName="email" placeholder="Email" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.email.errors }"></div>
-              </div>
-              <div class="col-sm-12">
-                <div class="form-group mb-30"><input class="form-control" name="address" formControlName="address" placeholder="サロン様住所 〒" type="text"
-                  [ngClass]="{ 'is-invalid': submitted && f.address.errors }"></div>
-              </div>
-              <div class="col-sm-12">
-                <div class="text-center"><button class="btn" >送信する</button></div>
-              </div>
             </div>
+
           </div>
-       
-        </div>
-      </form>
+        </form>
       </div>
 
       <!-- <div class="white-bg">

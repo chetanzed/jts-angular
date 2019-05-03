@@ -471,10 +471,12 @@
     <div class="container">
         <div class="white-bg mb-30">
             <div class="page-heading text-center"><h1>お問い合わせ</h1></div>
-            <div class="page-heading text-center"><h4>{{msg}}</h4></div>
             <form (ngSubmit)="onContact()" [formGroup]="contectForm">
             <div class="row justify-content-center">
                 <div class="col-md-9">
+                        <div *ngIf="edited" class="alert alert-success mb-30" role="alert">
+                                {{msg}}
+                            </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group mb-30">

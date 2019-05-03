@@ -11,7 +11,8 @@ export class EventComponent extends utilClass implements OnInit {
   firstLoad: any;
   eventForm: FormGroup;
   submitted = false;
-  msg = " ";
+  msg = "";
+  public edited = false;
   constructor(private formBuilder: FormBuilder, private EventService: AuthService) {
     super();
   }
@@ -41,10 +42,6 @@ export class EventComponent extends utilClass implements OnInit {
   get f() { return this.eventForm.controls; }
 
 
-
-
-
-
   onSubmit() {
     this.submitted = true;
     // stop here if form is invalid
@@ -53,13 +50,19 @@ export class EventComponent extends utilClass implements OnInit {
     } else {
       console.log(this.eventForm);
       this.EventService.eventService(this.eventForm.value).subscribe(data => {
-        console.log(data.msg);
+        console.log(data);
         this.msg = data.msg ;
       });
       this.eventForm.reset();
-     
+        //wait 2 Seconds and hide
+        setTimeout(function() {
+        //    //show box msg
+        this.edited = true;
+            console.log(this.edited);
+        }.bind(this), 2000);
     }
   }
+  
   mask: any[] =
     // ['+', '1', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
     [/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
