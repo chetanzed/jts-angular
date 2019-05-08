@@ -8,7 +8,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./event.component.css']
 })
 export class EventComponent extends utilClass implements OnInit {
-  firstLoad: any;
+  firstLoad:boolean=true;
   eventForm: FormGroup;
   submitted = false;
   msg = "";
