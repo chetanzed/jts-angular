@@ -375,7 +375,7 @@ input[type='file'] {display: none;}
 /******** Event ************/
 
 .event-panel {background-color: #141c30;}
-.event-first-box *, .event-second-box * {color: #fff;}
+.event-panel * {color: #fff;}
 .event-heading { font-size: 3rem; font-family: 'Arvo', serif; font-weight: bold; letter-spacing: 3px;}
 .event-first-box  {position: relative;}
 .event-heading-color {background: -webkit-linear-gradient(#dcbc4d, #9c7e2e); -webkit-background-clip: text;-webkit-text-fill-color: transparent;-webkit-text-stroke: 0.1rem white;text-stroke: 0.1rem white; }
@@ -388,8 +388,8 @@ padding: 15px 0;}
 .event-detail span{display: block;line-height: normal;}
 .event-detail span.year{font-size: 1.5rem}
 .event-detail .date{font-size: 3.5rem;line-height: 3.5rem;}
-.event-form {background-color: #fff;}
-.event-form-heading {color: #525252;}
+.event-form {background-color: rgba(131,135,121,1)}
+/*.event-form-heading {color: #525252;}*/
 .event-text {position: relative; z-index: 1}
 /******** Event ************/
 
