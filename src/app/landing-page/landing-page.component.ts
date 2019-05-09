@@ -8,11 +8,11 @@ declare let $: any;
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-  contectForm: FormGroup;
-  submitted = false;
-  msg="";
-  public edited = false;
-  constructor(private fb: FormBuilder, private auth: AuthService) { }
+  contactForm: FormGroup;
+  datasaved = false;
+  msg: any;
+  
+  constructor(private fb: FormBuilder, private authservice: AuthService) { }
 
   ngOnInit() {
     $('.js-anchor-link').click(function (e) {
@@ -38,7 +38,7 @@ export class LandingPageComponent implements OnInit {
       });
     });
 
-    this.contectForm = this.fb.group({
+    this.contactForm = this.fb.group({
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.minLength(10)]],
@@ -94,27 +94,21 @@ export class LandingPageComponent implements OnInit {
 
 
   }
-  get f() { return this.contectForm.controls; }
+  
 
   onContact() {
-    this.submitted = true;
-
-    if (this.contectForm.invalid) {
+    if (this.contactForm.invalid) {
       return;
     }
     else {
-      console.log(this.contectForm.value);
-      this.auth.contectForm(this.contectForm.value).subscribe(data => {
+      console.log(this.contactForm);
+      this.authservice.creatContact(this.contactForm.value).subscribe(data => {
         console.log(data);
         this.msg= data.msg;
+        this.datasaved = true;
+        this.contactForm.reset();
       });
-      this.contectForm.reset();
-        //wait 2 Seconds and hide
-        setTimeout(function() {
-          //    //show box msg
-          this.edited = true;
-              console.log(this.edited);
-          }.bind(this), 2000);
+      
     }
   }
 

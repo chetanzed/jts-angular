@@ -471,42 +471,52 @@
     <div class="container">
         <div class="white-bg mb-30">
             <div class="page-heading text-center"><h1>お問い合わせ</h1></div>
-            <form (ngSubmit)="onContact()" [formGroup]="contectForm">
+            <form (ngSubmit)="onContact()" [formGroup]="contactForm">
             <div class="row justify-content-center">
                 <div class="col-md-9">
-                        <div *ngIf="edited" class="alert alert-success mb-30" role="alert">
+                        <div *ngIf="datasaved" class="alert alert-success mb-30" role="alert">
                                 {{msg}}
                             </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
-                                <input type="text" class="form-control" name="name" formControlName="name" placeholder="名前"
-                            [ngClass]="{'is-invalid': submitted && f.name.errors }">
+                                <input type="text" class="form-control" 
+                                 formControlName="name" placeholder="名前"
+                                 required />
+                                 <span *ngIf="!contactForm.get('name').valid && contactForm.get('name').touched"></span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
-                                <input type="text" class="form-control" name="email" formControlName="email"placeholder="メールアドレス"
-                                [ngClass]="{'is-invalid': submitted && f.email.errors }">
+                                <input type="text" class="form-control"  
+                                formControlName="email"
+                                placeholder="メールアドレス"
+                                required />
+                                <span *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched"></span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
-                                <input type="text" class="form-control" name="phone" [textMask]="{mask: mask}" formControlName="phone" placeholder="電話番号"
-                                [ngClass]="{'is-invalid': submitted && f.phone.errors }">
+                                <input type="tel" class="form-control" 
+                                 [textMask]="{mask: mask}" formControlName="phone" placeholder="電話番号"
+                                 required />
+                                 <span *ngIf="!contactForm.get('phone').valid && contactForm.get('phone').touched"></span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
-                                <input type="text" class="form-control" name="subject" formControlName="subject" placeholder="サロンの業種"
-                                [ngClass]="{'is-invalid': submitted && f.subject.errors }">
+                                <input type="text" class="form-control" 
+                                 formControlName="subject" placeholder="サロンの業種"
+                                 required />
+                                 <span *ngIf="!contactForm.get('subject').valid && contactForm.get('subject').touched"></span>
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group mb-30">
                                 <textarea name="message"  formControlName="message" placeholder="メッセージ" cols="" rows="6" class="form-control"
-                                [ngClass]="{'is-invalid': submitted && f.message.errors }"
-                                ></textarea>
+                                 >
+                            </textarea>
+                            <span *ngIf="!contactForm.get('message').valid && contactForm.get('message').touched"></span>  
                             </div>
                         </div>
                         <div class="col-sm-12">
