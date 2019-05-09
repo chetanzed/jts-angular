@@ -104,7 +104,7 @@
                   <div class="form-group mb-30">
                       <input type="text"
                       class="form-control" 
-                        formControlName="participant_one" placeholder="サロン様名" 
+                        formControlName="participant_one" placeholder="参加者名" 
                         required />
                         <span *ngIf="!eventForm.get('participant_one').valid && eventForm.get('participant_one').touched"></span>
                     </div>
@@ -113,7 +113,7 @@
                   <div class="form-group mb-30">
                       <input type="text"
                       class="form-control" 
-                        formControlName="email" placeholder="サロン様名" 
+                        formControlName="email" placeholder="Email" 
                         required />
                         <span *ngIf="!eventForm.get('email').valid && eventForm.get('email').touched"></span>
                     </div>
@@ -122,7 +122,7 @@
                   <div class="form-group mb-30">
                       <input type="text"
                       class="form-control" 
-                        formControlName="participant_three" placeholder="サロン様名" 
+                        formControlName="participant_three" placeholder="参加者名" 
                         required />
                         <span *ngIf="!eventForm.get('participant_three').valid && eventForm.get('participant_three').touched"></span>
                     </div>
@@ -132,7 +132,7 @@
                       <input type="tel"
                       [textMask]="{mask: mask}"
                       class="form-control" 
-                        formControlName="tel" placeholder="サロン様名" 
+                        formControlName="tel" placeholder="Tel" 
                         required />
                         <span *ngIf="!eventForm.get('tel').valid && eventForm.get('tel').touched"></span>
                     </div>
@@ -141,7 +141,7 @@
                   <div class="form-group mb-30">
                       <input type="text"
                       class="form-control" 
-                        formControlName="participant_two" placeholder="サロン様名" 
+                        formControlName="participant_two" placeholder="参加者名" 
                         required />
                         <span *ngIf="!eventForm.get('participant_two').valid && eventForm.get('participant_two').touched"></span>
                     </div>
@@ -150,7 +150,7 @@
                   <div class="form-group mb-30">
                       <input type="text"
                       class="form-control" 
-                        formControlName="address" placeholder="サロン様名" 
+                        formControlName="address" placeholder="サロン様住所 〒" 
                         required />
                         <span *ngIf="!eventForm.get('address').valid && eventForm.get('address').touched"></span>
                   </div>
@@ -168,7 +168,7 @@
               <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
                   <div class="row justify-content-center">
                     <div class="col-md-9">
-                        <div *ngIf="edited" class="alert alert-success mb-30" role="alert">
+                        <div *ngIf="datasaved" class="alert alert-success mb-30" role="alert">
                             {{msg}}
                         </div>
                       <div class="row">
@@ -185,7 +185,7 @@
                                 <div class="form-group mb-30">
                                     <input type="text"
                                     class="form-control" 
-                                      formControlName="email" placeholder="サロン様名" 
+                                      formControlName="email" placeholder="Email" 
                                       required />
                                       <span *ngIf="!eventForm.get('email').valid && eventForm.get('email').touched"></span>
                                   </div>
@@ -194,7 +194,7 @@
                             <div class="form-group mb-30">
                                 <input type="text"
                                 class="form-control" 
-                                  formControlName="tel" placeholder="サロン様名" 
+                                  formControlName="tel" placeholder="Tel" 
                                   required />
                                   <span *ngIf="!eventForm.get('tel').valid && eventForm.get('tel').touched"></span>
                               </div>
@@ -203,7 +203,7 @@
                               <div class="form-group mb-30">
                                   <input type="text"
                                   class="form-control" 
-                                    formControlName="address" placeholder="サロン様名" 
+                                    formControlName="address" placeholder="サロン様住所 〒" 
                                     required />
                                     <span *ngIf="!eventForm.get('address').valid && eventForm.get('address').touched"></span>
                               </div>
@@ -212,7 +212,7 @@
                                 <div class="form-group mb-30">
                                     <input type="text"
                                     class="form-control" 
-                                      formControlName="participant_two" placeholder="サロン様名" 
+                                      formControlName="participant_two" placeholder="参加者名" 
                                       required />
                                       <span *ngIf="!eventForm.get('participant_two').valid && eventForm.get('participant_two').touched"></span>
                                   </div>
@@ -221,7 +221,7 @@
                                   <div class="form-group mb-30">
                                       <input type="text"
                                       class="form-control" 
-                                        formControlName="participant_three" placeholder="サロン様名" 
+                                        formControlName="participant_three" placeholder="参加者名" 
                                         required />
                                         <span *ngIf="!eventForm.get('participant_three').valid && eventForm.get('participant_three').touched"></span>
                                     </div>
@@ -230,7 +230,7 @@
                                     <div class="form-group mb-30">
                                         <input type="text"
                                         class="form-control" 
-                                          formControlName="participant_one" placeholder="サロン様名" 
+                                          formControlName="participant_one" placeholder="参加者名" 
                                           required />
                                           <span *ngIf="!eventForm.get('participant_one').valid && eventForm.get('participant_one').touched"></span>
                                       </div>
