@@ -87,43 +87,72 @@
               <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
           <div class="row justify-content-center">
             <div class="col-md-9">
-                <div *ngIf="edited" class="alert alert-success mb-30" role="alert">
+                <div *ngIf="datasaved" class="alert alert-success mb-30" role="alert">
                     {{msg}}
                 </div>
               <div class="row">
                 <div class="col-sm-6">
-                  <div class="form-group mb-30"><input class="form-control" name="salon_name"
-                      formControlName="salon_name" placeholder="サロン様名" type="text"
-                      [ngClass]="{ 'is-invalid': submitted && f.salon_name.errors }">
+                  <div class="form-group mb-30">
+                    <input type="text"
+                    class="form-control" 
+                      formControlName="salon_name" placeholder="サロン様名" 
+                      required />
+                      <span *ngIf="!eventForm.get('salon_name').valid && eventForm.get('salon_name').touched"></span>
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="form-group mb-30"><input class="form-control" name="participant_one"
-                      formControlName="participant_one" placeholder="参加者名" type="text"
-                      [ngClass]="{ 'is-invalid': submitted && f.participant_one.errors }"></div>
+                  <div class="form-group mb-30">
+                      <input type="text"
+                      class="form-control" 
+                        formControlName="participant_one" placeholder="サロン様名" 
+                        required />
+                        <span *ngIf="!eventForm.get('participant_one').valid && eventForm.get('participant_one').touched"></span>
+                    </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="form-group mb-30"><input class="form-control" name="email" formControlName="email"
-                      placeholder="Email" type="text" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"></div>
+                  <div class="form-group mb-30">
+                      <input type="text"
+                      class="form-control" 
+                        formControlName="email" placeholder="サロン様名" 
+                        required />
+                        <span *ngIf="!eventForm.get('email').valid && eventForm.get('email').touched"></span>
+                    </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="form-group mb-30"><input class="form-control" name="participant_three"
-                      formControlName="participant_three" placeholder="参加者名" type="text"
-                      [ngClass]="{ 'is-invalid': submitted && f.participant_three.errors }"></div>
+                  <div class="form-group mb-30">
+                      <input type="text"
+                      class="form-control" 
+                        formControlName="participant_three" placeholder="サロン様名" 
+                        required />
+                        <span *ngIf="!eventForm.get('participant_three').valid && eventForm.get('participant_three').touched"></span>
+                    </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="form-group mb-30"><input class="form-control" name="tel" [textMask]="{mask: mask}"
-                      formControlName="tel" placeholder="Tel" type="text"
-                      [ngClass]="{ 'is-invalid': submitted && f.tel.errors }"></div>
+                  <div class="form-group mb-30">
+                      <input type="tel"
+                      [textMask]="{mask: mask}"
+                      class="form-control" 
+                        formControlName="tel" placeholder="サロン様名" 
+                        required />
+                        <span *ngIf="!eventForm.get('tel').valid && eventForm.get('tel').touched"></span>
+                    </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="form-group mb-30"><input class="form-control" name="participant_two"
-                      formControlName="participant_two" placeholder="参加者名" type="text"
-                      [ngClass]="{ 'is-invalid': submitted && f.participant_two.errors }"></div>
+                  <div class="form-group mb-30">
+                      <input type="text"
+                      class="form-control" 
+                        formControlName="participant_two" placeholder="サロン様名" 
+                        required />
+                        <span *ngIf="!eventForm.get('participant_two').valid && eventForm.get('participant_two').touched"></span>
+                    </div>
                 </div>
                <div class="col-sm-12">
-                  <div class="form-group mb-30"><input class="form-control" name="address" formControlName="address"
-                      placeholder="サロン様住所 〒" type="text" [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
+                  <div class="form-group mb-30">
+                      <input type="text"
+                      class="form-control" 
+                        formControlName="address" placeholder="サロン様名" 
+                        required />
+                        <span *ngIf="!eventForm.get('address').valid && eventForm.get('address').touched"></span>
                   </div>
                 </div>
                 <div class="col-sm-12">
@@ -143,47 +172,72 @@
                             {{msg}}
                         </div>
                       <div class="row">
-                        <div class="col-sm-6">
-                          <div class="form-group mb-30"><input class="form-control" name="salon_name"
-                              formControlName="salon_name" placeholder="サロン様名" type="text"
-                              [ngClass]="{ 'is-invalid': submitted && f.salon_name.errors }">
-                          </div>
-                        </div> 
-                        <div class="col-sm-6">
-                          <div class="form-group mb-30"><input class="form-control" name="email" formControlName="email"
-                              placeholder="Email" type="text" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"></div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="form-group mb-30"><input class="form-control" name="tel" [textMask]="{mask: mask}"
-                              formControlName="tel" placeholder="Tel" type="text"
-                              [ngClass]="{ 'is-invalid': submitted && f.tel.errors }"></div>
-                        </div> 
-                        <div class="col-sm-12">
-                          <div class="form-group mb-30"><input class="form-control" name="address" formControlName="address"
-                              placeholder="サロン様住所 〒" type="text" [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
-                          </div>
-                        </div>
-                           <div class="col-sm-6">
-                          <div class="form-group mb-30"><input class="form-control" name="participant_two"
-                              formControlName="participant_two" placeholder="参加者名" type="text"
-                              [ngClass]="{ 'is-invalid': submitted && f.participant_two.errors }">
+                          <div class="col-sm-6">
+                              <div class="form-group mb-30">
+                                <input type="text"
+                                class="form-control" 
+                                  formControlName="salon_name" placeholder="サロン様名" 
+                                  required />
+                                  <span *ngIf="!eventForm.get('salon_name').valid && eventForm.get('salon_name').touched"></span>
+                              </div>
                             </div>
-                        </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text"
+                                    class="form-control" 
+                                      formControlName="email" placeholder="サロン様名" 
+                                      required />
+                                      <span *ngIf="!eventForm.get('email').valid && eventForm.get('email').touched"></span>
+                                  </div>
+                              </div>
                         <div class="col-sm-6">
-                            <div class="form-group mb-30"><input class="form-control" name="participant_three"
-                                formControlName="participant_three" placeholder="参加者名" type="text"
-                                [ngClass]="{ 'is-invalid': submitted && f.participant_three.errors }">
+                            <div class="form-group mb-30">
+                                <input type="text"
+                                class="form-control" 
+                                  formControlName="tel" placeholder="サロン様名" 
+                                  required />
+                                  <span *ngIf="!eventForm.get('tel').valid && eventForm.get('tel').touched"></span>
                               </div>
                           </div>
-                        <div class="col-sm-6">
-                          <div class="form-group mb-30"><input class="form-control" name="participant_one"
-                              formControlName="participant_one" placeholder="参加者名" type="text"
-                              [ngClass]="{ 'is-invalid': submitted && f.participant_one.errors }">
+                          <div class="col-sm-12">
+                              <div class="form-group mb-30">
+                                  <input type="text"
+                                  class="form-control" 
+                                    formControlName="address" placeholder="サロン様名" 
+                                    required />
+                                    <span *ngIf="!eventForm.get('address').valid && eventForm.get('address').touched"></span>
+                              </div>
                             </div>
-                        </div>
+                            <div class="col-sm-6">
+                                <div class="form-group mb-30">
+                                    <input type="text"
+                                    class="form-control" 
+                                      formControlName="participant_two" placeholder="サロン様名" 
+                                      required />
+                                      <span *ngIf="!eventForm.get('participant_two').valid && eventForm.get('participant_two').touched"></span>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="form-group mb-30">
+                                      <input type="text"
+                                      class="form-control" 
+                                        formControlName="participant_three" placeholder="サロン様名" 
+                                        required />
+                                        <span *ngIf="!eventForm.get('participant_three').valid && eventForm.get('participant_three').touched"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-30">
+                                        <input type="text"
+                                        class="form-control" 
+                                          formControlName="participant_one" placeholder="サロン様名" 
+                                          required />
+                                          <span *ngIf="!eventForm.get('participant_one').valid && eventForm.get('participant_one').touched"></span>
+                                      </div>
+                                  </div>
 
                         <div class="col-sm-12">
-                          <div class="text-center"><button  class="btn">送信する</button></div>
+                          <div class="text-center"><button type="submit" class="btn">送信する</button></div>
                         </div>
                       </div>
                     </div>
