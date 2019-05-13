@@ -14,7 +14,7 @@ export class EventComponent extends utilClass implements OnInit {
   eventForm: FormGroup;
   datasaved = false;
   msg: any;
-  
+  submitted = false;
   constructor(private formBuilder: FormBuilder, private authservice: AuthService) {
     super();
   }
@@ -39,10 +39,11 @@ export class EventComponent extends utilClass implements OnInit {
     });
   }
  
-
+// convenience getter for easy access to form fields
+get f() { return this.eventForm.controls; }
 
   onSubmit() {
-    
+    this.submitted = true;
     // let form = new FormData();
     // form.set('salon_name', this.eventForm.get('salon_name').value);
     // form.set('participant_one', this.eventForm.get('participant_one').value);
@@ -54,17 +55,21 @@ export class EventComponent extends utilClass implements OnInit {
 
     if (this.eventForm.invalid) {
       return;
-    } else  {
+    } else if(this.eventForm.valid ) {
       console.log(this.eventForm);
       this.authservice.creatEvent(this.eventForm.value).subscribe(data => {
         console.log(data);
         this.msg = data.msg ;
         this.datasaved = true;
-        this.eventForm.reset();
+       
+      
       });
     }
+   
   }
-
+  reset(){
+    this.eventForm.reset;
+  }
   mask: any[] =
     // ['+', '1', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
     [/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
