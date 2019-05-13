@@ -11,7 +11,7 @@ export class LandingPageComponent implements OnInit {
   contactForm: FormGroup;
   datasaved = false;
   msg: any;
-  
+  submitted = false;
   constructor(private fb: FormBuilder, private authservice: AuthService) { }
 
   ngOnInit() {
@@ -95,8 +95,8 @@ export class LandingPageComponent implements OnInit {
 
   }
   
-
   onContact() {
+    this.submitted = true;
     if (this.contactForm.invalid) {
       return;
     }
@@ -106,7 +106,9 @@ export class LandingPageComponent implements OnInit {
         console.log(data);
         this.msg= data.msg;
         this.datasaved = true;
+        this.submitted = false;
         this.contactForm.reset();
+
       });
       
     }

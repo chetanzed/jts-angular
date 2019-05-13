@@ -482,8 +482,8 @@
                             <div class="form-group mb-30">
                                 <input type="text" class="form-control" 
                                  formControlName="name" placeholder="名前"
-                                 required />
-                                 <span *ngIf="!contactForm.get('name').valid && contactForm.get('name').touched"></span>
+                                 [ngClass]="{ 'is-invalid': submitted && !contactForm.get('name').valid }"/>
+                                 <!-- <span *ngIf="!contactForm.get('name').valid && contactForm.submitted && contactForm.get('name').touched"></span> -->
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -491,32 +491,32 @@
                                 <input type="text" class="form-control"  
                                 formControlName="email"
                                 placeholder="メールアドレス"
-                                required />
-                                <span *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched"></span>
+                                [ngClass]="{ 'is-invalid': submitted && !contactForm.get('email').valid }"/>
+                                <!-- <span *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched"></span> -->
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
                                 <input type="tel" class="form-control" 
                                  [textMask]="{mask: mask}" formControlName="phone" placeholder="電話番号"
-                                 required />
-                                 <span *ngIf="!contactForm.get('phone').valid && contactForm.get('phone').touched"></span>
+                                 [ngClass]="{ 'is-invalid': submitted && !contactForm.get('phone').valid }" />
+                                 <!-- <span *ngIf="!contactForm.get('phone').valid && contactForm.get('phone').touched"></span> -->
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
                                 <input type="text" class="form-control" 
                                  formControlName="subject" placeholder="サロンの業種"
-                                 required />
-                                 <span *ngIf="!contactForm.get('subject').valid && contactForm.get('subject').touched"></span>
+                                 [ngClass]="{ 'is-invalid': submitted && !contactForm.get('subject').valid }"  />
+                                 <!-- <span *ngIf="!contactForm.get('subject').valid && contactForm.get('subject').touched"></span> -->
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group mb-30">
                                 <textarea name="message"  formControlName="message" placeholder="メッセージ" cols="" rows="6" class="form-control"
-                                 >
+                                [ngClass]="{ 'is-invalid': submitted && !contactForm.get('subject').valid }"  >
                             </textarea>
-                            <span *ngIf="!contactForm.get('message').valid && contactForm.get('message').touched"></span>  
+                            <!-- <span *ngIf="!contactForm.get('message').valid && contactForm.get('message').touched"></span>   -->
                             </div>
                         </div>
                         <div class="col-sm-12">
