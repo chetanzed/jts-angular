@@ -109,6 +109,7 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .color-red {color: #d72828 !important;}
 .color-white {color: #fff !important;}
 .primary-color {color: #e7c240 !important;}
+.black-color {color: #000 !important;}
 
 /******* read more ********/
 .morecontent span { display: none;}

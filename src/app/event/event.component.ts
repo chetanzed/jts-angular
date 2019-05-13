@@ -55,21 +55,19 @@ get f() { return this.eventForm.controls; }
 
     if (this.eventForm.invalid) {
       return;
-    } else if(this.eventForm.valid ) {
+    } else {
       console.log(this.eventForm);
       this.authservice.creatEvent(this.eventForm.value).subscribe(data => {
         console.log(data);
         this.msg = data.msg ;
         this.datasaved = true;
-       
-      
+        this.eventForm.reset();
+        this.submitted= false;
       });
     }
    
   }
-  reset(){
-    this.eventForm.reset;
-  }
+  
   mask: any[] =
     // ['+', '1', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
     [/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];

@@ -88,7 +88,7 @@
               <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
           <div class="row justify-content-center">
             <div class="col-md-9">
-                <div *ngIf="datasaved" class="alert alert-success mb-30" role="alert">
+                <div *ngIf="datasaved" class="alert alert-success mb-30 black-color"  role="alert">
                     {{msg}}
                 </div>
               <div class="row">
@@ -155,7 +155,7 @@
                   </div>
                 </div>
                 <div class="col-sm-12">
-                  <div class="text-center"><button (click)="reset()"  class="btn" >送信する</button></div>
+                  <div class="text-center"><button  class="btn" >送信する</button></div>
                 </div>
               </div>
             </div>
@@ -167,7 +167,7 @@
               <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
                   <div class="row justify-content-center">
                     <div class="col-md-9">
-                        <div *ngIf="datasaved" class="alert alert-success mb-30" role="alert">
+                        <div *ngIf="datasaved" class="alert alert-success mb-30 black-color" role="alert">
                             {{msg}}
                         </div>
                       <div class="row">
