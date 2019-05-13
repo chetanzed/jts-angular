@@ -31,8 +31,8 @@ export class EventComponent extends utilClass implements OnInit {
     this.eventForm = this.formBuilder.group({
       salon_name: ['', Validators.required],
       participant_one: ['', Validators.required],
-      participant_two: ['', Validators.required],
-      participant_three: ['', Validators.required],
+      participant_two: [''],
+      participant_three: [''],
       tel: ['', [Validators.required, Validators.minLength(10)]],
       email: ['', [Validators.required, Validators.email]],
       address: ['', [Validators.required]]
