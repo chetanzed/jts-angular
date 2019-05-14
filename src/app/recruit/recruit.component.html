@@ -174,13 +174,88 @@
     <div class="padding-panel ">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6"><a href="#"  class="btn btn-black join-us-btn mb-30">紹介ではない方はこちらから問い合わせする</a></div>
+                <div class="col-lg-6"><a href="#" data-toggle="modal" data-target="#myModal1" class="btn btn-black join-us-btn mb-30">紹介ではない方はこちらから問い合わせする</a></div>
                 <div class="col-lg-6"><a href="#" data-toggle="modal" data-target="#myModal"  class="btn join-us-btn mb-30">紹介者コードをお持ちの方はこちらから応募する</a></div>
             </div>
         </div>
     </div>
 
 </div>
+
+<!-- Modal Contact Us model start-->
+<!-- The Modal Staff Detail -->
+<div class="modal fade" id="myModal1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title">お問い合わせ </h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!--- contact us start ---------->
+            <div class="modal-body">
+                <form (ngSubmit)="onContact()" [formGroup]="contactForm">
+                    <div class="row justify-content-center">
+                        <div class="col-md-9">
+                               <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-30">
+                                        <input type="text" class="form-control" 
+                                        formControlName="name" placeholder="名前"
+                                        [ngClass]="{ 'is-invalid': submitted && !contactForm.get('name').valid }"/>
+                                         <!--  <span *ngIf="!contactForm.get('name').valid && contactForm.submitted && contactForm.get('name').touched"></span> -->
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-30">
+                                        <input type="text" class="form-control"  
+                                        formControlName="email"
+                                        placeholder="メールアドレス"
+                                        [ngClass]="{ 'is-invalid': submitted && !contactForm.get('email').valid }" />
+                                        <!-- <span *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched"></span> -->
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-30">
+                                        <input type="tel" class="form-control" 
+                                        formControlName="phone"  [textMask]="{mask: mask}" placeholder="電話番号"
+                                        [ngClass]="{ 'is-invalid': submitted && !contactForm.get('phone').valid }"/>
+                                         <!-- <span *ngIf="!contactForm.get('phone').valid && contactForm.get('phone').touched"></span> -->
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-30">
+                                        <input type="text" class="form-control" 
+                                        formControlName="subject" placeholder="サロンの業種"
+                                        [ngClass]="{ 'is-invalid': submitted && !contactForm.get('subject').valid }" />
+                                         <!-- <span *ngIf="!contactForm.get('subject').valid && contactForm.get('subject').touched"></span> -->
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group mb-30">
+                                        <textarea name="message"  formControlName="message" placeholder="メッセージ" cols="" rows="6" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && !contactForm.get('message').valid }" >
+                                    </textarea>
+                                    <!--  <span *ngIf="!contactForm.get('message').valid && contactForm.get('message').touched"></span>   -->
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="text-center">
+                                        <button class="btn">送信する</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- The Modal Contact Us End --->
+
+
+
         <!-- The Modal Staff Detail -->
         <div class="modal fade" id="myModal">
             <div class="modal-dialog modal-lg">
@@ -216,4 +291,7 @@
             </div>
         </div>
         <!-- The Modal Staff Detail End --->
+
+
+
       <app-footar></app-footar>

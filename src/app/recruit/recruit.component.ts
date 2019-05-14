@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {  AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { Popup } from '../Models/popup.model';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-recruit',
@@ -9,9 +10,11 @@ import { Popup } from '../Models/popup.model';
   styleUrls: ['./recruit.component.css']
 })
 export class RecruitComponent implements OnInit {
-  
+  msg: any;
+  submitted = false;
+  contactForm: FormGroup;
   log1:Popup=new Popup();
-  constructor(private router:Router, private authservice:AuthService) { }
+  constructor(private router:Router,private fb:FormBuilder, private authservice:AuthService) { }
 
   firstLoad:boolean=true;
   ngOnInit() {
@@ -20,6 +23,14 @@ export class RecruitComponent implements OnInit {
       window.scroll(0,0);
       this.firstLoad = false;
     }
+    // contactform
+    this.contactForm = this.fb.group({
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.minLength(10)]],
+      subject: ['', [Validators.required]],
+      message: ['', [Validators.required]]
+    });
   }
   onSubmit(){
     // alert("i am submiting"+this.log1.unique_sales_code);
@@ -40,4 +51,29 @@ export class RecruitComponent implements OnInit {
 
  });
   }
+
+
+  // contact from
+  onContact() {
+    this.submitted = true;
+    if (this.contactForm.invalid) {
+      return;
+    }
+    else {
+      console.log(this.contactForm);
+      this.authservice.creatContact(this.contactForm.value).subscribe(data => {
+        console.log(data);
+        this.msg= data.msg;
+   
+        this.submitted = false;
+        this.contactForm.reset();
+
+      });
+      
+    }
+  }
+
+  mask: any[] =
+    // ['+', '1', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+    [/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
 }
