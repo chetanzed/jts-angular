@@ -9,7 +9,7 @@
 */
 @media (min-width: 1200px){
     .container {max-width: 1200px;}
-    .col-right-header-btn .btn {font-size: 1rem; padding: 12px 35px;}
+    .col-right-header-btn .btn {font-size: 1rem; padding: 10px 0; width: 160px;}
 
     
 }
