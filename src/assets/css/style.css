@@ -148,7 +148,7 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .right-header h4 a:hover{color: #e7c240;}
 .col-right-header-btn {/*float: right; */display: inline-block; vertical-align: middle; /*margin: 18px 13px 0 35px; width: 134px;*/  position: relative; border-left: 1px solid #eeeeee; 
     padding-left: 35px; margin-left: 35px}
-    .col-right-header-btn i{margin-right: 5px;}
+    .col-right-header-btn a i{margin-right: 5px;}
 .header-link li {display: inline-block; vertical-align: middle;padding-right: 8px;}
 .header-link li:last-child {padding-right: 0;}
 /*.header-link li a{font-size: 11px;}*/
