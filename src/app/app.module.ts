@@ -28,6 +28,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
 import { defineLocale } from 'ngx-bootstrap/chronos';
 import { jaLocale } from 'ngx-bootstrap/locale';
 import { EventComponent } from './event/event.component';
+import { NewsBlog1Component } from './news-blog1/news-blog1.component';
+import { NewsBlogsComponent } from './news-blogs/news-blogs.component';
 
 defineLocale('ja', jaLocale);
 
@@ -50,7 +52,9 @@ defineLocale('ja', jaLocale);
     RegistrationDetailsComponent,
     NewsComponent,
     AuthComponent,
-    EventComponent
+    EventComponent,
+    NewsBlog1Component,
+    NewsBlogsComponent
   ],
   imports: [
     BrowserModule,

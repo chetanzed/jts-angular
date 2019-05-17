@@ -14,7 +14,8 @@ import { ThanksComponent } from './thanks/thanks.component';
 import { NewsComponent } from './news/news.component';
 import { RegistrationDetailsComponent } from './registration-details/registration-details.component';
 import { EventComponent } from './event/event.component';
-
+import { NewsBlog1Component } from './news-blog1/news-blog1.component';
+import { NewsBlogsComponent } from './news-blogs/news-blogs.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
@@ -27,7 +28,12 @@ const routes: Routes = [
   {path :'function',component: FunctionComponent },
   {path :'thanks',component: ThanksComponent },
   {path :'faq',component: FaqComponent },
-  {path :'news',component: NewsComponent },
+  {path :'news',component:  NewsBlogsComponent ,
+  children:[
+    {path:'' , component : NewsComponent},
+    {path:'blog1' , component : NewsBlog1Component}
+
+  ]},
   {path :'registration-detail',component: RegistrationDetailsComponent },
 {path : 'event', component: EventComponent},
   {path :'how-to-use',component: HowToUseComponent  },
