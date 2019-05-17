@@ -30,6 +30,7 @@ import { jaLocale } from 'ngx-bootstrap/locale';
 import { EventComponent } from './event/event.component';
 import { NewsBlog1Component } from './news-blog1/news-blog1.component';
 import { NewsBlogsComponent } from './news-blogs/news-blogs.component';
+import { Newsblog2Component } from './newsblog2/newsblog2.component';
 
 defineLocale('ja', jaLocale);
 
@@ -54,7 +55,8 @@ defineLocale('ja', jaLocale);
     AuthComponent,
     EventComponent,
     NewsBlog1Component,
-    NewsBlogsComponent
+    NewsBlogsComponent,
+    Newsblog2Component
   ],
   imports: [
     BrowserModule,

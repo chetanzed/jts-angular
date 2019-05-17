@@ -16,7 +16,7 @@ import { RegistrationDetailsComponent } from './registration-details/registratio
 import { EventComponent } from './event/event.component';
 import { NewsBlog1Component } from './news-blog1/news-blog1.component';
 import { NewsBlogsComponent } from './news-blogs/news-blogs.component';
-
+import { Newsblog2Component } from './newsblog2/newsblog2.component';
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'recruit',component: RecruitComponent},
@@ -31,7 +31,8 @@ const routes: Routes = [
   {path :'news',component:  NewsBlogsComponent ,
   children:[
     {path:'' , component : NewsComponent},
-    {path:'blog1' , component : NewsBlog1Component}
+    {path:'blog1' , component : NewsBlog1Component},
+    {path: 'blog2', component: Newsblog2Component}
 
   ]},
   {path :'registration-detail',component: RegistrationDetailsComponent },
