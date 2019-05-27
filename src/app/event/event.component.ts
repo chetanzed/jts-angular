@@ -33,7 +33,7 @@ export class EventComponent extends utilClass implements OnInit {
       participant_one: ['', Validators.required],
       participant_two: [''],
       participant_three: [''],
-      tel: ['', [Validators.required, Validators.minLength(10)]],
+      tel: ['', [Validators.required, Validators.minLength(11)]],
       email: ['', [Validators.required, Validators.email]],
       address: ['', [Validators.required]]
     });
@@ -70,6 +70,6 @@ get f() { return this.eventForm.controls; }
   
   mask: any[] =
     // ['+', '1', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
-    [/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+    [/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/,'-', /\d/, /\d/, /\d/, /\d/];
 
 }
