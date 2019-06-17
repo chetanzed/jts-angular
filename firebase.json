@@ -1,12 +1,16 @@
 {
-	"hosting": {
-		"public": "dist/JTS",
-		"ignore": [ "firebase.json", "**/.*", "**/node_modules/**" ],
-		"rewrites": [
-			{
-				"source": "**",
-				"destination": "/index.html"
-			}
-		]
-	}
+  "hosting": {
+    "public": "dist/JTS",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
 }

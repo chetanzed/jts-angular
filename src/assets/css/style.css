@@ -15,8 +15,8 @@ ul {list-style-type: none;padding: 0; margin-bottom: 0;}
 img {max-width: 100%;border-style: none;height: auto;width: auto;}
 button:focus {outline: 0 none;}
 
-.btn{background: #e7c240;border: none;color: #fff;padding: 10px 30px;font-size: 0.85rem; transition: all .3s; -webkit-transition: all .3s; -moz-transition: all .3s;-o-transition: all .3s; 
-   border-radius: 2px;-moz-border-radius: 2px -webkit-border-radius: 2px;}
+.btn{background: #e7c240;border: none;color: #fff;padding: 10px 30px;font-size: 1.25rem; transition: all .3s; -webkit-transition: all .3s; 
+    -moz-transition: all .3s;-o-transition: all .3s;  border-radius: 25px;-moz-border-radius: 25px -webkit-border-radius: 25px;}
 .btn:hover, .btn:focus {background: #281e05; color: #fff; outline: 0; box-shadow: 0 0 0 0.05rem rgba(40,30,5,.20); -webkit-box-shadow: 0 0 0 0.05rem rgba(40,30,5,.20);} 
 .btn-black {background-color: #281e05;}
 .btn-black:hover,.btn-black:focus {background-color: #e7c240;}
@@ -149,7 +149,8 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .right-header h4 a:hover{color: #e7c240;}
 .col-right-header-btn {/*float: right; */display: inline-block; vertical-align: middle; /*margin: 18px 13px 0 35px; width: 134px;*/  position: relative; border-left: 1px solid #eeeeee; 
     padding-left: 35px; margin-left: 35px}
-    .col-right-header-btn a i{margin-right: 5px;}
+.col-right-header-btn a i{margin-right: 5px;}
+.col-right-header-btn .btn {font-size: 1rem; width: 175px; padding: 10px 0;}
 .header-link li {display: inline-block; vertical-align: middle;padding-right: 8px;}
 .header-link li:last-child {padding-right: 0;}
 /*.header-link li a{font-size: 11px;}*/
@@ -187,12 +188,25 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .slider-content {position: absolute; top: 50%; left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);transform: translate(-50%, -50%); color: #fff; width: 100%;}
 .top-app-links li {display: inline-block; margin-right: 15px; vertical-align: top;}
+.top-app-links li:last-child {margin-right: 0;}
+.top-app-links li img {max-height:50px;}
 .slider-content-inner h1 {background: -webkit-linear-gradient(#dcbc4d, #9c7e2e);-webkit-background-clip: text;-webkit-text-fill-color: transparent;-webkit-text-stroke: 0.05rem white;
-    text-stroke: 0.01rem white; font-size: 3.6rem;}
+    text-stroke: 0.01rem white; font-size: 2.75rem; line-height: 2.5rem;}
+.slider-content-inner span {font-size: 1.75rem}    
 
-.slider-itme1 {background-color: #da5967;}
+.slider-itme1 {background-color: #da5967; height: 740px;}
 .slider-face {text-align: right;}
-.slider-face img{width: 50%;}
+.slider-face img{width: 48%;}
+
+.banner-form {border: 1px solid #fff; border-radius: 2px; -webkit-border-radius : 2px; -moz-border-radius: 2px; -o-border-radius: 2px; background-color: #cd4c5a; 
+    width: 485px; padding: 30px 15px;}
+ .banner-heading h3{background-color: #e7c240; position: relative;  border-radius: 2px; -webkit-border-radius : 2px; -moz-border-radius: 2px; -o-border-radius: 2px; 
+    padding: 10px; margin: 0 50px;}
+ .banner-heading h3:before {content: ""; position: absolute; left: -30px; background-image:url(../images/heading-left-design.png); background-repeat: no-repeat; background-position: center; 
+    height: 52px; width: 42px; top: 15px; background-size: 100%;}
+ .banner-heading h3:after {content: ""; position: absolute; right: -30px; background-image:url(../images/heading-right-design.png); background-repeat: no-repeat; background-position: center; 
+    height: 52px; width: 42px; top: 15px; background-size: 100%; }
+    .bannerBtn {width: 100%;}
 /********* header slider end ********/
 
 /********* about panel start*************/
@@ -370,6 +384,7 @@ input[type='file'] {display: none;}
 .news-date {position: absolute;top: 20px; right: 20px; z-index: 1;background: #e7c240;width: 55px;height: 55px;padding: 12.5px 0;-webkit-border-radius: 100%; -moz-border-radius: 100%;
  border-radius: 100%;color: #FFFFFF;text-align: center; -webkti-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
  .news-comment-time,  .news-comment-time a {color: #aaa; font-size: 0.75rem}
+ .item-margin {padding: 15px;}
 
 
 
