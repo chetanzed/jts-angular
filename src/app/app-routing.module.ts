@@ -35,7 +35,7 @@ const routes: Routes = [
   children:[
     {path:'' , component : NewsComponent},
     {path:'学校訪問記' , component : NewsBlog1Component},
-    {path: 'blog2', component: Newsblog2Component},
+    {path: '広告について', component: Newsblog2Component},
     {path: 'AI-Beauty-Innovation-seminer2020を開催',component:AIBeautyInnovationSeminer2020Component},
 
   ]},

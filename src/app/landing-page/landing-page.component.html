@@ -21,9 +21,9 @@
                             <h5 class="text-center mb-20">JTSBoard&サロン予約システムMiraiの全機能が <br>30日間無料で使い放題!!</h5>
                             
                             <form (ngSubmit)="onSignup()" [formGroup]="signupForm">
-                                    <div class="form-group">
-                                            <input type="text" type="hidden"  class="form-control" formControlName="device_type">
-                              </div>
+                                <div class="form-group">
+                                    <input type="text" type="hidden"  class="form-control" formControlName="device_type">
+                                </div>
                                 <div class="form-group">
                                     <input name="" formControlName="salon_name" placeholder="サロン名" class="form-control" type="text" >
                                     <span *ngIf="!signupForm.get('salon_name').valid && signupForm.get('salon_name').touched"></span>
@@ -32,23 +32,28 @@
                                     <input name="" placeholder="メール" class="form-control" formControlName="email" type="email" >                
                                     <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched"></span>
                                 </div>
-                                <div formGroupName="passwordMatch">
-                                <div class="form-group">
-                                    <input name="" placeholder="パスワード" class="form-control" formControlName="password" type="password">
-                                    <span *ngIf="!signupForm.get('passwordMatch').get('password').valid && signupForm.get('passwordMatch').get('password').touched">
-                                    </span>
-                                </div>
-                                </div>
-                                <div formGroupName="passwordMatch">
-                                        <div class="form-group">
-                                          <input type="password" class="form-control"  formControlName="confirm_password" placeholder="パスワードを認証する">
-                                          <span *ngIf="!signupForm.get('passwordMatch').get('confirm_password').valid && signupForm.get('passwordMatch').get('confirm_password').touched">
-                                         </span>
-                                        <span *ngIf="!signupForm.get('passwordMatch').valid && signupForm.get('passwordMatch').touched"> password
-                                          and confirm password must match !!!</span>
+                                <ul class="banner-password-fields d-flex">
+                                    <li class="">
+                                        <div formGroupName="passwordMatch">
+                                            <div class="form-group">
+                                                <input name="" placeholder="パスワード" class="form-control" formControlName="password" type="password">
+                                                <span *ngIf="!signupForm.get('passwordMatch').get('password').valid && signupForm.get('passwordMatch').get('password').touched">
+                                                </span>
+                                            </div>
                                         </div>
-                                </div>
-                                <div class="logBtn text-center mb-30">
+                                    </li>
+                                    <li class="">
+                                        <div formGroupName="passwordMatch">
+                                            <div class="form-group">
+                                              <input type="password" class="form-control"  formControlName="confirm_password" placeholder="パスワードを認証する">
+                                                  <span *ngIf="!signupForm.get('passwordMatch').get('confirm_password').valid && signupForm.get('passwordMatch').get('confirm_password').touched">
+                                                 </span>
+                                                <span *ngIf="!signupForm.get('passwordMatch').valid && signupForm.get('passwordMatch').touched"> パスワードと確認パスワードを一致させてください。</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="logBtn text-center mb-20">
                                     <button class="btn bannerBtn" type="submit">今すぐ無料ではじめて見る</button>
                                 </div>
                             </form>
@@ -459,47 +464,54 @@
 <div class="newspaper-panel box-bg padding-panel">
     <div class="slider-outer">
         <div class="container">
-            <div class="page-heading text-center"><h1>ブログ</h1></div>
+            <div class="page-heading text-center"><h1>活用事例＆サロンワークに役立つ旬な情報をお届け<br>JTS Board ブログ</h1></div>
             <div id="owl-demo2" class="owl-carousel">
-                    <div class="item">
-                            <div class="item-margin">
-                                <div class="case-study-item box-shadow">
-                                    <div class="news-date">
-                                        <div class="day">18</div>
-                                        <div class="month">六月</div>
-                                    </div>
-                                    <img src="../../assets/images/app-blog/ai-beauty-innovation-seminer2020を開催.jpg">
-                                    <div class="cs-content">
-                                        <p>AI Beauty Innovation seminer2020を開催</p>
-                                        <p>こんにちは、広報担当のYUKIです。</p>
-                                            <p>先週の水曜日、ウインク愛知にて第一回目のセミナーを開催しました。</p>
-                                            <p>多くのオーナーさま、美容代理店さまにご参加いただきました。</p>
-                                                <p>本当にありがとうございます。</p>
-                                                <p>当日は東京本社のエンジニアチームも助っ人として登場し、</p>
-                                        <a routerLink="/news/AI-Beauty-Innovation-seminer2020を開催" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
-                                    </div>
-                                </div>  
-                            </div>
-                        </div>
                 <div class="item">
                     <div class="item-margin">
-                        <div class="case-study-item box-shadow">
-                            <div class="news-date">
-                            <div class="day">17</div>
-                            <div class="month">三月</div>
+                        <div class="case-study-item box-shadow position-relative">
+                            <!-- <div class="news-date mb-20">
+                                <div class="day">18</div>
+                                <div class="month">六月</div>
+                            </div> -->
+                            <div class="fadeIn animated new-label-blog">New</div>
+                            <img src="../../assets/images/app-blog/ai-beauty-innovation-seminer2020を開催.jpg">
+                            <div class="cs-content">
+                                <h6 class="">AI Beauty Innovation seminer2020を開催</h6>
+                                <hr>
+                                <div class="news-block-text">
+                                    <p>こんにちは、広報担当のYUKIです。</p>
+                                    <p>先週の水曜日、ウインク愛知にて第一回目のセミナーを開催しました。</p>
+                                </div>                                
+                                <div class="date-blog">18 六月</div>
+                                <!-- <p>多くのオーナーさま、美容代理店さまにご参加いただきました。</p>
+                                <p>本当にありがとうございます。</p>
+                                <p>当日は東京本社のエンジニアチームも助っ人として登場し、</p> -->
+                                <a routerLink="/news/AI-Beauty-Innovation-seminer2020を開催" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-margin">
+                        <div class="case-study-item box-shadow position-relative">
+                            <!-- <div class="news-date">
+                                <div class="day">17</div>
+                                <div class="month">三月</div>
+                            </div> -->
                             <img src="../../assets/images/app-blog/blog2.jpg">
                             <div class="cs-content">
-                                <!-- <h6>「美容とITがコラボする。</h6>
-                                <hr> -->
-                                <p>初めまして。</p>
-                                <p>マジェスティックビューティー大原めぐみです。</p>
-
-                                <p>マジェスティックビューティー、興味ある方はサロンのインスタみてください➡️マジェインスタ</p>
+                                <h6>「学校訪問記」</h6>
+                                <hr>
+                                <div class="news-block-text">
+                                    <p>初めまして。</p>
+                                    <p>マジェスティックビューティー大原めぐみです。</p>
+                                </div>
+                                <div class="date-blog">17 三月</div>
+                                <!-- <p>マジェスティックビューティー、興味ある方はサロンのインスタみてください➡️マジェインスタ</p>
                                 <p>サロンワークまでの時間、</p>
                                 <p>オフィスにて。</p>
                                 <p>事務仕事というか、ブログを再スタートしています。</p>
-                                <p>決心大事！！</p>
+                                <p>決心大事！！</p> -->
                                 <a routerLink="/news/学校訪問記" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
                               
                             </div>
@@ -508,21 +520,26 @@
                 </div>
                 <div class="item">
                     <div class="item-margin">
-                        <div class="case-study-item box-shadow">
-                            <div class="news-date">
+                        <div class="case-study-item box-shadow position-relative">
+                            <!-- <div class="news-date">
                                 <div class="day">17</div>
                                 <div class="month">三月</div>
-                            </div>
+                            </div> -->
                             <img src="../../assets/images/app-blog/jts_ai_blog.jpg">
                             <div class="cs-content">
-                                <p>今日は私のサロンでも使っている集客広告媒体ホットペッパービューティーのお話</p>
-                                <p> サロン経営で、</p>
-                                    <p> 集客で頼りにしているのが</p>
-                                    <p> ホットペッパービューティーですよね。</p>
-                                        <p>多分ほとんどのサロン様が利用したことある。もしくは</p>
-                                        <p>利用中。ですよね！！</p>
-                                            <p>私も利用させていただいて、2年くらいですが、</p>
-                                <a routerLink="/news/blog2" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
+                                <h6>「広告について」</h6>
+                                <hr>
+                                <div class="news-block-text">
+                                    <p>今日は私のサロンでも使っている集客広告媒体ホットペッパービューティーのお話</p>
+                                    <p> サロン経営で、</p>
+                                </div>
+                                <div class="date-blog">17 三月</div>
+                                <!-- <p> 集客で頼りにしているのが</p>
+                                <p> ホットペッパービューティーですよね。</p>
+                                <p>多分ほとんどのサロン様が利用したことある。もしくは</p>
+                                <p>利用中。ですよね！！</p>
+                                <p>私も利用させていただいて、2年くらいですが、</p> -->
+                                <a routerLink="/news/広告について" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>  
                     </div>

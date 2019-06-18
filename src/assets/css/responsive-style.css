@@ -387,3 +387,13 @@
 
 
 
+
+@media (min-width: 1200px) and (max-width: 1919px) and (orientation: landscape) {
+    .slider-face img {width: 65%}
+    .slider-itme1 {height: unset; min-height: 740px;}
+}
+
+
+@media (min-width: 1920px) {
+    .slider-itme1 {height: unset;}
+}
