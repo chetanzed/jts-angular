@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core'
-import { Observable, from } from 'rxjs'
-import { Login } from './Models/login.model'
-import { Popup } from './Models/popup.model'
-import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { Injectable } from '@angular/core';
+import { Observable, from } from 'rxjs';
+import { Login } from './Models/login.model';
+import { Popup } from './Models/popup.model';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { RegisterForm } from './Models/registration.model';
 import { contactResponse } from './Models/contactResponse.model';
 import { eventResponse } from './Models/eventResponse.model';
-
+import { siginupResponse } from './Models/signupResponse.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -41,5 +41,9 @@ export class AuthService {
   creatEvent(eve):Observable<eventResponse>{
     
     return this.http.post<eventResponse>('https://api.jtsboard.com/web_service_angular/event_form',eve);
+      }
+
+      createSignup(signup):Observable<siginupResponse>{
+        return this.http.post<siginupResponse> ("https://api.jtsboard.com/web_servicesv42/signup",signup);
       }
 }

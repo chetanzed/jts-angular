@@ -31,6 +31,7 @@ import { EventComponent } from './event/event.component';
 import { NewsBlog1Component } from './news-blog1/news-blog1.component';
 import { NewsBlogsComponent } from './news-blogs/news-blogs.component';
 import { Newsblog2Component } from './newsblog2/newsblog2.component';
+import { JtsBoardPart1SuccessComponent } from './jts-board-part1-success/jts-board-part1-success.component';
 
 defineLocale('ja', jaLocale);
 
@@ -56,7 +57,8 @@ defineLocale('ja', jaLocale);
     EventComponent,
     NewsBlog1Component,
     NewsBlogsComponent,
-    Newsblog2Component
+    Newsblog2Component,
+    JtsBoardPart1SuccessComponent
   ],
   imports: [
     BrowserModule,

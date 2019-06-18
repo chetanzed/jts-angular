@@ -19,20 +19,40 @@
                                 <h3 class="text-center">新規登録で今なら</h3>
                             </div>
                             <h5 class="text-center mb-20">JTSBoard&サロン予約システムMiraiの全機能が <br>30日間無料で使い放題!!</h5>
-                            <form>
+                            
+                            <form (ngSubmit)="onSignup()" [formGroup]="signupForm">
+                                    <div class="form-group">
+                                            <input type="text" type="hidden"  class="form-control" formControlName="device_type">
+                              </div>
                                 <div class="form-group">
-                                    <input name="" placeholder="サロン名" class="form-control" type="text" id="UserSalonName">
+                                    <input name="" formControlName="salon_name" placeholder="サロン名" class="form-control" type="text" >
+                                    <span *ngIf="!signupForm.get('salon_name').valid && signupForm.get('salon_name').touched"></span>
                                 </div>
                                 <div class="form-group">
-                                    <input name="" placeholder="メール" class="form-control" type="email" id="UserEmail">                
+                                    <input name="" placeholder="メール" class="form-control" formControlName="email" type="email" >                
+                                    <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched"></span>
                                 </div>
+                                <div formGroupName="passwordMatch">
                                 <div class="form-group">
-                                    <input name="" placeholder="パスワード" class="form-control" type="password" id="UserPassword">
+                                    <input name="" placeholder="パスワード" class="form-control" formControlName="password" type="password">
+                                    <span *ngIf="!signupForm.get('passwordMatch').get('password').valid && signupForm.get('passwordMatch').get('password').touched">
+                                    </span>
+                                </div>
+                                </div>
+                                <div formGroupName="passwordMatch">
+                                        <div class="form-group">
+                                          <input type="password" class="form-control"  formControlName="confirm_password" placeholder="パスワードを認証する">
+                                          <span *ngIf="!signupForm.get('passwordMatch').get('confirm_password').valid && signupForm.get('passwordMatch').get('confirm_password').touched">
+                                         </span>
+                                        <span *ngIf="!signupForm.get('passwordMatch').valid && signupForm.get('passwordMatch').touched"> password
+                                          and confirm password must match !!!</span>
+                                        </div>
                                 </div>
                                 <div class="logBtn text-center mb-30">
                                     <button class="btn bannerBtn" type="submit">今すぐ無料ではじめて見る</button>
                                 </div>
                             </form>
+                            <p *ngIf="datasaved" class= "danger"> <i class="fas fa-check mr-10"></i> <span>{{msg}}</span> </p>
                             <ul class="top-app-links text-center">
                                 <li><a href="https://itunes.apple.com/us/app/jtsboard/id1408502078?ls=1&mt=8"><img src="../../assets/images/app-links-img/app-store-btn.png"></a></li>
                                 <li><a href="https://play.google.com/store/apps/details?id=com.zedtech.jtsboard"><img src="../../assets/images/app-links-img/google-play-btn.png"></a></li>
@@ -57,10 +77,10 @@
                     <div class="page-heading text-center"><h1>JTS Boardとは何か？</h1></div>
                     <div class="page-sub-heading text-center">
                         <h5>
-                            予約システムはもちろん、電子カルテ、レジ、売上管理、勤怠管理など
+                            予約システムはもちろん、電子カルテ、レジ、売上管理、勤怠管理など <br>
                             サロン業務に関わる全ての業務をオールインワンアプリで行うことができます。<br>
                             ホットペッパービューティーのサロンボードとも自動連携。<br>
-                            オーナー様の苦手なマーケティング・データ解析・アナリティクス（分析）は
+                            オーナー様の苦手なマーケティング・データ解析・アナリティクス（分析）は <br>
                             AIにお任せください。
                             <!-- サロン運営に必要な業務、カルテの管理、売上管理、勤怠管理はもちろん<br>
                             サロン業務に関わる全ての問題を解決するアプリです。<br>
@@ -439,7 +459,7 @@
 <div class="newspaper-panel box-bg padding-panel">
     <div class="slider-outer">
         <div class="container">
-            <div class="page-heading text-center"><h1>ニュース</h1></div>
+            <div class="page-heading text-center"><h1>ブログ</h1></div>
             <div id="owl-demo2" class="owl-carousel">
                 <div class="item">
                     <div class="item-margin">
