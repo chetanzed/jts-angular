@@ -7,6 +7,11 @@
     .container {max-width: 1410px;}
 }
 */
+@media (min-width: 1200px) and (max-width:1366px) {
+    .slider-face img { width: 60%;}
+
+}
+
 @media (min-width: 1200px){
     .container {max-width: 1200px;}
     .col-right-header-btn .btn {font-size: 1rem; padding: 10px 0; width: 160px;}
@@ -15,7 +20,7 @@
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-    .slider-face img{width: 60%;}
+    .slider-face img{width: 64%;}
     .slider-content-inner h1 {font-size: 2.5rem; line-height: 2rem;}
     .slider-content-inner h4 {font-size: 1.25rem;}
     .recruit-header-panel h1 {font-size: 1.5rem;}
@@ -26,6 +31,8 @@
     .event-heading {font-size: 2.5rem;}
 
     .about-inner-panel .page-sub-heading h5 {font-size: 1.15rem;}
+
+    .slider-itme1 {height: 650px;}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) { 
