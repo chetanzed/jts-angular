@@ -197,8 +197,8 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 .slider-content-inner h1 span {font-size: 1.75rem}    
 
 .slider-itme1 {background-color: #da5967; height: 700px;}
-.slider-face {text-align: right; height: 100%;}
-.slider-face img{width: 45%; margin-top: 60px;}
+.slider-face {text-align: right; height: 100%; overflow: hidden; justify-content: flex-end;}
+.slider-face img{width: 45%; margin-top: 80px;}
 
 .banner-form {border: 1px solid #fff; border-radius: 2px; -webkit-border-radius : 2px; -moz-border-radius: 2px; -o-border-radius: 2px; background-color: #cd4c5a; 
    width: 485px; padding: 15px;}
