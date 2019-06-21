@@ -19,6 +19,7 @@ import { NewsBlogsComponent } from './news-blogs/news-blogs.component';
 import { Newsblog2Component } from './newsblog2/newsblog2.component';
 import { JtsBoardPart1SuccessComponent } from './jts-board-part1-success/jts-board-part1-success.component';
 import { AIBeautyInnovationSeminer2020Component } from './ai-beauty-innovation-seminer2020/ai-beauty-innovation-seminer2020.component';
+import { Blog4Component } from './blog4/blog4.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
@@ -37,6 +38,7 @@ const routes: Routes = [
     {path:'学校訪問記' , component : NewsBlog1Component},
     {path: '広告について', component: Newsblog2Component},
     {path: 'AI-Beauty-Innovation-seminer2020を開催',component:AIBeautyInnovationSeminer2020Component},
+    {path: '次世代のサロン管理システム',component:Blog4Component},
 
   ]},
   {path :'registration-detail',component: RegistrationDetailsComponent },

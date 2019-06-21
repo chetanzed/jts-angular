@@ -71,7 +71,7 @@ export class LandingPageComponent implements OnInit {
 
     $(document).ready(function () {
       $("#owl-demo2").owlCarousel({
-        autoPlay: false,
+        autoPlay: true,
         items: 3,
         center: true,
         loop: true,

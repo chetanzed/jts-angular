@@ -33,6 +33,7 @@ import { NewsBlogsComponent } from './news-blogs/news-blogs.component';
 import { Newsblog2Component } from './newsblog2/newsblog2.component';
 import { JtsBoardPart1SuccessComponent } from './jts-board-part1-success/jts-board-part1-success.component';
 import { AIBeautyInnovationSeminer2020Component } from './ai-beauty-innovation-seminer2020/ai-beauty-innovation-seminer2020.component';
+import { Blog4Component } from './blog4/blog4.component';
 
 defineLocale('ja', jaLocale);
 
@@ -60,7 +61,8 @@ defineLocale('ja', jaLocale);
     NewsBlogsComponent,
     Newsblog2Component,
     JtsBoardPart1SuccessComponent,
-    AIBeautyInnovationSeminer2020Component
+    AIBeautyInnovationSeminer2020Component,
+    Blog4Component
   ],
   imports: [
     BrowserModule,
