@@ -31,14 +31,14 @@
                                 <div class="form-group">
                                     
                                     <input  placeholder="メール" class="form-control" formControlName="email" type="email" >                
-                                    <input type="email" style="position: absolute; right: -20000px">
+                                    <input name="DummyEmailInput" type="email" style="position: absolute; right: -20000px">
                                     <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched"></span>
                                 </div>
                                 <ul class="banner-password-fields d-flex">
                                     <li class="">
                                         <div formGroupName="passwordMatch">
                                             <div class="form-group">
-                                                <input type="password" style="position: absolute; right: -20000px">
+                                                <input name="DummyPasswordInput" type="password" style="position: absolute; right: -20000px">
                                                 <input placeholder="パスワード" class="form-control" formControlName="password" type="password" autocomplete="false">
                                                 <span *ngIf="!signupForm.get('passwordMatch').get('password').valid && signupForm.get('passwordMatch').get('password').touched">
                                                 </span>
