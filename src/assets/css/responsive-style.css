@@ -226,7 +226,7 @@
 
 
     .header {text-align: center; padding-top: 0; border-top: 5px solid #e7c240;}
-    .sticky + .main {padding-top: 198px;}
+    .sticky + .main {padding-top: 169px;}
 
     .brand-logo {display: none;}
     .brand-logo img{height: 45px;}
@@ -323,7 +323,7 @@
     .padding-panel {padding-top: 40px; padding-bottom: 25px;}
     .table-gap td, .table-gap th {padding: 0.5rem;}
 
-    .sticky + .main {padding-top: 191px;}
+    .sticky + .main {padding-top: 153px;}
 
     .header-link li a {font-size: 13px;}
     .header-link li {padding-right: 5px;}
