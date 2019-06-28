@@ -59,7 +59,7 @@
                                     <button class="btn bannerBtn" type="submit">今すぐ無料ではじめて見る</button>
                                 </div>
                             </form>
-                            <p *ngIf="datasaved" class= "danger"> <i class="fas fa-check mr-10"></i> <span>{{msg}}</span> </p>
+                            <p *ngIf="datasaved" class= "danger"> <span>{{msg}}</span> </p>
                             <ul class="top-app-links text-center">
                                 <li><a href="https://apps.apple.com/us/app/jtsboard/id1408502078"><img src="../../assets/images/app-links-img/app-store-btn.png"></a></li>
                                 <li><a href="https://play.google.com/store/apps/details?id=com.zedtechno.jtsboard"><img src="../../assets/images/app-links-img/google-play-btn.png"></a></li>
@@ -644,9 +644,9 @@
             <form (ngSubmit)="onContact()" [formGroup]="contactForm">
             <div class="row justify-content-center">
                 <div class="col-md-9">
-                        <div *ngIf="datasaved" class="alert alert-success mb-30" role="alert">
-                                {{msg}}
-                            </div>
+                    <div *ngIf="datasaved" class="alert alert-success mb-30" role="alert">
+                        {{msg}}
+                    </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
