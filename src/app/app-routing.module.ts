@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: 'login',   component: LoginComponent},
   {path:'signup',component:SignupComponent},
   {path: 'admin', canActivate:[AuthGuard], component: AdminComponent},
- {path: 'thank-success-part-1',component:JtsBoardPart1SuccessComponent},
+ {path: 'thank-success-step-first',component:JtsBoardPart1SuccessComponent},
   {path :'function',component: FunctionComponent },
   {path :'thanks',component: ThanksComponent },
   {path :'faq',component: FaqComponent },
