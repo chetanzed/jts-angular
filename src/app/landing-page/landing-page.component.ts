@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { signupDetail } from 'src/app/Models/signupDetail';
@@ -195,7 +196,9 @@ export class LandingPageComponent implements OnInit {
     this.signup.email = this.signupForm.get('email').value;
     this.signup.password = this.signupForm.get('passwordMatch').get('password').value;
     this.signup.confirm_password = this.signupForm.get('passwordMatch').get('confirm_password').value;
-
+if (this.signupForm.invalid) {
+      return;
+    }
     this.authservice.createSignup(this.signup)
       .subscribe(data => {
         console.log(data);
@@ -237,3 +240,4 @@ export class LandingPageComponent implements OnInit {
     // ['+', '1', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
     [/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
 }
+

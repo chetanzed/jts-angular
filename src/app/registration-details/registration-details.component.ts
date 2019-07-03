@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { RegisterForm } from '../Models/registration.model';
@@ -55,3 +56,4 @@ export class RegistrationDetailsComponent implements OnInit {
   
   
 }
+
