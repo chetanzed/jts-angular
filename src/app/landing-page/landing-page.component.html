@@ -1,3 +1,4 @@
+
 <app-header id="navbar"></app-header >
 
 <div class="main">
@@ -6,17 +7,66 @@
 <div class="slider-outer">
     <div id="owl-demo" class="owl-carousel">
         <div class="item slider-itme1">
-            <div class="slider-face"><img src="../../assets/images/slider-img/slider-face.png" alt=""></div>
+            <div class="slider-face d-flex align-items-center"><img src="../../assets/images/slider-img/slider-face.png" alt=""></div>
             <div class="slider-content">
                 <div class="container">
-                    <div class="slider-content-inner">
-                        <h1 class="mb-60">サロン業務をAIが代行</h1>
-                        <h2 class="mb-60">オールイン・ワン・パッケージ</h2>
-                        <h4 class="mb-60">顧客管理・売上管理・経費管理・勤怠管理・目標管理</h4>
-                        <ul class="top-app-links">
-                            <li><a href="https://itunes.apple.com/us/app/jtsboard/id1408502078?ls=1&mt=8"><img src="../../assets/images/app-links-img/app-store-btn.png"></a></li>
-                            <li><a href="https://play.google.com/store/apps/details?id=com.zedtech.jtsboard"><img src="../../assets/images/app-links-img/google-play-btn.png"></a></li>
-                        </ul>
+                    <div class="slider-content-inner mt-20">
+                        <h1 class="mb-30">スマホでかんたんサロン管理 <br>
+                        <span>日本初AIシステム搭載アプリ</span></h1>
+                        <!-- <h2 class="mb-60">オールイン・ワン・パッケージ</h2> -->
+                        <!-- <h4 class="mb-60">顧客管理・売上管理・経費管理・勤怠管理・目標管理</h4> -->
+                        <div class="banner-form">
+                            <div class="banner-heading mb-30">
+                                <h3 class="text-center">新規登録で今なら</h3>
+                            </div>
+                            <h5 class="text-center mb-20">JTSBoard&サロン予約システムMiraiの全機能が <br>30日間無料で使い放題!!</h5>
+                            
+                            <form (ngSubmit)="onSignup()" [formGroup]="signupForm">
+                                <div class="form-group">
+                                    <input type="text" type="hidden"  class="form-control" formControlName="device_type">
+                                </div>
+                                <div class="form-group">
+                                    <input formControlName="salon_name" placeholder="サロン名" class="form-control" type="text" >
+                                    <span *ngIf="!signupForm.get('salon_name').valid && signupForm.get('salon_name').touched"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input name="DummyEmailInput" type="email" style="position: absolute; right: -20000px" tabindex="-1">
+                                    <input  placeholder="メール" class="form-control" formControlName="email" type="email" >                
+                                    <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched"></span>
+                                </div>
+                                <ul class="banner-password-fields d-flex">
+                                    <li class="">
+                                        <div formGroupName="passwordMatch">
+                                            <div class="form-group">
+                                                <input name="DummyPasswordInput" type="password" style="position: absolute; right: -20000px" tabindex="-1">
+                                                <input placeholder="パスワード" class="form-control" formControlName="password" type="password" autocomplete="false">
+                                                <span *ngIf="!signupForm.get('passwordMatch').get('password').valid && signupForm.get('passwordMatch').get('password').touched">
+                                                </span>
+                                                <span *ngIf="!signupForm.get('passwordMatch').get('password').valid && signupForm.get('passwordMatch').get('password').errors.minlength">半角英数字6文字以上</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="">
+                                        <div formGroupName="passwordMatch">
+                                            <div class="form-group">
+                                              <input type="password" class="form-control"  formControlName="confirm_password" placeholder="パスワードを認証する">
+                                                  <span *ngIf="!signupForm.get('passwordMatch').get('confirm_password').valid && signupForm.get('passwordMatch').get('confirm_password').touched">
+                                                 </span>
+                                                <span *ngIf="!signupForm.get('passwordMatch').valid && signupForm.get('passwordMatch').touched"> パスワードと確認パスワードを一致させてください。</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="logBtn text-center mb-20">
+                                    <button class="btn bannerBtn" type="submit">今すぐ無料ではじめて見る</button>
+                                </div>
+                            </form>
+                            <p *ngIf="datasaved" class= "danger"> <span>{{msg}}</span> </p>
+                            <ul class="top-app-links text-center">
+                                <li><a href="https://apps.apple.com/us/app/jtsboard/id1408502078"><img src="../../assets/images/app-links-img/app-store-btn.png"></a></li>
+                                <li><a href="https://play.google.com/store/apps/details?id=com.zedtechno.jtsboard"><img src="../../assets/images/app-links-img/google-play-btn.png"></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -33,12 +83,17 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-10 col-lg-9 col-xl-8">
-                    <div class="page-heading text-center"><h1>JTS Boardとは何か？</h1></div>
+                    <div class="page-heading text-center"><h1>JTSBoardサロンアプリとは</h1></div>
                     <div class="page-sub-heading text-center">
                         <h5>
-                            サロン運営に必要な業務、カルテの管理、売上管理、勤怠管理はもちろん<br>
+                            予約システムはもちろん、電子カルテ、レジ、売上管理、勤怠管理など <br>
+                            サロン業務に関わる全ての業務をオールインワンアプリで行うことができます。<br>
+                            ホットペッパービューティーのサロンボードとも自動連携。<br>
+                            オーナー様の苦手なマーケティング・データ解析・アナリティクス（分析）は <br>
+                            AIにお任せください。
+                            <!-- サロン運営に必要な業務、カルテの管理、売上管理、勤怠管理はもちろん<br>
                             サロン業務に関わる全ての問題を解決するアプリです。<br>
-                            日々の履歴からAIが更なる売上UP＆効率UPのためのサポートを行います。
+                            日々の履歴からAIが更なる売上UP＆効率UPのためのサポートを行います。 -->
                         </h5>
                     </div>
 
@@ -49,34 +104,34 @@
                             <ul class="fuction-list">
                                 <li>
                                     <a href="" class="form-function">
-                                        <img src="../../assets/images/icons/form.png"><br>カルテ
+                                        <img src="../../assets/images/icons/form.png" alt="カルテ"><br>カルテ
                                     </a>
                                 </li>
                                 <li>
                                     <a href="" class="calendar-function">
-                                        <img src="../../assets/images/icons/calendar.png"><br>カレンダー
+                                        <img src="../../assets/images/icons/calendar.png" alt="カレンダー"><br>カレンダー
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="" class="sales-function">
-                                        <img src="../../assets/images/icons/sales.png"><br>売上集計
+                                        <img src="../../assets/images/icons/sales.png" alt="売上集計"><br>売上集計
                                     </a>
                                 </li>
                                 <li>
                                     <a href="" class="expenses-function">
-                                        <img src="../../assets/images/icons/expenses.png"><br>経費
+                                        <img src="../../assets/images/icons/expenses.png" alt="経費"><br>経費
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="" class="staff-function">
-                                        <img src="../../assets/images/icons/staff.png"><br>スタッフ
+                                        <img src="../../assets/images/icons/staff.png" alt="スタッフ"><br>スタッフ
                                     </a>
                                 </li>
                                 <li>
                                     <a href="" class="chat-function">
-                                        <img src="../../assets/images/icons/chat.png"><br>チャット
+                                        <img src="../../assets/images/icons/chat.png" alt="チャット"><br>チャット
                                     </a>
                                 </li>
                             </ul>
@@ -280,7 +335,7 @@
                    
                 </div>
                 <div class="mb-30 app-link-btn">
-                    <a href="#"><img src="../../assets/images/app-links-img/web-app-btn.png"></a>
+                    <a href="https://web.jtsboard.com/users/registration" target="blank"><img src="../../assets/images/app-links-img/web-app-btn.png"></a>
                 </div>
             </div>
             <div class="col-4 text-center">
@@ -288,7 +343,7 @@
                     <img src="../../assets/images/app-img/ipad-iphone.png">
                 </div>
                 <div class="mb-30 app-link-btn">
-                    <a href="#"><img src="../../assets/images/app-links-img/app-store-btn.png"></a>
+                    <a href="https://apps.apple.com/us/app/jtsboard/id1408502078" target="blank"><img src="../../assets/images/app-links-img/app-store-btn.png"></a>
                 </div>
             </div>
             <div class="col-4 text-center">
@@ -296,7 +351,7 @@
                     <img src="../../assets/images/app-img/android-tablet.png">
                 </div>
                 <div class="mb-30 app-link-btn">
-                    <a href="#"><img src="../../assets/images/app-links-img/google-play-btn.png"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.zedtechno.jtsboard" target="blank"><img src="../../assets/images/app-links-img/google-play-btn.png"></a>
                 </div>
             </div>
         </div>
@@ -344,7 +399,9 @@
                     <div class="cs-content">
                         <h6>アイラッシュサロン</h6>
                         <hr>
-                        <p class="more">日別、月別、スタッフ別に売上を確認することができます。リピート率や来店周期や来店回数など、知りたい内容をすぐに検索できます  </p>
+                        <p class="more">予約システムを導入したい、だけど予算に余裕がないと、色々探している中で見つけました。予約はもちろん日別、月別、スタッフ別に売上を確認することができます。リピート率や来店周期や来店回数など、知りたい内容をすぐに検索でき、とても便利です。</p>
+                        <!-- <p class="more">日別、月別、スタッフ別に売上を確認することができます。リピート率や来店周期や来店回数など、知りたい内容をすぐに検索できます  </p> -->
+                        
                         <!-- <a href="#" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a> -->
                     </div>
                 </div>
@@ -355,7 +412,10 @@
                     <div class="cs-content">
                         <h6>エステサロン</h6>
                         <hr>
-                        <p class="more">様々な広告媒体に掲載すると、予約管理は大変。一つの管理画面で管理出来たらいいな！を叶えました。例えばホットペッパーからの予約、電話予約、次回予約…と、予約経路がバラバラでは、予約ミスを招いてしまう可能性があります。そこで、JTSボードは、ホットペッパービューティからの予約をJTSボードのカレンダーに自動送信。管理が楽になります。 </p>
+                        <p class="more"><!-- 様々な広告媒体に掲載すると、予約管理は大変。JTSボードは、ホットペッパービューティからの予約をJTSボードのカレンダーに自動送信してくれるので管理が楽になります。またJTSボードからサロンボードへの予約入力もできるので便利です。 -->
+                        様々な広告媒体に掲載すると、予約管理は大変。JTSボードは他媒体の予約も自動送信してくれるので管理が楽になります。またJTSBoardから他媒体の操作も可能です。
+                        </p>
+                        <!-- <p class="more">様々な広告媒体に掲載すると、予約管理は大変。一つの管理画面で管理出来たらいいな！を叶えました。例えばホットペッパーからの予約、電話予約、次回予約…と、予約経路がバラバラでは、予約ミスを招いてしまう可能性があります。そこで、JTSボードは、ホットペッパービューティからの予約をJTSボードのカレンダーに自動送信。管理が楽になります。 </p> -->
                         <!-- <a href="#" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a> -->
                     </div>
                 </div>
@@ -406,8 +466,119 @@
     <!--- salon voice end ---------->
 
 
-<!--- newspaper start ---------->
+<!---- news blog start here ------------>
 <div class="newspaper-panel box-bg padding-panel">
+    <div class="slider-outer">
+        <div class="container">
+            <div class="page-heading text-center"><h1>サロン集客＆マネージメントに役立つ情報をお届け<br>JTS Boardブログ</h1></div>
+            <div id="owl-demo2" class="owl-carousel">
+                <div class="item">
+                    <div class="item-margin">
+                        <div class="case-study-item box-shadow position-relative">                            
+                            <div class="fadeIn animated new-label-blog">New</div>
+                            <img src="../../assets/images/app-blog/blog4.jpg">
+                            <div class="cs-content">
+                                <h6 class="">次世代のサロン管理システム</h6>
+                                <hr>
+                                <div class="news-block-text">
+                                    <p>こんにちは、広報担当のYUKIです。</p>
+                                    <p>今日はサロン管理システムであるJTSBoardの機能的な</p>
+                                </div>                                
+                                <div class="date-blog">6月20日</div>
+                                <a routerLink="/news/次世代のサロン管理システム" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-margin">
+                        <div class="case-study-item box-shadow position-relative">
+                            <!-- <div class="news-date mb-20">
+                                <div class="day">18</div>
+                                <div class="month">六月</div>
+                            </div> -->
+                            <div class="fadeIn animated new-label-blog">New</div>
+                            <img src="../../assets/images/app-blog/ai-beauty-innovation-seminer2020を開催.jpg">
+                            <div class="cs-content">
+                                <h6 class="">AI Beauty Innovation seminer2020を開催</h6>
+                                <hr>
+                                <div class="news-block-text">
+                                    <p>こんにちは、広報担当のYUKIです。</p>
+                                    <p>先週の水曜日、ウインク愛知にて第一回目のセミナーを開催しました。</p>
+                                </div>                                
+                                <div class="date-blog">6月18日</div>
+                                <!-- <p>多くのオーナーさま、美容代理店さまにご参加いただきました。</p>
+                                <p>本当にありがとうございます。</p>
+                                <p>当日は東京本社のエンジニアチームも助っ人として登場し、</p> -->
+                                <a routerLink="/news/AI-Beauty-Innovation-seminer2020を開催" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-margin">
+                        <div class="case-study-item box-shadow position-relative">
+                            <!-- <div class="news-date">
+                                <div class="day">17</div>
+                                <div class="month">三月</div>
+                            </div> -->
+                            <img src="../../assets/images/app-blog/blog2.jpg">
+                            <div class="cs-content">
+                                <h6>「学校訪問記」</h6>
+                                <hr>
+                                <div class="news-block-text">
+                                    <p>初めまして。</p>
+                                    <p>マジェスティックビューティー大原めぐみです。</p>
+                                </div>
+                                <div class="date-blog">3月17日</div>
+                                <!-- <p>マジェスティックビューティー、興味ある方はサロンのインスタみてください➡️マジェインスタ</p>
+                                <p>サロンワークまでの時間、</p>
+                                <p>オフィスにて。</p>
+                                <p>事務仕事というか、ブログを再スタートしています。</p>
+                                <p>決心大事！！</p> -->
+                                <a routerLink="/news/学校訪問記" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-margin">
+                        <div class="case-study-item box-shadow position-relative">
+                            <!-- <div class="news-date">
+                                <div class="day">17</div>
+                                <div class="month">三月</div>
+                            </div> -->
+                            <img src="../../assets/images/app-blog/jts_ai_blog.jpg">
+                            <div class="cs-content">
+                                <h6>「広告について」</h6>
+                                <hr>
+                                <div class="news-block-text">
+                                    <p>今日は私のサロンでも使っている集客広告媒体ホットペッパービューティーのお話</p>
+                                    <p> サロン経営で、</p>
+                                </div>
+                                <div class="date-blog">3月17日</div>
+                                <!-- <p> 集客で頼りにしているのが</p>
+                                <p> ホットペッパービューティーですよね。</p>
+                                <p>多分ほとんどのサロン様が利用したことある。もしくは</p>
+                                <p>利用中。ですよね！！</p>
+                                <p>私も利用させていただいて、2年くらいですが、</p> -->
+                                <a routerLink="/news/広告について" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<!---- news blog end here ------------>
+
+
+<!--- newspaper start ---------->
+<!-- <div class="newspaper-panel box-bg padding-panel">
     <div class="container">
         <div class="page-heading text-center"><h1>ニュース</h1></div>
         <div class="row">
@@ -421,7 +592,7 @@
             <div class="col-sm-4 col-lg-3 mb-30"><img src="../../assets/images/newspaper-img.jpg"></div>
         </div>
     </div>
-</div>
+</div> -->
 <!--- newspaper end ---------->
 
 
@@ -435,7 +606,8 @@
                     <div class="page-heading text-center"><h1>費用・プラン</h1></div>
                     <div class="page-sub-heading text-center">
                         <h5>
-                            カレンダー機能、シフト、予約、顧客管理、カルテ、レジ・会計、売上集計、<br>分析、チャット、出退勤など充実の機能を 15,000円でご利用いただけます。
+                            カレンダー機能、シフト、予約、顧客管理、カルテ、レジ・会計、売上集計、<br>分析、チャット、出退勤など充実の機能を 15,000円～でご利用いただけます。<br>
+                            サロン開業を考えている方必見!!今なら特別オファーがあります。一度お問い合わせください。
                         </h5>
                     </div>  
                     <div class="row justify-content-center">
@@ -450,7 +622,7 @@
                                         <a href="#"><span class="label-b">初月利用料</span><span class="price-b">無料</span></a>
                                     </li>
                                     <li>
-                                        <a href="#"><span class="label-b">月額利用料</span><span class="price-b">15,000 <span class="yen">円</span> 
+                                        <a href="#"><span class="label-b">月額利用料</span><span class="price-b">15,000 <span class="yen">円 ～</span> 
                                             <span class="tax-label">(税抜き価格)</span> </span></a>
                                     </li>
                                 </ul>
@@ -471,42 +643,63 @@
     <div class="container">
         <div class="white-bg mb-30">
             <div class="page-heading text-center"><h1>お問い合わせ</h1></div>
+            <form (ngSubmit)="onContact()" [formGroup]="contactForm">
             <div class="row justify-content-center">
                 <div class="col-md-9">
+                    <div *ngIf="datasaved" class="alert alert-success mb-30" role="alert">
+                        {{msg}}
+                    </div>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
-                                <input type="text" class="form-control" name="" placeholder="名前">
+                                <input type="text" class="form-control" 
+                                 formControlName="name" placeholder="名前"
+                                 [ngClass]="{ 'is-invalid': submitted && !contactForm.get('name').valid }"/>
+                                 <!-- <span *ngIf="!contactForm.get('name').valid && contactForm.submitted && contactForm.get('name').touched"></span> -->
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
-                                <input type="text" class="form-control" name="" placeholder="メールアドレス">
+                                <input type="text" class="form-control"  
+                                formControlName="email"
+                                placeholder="メールアドレス"
+                                [ngClass]="{ 'is-invalid': submitted && !contactForm.get('email').valid }"/>
+                                <!-- <span *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched"></span> -->
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
-                                <input type="text" class="form-control" name="" placeholder="電話番号">
+                                <input type="tel" class="form-control" 
+                                 [textMask]="{mask: mask}" formControlName="phone" placeholder="電話番号"
+                                 [ngClass]="{ 'is-invalid': submitted && !contactForm.get('phone').valid }" />
+                                 <!-- <span *ngIf="!contactForm.get('phone').valid && contactForm.get('phone').touched"></span> -->
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group mb-30">
-                                <input type="text" class="form-control" name="" placeholder="サロンの業種">
+                                <input type="text" class="form-control" 
+                                 formControlName="subject" placeholder="サロンの業種"
+                                 [ngClass]="{ 'is-invalid': submitted && !contactForm.get('subject').valid }"  />
+                                 <!-- <span *ngIf="!contactForm.get('subject').valid && contactForm.get('subject').touched"></span> -->
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group mb-30">
-                                <textarea placeholder="メッセージ" cols="" rows="6" class="form-control"></textarea>
+                                <textarea name="message"  formControlName="message" placeholder="メッセージ" cols="" rows="6" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && !contactForm.get('subject').valid }"  >
+                            </textarea>
+                            <!-- <span *ngIf="!contactForm.get('message').valid && contactForm.get('message').touched"></span>   -->
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="text-center">
-                                <a href="#" class="btn">送信する</a>
+                                <button class="btn">送信する</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </form>
         </div>
     </div>
 </div>
@@ -514,3 +707,4 @@
 </div>
 
 <app-footar></app-footar>
+

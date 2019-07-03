@@ -1,119 +1,99 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>JTS Board</title>
-  <base href="/" />
- <!-- Schedular CSS -->
- <link href="../styles/OpenNew.css" rel="stylesheet">
- <link href="//cdn.syncfusion.com/ej2/material.css" rel="stylesheet" />
- <!-- Schedular CSS -->
+  <head>
+    <meta charset="utf-8" />
+    <title>サロン予約システム | サロン管理システム - JTS Board</title>
+    <meta name="description" content="
+サロン予約システム | サロン管理システム - JTS Boardはサロン業務全てのたった１つのアプリで管理することが可能。日本初AI機能も搭載。ユーザー満足度は98%です。" />
+    <meta name="google-site-verification" content="2URm_zHXmE5ilCIbIteCsBD51fdyfyli441CJGXnE7s" />
+    <base href="/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0"
+    />
 
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
     <!-- Bootstrap CSS -->
-    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css"/>
- 
+    <link
+      href="assets/css/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css"> 
 
-  <!---Fontawesome --->
-  <link href="assets/css/all.css" rel="stylesheet" type="text/css" />
+    <!---Fontawesome --->
+    <link href="assets/css/all.css" rel="stylesheet" type="text/css" />
 
-  <!-- Owl Carousel Assets -->
-  <link href="assets/css/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
-  <link href="assets/css/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
+    <!-- Owl Carousel Assets -->
+    <link
+      href="assets/css/owl-carousel/owl.carousel.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/owl-carousel/owl.theme.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-  <!------- Animation ----------->
-  <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <!------- Animation ----------->
+    <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
 
-  <!-- Our Custom CSS -->
-  <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- Our Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 
-  <!-- Our Custom CSS -->
-  <link href="assets/css/responsive-style.css" rel="stylesheet" type="text/css" />
-  <!-- Date picker css start -->
-  <link rel="stylesheet" type="text/css" href="assets/css/datepicker/bootstrap-datepicker3.min.css" />
+    <!-- Our Custom CSS -->
+    <link
+      href="assets/css/responsive-style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Date picker css start -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/datepicker/bootstrap-datepicker3.min.css"
+    />
 
-  <!-- Date picker css end -->
- 
-</head>
+    <!-- Date picker css end -->
 
-<body  class="ej2-new">
-  <!-- Schedular  -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLQL39J"height="0"width="0"style="display:none;visibility:hidden"></iframe></noscript>
-  <div hidden id="sync-analytics" data-queue="EJ2 - Angular - Demos"></div>
-<!-- Schedular -->
-  <app-root></app-root>
-  <!-- jQuery js-->
-  <script src="assets/js/jquery.min.js"></script>
+ <!-- jQuery js-->
+ <script src="assets/js/jquery.min.js"></script>
 
-  <!-- Bootstrap JS -->
-  <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136013190-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  <!-- owl-carousel -->
-  <script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
+gtag('config', 'UA-136013190-1');
+</script>
+  </head>
+  <body>
+    <app-root></app-root>
+   
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
 
-  <!----custom js------>
-  <script src="assets/js/phone_number.js"></script>
- 
+    <!-- owl-carousel -->
+    <script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
 
-  <!-- Date picker js start -->
-  <!-- <script src="assets/js/bootstrap-datepicker.js"></script> -->
+    <!----custom js------>
+    <script src="assets/js/phone_number.js"></script>
+    <script src="assets/js/accountNo.js"></script>
 
-  <!-- Date picker js end -->
+    <!-- Date picker js start -->
+    <!-- <script src="assets/js/bootstrap-datepicker.js"></script> -->
 
-  <script type="text/javascript">
-    // Read More Jquery Start first
-    $(document).ready(function () {
-      // Configure/customize these variables.
-      var showChar = 40 // How many characters are shown by default
-      var ellipsestext = '...'
-      var moretext = "続きを読む <i class='fas fa-arrow-circle-right'></i>"
-      var lesstext = "もっと読む <i class='fas fa-arrow-circle-right'></i>"
+    <!-- Date picker js end -->
 
-      $('.more').each(function () {
-        var content = $(this).html()
-
-        if (content.length > showChar) {
-          var c = content.substr(0, showChar)
-          var h = content.substr(showChar, content.length - showChar)
-
-          var html =
-            c +
-            '<span class="moreellipses">' +
-            ellipsestext +
-            '&nbsp;</span><span class="morecontent"><span>' +
-            h +
-            '</span>&nbsp;&nbsp;<a href="#" class="morelink">' +
-            moretext +
-            '</a></span>'
-
-          $(this).html(html)
-        }
-      })
-
-      $('.morelink').click(function () {
-        if ($(this).hasClass('less')) {
-          $(this).removeClass('less')
-          $(this).html(moretext)
-        } else {
-          $(this).addClass('less')
-          $(this).html(lesstext)
-        }
-        $(this)
-          .parent()
-          .prev()
-          .toggle()
-        $(this)
-          .prev()
-          .toggle()
-        return false
-      })
-    })
-      // Read More Jquery End
-  </script>
-</body>
-
+    <script type="text/javascript">
+      
+    </script>
+  </body>
 </html>
+
