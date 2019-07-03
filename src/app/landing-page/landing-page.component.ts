@@ -169,8 +169,8 @@ export class LandingPageComponent implements OnInit {
       salon_name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       passwordMatch: this.fb.group({
-        password: ['', [Validators.required]],
-        confirm_password: ['', [Validators.required]]
+        password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(6)]],
+        confirm_password: ['', [Validators.required,  Validators.minLength(6), Validators.maxLength(6)]]
       }, { validator: this.passwordMatch }),
     });
 
