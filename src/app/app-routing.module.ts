@@ -5,7 +5,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
 
 import { RecruitComponent } from './recruit/recruit.component';
-import { AdminComponent } from './admin/admin.component';
+
 import { AuthGuard } from './auth.guard';
 import { RegistrationComponent } from './registration/registration.component';
 import { SignupComponent } from './signup/signup.component';import { FaqComponent } from './faq/faq.component';
@@ -28,7 +28,7 @@ const routes: Routes = [
   {path:'register',component:RegistrationComponent},
   {path: 'login',   component: LoginComponent},
   {path:'signup',component:SignupComponent},
-  {path: 'admin', canActivate:[AuthGuard], component: AdminComponent},
+ 
  {path: 'thank-success-step-first',component:JtsBoardPart1SuccessComponent},
   {path :'function',component: FunctionComponent },
   {path :'thanks',component: ThanksComponent },
