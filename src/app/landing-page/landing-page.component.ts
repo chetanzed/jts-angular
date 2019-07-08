@@ -165,6 +165,11 @@ export class LandingPageComponent implements OnInit {
     // Read More Jquery End
 
     //siginup From Group
+<<<<<<< HEAD
+    // stop here if form is invalid
+
+=======
+>>>>>>> 57d153831d8a8ed01d664f8b447a1b2246682474
     this.signupForm = this.fb.group({
       device_type: ['angular'],
       salon_name: ['', [Validators.required]],
@@ -191,6 +196,10 @@ export class LandingPageComponent implements OnInit {
   //Password matching end
 
   onSignup() {
+<<<<<<< HEAD
+
+=======
+>>>>>>> 57d153831d8a8ed01d664f8b447a1b2246682474
     this.signup.device_type = this.signupForm.get('device_type').value;
     this.signup.salon_name = this.signupForm.get('salon_name').value;
     this.signup.email = this.signupForm.get('email').value;
@@ -198,8 +207,13 @@ export class LandingPageComponent implements OnInit {
     this.signup.confirm_password = this.signupForm.get('passwordMatch').get('confirm_password').value;
     if (this.signupForm.invalid) {
       return;
+<<<<<<< HEAD
+    } else{
+      this.authservice.createSignup(this.signup)
+=======
     }
     this.authservice.createSignup(this.signup)
+>>>>>>> 57d153831d8a8ed01d664f8b447a1b2246682474
       .subscribe(data => {
         console.log(data);
         if (data.status == "error") {
@@ -212,6 +226,10 @@ export class LandingPageComponent implements OnInit {
           this.router.navigate(['thank-success-step-first']);
         }
       });
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> 57d153831d8a8ed01d664f8b447a1b2246682474
   }
   //signup From end//
 
