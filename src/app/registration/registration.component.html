@@ -4,9 +4,7 @@
   <div class="registration-panel padding-panel box-bg">
     <div class="container">
       <div class="white-bg">
-        <div class="page-heading text-center">
-          <h1>契約フォーム</h1>
-        </div>
+        <div class="page-heading text-center"><h1>契約フォーム</h1></div>
         <div class="page-sub-heading text-center">
           <h5 class="primary-color">
             契約のお申し込み
@@ -14,11 +12,11 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-10 col-lg-9">
-            <form (ngSubmit)="goSubmit(regForm)" [formGroup]="regForm">
+            <form ngForm="registerForm" (submit)="onRegister(reg)">
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group mb-30">
-                   <input
+                    <input
                       type="text"
                       class="form-control"
                       name="master_sales_code"
@@ -27,120 +25,202 @@
                       value="{{ reg.master_sales_code | json }}"
                       readonly="readonly"
                     />
+                    <!-- {{rform.master_sales_code}} -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      [(ngModel)]="reg.kana"
+                      #kana="ngModel"
+                      class="form-control"
+                      name="kana"
+                      placeholder="ふりがな"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!kana.valid && kana.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      [(ngModel)]="reg.kanji"
+                      #kanji="ngModel"
+                      class="form-control"
+                      name="kanji"
+                      placeholder="氏名"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!kanji.valid && kanji.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      [(ngModel)]="reg.tel"
+                      #tel="ngModel"
+                      id="yourphone"
+                      name="tel"
+                      placeholder="携帯番号"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!tel.valid && tel.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="email"
+                      [(ngModel)]="reg.email"
+                      #email="ngModel"
+                      class="form-control"
+                      placeholder="メールアドレス"
+                      name="email"
+                      required
+                      email
+                    />
+                    <!-- <span class="help-block" *ngIf="!email.valid && email.touched">Enter the value hear box is empity.</span> -->
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <input type="text" class="form-control" formControlName="kana" placeholder="ふりがな" required />
-                    <span *ngIf="!regForm.get('kana').valid && regForm.get('kana').touched">Please enter Name !!!</span>
-                  </div>
-                </div>
-
-                <div class="col-sm-6">
-                  <div class="form-group mb-30">
-                    <input type="text" class="form-control" formControlName="kanji" placeholder="氏名" required />
-                    <span *ngIf="!regForm.get('kanji').valid && regForm.get('kanji').touched">Please enter Name
-                      !!!</span>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group mb-30">
-                    <input type="tel" [textMask]="{mask: mask}" class="form-control" formControlName="tel"
-                      placeholder="携帯番号" required />
-                    <span *ngIf="!regForm.get('tel').valid && regForm.get('tel').touched">Please enter Name !!!</span>
+                    <input
+                      type="password"
+                      [(ngModel)]="reg.password"
+                      #password="ngModel"
+                      class="form-control"
+                      name="password"
+                      placeholder="パスワードを作成（半角英数６桁）"
+                      #password="ngModel"
+                      required
+                      maxlength="6"
+                    />
+                    <!-- <span class="help-block" *ngIf="!password.valid && password.touched">Enter the value hear box is empity.</span> -->
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <input type="email" class="form-control" formControlName="email" placeholder="メールアドレス" required />
-                    <span *ngIf="!regForm.get('email').valid && regForm.get('email').touched">Please enter email
-                      !!!</span>
-                  </div>
-                </div>
-
-                <div class="col-sm-6" formGroupName="passwordMatch">
-                  <div class="form-group mb-30">
-                    <input type="password" class="form-control" formControlName="password"
-                      placeholder="パスワードを作成（半角英数６桁）" required />
-                    <span
-                      *ngIf="!regForm.get('passwordMatch').get('password').valid && regForm.get('passwordMatch').get('password').touched">Please
-                      enter Password !!!</span>
-                  </div>
-                </div>
-
-                <div class="col-sm-6" formGroupName="passwordMatch">
-                  <div class="form-group mb-30">
-                    <input type="password" class="form-control" formControlName="confirm_password"
-                      placeholder="パスワードを再入力（確認用）" required />
-                    <span
-                      *ngIf="!regForm.get('passwordMatch').get('confirm_password').valid && regForm.get('passwordMatch').get('confirm_password').touched">Please
-                      Confirm your Password !!!</span>
-                    <span *ngIf="!regForm.get('passwordMatch').valid && regForm.get('passwordMatch').touched"> password
-                      and confirm password must match !!!</span>
-                  </div>
-                </div>
-
-                <div class="col-sm-6">
-                  <div class="form-group mb-30">
-                    <input #dob="bsDatepicker" bsDatepicker [(bsConfig)]="datePickerConfig" type="text"
-                      class="form-control" formControlName="dob" placeholder="誕生日" required/>
-                    <!-- {{regForm.get('dob').value|date: 'yyyy年MM月dd日'}} -->
-                    <span *ngIf="!regForm.get('dob').valid && regForm.get('dob').touched">Please enter Name !!!</span>
+                    <input
+                      type="password"
+                      [(ngModel)]="reg.confirm_password"
+                      #confirm_password="ngModel"
+                      class="form-control"
+                      name="confirm_password"
+                      placeholder="パスワードを再入力（確認用）"
+                      required
+                      maxlength="6"
+                    />
+                    <!-- <span class="help-block" *ngIf="!confirm_password.valid && confirm_password.touched">Enter the value hear box is empity.</span> -->
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <input type="text" class="form-control" formControlName="zip_code" placeholder="郵便番号" required />
-                    <span *ngIf="!regForm.get('zip_code').valid && regForm.get('zip_code').touched">Please enter Name
-                      !!!</span>
+                    <input
+                      type="text"
+                      #dob="ngModel"
+                   
+                      [(ngModel)]="reg.dob"
+                      id="yourphone4"
+                      class="form-control"
+                      name="dob"
+                      placeholder="誕生日"
+                      required
+                    />
+                    
+                    <!-- <span class="help-block" *ngIf="!dob.valid && dob.touched">Enter the value hear box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <input
+                      type="text"
+                      [(ngModel)]="reg.zip_code"
+                      #zip_code="ngModel"
+                      class="form-control"
+                      name="zip_code"
+                      placeholder="郵便番号"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!zip_code.valid && zip_code.touched">Enter the value hear box is empity.</span> -->
                   </div>
                 </div>
                 <div class="col-sm-12">
                   <div class="form-group mb-30">
-                    <input type="text" class="form-control" formControlName="address" placeholder="住所" required />
-                    <span *ngIf="!regForm.get('address').valid && regForm.get('address').touched">Please enter Name
-                      !!!</span>
+                    <input
+                      type="text"
+                      [(ngModel)]="reg.address"
+                      #address="ngModel"
+                      class="form-control"
+                      name="address"
+                      placeholder="住所 "
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!address.valid && address.touched">Enter the value hear box is empity.</span> -->
                   </div>
                 </div>
 
-                <div class="col-sm-12 mb-30">
-                  <hr />
-                </div>
+                <div class="col-sm-12 mb-30"><hr /></div>
 
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label>
-                      運転免許証の写真を表側、裏側を選択してアップロードしてください
-                    </label>
+                    <label
+                      >運転免許証の写真を表側、裏側を選択してアップロードしてください</label
+                    >
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
                     <label>表：</label>
+
+                    <!-- W64 -->
+                    <!-- <label for="files" class="btn">画像を選択する</label>
+                                     <input  id="files" class="form-control" style="visibility:hidden;" [(ngModel)]="frontImage" name="frontImage" #abc="ngModel" type="file" accept="image/*" (change)="changeListener($event)" required>  -->
+
                     <div class="input-container">
-                      <input #file1 class="form-control" name="frontImage" id="real-input"
-                        formControlName="dl_front_img" type="file" accept="image/*" (change)="changeListener($event)"
-                        required>
-                      <button (click)="file1.click()" type="button" class="browse-btn">画像を選択する</button>
-                      <span class="file-info">{{file1default}}</span>
+                      <input
+                        id="real-input"
+                        class="form-control"
+                        [(ngModel)]="frontImage"
+                        name="frontImage"
+                        #abc="ngModel"
+                        type="file"
+                        accept="image/*"
+                        (change)="changeListener($event)"
+                        required
+                      />
+                      <button class="browse-btn">画像を選択する</button>
+                      <span class="file-info">未選択</span>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
                     <label>裏：</label>
                     <div class="input-container">
-                      <input #file2 class="form-control" name="backImage" id="real-input1" formControlName="dl_back_img"
-                        type="file" accept="image/*" (change)="changeListener1($event)" required>
-                      <button (click)="file2.click()" type="button" class="browse-btn1">画像を選択する</button>
-                      <span class="file-info1">{{file2default}}</span>
+                      <input
+                        id="real-input1"
+                        class="form-control"
+                        [(ngModel)]="backImage"
+                        name="backImage"
+                        #def="ngModel"
+                        type="file"
+                        accept="image/*"
+                        (change)="changeListener1($event)"
+                        required
+                      />
+                      <button class="browse-btn1">画像を選択する</button>
+                      <span class="file-info1">未選択</span>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-12 mb-30">
-                  <hr />
-                </div>
+
+                <div class="col-sm-12 mb-30"><hr /></div>
 
                 <div class="col-sm-12">
                   <div class="page-sub-heading text-center">
@@ -152,95 +232,159 @@
 
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <input type="text" class="form-control" formControlName="bank_name" placeholder="金融機関名" required />
-                    <span *ngIf="!regForm.get('bank_name').valid && regForm.get('bank_name').touched">Please enter Name
-                      !!!</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.bank_name"
+                      #bank_name="ngModel"
+                      name="bank_name"
+                      placeholder="金融機関名"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!bank_name.valid && bank_name.touched">Value is empity.</span> -->
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <input type="text" class="form-control" formControlName="bank_name_kana" placeholder="金融機関名（カナ"
-                      required />
-                    <span *ngIf="!regForm.get('bank_name_kana').valid && regForm.get('bank_name_kana').touched">Please
-                      enter Name !!!</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.bank_name_kana"
+                      #bank_name_kana="ngModel"
+                      name="bank_name_kana"
+                      placeholder="金融機関名（カナ）"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!bank_name_kana.valid && bank_name_kana.touched">Enter the Value input Box is empity.</span> -->
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <input (keypress)="numberOnly($event)" maxlength="4" type="text" class="form-control"
-                      formControlName="bank_number" placeholder="金融機関コード" required />
-                    <span *ngIf="!regForm.get('bank_number').valid && regForm.get('bank_number').touched">Please enter
-                      Name !!!</span>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      [(ngModel)]="reg.bank_number"
+                      #bank_number="ngModel"
+                      id="yourphone1"
+                      name="bank_number"
+                      placeholder="金融機関コード"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!bank_number.valid && bank_number.touched">Enter the Value input Box is empity.</span> -->
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <input (keypress)="numberOnly($event)" maxlength="3" type="text" class="form-control"
-                      formControlName="branch_code" placeholder="支店コード" required />
-                    <span *ngIf="!regForm.get('branch_code').valid && regForm.get('branch_code').touched">Please enter
-                      Name !!!</span>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      [(ngModel)]="reg.branch_code"
+                      #branch_code="ngModel"
+                      id="yourphone2"
+                      name="branch_code"
+                      placeholder="支店コード"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!branch_code.valid && branch_code.touched">Enter the Value input Box is empity.</span> -->
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <input type="text" class="form-control" formControlName="branch_kana" placeholder="支店名（カナ）"
-                      required />
-                    <span *ngIf="!regForm.get('branch_kana').valid && regForm.get('branch_kana').touched">Please enter
-                      Name !!!</span>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group mb-30">
-                    <input type="text" class="form-control" formControlName="branch" placeholder="支店名" required />
-                    <span *ngIf="!regForm.get('branch').valid && regForm.get('branch').touched">Please enter Name
-                      !!!</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.branch_kana"
+                      #branch_kana="ngModel"
+                      name="branch_kana"
+                      placeholder="支店名（カナ）"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!branch_kana.valid && branch_kana.touched">Enter the Value input Box is empity.</span> -->
                   </div>
                 </div>
 
+                <!-- branch  -->
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <select class="form-control" formControlName="what_kind_of_bank">
-                      <option selected>預金種類</option>
-                      <option>普通預金</option>
-                      <option>当座預金</option>
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.branch"
+                      #branch="ngModel"
+                      name="branch"
+                      placeholder="支店名"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!branch.valid && branch.touched">Enter the Value input Box is empity.</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group mb-30">
+                    <select
+                      class="form-control"
+                      [(ngModel)]="reg.what_kind_of_bank"
+                      #what_kind_of_bank="ngModel"
+                      name="what_kind_of_bank"
+                      required
+                    >
+                      <option selected="selected" disabled="disabled"
+                        >預金種類</option
+                      >
+                      <option value="普通預金">普通預金</option>
+                      <option value="当座預金">当座預金</option>
                     </select>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <input (keypress)="numberOnly($event)" maxlength="7" type="text" class="form-control"
-                      formControlName="account_number" placeholder="ふりがな" required />
-                    <span *ngIf="!regForm.get('account_number').valid && regForm.get('account_number').touched">Please
-                      enter Name !!!</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.account_number"
+                      #account_number="ngModel"
+                      id="yourphone3"
+                      name="account_number"
+                      placeholder="口座番号"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!account_number.valid && account_number.touched">Enter the Value input Box is empity.</span> -->
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <input type="text" class="form-control" formControlName="account_holder_name_kana"
-                      placeholder="口座名義（カナ）" required />
-                    <span
-                      *ngIf="!regForm.get('account_holder_name_kana').valid && regForm.get('account_holder_name_kana').touched">Please
-                      enter Name !!!</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.account_holder_name_kana"
+                      #account_holder_name_kana="ngModel"
+                      name="account_holder_name_kana"
+                      placeholder="口座名義（カナ）"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!account_holder_name_kana.valid && account_holder_name_kana.touched">Enter the Value input Box is empity.</span> -->
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group mb-30">
-                    <input type="text" class="form-control" formControlName="account_holder_name" placeholder="口座名義"
-                      required />
-                    <span
-                      *ngIf="!regForm.get('account_holder_name').valid && regForm.get('account_holder_name').touched">Please
-                      enter Name !!!</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="reg.account_holder_name"
+                      #account_holder_name="ngModel"
+                      name="account_holder_name"
+                      placeholder="口座名義"
+                      required
+                    />
+                    <!-- <span class="help-block" *ngIf="!account_holder_name.valid && account_holder_name.touched">Enter the Value input Box is empity.</span> -->
                   </div>
                 </div>
 
-                <div class="col-sm-12 mb-30">
-                  <hr />
-                </div>
+                <div class="col-sm-12 mb-30"><hr /></div>
 
                 <div class="col-sm-12">
                   <div class="page-sub-heading text-center">
-                    <h5 class="primar y-color">
+                    <h5 class="primary-color">
                       ご確認項目
                     </h5>
                   </div>
@@ -449,15 +593,15 @@
 
                   <div class="form-group">
                     <h6 class="mb-0">
-                      <input type="checkbox" id="agree" required  />
-                      <label class="ml-10 color-red" for="agree">同意します</label>
+                      <input type="checkbox" id="agree" required />
+                      <label class="ml-10 color-red" for="agree"
+                        >同意します</label
+                      >
                     </h6>
                   </div>
-                  <div class="mb-30">
-                    <hr />
-                  </div>
+                  <div class="mb-30"><hr /></div>
                   <div class="text-center">
-                    <button type="submit" [disabled]="!regForm.valid" class="btn join-us-btn">
+                    <button type="submit" class="btn join-us-btn">
                       規約に同意して確認画面へ
                     </button>
                   </div>

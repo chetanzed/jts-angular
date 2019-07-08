@@ -18,7 +18,7 @@ export class LandingPageComponent implements OnInit {
   datasaved = false;
   msg: any;
   submitted = false;
-  constructor(private fb: FormBuilder, private authservice: AuthService,private router:Router ) { }
+  constructor(private fb: FormBuilder, private authservice: AuthService, private router: Router) { }
 
   ngOnInit() {
     $('.js-anchor-link').click(function (e) {
@@ -144,7 +144,7 @@ export class LandingPageComponent implements OnInit {
         }
       })
 
-      $('.morelink').click(function() {
+      $('.morelink').click(function () {
         if ($(this).hasClass('less')) {
           $(this).removeClass('less');
           $(this).html(moretext);
@@ -163,7 +163,7 @@ export class LandingPageComponent implements OnInit {
       });
     });
     // Read More Jquery End
-   
+
     //siginup From Group
     this.signupForm = this.fb.group({
       device_type: ['angular'],
@@ -171,7 +171,7 @@ export class LandingPageComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       passwordMatch: this.fb.group({
         password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(6)]],
-        confirm_password: ['', [Validators.required,  Validators.minLength(6), Validators.maxLength(6)]]
+        confirm_password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(6)]]
       }, { validator: this.passwordMatch }),
     });
 
@@ -196,7 +196,7 @@ export class LandingPageComponent implements OnInit {
     this.signup.email = this.signupForm.get('email').value;
     this.signup.password = this.signupForm.get('passwordMatch').get('password').value;
     this.signup.confirm_password = this.signupForm.get('passwordMatch').get('confirm_password').value;
-if (this.signupForm.invalid) {
+    if (this.signupForm.invalid) {
       return;
     }
     this.authservice.createSignup(this.signup)
@@ -208,7 +208,7 @@ if (this.signupForm.invalid) {
           return false;
         }
         else {
-         
+
           this.router.navigate(['thank-success-step-first']);
         }
       });

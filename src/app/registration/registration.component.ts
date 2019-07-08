@@ -1,5 +1,4 @@
-
-import { Component, OnInit,ViewChild,HostListener } from '@angular/core'
+import { Component, OnInit, ViewChild, HostListener } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
 import { AuthService } from '../auth.service'
 import { RegisterForm } from '../Models/registration.model'
@@ -20,24 +19,24 @@ export class RegistrationComponent implements OnInit {
   backImage: string
   what_kind_of_back: string
   reg: RegisterForm = new RegisterForm()
-  realInput2:any;
-  msg1:any;
+  realInput2: any;
+  msg1: any;
   constructor(
     private router: Router,
     private authservice: AuthService,
     private route: ActivatedRoute,
-  
-  ) {}
+
+  ) { }
 
   rform: RegisterForm = new RegisterForm()
   firstLoad: boolean = true
- 
+
   ngOnInit() {
     // this.localeService.use(this.locale);
     const uploadButton = document.querySelector('.browse-btn')
     const fileInfo = document.querySelector('.file-info')
     const realInput = (<HTMLInputElement>document.getElementById('real-input'))
-   
+
     uploadButton.addEventListener('click', e => {
       realInput.click()
     })
@@ -51,12 +50,12 @@ export class RegistrationComponent implements OnInit {
       fileInfo.innerHTML = truncated;
     });
 
-   
+
 
     const uploadButton1 = document.querySelector('.browse-btn1')
     const fileInfo1 = document.querySelector('.file-info1')
     const realInput1 = (<HTMLInputElement>document.getElementById('real-input1'))
-   
+
     uploadButton1.addEventListener('click', e => {
       realInput1.click()
     })
@@ -76,7 +75,7 @@ export class RegistrationComponent implements OnInit {
 
 
     //mobile no.
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('#yourphone').usPhoneFormat({
         format: 'xxx-xxx-xxxx'
       });
@@ -93,9 +92,9 @@ export class RegistrationComponent implements OnInit {
         format: 'xxxxxxxx'
       });
       $('#yourphone4').usPhoneFormat({
-        format:'xxxx-xx-xx'
+        format: 'xxxx-xx-xx'
       });
-     
+
     });
 
     //mobile no.
@@ -109,7 +108,7 @@ export class RegistrationComponent implements OnInit {
     this.route.queryParamMap.subscribe(data => {
       this.reg.master_sales_code = data.get('rfc')
     })
-    
+
   }
 
   onRegister(reg) {
@@ -147,7 +146,7 @@ export class RegistrationComponent implements OnInit {
             }
           })
         } else {
-          this.authservice.registration(reg).subscribe(data =>{
+          this.authservice.registration(reg).subscribe(data => {
             alert(data.msg1);
           })
           this.router.navigate(['register'])
@@ -201,5 +200,5 @@ export class RegistrationComponent implements OnInit {
   dateChange(date: any): void {
     this.reg.dob = date
   }
-  
+
 }
