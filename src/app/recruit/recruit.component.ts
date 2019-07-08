@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import {  AuthService } from '../auth.service';
 import { Router } from '@angular/router';
@@ -77,3 +78,4 @@ export class RecruitComponent implements OnInit {
     // ['+', '1', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
     [/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/,/\d/, '-', /\d/, /\d/, /\d/, /\d/];
 }
+

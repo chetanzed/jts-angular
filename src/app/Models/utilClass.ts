@@ -1,3 +1,4 @@
+
 export class utilClass
 {
     numberOnly(event): boolean {
@@ -7,4 +8,5 @@ export class utilClass
         }
         return true;
       }
+
 }

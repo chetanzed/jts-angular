@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Routes, RouterModule, Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { Login1 } from '../Models/login1.model';
+import { FormBuilder, Validators, FormGroup, AbstractControl } from '@angular/forms';
+
+
+
 
 @Component({
   selector: 'app-login',
@@ -8,36 +13,45 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  username= "mannysahu.zed@gmail.com";
-  password= "123456"
+  log: Login1 = new Login1();
+  signinForm: FormGroup;
 
-  constructor(private route:Router, private authservice:AuthService) { }
+  constructor(private router: Router, private authservice: AuthService, private fb: FormBuilder) { }
 
   ngOnInit() {
-  }
-  
-  onSignin(){
-    var log= {
-      "email": "ss@yopmail.com",
-      "password": "123456"
-  
-     }
-this.authservice.checkLogin(log)
-.subscribe(data =>{
-       
-  console.log (data)
-  if(data.msg1)
-  {
 
-    localStorage.setItem("isLoggedin","yes");
-this.route.navigate(['admin'])
-   
-
-  }
-  else{
-alert("sorry")
+    this.signinForm = this.fb.group({
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]]
+    })
   }
 
- });
+
+  onSignin() {
+
+
+    let form = new FormData();
+    form.set('email', this.signinForm.get('email').value);
+    form.set('password', this.signinForm.get('password').value);
+
+    console.log(this.signinForm)
+    this.authservice.loginUser(form)
+      .subscribe(data => {
+        console.log(data)
+
+        if (data.status == 'success') {
+
+          localStorage.setItem("isLoggedin", "yes");
+          this.router.navigate(['admin'])
+        }
+        else {
+          alert(data.msg1)
+        }
+
+      });
   }
+
+
+
+
 }
