@@ -404,7 +404,8 @@
 
 @media (min-width: 1921px) {
     .slider-itme1 {height: unset;}
-    .slider-face img {width: 32%;} 
+    .slider-face img {width: 60%;} 
+    .slider-face {width: 1440px; margin: 0 auto;}
 
 }
 

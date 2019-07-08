@@ -195,7 +195,9 @@ export class LandingPageComponent implements OnInit {
     this.signup.email = this.signupForm.get('email').value;
     this.signup.password = this.signupForm.get('passwordMatch').get('password').value;
     this.signup.confirm_password = this.signupForm.get('passwordMatch').get('confirm_password').value;
-
+if (this.signupForm.invalid) {
+      return;
+    }
     this.authservice.createSignup(this.signup)
       .subscribe(data => {
         console.log(data);
