@@ -18,8 +18,15 @@
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group mb-30">
-                    <input type="text" class="form-control" placeholder="master_sales_code"
-                      value="{{reg.master_sales_code}}" readonly="readonly" />
+                   <input
+                      type="text"
+                      class="form-control"
+                      name="master_sales_code"
+                      [(ngModel)]="reg.master_sales_code"
+                      placeholder="master_sales_code"
+                      value="{{ reg.master_sales_code | json }}"
+                      readonly="readonly"
+                    />
                   </div>
                 </div>
 

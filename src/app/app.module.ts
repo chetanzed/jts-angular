@@ -14,7 +14,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component'
 import { LoginComponent } from './login/login.component'
 
 import { RecruitComponent } from './recruit/recruit.component'
-import { AdminComponent } from './admin/admin.component'
+
 import { AuthService } from './auth.service'
 import { RegistrationComponent } from './registration/registration.component'
 import { SignupComponent } from './signup/signup.component'
@@ -47,7 +47,7 @@ defineLocale('ja', jaLocale);
     LandingPageComponent,
     LoginComponent,
     RecruitComponent,
-    AdminComponent,
+   
     RegistrationComponent,
     SignupComponent,
     FaqComponent,
