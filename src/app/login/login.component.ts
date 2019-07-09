@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     this.signinForm = this.fb.group({
       email: ['', [Validators.required]],
       password: ['', [Validators.required]]
-    })
+    });
   }
 
 
@@ -33,25 +33,16 @@ export class LoginComponent implements OnInit {
     let form = new FormData();
     form.set('email', this.signinForm.get('email').value);
     form.set('password', this.signinForm.get('password').value);
-
-    console.log(this.signinForm)
     this.authservice.loginUser(form)
       .subscribe(data => {
-        console.log(data)
+        console.log(data);
 
         if (data.status == 'success') {
-
           localStorage.setItem("isLoggedin", "yes");
           this.router.navigate(['admin'])
+        } else {
+          alert(data.msg1);
         }
-        else {
-          alert(data.msg1)
-        }
-
       });
   }
-
-
-
-
 }
