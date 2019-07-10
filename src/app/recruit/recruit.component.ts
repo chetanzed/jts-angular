@@ -1,10 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
-import {  AuthService } from '../auth.service';
+import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { Popup } from '../Models/popup.model';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-
+declare var $: any;
 @Component({
   selector: 'app-recruit',
   templateUrl: './recruit.component.html',
@@ -14,14 +14,15 @@ export class RecruitComponent implements OnInit {
   msg: any;
   submitted = false;
   contactForm: FormGroup;
-  log1:Popup=new Popup();
-  constructor(private router:Router,private fb:FormBuilder, private authservice:AuthService) { }
+  log1: Popup = new Popup();
+  codeMsg = false;
+  constructor(private router: Router, private fb: FormBuilder, private authservice: AuthService) { }
 
-  firstLoad:boolean=true;
+  firstLoad: boolean = true;
   ngOnInit() {
-    this.log1.unique_sales_code = "";
-    if(this.firstLoad) {
-      window.scroll(0,0);
+    this.log1.unique_sales_code = '';
+    if (this.firstLoad) {
+      window.scroll(0, 0);
       this.firstLoad = false;
     }
     // contactform
@@ -33,24 +34,22 @@ export class RecruitComponent implements OnInit {
       message: ['', [Validators.required]]
     });
   }
-  onSubmit(){
+  onSubmit() {
     // alert("i am submiting"+this.log1.unique_sales_code);
-    
-     this.authservice.createcode(this.log1)
-.subscribe(data =>{
+    this.authservice.createcode(this.log1).subscribe(data => {
+      console.log(data)
+      if (data.status == "success") {
+        $('#myModal').modal('hide')
+        // localStorage.setItem("isLoggedin","yes");
+        this.router.navigate(['register'], { queryParams: { rfc: data.unique_sales_code } });
        
-  console.log (data)
-  if(data.status=="success")
-  {
-    // localStorage.setItem("isLoggedin","yes");
-    this.router.navigate(['register'],{queryParams:{rfc:data.unique_sales_code}});
-  }
-  else{
-    this.log1.unique_sales_code
-       alert("unique_sales_code: " +this.log1.unique_sales_code + "" +" is not Valid");
-  }
 
- });
+      } else {
+        this.msg = data.msg1;
+        this.codeMsg = true;
+        //  alert("unique_sales_code: " +this.log1.unique_sales_code + "" +" is not Valid");
+      }
+    });
   }
 
 
@@ -64,18 +63,17 @@ export class RecruitComponent implements OnInit {
       console.log(this.contactForm);
       this.authservice.creatContact(this.contactForm.value).subscribe(data => {
         console.log(data);
-        this.msg= data.msg;
-   
+        this.msg = data.msg;
         this.submitted = false;
         this.contactForm.reset();
 
       });
-      
+
     }
   }
 
   mask: any[] =
     // ['+', '1', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
-    [/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/,/\d/, '-', /\d/, /\d/, /\d/, /\d/];
+    [/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
 }
 
