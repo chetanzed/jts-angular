@@ -116,7 +116,7 @@
             <div class="page-sub-heading text-center">
                 <h5>
                     JTSボード販売員の報酬はフルコミッション（完全歩合制）です。報酬の100パーセントが自分の業績によって決まります。
-                    JTSボードの販売価格は15,000円(税別）〜 です。<br>クライアント様への販売は1年契約が条件です。<br class="d-block d-sm-none">契約終了まで毎月支給されます。（更新可）<br>
+                    JTSボードの販売価格は15,000円(税抜)〜30,000円(税抜)です。<br>クライアント様への販売は1年契約が条件です。<br class="d-block d-sm-none">契約終了まで毎月支給されます。（更新可）<br>
                     契約数と歩合還元率は以下となります。
                 </h5>
             </div>
@@ -153,13 +153,13 @@
                         <tr>
                             <td>151〜200</td>
                             <td>25%</td>
-                            <td>4500円〜9000円</td>
+                            <td>3750円〜7500円</td>
                             <td>600,000 円</td>
                         </tr>
                         <tr>
                             <td>201〜500 </td>
                             <td>30%</td>
-                            <td></td>
+                            <td>4500円〜9000円</td>
                             <td>1,875,000 円</td>
                         </tr>
                     </tbody>
@@ -275,13 +275,20 @@
                         <div class="form-group">
                             <input type="text" #usc="ngModel"  [(ngModel)]="log1.unique_sales_code" class="form-control" name="unique_sales_code" placeholder="紹介者コードを入力してください" required></div>
                                 <!-- {{log1|json}} -->
+                               <div  *ngIf="codeMsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <span class="" role="alert"></span>
+                        <strong>unique_sales_code: {{ this.log1.unique_sales_code}}</strong> {{msg}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
                         </div>
 
                         <!-- Modal footer -->
                         <div class="modal-footer">
                             <div class="text-center">
-                                <a class="btn mr-20" href="#" data-dismiss="modal" (click)="onSubmit()" >送信する</a>
-                                <a class="btn" data-dismiss="modal" href="#">閉じる</a>
+                                <button class="btn mr-20"    (click)="onSubmit()" >送信する</button>
+                                <button class="btn" data-dismiss="modal" href="#">閉じる</button>
                             </div>                       
                         
                         </div>
