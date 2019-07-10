@@ -32,6 +32,7 @@ export class RegistrationComponent implements OnInit {
   firstLoad: boolean = true
 
   ngOnInit() {
+
     // this.localeService.use(this.locale);
     const uploadButton = document.querySelector('.browse-btn')
     const fileInfo = document.querySelector('.file-info')
