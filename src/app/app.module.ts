@@ -36,6 +36,7 @@ import { JtsBoardPart1SuccessComponent } from './jts-board-part1-success/jts-boa
 import { AIBeautyInnovationSeminer2020Component } from './ai-beauty-innovation-seminer2020/ai-beauty-innovation-seminer2020.component';
 import { Blog4Component } from './blog4/blog4.component';
 import { NewsBlog3Component } from './news-blog3/news-blog3.component';
+import { NewsBlog4Component } from './news-blog4/news-blog4.component';
 
 defineLocale('ja', jaLocale);
 
@@ -65,7 +66,8 @@ defineLocale('ja', jaLocale);
     JtsBoardPart1SuccessComponent,
     AIBeautyInnovationSeminer2020Component,
     Blog4Component,
-    NewsBlog3Component
+    NewsBlog3Component,
+    NewsBlog4Component
   ],
   imports: [
     BrowserModule,
