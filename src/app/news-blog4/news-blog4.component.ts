@@ -17,13 +17,13 @@ constructor(private title: Title, private meta: Meta, private seoService: SEOSer
       this.firstLoad = false;
     }
      //sco start==================================//
-     this.title.setTitle('予約アプリにどうしてＡＩが必要？');
-     this.meta.updateTag({ name: 'description', content: 'こんにちは、広報担当のYUKIです。今日もJTSBoardの機能をご紹介しますね！みなさんはサロンの予約管理、どうされていますか？？ 小規模サロン様やオーナー１人のサロン様ほど、' });
+     this.title.setTitle('予約アプリにどうしてＡＩが必要？| jts-board');
+     this.meta.updateTag({ name: 'description', content: 'こんにちは！今日はＡＩについて。最近ＡＩに関する本やニュースが世間をにぎわせています。' });
      this.seoService.generateTags({
        title: '予約アプリにどうしてＡＩが必要？',
-       description: 'こんにちは、広報担当のYUKIです。今日もJTSBoardの機能をご紹介しますね！みなさんはサロンの予約管理、どうされていますか？？ 小規模サロン様やオーナー１人のサロン様ほど、',
+       description: 'こんにちは！今日はＡＩについて。最近ＡＩに関する本やニュースが世間をにぎわせています。',
        image: 'http://localhost:4200/assets/images/main-logo-header.png\'',
-       slug: '予約アプリにどうしてＡＩが必要？'
+      //  slug: '予約アプリにどうしてＡＩが必要？'
      });
      this.seoService.createCanonicalURL();
      //   // sco end ==================//

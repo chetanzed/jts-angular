@@ -16,13 +16,13 @@ export class NewsBlog3Component implements OnInit {
       this.firstLoad = false;
     }
     //sco start==================================//
-    this.title.setTitle('サロン予約はどうしていますか？');
+    this.title.setTitle('サロン予約はどうしていますか？| jts-board');
     this.meta.updateTag({ name: 'description', content: 'こんにちは、広報担当のYUKIです。今日もJTSBoardの機能をご紹介しますね！みなさんはサロンの予約管理、どうされていますか？？ 小規模サロン様やオーナー１人のサロン様ほど、' });
     this.seoService.generateTags({
       title: 'サロン予約はどうしていますか？',
       description: 'こんにちは、広報担当のYUKIです。今日もJTSBoardの機能をご紹介しますね！みなさんはサロンの予約管理、どうされていますか？？ 小規模サロン様やオーナー１人のサロン様ほど、',
       image: 'http://localhost:4200/assets/images/main-logo-header.png\'',
-      slug: 'サロン予約はどうしていますか？'
+      // slug: 'サロン予約はどうしていますか？'
     });
     this.seoService.createCanonicalURL();
     //   // sco end ==================//
