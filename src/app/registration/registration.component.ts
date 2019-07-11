@@ -1,10 +1,10 @@
-import { Component, OnInit, ViewChild, HostListener } from '@angular/core'
-import { Router, ActivatedRoute } from '@angular/router'
-import { AuthService } from '../auth.service'
-import { RegisterForm } from '../Models/registration.model'
+import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from '../auth.service';
+import { RegisterForm } from '../Models/registration.model';
+import { from } from 'rxjs';
 
-declare var $: any
-import { from } from 'rxjs'
+declare var $: any;
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -15,24 +15,17 @@ export class RegistrationComponent implements OnInit {
   // locale = "ja";
   // locales = listLocales();
 
-  frontImage: string
-  backImage: string
-  what_kind_of_back: string
-  reg: RegisterForm = new RegisterForm()
+  frontImage: any;
+  backImage: any;
+  what_kind_of_back: string;
+  reg: RegisterForm = new RegisterForm();
   realInput2: any;
   msg1: any;
-  constructor(
-    private router: Router,
-    private authservice: AuthService,
-    private route: ActivatedRoute,
-
-  ) { }
-
-  rform: RegisterForm = new RegisterForm()
+  constructor(private router: Router, private authservice: AuthService, private route: ActivatedRoute) { }
+  rform: RegisterForm = new RegisterForm();
   firstLoad: boolean = true
 
   ngOnInit() {
-
     // this.localeService.use(this.locale);
     const uploadButton = document.querySelector('.browse-btn')
     const fileInfo = document.querySelector('.file-info')
@@ -41,40 +34,27 @@ export class RegistrationComponent implements OnInit {
     uploadButton.addEventListener('click', e => {
       realInput.click()
     })
-
     realInput.addEventListener('change', () => {
       const name = realInput.value.split(/\\|\//).pop();
       const truncated = name.length > 20
         ? name.substr(name.length - 20)
         : name;
-
       fileInfo.innerHTML = truncated;
     });
-
-
 
     const uploadButton1 = document.querySelector('.browse-btn1')
     const fileInfo1 = document.querySelector('.file-info1')
     const realInput1 = (<HTMLInputElement>document.getElementById('real-input1'))
-
     uploadButton1.addEventListener('click', e => {
       realInput1.click()
     })
-
     realInput1.addEventListener('change', () => {
       const name = realInput1.value.split(/\\|\//).pop();
       const truncated = name.length > 20
         ? name.substr(name.length - 20)
         : name;
-
       fileInfo1.innerHTML = truncated;
     });
-
-
-
-
-
-
     //mobile no.
     $(document).ready(function () {
       $('#yourphone').usPhoneFormat({
@@ -102,8 +82,8 @@ export class RegistrationComponent implements OnInit {
     this.reg.what_kind_of_bank = '預金種類'
     //show on top screen
     if (this.firstLoad) {
-      window.scroll(0, 0)
-      this.firstLoad = false
+      window.scroll(0, 0);
+      this.firstLoad = false;
     }
 
     this.route.queryParamMap.subscribe(data => {
@@ -113,11 +93,11 @@ export class RegistrationComponent implements OnInit {
   }
 
   onRegister(reg) {
-    console.log(reg)
+    // console.log(reg)
 
     if (this.reg.dl_front_img && this.reg.dl_back_img) {
       this.authservice.registration(reg).subscribe(data => {
-        console.log(data)
+        // console.log(data)
         if (data.status == 'success') {
           this.router.navigate(['registration-detail'], {
             queryParams: {
@@ -148,7 +128,7 @@ export class RegistrationComponent implements OnInit {
           })
         } else {
           this.authservice.registration(reg).subscribe(data => {
-            alert(data.msg1);
+            // alert(data.msg1);
           })
           this.router.navigate(['register'])
         }
@@ -167,39 +147,37 @@ export class RegistrationComponent implements OnInit {
     var myReader: FileReader = new FileReader()
 
     myReader.onloadend = e => {
-      image = myReader.result
-      this.reg.dl_front_img = myReader.result
+      image = myReader.result;
+      this.reg.dl_front_img = myReader.result;
 
       // $('#imgfront').attr('src',myReader.result);
-      console.log('front image', this.reg.dl_front_img)
+      // console.log('front image', this.reg.dl_front_img)
     }
-
-    myReader.readAsDataURL(file)
+    myReader.readAsDataURL(file);
   }
 
   // W64 for Back image
   changeListener1($event): void {
-    this.readThis1($event.target)
+    this.readThis1($event.target);
   }
 
   readThis1(inputValue: any): void {
     let image
     var file: File = inputValue.files[0]
-    var myReader: FileReader = new FileReader()
+    var myReader: FileReader = new FileReader();
 
     myReader.onloadend = e => {
       image = myReader.result
       this.reg.dl_back_img = myReader.result
 
       // $('#imgfront').attr('src',myReader.result);
-      console.log('back image', this.reg.dl_back_img)
+      // console.log('back image', this.reg.dl_back_img)
     }
-
-    myReader.readAsDataURL(file)
+    myReader.readAsDataURL(file);
   }
 
   dateChange(date: any): void {
-    this.reg.dob = date
+    this.reg.dob = date;
   }
 
 }

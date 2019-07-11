@@ -17,8 +17,7 @@ export class RecruitComponent implements OnInit {
   log1: Popup = new Popup();
   codeMsg = false;
   constructor(private router: Router, private fb: FormBuilder, private authservice: AuthService) { }
-
-  firstLoad: boolean = true;
+  firstLoad = true;
   ngOnInit() {
     this.log1.unique_sales_code = '';
     if (this.firstLoad) {
@@ -37,8 +36,9 @@ export class RecruitComponent implements OnInit {
   onSubmit() {
     // alert("i am submiting"+this.log1.unique_sales_code);
     this.authservice.createcode(this.log1).subscribe(data => {
-      console.log(data)
+      // console.log(data)
       if (data.status == "success") {
+        //model hidden 
         $('#myModal').modal('hide')
         // localStorage.setItem("isLoggedin","yes");
         this.router.navigate(['register'], { queryParams: { rfc: data.unique_sales_code } });
@@ -58,9 +58,9 @@ export class RecruitComponent implements OnInit {
       return;
     }
     else {
-      console.log(this.contactForm);
+      // console.log(this.contactForm);
       this.authservice.creatContact(this.contactForm.value).subscribe(data => {
-        console.log(data);
+        // console.log(data);
         this.msg = data.msg;
         this.submitted = false;
         this.contactForm.reset();

@@ -201,7 +201,7 @@ export class LandingPageComponent implements OnInit {
     }
     this.authservice.createSignup(this.signup)
       .subscribe(data => {
-        console.log(data);
+        // console.log(data);
         if (data.status == "error") {
           this.msg = data.msg;
           this.datasaved = true;
@@ -223,9 +223,9 @@ export class LandingPageComponent implements OnInit {
       return;
     }
     else {
-      console.log(this.contactForm);
+      // console.log(this.contactForm);
       this.authservice.creatContact(this.contactForm.value).subscribe(data => {
-        console.log(data);
+        // console.log(data);
         this.msg = data.msg;
         this.datasaved = true;
         this.submitted = false;
