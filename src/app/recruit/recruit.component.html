@@ -127,8 +127,9 @@
                         <tr>
                             <th>契約<br class="d-block d-sm-none">店舗数</th>
                             <th>歩合<br class="d-block d-sm-none">還元率</th>
-                            <th>１店舗あたり<br class="d-block d-sm-none">報酬額 (税別)</th>
+                            <th>１店舗あたり<br class="d-block d-sm-none">報酬額</th>
                             <th>最大報酬<br class="d-block d-sm-none">(月額)</th>
+                            <th>最大報酬<br class="d-block d-sm-none">（年額）</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -137,35 +138,40 @@
                             <td>10%</td>
                             <td>1500円〜3000円</td>
                             <td>37,000 円</td>
+                            <td>444,000</td>
                         </tr>
                         <tr>
                             <td>51〜100</td>
                             <td>15%</td>
                             <td>2250円〜4500円</td>
                             <td>150,000 円</td>
+                            <td>1,800,000</td>
                         </tr>
                         <tr>
                             <td>101〜150 </td>
                             <td>20%</td>
                             <td>3000円〜6000円</td>
                             <td>337,000 円</td>
+                            <td>4,044,000</td>
                         </tr>
                         <tr>
                             <td>151〜200</td>
                             <td>25%</td>
                             <td>3750円〜7500円</td>
                             <td>600,000 円</td>
+                            <td>7,200,000</td>
                         </tr>
                         <tr>
                             <td>201〜500 </td>
                             <td>30%</td>
                             <td>4500円〜9000円</td>
                             <td>1,875,000 円</td>
+                            <td>22,500,000</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <p class="mb-30 color-red">最高歩合還元率は30%となります。</p>
+                <p class="mb-30 color-red">最高歩合還元率は30％となります。報酬額に関しては全て税抜となっております</p>
                
             </div>
         </div>
@@ -277,7 +283,7 @@
                                 <!-- {{log1|json}} -->
                                <div  *ngIf="codeMsg" class="alert alert-danger alert-dismissible fade show" role="alert">
                         <span class="" role="alert"></span>
-                        <strong>unique_sales_code: {{ this.log1.unique_sales_code}}</strong> {{msg}}
+                        <strong>{{msg}} </strong> 
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>

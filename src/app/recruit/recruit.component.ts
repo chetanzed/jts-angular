@@ -42,8 +42,6 @@ export class RecruitComponent implements OnInit {
         $('#myModal').modal('hide')
         // localStorage.setItem("isLoggedin","yes");
         this.router.navigate(['register'], { queryParams: { rfc: data.unique_sales_code } });
-       
-
       } else {
         this.msg = data.msg1;
         this.codeMsg = true;
