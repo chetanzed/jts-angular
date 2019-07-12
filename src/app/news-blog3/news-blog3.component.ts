@@ -16,7 +16,7 @@ export class NewsBlog3Component implements OnInit {
       this.firstLoad = false;
     }
     //sco start==================================//
-    this.title.setTitle('サロン予約はどうしていますか？| jts-board');
+    this.title.setTitle('サロン予約はどうしていますか？-JTS BOARD');
     this.meta.updateTag({ name: 'description', content: 'こんにちは、広報担当のYUKIです。今日もJTSBoardの機能をご紹介しますね！みなさんはサロンの予約管理、どうされていますか？？ 小規模サロン様やオーナー１人のサロン様ほど、' });
     this.seoService.generateTags({
       title: 'サロン予約はどうしていますか？',

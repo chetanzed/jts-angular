@@ -17,11 +17,11 @@ constructor(private title: Title, private meta: Meta, private seoService: SEOSer
       this.firstLoad = false;
     }
      //sco start==================================//
-     this.title.setTitle('予約アプリにどうしてＡＩが必要？| jts-board');
-     this.meta.updateTag({ name: 'description', content: 'こんにちは！今日はＡＩについて。最近ＡＩに関する本やニュースが世間をにぎわせています。' });
+     this.title.setTitle('予約アプリにどうしてＡＩが必要？-JTS BOARD');
+     this.meta.updateTag({ name: 'description', content: 'こんにちは！ 今日はＡＩについて。最近ＡＩに関する本やニュースが世間をにぎわせています。みなさんもきっとこ キーワードを耳にすることが多いのではないでしょうか？' });
      this.seoService.generateTags({
        title: '予約アプリにどうしてＡＩが必要？',
-       description: 'こんにちは！今日はＡＩについて。最近ＡＩに関する本やニュースが世間をにぎわせています。',
+       description: 'こんにちは！ 今日はＡＩについて。最近ＡＩに関する本やニュースが世間をにぎわせています。みなさんもきっとこ キーワードを耳にすることが多いのではないでしょうか？',
        image: 'http://localhost:4200/assets/images/main-logo-header.png\'',
       //  slug: '予約アプリにどうしてＡＩが必要？'
      });
