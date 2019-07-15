@@ -339,7 +339,7 @@ border-radius: 2px;-webkit-border-radius: 2px;-moz-border-radius: 2px;-o-border-
 
 .recruit-reward-panel .table-gap td,.recruit-reward-panel .table-gap th{font-size: 18px; }
 .recruit-reward-panel .table-gap th{background-color: #7a9ae3; color: #fff; font-weight: normal;}
-.join-us-btn {padding: 15px; width: 100%; font-size: 1.2rem;}
+.join-us-btn {padding: 15px; width: 100%; font-size: 1.2rem; border-radius: 30px;}
 
 /*********** recruit page end ************/
 
