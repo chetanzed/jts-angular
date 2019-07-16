@@ -37,6 +37,7 @@ import { AIBeautyInnovationSeminer2020Component } from './ai-beauty-innovation-s
 import { Blog4Component } from './blog4/blog4.component';
 import { NewsBlog3Component } from './news-blog3/news-blog3.component';
 import { NewsBlog4Component } from './news-blog4/news-blog4.component';
+import { NewsBlog5Component } from './news-blog5/news-blog5.component';
 
 defineLocale('ja', jaLocale);
 
@@ -67,7 +68,8 @@ defineLocale('ja', jaLocale);
     AIBeautyInnovationSeminer2020Component,
     Blog4Component,
     NewsBlog3Component,
-    NewsBlog4Component
+    NewsBlog4Component,
+    NewsBlog5Component
   ],
   imports: [
     BrowserModule,
