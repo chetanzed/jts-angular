@@ -23,6 +23,7 @@ import { AIBeautyInnovationSeminer2020Component } from './ai-beauty-innovation-s
 import { Blog4Component } from './blog4/blog4.component';
 import { NewsBlog3Component } from './news-blog3/news-blog3.component';
 import { NewsBlog4Component } from './news-blog4/news-blog4.component';
+import { NewsBlog5Component } from './news-blog5/news-blog5.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -45,6 +46,7 @@ const routes: Routes = [
       { path: '次世代のサロン管理システム', component: Blog4Component },
       { path: 'サロン予約はどうしていますか', component: NewsBlog3Component },
       { path: '予約アプリにどうしてＡＩが必要', component: NewsBlog4Component },
+      { path: 'AIがキャンセルの穴を埋めてくれる', component: NewsBlog5Component}
     ]
   },
   { path: 'registration-detail', component: RegistrationDetailsComponent },
