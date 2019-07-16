@@ -10,8 +10,7 @@ export class SEOService {
     config = { title: 'サロン予約システム | サロン管理システム - JTS Board',
       description: 'サロン予約システム | サロン管理システム - JTS Boardはサロン業務全てのたった１つのアプリで管理することが可能。日本初AI機能も搭載。ユーザー満足度は98%です。',
       image: 'http://localhost:4200/assets/images/main-logo-header.png',
-      slug: '',
-      ...config
+      slug: '', config
     }
     // this.meta.updateTag({ name: 'twitter:card', content: '' });
     // this.meta.updateTag({ name: 'twitter:site', content: 'https://twitter.com/zedinternation1' });
