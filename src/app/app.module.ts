@@ -38,6 +38,7 @@ import { Blog4Component } from './blog4/blog4.component';
 import { NewsBlog3Component } from './news-blog3/news-blog3.component';
 import { NewsBlog4Component } from './news-blog4/news-blog4.component';
 import { NewsBlog5Component } from './news-blog5/news-blog5.component';
+import { NewsBlog6Component } from './news-blog6/news-blog6.component';
 
 defineLocale('ja', jaLocale);
 
@@ -69,7 +70,8 @@ defineLocale('ja', jaLocale);
     Blog4Component,
     NewsBlog3Component,
     NewsBlog4Component,
-    NewsBlog5Component
+    NewsBlog5Component,
+    NewsBlog6Component
   ],
   imports: [
     BrowserModule,
