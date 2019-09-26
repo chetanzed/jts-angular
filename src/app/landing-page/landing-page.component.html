@@ -1,8 +1,8 @@
+<app-header id="navbar">
+</app-header>
 
-<app-header id="navbar"></app-header >
+<div class="main">
 
-    <div class="main">
-    
     <!---- slider start here ------------>
     <div class="slider-outer">
         <div id="owl-demo" class="owl-carousel">
@@ -12,7 +12,7 @@
                     <div class="container">
                         <div class="slider-content-inner mt-20">
                             <h1 class="mb-30">スマホでかんたんサロン管理 <br>
-                            <span>日本初AIシステム搭載アプリ</span></h1>
+                                <span>日本初AIシステム搭載アプリ</span></h1>
                             <!-- <h2 class="mb-60">オールイン・ワン・パッケージ</h2> -->
                             <!-- <h4 class="mb-60">顧客管理・売上管理・経費管理・勤怠管理・目標管理</h4> -->
                             <div class="banner-form">
@@ -20,18 +20,18 @@
                                     <h3 class="text-center">新規登録で今なら</h3>
                                 </div>
                                 <h5 class="text-center mb-20">JTSBoard&サロン予約システムMiraiの全機能が <br>30日間無料で使い放題!!</h5>
-                                
+
                                 <form (ngSubmit)="onSignup()" [formGroup]="signupForm">
                                     <div class="form-group">
-                                        <input type="text" type="hidden"  class="form-control" formControlName="device_type">
+                                        <input type="text" type="hidden" class="form-control" formControlName="device_type">
                                     </div>
                                     <div class="form-group">
-                                        <input formControlName="salon_name" placeholder="サロン名" class="form-control" type="text" >
+                                        <input formControlName="salon_name" placeholder="サロン名" class="form-control" type="text">
                                         <span *ngIf="!signupForm.get('salon_name').valid && signupForm.get('salon_name').touched"></span>
                                     </div>
                                     <div class="form-group">
                                         <input name="DummyEmailInput" type="email" style="position: absolute; right: -20000px" tabindex="-1">
-                                        <input  placeholder="メール" class="form-control" formControlName="email" type="email" >                
+                                        <input placeholder="メール" class="form-control" formControlName="email" type="email">
                                         <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched"></span>
                                     </div>
                                     <ul class="banner-password-fields d-flex">
@@ -49,8 +49,8 @@
                                         <li class="">
                                             <div formGroupName="passwordMatch">
                                                 <div class="form-group">
-                                                  <input type="password" class="form-control"  formControlName="confirm_password" placeholder="パスワードを認証する">
-                                                      <span *ngIf="!signupForm.get('passwordMatch').get('confirm_password').valid && signupForm.get('passwordMatch').get('confirm_password').touched">
+                                                    <input type="password" class="form-control" formControlName="confirm_password" placeholder="パスワードを認証する">
+                                                    <span *ngIf="!signupForm.get('passwordMatch').get('confirm_password').valid && signupForm.get('passwordMatch').get('confirm_password').touched">
                                                      </span>
                                                     <span *ngIf="!signupForm.get('passwordMatch').valid && signupForm.get('passwordMatch').touched"> パスワードと確認パスワードを一致させてください。</span>
                                                 </div>
@@ -61,10 +61,14 @@
                                         <button class="btn bannerBtn" type="submit">今すぐ無料ではじめて見る</button>
                                     </div>
                                 </form>
-                                <p *ngIf="datasaved" class= "danger"> <span>{{msg}}</span> </p>
+                                <p *ngIf="datasaved" class="danger"> <span>{{msg}}</span> </p>
                                 <ul class="top-app-links text-center">
-                                    <li><a href="https://apps.apple.com/us/app/jtsboard/id1408502078"><img src="../../assets/images/app-links-img/app-store-btn.png"></a></li>
-                                    <li><a href="https://play.google.com/store/apps/details?id=com.zedtechno.jtsboard"><img src="../../assets/images/app-links-img/google-play-btn.png"></a></li>
+                                    <li>
+                                        <a href="https://apps.apple.com/us/app/jtsboard/id1408502078"><img src="../../assets/images/app-links-img/app-store-btn.png"></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://play.google.com/store/apps/details?id=com.zedtechno.jtsboard"><img src="../../assets/images/app-links-img/google-play-btn.png"></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -74,33 +78,33 @@
         </div>
     </div>
     <!---- slider end here ------------>
-    
-    
+
+
     <!--- about panel start ---------->
     <div class="about-panel">
         <div class="about-inner-panel white-over padding-panel">
-    
+
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-sm-10 col-lg-9 col-xl-8">
-                        <div class="page-heading text-center"><h1>JTSBoardサロンアプリとは</h1></div>
+                        <div class="page-heading text-center">
+                            <h1>JTSBoardサロンアプリとは</h1>
+                        </div>
                         <div class="page-sub-heading text-center">
                             <h5>
-                                予約システムはもちろん、電子カルテ、レジ、売上管理、勤怠管理など <br>
-                                サロン業務に関わる全ての業務をオールインワンアプリで行うことができます。<br>
-                                ホットペッパービューティーのサロンボードとも自動連携。<br>
-                                オーナー様の苦手なマーケティング・データ解析・アナリティクス（分析）は <br>
-                                AIにお任せください。
+                                予約システムはもちろん、電子カルテ、レジ、売上管理、勤怠管理など <br> サロン業務に関わる全ての業務をオールインワンアプリで行うことができます。
+                                <br> ホットペッパービューティーのサロンボードとも自動連携。
+                                <br> オーナー様の苦手なマーケティング・データ解析・アナリティクス（分析）は <br> AIにお任せください。
                                 <!-- サロン運営に必要な業務、カルテの管理、売上管理、勤怠管理はもちろん<br>
                                 サロン業務に関わる全ての問題を解決するアプリです。<br>
                                 日々の履歴からAIが更なる売上UP＆効率UPのためのサポートを行います。 -->
                             </h5>
                         </div>
-    
-    
+
+
                         <div class="row justify-content-center">
                             <div class="col-sm-10 col-lg-9 col-xl-8">
-                               
+
                                 <ul class="fuction-list">
                                     <li>
                                         <a href="" class="form-function">
@@ -112,7 +116,7 @@
                                             <img src="../../assets/images/icons/calendar.png" alt="カレンダー"><br>カレンダー
                                         </a>
                                     </li>
-    
+
                                     <li>
                                         <a href="" class="sales-function">
                                             <img src="../../assets/images/icons/sales.png" alt="売上集計"><br>売上集計
@@ -123,7 +127,7 @@
                                             <img src="../../assets/images/icons/expenses.png" alt="経費"><br>経費
                                         </a>
                                     </li>
-    
+
                                     <li>
                                         <a href="" class="staff-function">
                                             <img src="../../assets/images/icons/staff.png" alt="スタッフ"><br>スタッフ
@@ -135,39 +139,42 @@
                                         </a>
                                     </li>
                                 </ul>
-    
+
                                 <div class="text-center mt-20 mb-30"><a href="#" class="btn">詳細</a></div>
-    
+
                             </div>
                         </div>
-    
-    
+
+
                     </div>
                 </div>
             </div>
-    
+
         </div>
     </div>
     <!--- about panel end ---------->
-    
-    
+
+
     <!--- AI panel start ---------->
     <div class="AI-panel">
         <div class="AI-inner-panel black-over padding-panel">
-    
+
             <div class="container">
                 <div class="row">
                     <div class="col-md-9 col-lg-8 col-sm-10">
                         <div class="white-bg text-center mb-30">
-                            <div class="comment-box"><img src="../../assets/images/comments-box.png"><h2>業界初</h2></div>
-                            <div class="page-heading text-center"><h1>AIだからできること</h1></div>
+                            <div class="comment-box"><img src="../../assets/images/comments-box.png">
+                                <h2>業界初</h2>
+                            </div>
+                            <div class="page-heading text-center">
+                                <h1>AIだからできること</h1>
+                            </div>
                             <div class="page-sub-heading text-center">
                                 <h5>
-                                    AIがお客様の行動や特徴を把握し、<br>
-                                    スタッフとの相性を読み取り、どのスタッフが入客するか？と判断します<br>
-                                
-                                    スタッフのシフト決めをAIが行うことはもちろん<br>
-                                    日々の業務に関する質問にAIが返信します
+                                    AIがお客様の行動や特徴を把握し、<br> スタッフとの相性を読み取り、どのスタッフが入客するか？と判断します
+                                    <br> スタッフのシフト決めをAIが行うことはもちろん
+
+                                    <br> 日々の業務に関する質問にAIが返信します
                                 </h5>
                             </div>
                             <div class="help-suppoer-img">
@@ -176,36 +183,42 @@
                         </div>
                     </div>
                 </div>
-            </div> 
-    
+            </div>
+
         </div>
     </div>
     <!--- AI panel end ---------->
-    
-    
+
+
     <!--- Advantage panel start ---------->
-    <div class="advantage-panel box-bg padding-panel">  
+    <div class="advantage-panel box-bg padding-panel">
         <div class="container">
-            <div class="page-heading text-center"><h1>導入した際のメリット</h1></div>
+            <div class="page-heading text-center">
+                <h1>導入した際のメリット</h1>
+            </div>
             <ul class="advantage-list">
                 <li><img src="../../assets/images/icons/graph-icon.png" class="mr-40">大幅なコスト削減が可能に</li>
                 <li>既存客への効率的アプローチでリピート率UP</li>
                 <li>スタッフマネジメントの効率化</li>
             </ul>
-        </div> 
+        </div>
     </div>
     <!--- Advantage panel end ---------->
-    
-    
+
+
     <!--- compare panel start ---------->
-    <div class="compare-panel padding-panel">   
+    <div class="compare-panel padding-panel">
         <div class="container">
-                <div class="page-heading text-center"><h1>機能比較</h1></div>
+            <div class="page-heading text-center">
+                <h1>機能比較</h1>
+            </div>
             <div class="compare-table-b">
                 <table class="compare-table mb-30">
                     <thead>
                         <tr>
-                            <th><h4>機能</h4></th>
+                            <th>
+                                <h4>機能</h4>
+                            </th>
                             <th><img src="../../assets/images/compare-logo/coming-soon.png"></th>
                             <th><img src="../../assets/images/compare-logo/salon-board.png"></th>
                             <th><img src="../../assets/images/compare-logo/bionly.png"></th>
@@ -316,23 +329,24 @@
         </div>
     </div>
     <!--- compare panel end ---------->
-    
-    
+
+
     <!--- app screen panel start  ---------->
     <div class="app-screen-panel padding-panel box-bg">
         <div class="container">
-            <div class="page-heading text-center"><h1>導入方法</h1></div>
+            <div class="page-heading text-center">
+                <h1>導入方法</h1>
+            </div>
             <div class="page-sub-heading text-center">
                 <h5>
-                    JTSボードの導入方法について。まずは下のアプリをダウンロード！全てのデバイスでご利用可能です。<br>
-                    パソコン/IOS/Androidモバイルアプリケーション/タブレット）
+                    JTSボードの導入方法について。まずは下のアプリをダウンロード！全てのデバイスでご利用可能です。<br> パソコン/IOS/Androidモバイルアプリケーション/タブレット）
                 </h5>
             </div>
             <div class="row">
                 <div class="col-4 text-center">
                     <div class="mb-30 app-screen">
                         <img src="../../assets/images/app-img/web.png">
-                       
+
                     </div>
                     <div class="mb-30 app-link-btn">
                         <a href="https://web.jtsboard.com/users/registration" target="blank"><img src="../../assets/images/app-links-img/web-app-btn.png"></a>
@@ -358,20 +372,22 @@
         </div>
     </div>
     <!--- app screen panel end ---------->
-    
+
     <!--- case study panel start ---------->
     <div class="case-study-panel padding-panel" id="who-use">
-    
+
         <div class="container">
-    
-            <div class="page-heading text-center"><h1>最適例</h1></div>
+
+            <div class="page-heading text-center">
+                <h1>最適例</h1>
+            </div>
             <div class="page-sub-heading text-center">
                 <h5>
                     JTSボードを導入するとオーナー、スタッフの作業を減らし、管理が簡単スムーズに。
                 </h5>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-sm-6">                        
+                <div class="col-lg-3 col-sm-6">
                     <div class="case-study-item box-shadow mb-30">
                         <img src="../../assets/images/case-study/Hair-Salon.jpg">
                         <div class="cs-content">
@@ -382,7 +398,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">                        
+                <div class="col-lg-3 col-sm-6">
                     <div class="case-study-item box-shadow mb-30">
                         <img src="../../assets/images/case-study/Nail-Salon.jpg">
                         <div class="cs-content">
@@ -393,7 +409,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">                        
+                <div class="col-lg-3 col-sm-6">
                     <div class="case-study-item box-shadow mb-30">
                         <img src="../../assets/images/case-study/Eyelash-Salon.jpg">
                         <div class="cs-content">
@@ -401,118 +417,166 @@
                             <hr>
                             <p class="more">予約システムを導入したい、だけど予算に余裕がないと、色々探している中で見つけました。予約はもちろん日別、月別、スタッフ別に売上を確認することができます。リピート率や来店周期や来店回数など、知りたい内容をすぐに検索でき、とても便利です。</p>
                             <!-- <p class="more">日別、月別、スタッフ別に売上を確認することができます。リピート率や来店周期や来店回数など、知りたい内容をすぐに検索できます  </p> -->
-                            
+
                             <!-- <a href="#" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a> -->
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">                        
+                <div class="col-lg-3 col-sm-6">
                     <div class="case-study-item box-shadow mb-30">
                         <img src="../../assets/images/case-study/Aesthetic-Salon.jpg">
                         <div class="cs-content">
                             <h6>エステサロン</h6>
                             <hr>
-                            <p class="more"><!-- 様々な広告媒体に掲載すると、予約管理は大変。JTSボードは、ホットペッパービューティからの予約をJTSボードのカレンダーに自動送信してくれるので管理が楽になります。またJTSボードからサロンボードへの予約入力もできるので便利です。 -->
-                            様々な広告媒体に掲載すると、予約管理は大変。JTSボードは他媒体の予約も自動送信してくれるので管理が楽になります。またJTSBoardから他媒体の操作も可能です。
+                            <p class="more">
+                                <!-- 様々な広告媒体に掲載すると、予約管理は大変。JTSボードは、ホットペッパービューティからの予約をJTSボードのカレンダーに自動送信してくれるので管理が楽になります。またJTSボードからサロンボードへの予約入力もできるので便利です。 -->
+                                様々な広告媒体に掲載すると、予約管理は大変。JTSボードは他媒体の予約も自動送信してくれるので管理が楽になります。またJTSBoardから他媒体の操作も可能です。
                             </p>
                             <!-- <p class="more">様々な広告媒体に掲載すると、予約管理は大変。一つの管理画面で管理出来たらいいな！を叶えました。例えばホットペッパーからの予約、電話予約、次回予約…と、予約経路がバラバラでは、予約ミスを招いてしまう可能性があります。そこで、JTSボードは、ホットペッパービューティからの予約をJTSボードのカレンダーに自動送信。管理が楽になります。 </p> -->
                             <!-- <a href="#" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a> -->
                         </div>
                     </div>
-                </div>                   
+                </div>
             </div>
             <!-- <div class="text-center mt-20 mb-30"><a href="#" class="btn">ここにリスト</a></div> -->
-    
+
         </div>
-    
+
     </div>
     <!--- case study panel end ---------->
-    
+
     <!--- salon voice start ---------->
-    
+
     <div class="salon-voice-panel d-block d-md-none">
         <div class="salon-voice-panel-inner blue-over padding-panel">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 col-md-6">
+                        <img src="../../assets/images/bg/salon-voice-bg.jpg">
+                        <div class="white-bg text-center mb-30">
+                            <div class="page-heading text-center">
+                                <h1>導入サロン</h1>
+                            </div>
+                            <div class="page-sub-heading text-center">
+                                <h5> マジェスティックビューティ ネイリストの声</h5>
+                            </div>
+                            <p class="mb-30">JTSボードを導入して、お客様の来店履歴や過去のデザインを全スタッフで共有できるため、お客様の特徴や、好みをアプリを開くだけで把握できます。お客様へのデザインやカラー提案をしやすくなりました。お客様を理解して提案できるから、お客様の満足度が上がりました。</p>
+                            <p>紙カルテだと、カルテへの記入が手間でしたが、JTSボードは、使った材料や、お客様のネイルを写真で保管できるため、1本だけ剥がれてしまいお直しをする時も、使用したカラージェルが何を使用したか、履歴を見ればわかるため、便利です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="salon-voice-panel black-over padding-panel d-none d-md-block">
         <div class="container">
-        <div class="row justify-content-center">
-        <div class="col-sm-8 col-md-6">
-        <img src="../../assets/images/bg/salon-voice-bg.jpg">
-        <div class="white-bg text-center mb-30"> 
-        <div class="page-heading text-center"><h1>導入サロン</h1></div>
-        <div class="page-sub-heading text-center"><h5> マジェスティックビューティ ネイリストの声</h5></div> 
-        <p class="mb-30">JTSボードを導入して、お客様の来店履歴や過去のデザインを全スタッフで共有できるため、お客様の特徴や、好みをアプリを開くだけで把握できます。お客様へのデザインやカラー提案をしやすくなりました。お客様を理解して提案できるから、お客様の満足度が上がりました。</p>
-        <p>紙カルテだと、カルテへの記入が手間でしたが、JTSボードは、使った材料や、お客様のネイルを写真で保管できるため、1本だけ剥がれてしまいお直しをする時も、使用したカラージェルが何を使用したか、履歴を見ればわかるため、便利です。</p> 
+            <div class="row justify-content-end">
+                <div class="col-md-6 col-sm-9">
+                    <div class="white-bg text-center mb-30">
+                        <div class="page-heading text-center">
+                            <h1>導入サロン</h1>
+                        </div>
+                        <div class="page-sub-heading text-center">
+                            <h5> マジェスティックビューティ ネイリストの声</h5>
+                        </div>
+                        <p class="mb-30">JTSボードを導入して、お客様の来店履歴や過去のデザインを全スタッフで共有できるため、お客様の特徴や、好みをアプリを開くだけで把握できます。お客様へのデザインやカラー提案をしやすくなりました。お客様を理解して提案できるから、お客様の満足度が上がりました。</p>
+                        <p>紙カルテだと、カルテへの記入が手間でしたが、JTSボードは、使った材料や、お客様のネイルを写真で保管できるため、1本だけ剥がれてしまいお直しをする時も、使用したカラージェルが何を使用したか、履歴を見ればわかるため、便利です。</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        <div class="salon-voice-panel black-over padding-panel d-none d-md-block">
-        <div class="container">
-        <div class="row justify-content-end">
-        <div class="col-md-6 col-sm-9">
-        <div class="white-bg text-center mb-30"> 
-        <div class="page-heading text-center"><h1>導入サロン</h1></div>
-        <div class="page-sub-heading text-center"><h5> マジェスティックビューティ ネイリストの声</h5></div> 
-        <p class="mb-30">JTSボードを導入して、お客様の来店履歴や過去のデザインを全スタッフで共有できるため、お客様の特徴や、好みをアプリを開くだけで把握できます。お客様へのデザインやカラー提案をしやすくなりました。お客様を理解して提案できるから、お客様の満足度が上がりました。</p>
-        <p>紙カルテだと、カルテへの記入が手間でしたが、JTSボードは、使った材料や、お客様のネイルを写真で保管できるため、1本だけ剥がれてしまいお直しをする時も、使用したカラージェルが何を使用したか、履歴を見ればわかるため、便利です。</p> 
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        <!--- salon voice end ---------->
-    
-    
+    </div>
+
+    <!--- salon voice end ---------->
+
+
     <!---- news blog start here ------------>
     <div class="newspaper-panel box-bg padding-panel">
         <div class="slider-outer">
             <div class="container">
-                <div class="page-heading text-center"><h1>サロン予約はどうしていますか？</h1></div>
+                <div class="page-heading text-center">
+                    <h1>サロン予約はどうしていますか？</h1>
+                </div>
                 <div id="owl-demo2" class="owl-carousel">
-                        <div class="item">
-                                <div class="item-margin">
-                                    <div class="case-study-item box-shadow position-relative">                            
-                                        <div class="fadeIn animated new-label-blog">New</div>
-                                        <img src="../../assets/images/app-blog/blog5.jpg">
-                                        <div class="cs-content">
-                                            <h6 class="">予約アプリにどうしてＡＩが必要？</h6>
-                                            <hr>
-                                            <div class="news-block-text">
-                                                <p>こんにちは！</p>
-                                                <p>今日はＡＩについて。</p>
-                                            </div>                                
-                                            <div class="date-blog">7月10日</div>
-                                            <a routerLink="/news/予約アプリにどうしてＡＩが必要" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
-                                        </div>
-                                    </div>  
+                    <div class="item">
+                        <div class="item-margin">
+                            <div class="case-study-item box-shadow position-relative">
+                                <div class="fadeIn animated new-label-blog">New</div>
+                                <img src="../../assets/images/app-blog/new-blog6.jpg">
+                                <div class="cs-content">
+                                    <h6 class="">サロン開業に必要なこと①～サロンカルテは活用できていますか？？～</h6>
+                                    <hr>
+                                    <div class="news-block-text">
+                                        <p> 先日、エステオーナーさんと話していて気付いたことがありました。
+                                        </p>
+
+                                    </div>
+                                    <div class="date-blog">7月23日</div>
+                                    <a routerLink="/news/サロン開業に必要なこと" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
-                        <div class="item">
-                                <div class="item-margin">
-                                    <div class="case-study-item box-shadow position-relative">                            
-                                        <div class="fadeIn animated new-label-blog">New</div>
-                                        <img src="../../assets/images/app-blog/サロン予約はどうしていますか-blog.jpg">
-                                        <div class="cs-content">
-                                            <h6 class="">サロン予約はどうしていますか？</h6>
-                                            <hr>
-                                            <div class="news-block-text">
-                                                <p>こんにちは、広報担当のYUKIです。</p>
-                                                <p>今日もJTSBoardの機能をご紹介しますね！</p>
-                                            </div>                                
-                                            <div class="date-blog">7月8日</div>
-                                            <a routerLink="/news/サロン予約はどうしていますか" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
-                                        </div>
-                                    </div>  
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-margin">
+                            <div class="case-study-item box-shadow position-relative">
+                                <div class="fadeIn animated new-label-blog">New</div>
+                                <img src="../../assets/images/app-blog/news-blog5.jpg">
+                                <div class="cs-content">
+                                    <h6 class="">AIがキャンセルの穴を埋めてくれる</h6>
+                                    <hr>
+                                    <div class="news-block-text">
+                                        <p>みなさまこんにちは！</p>
+                                        <p>大好きなお客様からお土産をいただきました！</p>
+                                    </div>
+                                    <div class="date-blog">7月16日</div>
+                                    <a routerLink="/news/AIがキャンセルの穴を埋めてくれる" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-margin">
+                            <div class="case-study-item box-shadow position-relative">
+
+                                <img src="../../assets/images/app-blog/blog5.jpg">
+                                <div class="cs-content">
+                                    <h6 class="">予約アプリにどうしてＡＩが必要？</h6>
+                                    <hr>
+                                    <div class="news-block-text">
+                                        <p>こんにちは！</p>
+                                        <p>今日はＡＩについて。</p>
+                                    </div>
+                                    <div class="date-blog">7月10日</div>
+                                    <a routerLink="/news/予約アプリにどうしてＡＩが必要" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-margin">
+                            <div class="case-study-item box-shadow position-relative">
+
+                                <img src="../../assets/images/app-blog/サロン予約はどうしていますか-blog.jpg">
+                                <div class="cs-content">
+                                    <h6 class="">サロン予約はどうしていますか？</h6>
+                                    <hr>
+                                    <div class="news-block-text">
+                                        <p>こんにちは、広報担当のYUKIです。</p>
+                                        <p>今日もJTSBoardの機能をご紹介しますね！</p>
+                                    </div>
+                                    <div class="date-blog">7月8日</div>
+                                    <a routerLink="/news/サロン予約はどうしていますか" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="item">
                         <div class="item-margin">
-                            <div class="case-study-item box-shadow position-relative">                            
-                              
+                            <div class="case-study-item box-shadow position-relative">
+
                                 <img src="../../assets/images/app-blog/blog4.jpg">
                                 <div class="cs-content">
                                     <h6 class="">次世代のサロン管理システム</h6>
@@ -520,14 +584,14 @@
                                     <div class="news-block-text">
                                         <p>こんにちは、広報担当のYUKIです。</p>
                                         <p>今日はサロン管理システムであるJTSBoardの機能的な</p>
-                                    </div>                                
+                                    </div>
                                     <div class="date-blog">6月20日</div>
                                     <a routerLink="/news/次世代のサロン管理システム" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
-                            </div>  
+                            </div>
                         </div>
                     </div>
-    
+
                     <div class="item">
                         <div class="item-margin">
                             <div class="case-study-item box-shadow position-relative">
@@ -535,7 +599,7 @@
                                     <div class="day">18</div>
                                     <div class="month">六月</div>
                                 </div> -->
-                               
+
                                 <img src="../../assets/images/app-blog/ai-beauty-innovation-seminer2020を開催.jpg">
                                 <div class="cs-content">
                                     <h6 class="">AI Beauty Innovation seminer2020を開催</h6>
@@ -543,14 +607,14 @@
                                     <div class="news-block-text">
                                         <p>こんにちは、広報担当のYUKIです。</p>
                                         <p>先週の水曜日、ウインク愛知にて第一回目のセミナーを開催しました。</p>
-                                    </div>                                
+                                    </div>
                                     <div class="date-blog">6月18日</div>
                                     <!-- <p>多くのオーナーさま、美容代理店さまにご参加いただきました。</p>
                                     <p>本当にありがとうございます。</p>
                                     <p>当日は東京本社のエンジニアチームも助っ人として登場し、</p> -->
                                     <a routerLink="/news/AI-Beauty-Innovation-seminer2020を開催" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
-                            </div>  
+                            </div>
                         </div>
                     </div>
                     <div class="item">
@@ -575,7 +639,7 @@
                                     <p>事務仕事というか、ブログを再スタートしています。</p>
                                     <p>決心大事！！</p> -->
                                     <a routerLink="/news/学校訪問記" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
-                                  
+
                                 </div>
                             </div>
                         </div>
@@ -603,17 +667,17 @@
                                     <p>私も利用させていただいて、2年くらいですが、</p> -->
                                     <a routerLink="/news/広告について" class="">続きを読む <i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
-                            </div>  
+                            </div>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </div>
     </div>
     <!---- news blog end here ------------>
-    
-    
+
+
     <!--- newspaper start ---------->
     <!-- <div class="newspaper-panel box-bg padding-panel">
         <div class="container">
@@ -631,22 +695,23 @@
         </div>
     </div> -->
     <!--- newspaper end ---------->
-    
-    
-     <!--- pricing start ---------->
+
+
+    <!--- pricing start ---------->
     <div class="pricing-panel" id="cost">
         <div class="pricing-inner-panel padding-panel">
-    
+
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-sm-10 col-md-10 col-lg-8 mb-30">
-                        <div class="page-heading text-center"><h1>費用・プラン</h1></div>
+                        <div class="page-heading text-center">
+                            <h1>費用・プラン</h1>
+                        </div>
                         <div class="page-sub-heading text-center">
                             <h5>
-                                カレンダー機能、シフト、予約、顧客管理、カルテ、レジ・会計、売上集計、<br>分析、チャット、出退勤など充実の機能を 15,000円～でご利用いただけます。<br>
-                                サロン開業を考えている方必見!!今なら特別オファーがあります。一度お問い合わせください。
+                                カレンダー機能、シフト、予約、顧客管理、カルテ、レジ・会計、売上集計、<br>分析、チャット、出退勤など充実の機能を 15,000円～でご利用いただけます。<br> サロン開業を考えている方必見!!今なら特別オファーがあります。一度お問い合わせください。
                             </h5>
-                        </div>  
+                        </div>
                         <div class="row justify-content-center">
                             <div class="col-sm-10 col-md-9">
                                 <div class="basic-plans">
@@ -665,84 +730,74 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
-    
+
         </div>
     </div>
     <!--- pricing end ---------->
-    
-    
+
+
     <!--- contact us start ---------->
     <div class="contact-us-panel padding-panel box-bg">
         <div class="container">
             <div class="white-bg mb-30">
-                <div class="page-heading text-center"><h1>お問い合わせ</h1></div>
+                <div class="page-heading text-center">
+                    <h1>お問い合わせ</h1>
+                </div>
                 <form (ngSubmit)="onContact()" [formGroup]="contactForm">
-                <div class="row justify-content-center">
-                    <div class="col-md-9">
-                        <div *ngIf="datasaved" class="alert alert-success mb-30" role="alert">
-                            {{msg}}
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text" class="form-control" 
-                                     formControlName="name" placeholder="名前"
-                                     [ngClass]="{ 'is-invalid': submitted && !contactForm.get('name').valid }"/>
-                                     <!-- <span *ngIf="!contactForm.get('name').valid && contactForm.submitted && contactForm.get('name').touched"></span> -->
-                                </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-9">
+                            <div *ngIf="datasaved" class="alert alert-success mb-30" role="alert">
+                                {{msg}}
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text" class="form-control"  
-                                    formControlName="email"
-                                    placeholder="メールアドレス"
-                                    [ngClass]="{ 'is-invalid': submitted && !contactForm.get('email').valid }"/>
-                                    <!-- <span *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched"></span> -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-30">
+                                        <input type="text" class="form-control" formControlName="name" placeholder="名前" [ngClass]="{ 'is-invalid': submitted && !contactForm.get('name').valid }" />
+                                        <!-- <span *ngIf="!contactForm.get('name').valid && contactForm.submitted && contactForm.get('name').touched"></span> -->
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="tel" class="form-control" 
-                                     [textMask]="{mask: mask}" formControlName="phone" placeholder="電話番号"
-                                     [ngClass]="{ 'is-invalid': submitted && !contactForm.get('phone').valid }" />
-                                     <!-- <span *ngIf="!contactForm.get('phone').valid && contactForm.get('phone').touched"></span> -->
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-30">
+                                        <input type="text" class="form-control" formControlName="email" placeholder="メールアドレス" [ngClass]="{ 'is-invalid': submitted && !contactForm.get('email').valid }" />
+                                        <!-- <span *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched"></span> -->
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group mb-30">
-                                    <input type="text" class="form-control" 
-                                     formControlName="subject" placeholder="サロンの業種"
-                                     [ngClass]="{ 'is-invalid': submitted && !contactForm.get('subject').valid }"  />
-                                     <!-- <span *ngIf="!contactForm.get('subject').valid && contactForm.get('subject').touched"></span> -->
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-30">
+                                        <input type="tel" class="form-control" [textMask]="{mask: mask}" formControlName="phone" placeholder="電話番号" [ngClass]="{ 'is-invalid': submitted && !contactForm.get('phone').valid }" />
+                                        <!-- <span *ngIf="!contactForm.get('phone').valid && contactForm.get('phone').touched"></span> -->
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="form-group mb-30">
-                                    <textarea name="message"  formControlName="message" placeholder="メッセージ" cols="" rows="6" class="form-control"
-                                    [ngClass]="{ 'is-invalid': submitted && !contactForm.get('subject').valid }"  >
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-30">
+                                        <input type="text" class="form-control" formControlName="subject" placeholder="サロンの業種" [ngClass]="{ 'is-invalid': submitted && !contactForm.get('subject').valid }" />
+                                        <!-- <span *ngIf="!contactForm.get('subject').valid && contactForm.get('subject').touched"></span> -->
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group mb-30">
+                                        <textarea name="message" formControlName="message" placeholder="メッセージ" cols="" rows="6" class="form-control" [ngClass]="{ 'is-invalid': submitted && !contactForm.get('subject').valid }">
                                 </textarea>
-                                <!-- <span *ngIf="!contactForm.get('message').valid && contactForm.get('message').touched"></span>   -->
+                                        <!-- <span *ngIf="!contactForm.get('message').valid && contactForm.get('message').touched"></span>   -->
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="text-center">
-                                    <button class="btn">送信する</button>
+                                <div class="col-sm-12">
+                                    <div class="text-center">
+                                        <button class="btn">送信する</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
             </div>
         </div>
     </div>
     <!--- contact us end ---------->
-    </div>
-    
-    <app-footar></app-footar>
-    
-    
+</div>
+
+<app-footar></app-footar>

@@ -208,7 +208,6 @@ export class LandingPageComponent implements OnInit {
           return false;
         }
         else {
-
           this.router.navigate(['thank-success-step-first']);
         }
       });
