@@ -272,7 +272,7 @@
      .recruit-work-text, .recruit-block-text {margin-bottom: 10px;padding: 15px 0;}
      .recruit-description-panel .table-gap td {font-size: 0.7rem;}
 
-
+    .about-panel .page-sub-heading h5 {letter-spacing: -0.5px;}
     .fuction-list {justify-content: center;}
     .fuction-list li a { padding: 10px; font-size: 0.9rem;}
     .fuction-list li {padding: 0 10px 20px; width: 40%;}
@@ -351,6 +351,7 @@
     .compare-table .fa-check, .compare-table .fa-times {font-size: 1rem;}
 
     .about-panel {background-position: 37% center;}
+    .about-panel .page-sub-heading h5 {letter-spacing: -0.15px;}
     .fuction-list li {padding: 0 8px 16px; width: 35%;}
     .fuction-list li a img {margin-bottom: 10px; height: 40px;}
     .recruit-reward-panel .table-gap td, .recruit-reward-panel .table-gap th { font-size: 0.55rem; font-weight: bold;}
